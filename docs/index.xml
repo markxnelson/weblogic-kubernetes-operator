@@ -2,77 +2,77 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>WebLogic Kubernetes Operator</title>
-    <link>/</link>
+    <link>/hugo-poc/</link>
     <description>Recent content on WebLogic Kubernetes Operator</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 23 Feb 2019 20:47:58 -0500</lastBuildDate>
     
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/hugo-poc/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Nodeports</title>
-      <link>/userguide/managing-domains/ingress/nodeports/</link>
+      <link>/hugo-poc/userguide/managing-domains/ingress/nodeports/</link>
       <pubDate>Sat, 23 Feb 2019 20:47:58 -0500</pubDate>
       
-      <guid>/userguide/managing-domains/ingress/nodeports/</guid>
+      <guid>/hugo-poc/userguide/managing-domains/ingress/nodeports/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Requirements</title>
-      <link>/developerguide/requirements/</link>
+      <link>/hugo-poc/developerguide/requirements/</link>
       <pubDate>Sat, 23 Feb 2019 17:19:19 -0500</pubDate>
       
-      <guid>/developerguide/requirements/</guid>
+      <guid>/hugo-poc/developerguide/requirements/</guid>
       <description>In addition to the requirements listed in the User Guide, the following software is also required to obtain and build the operator:
  Git (1.8 or later recommended) Java Developer Kit (1.8u131 or later recommended; please use 1.8, tests will not work on 1.9 or later versions) Apache Maven (3.3 or later recommended)  The operator is written primarily in Java, BASH shell scripts, and WLST scripts. The Java code uses features introduced in Java 1.</description>
     </item>
     
     <item>
       <title>RBAC</title>
-      <link>/security/rbac/</link>
+      <link>/hugo-poc/security/rbac/</link>
       <pubDate>Sat, 23 Feb 2019 17:15:36 -0500</pubDate>
       
-      <guid>/security/rbac/</guid>
+      <guid>/hugo-poc/security/rbac/</guid>
       <description>The operator assumes that certain roles and role bindings are created on the Kubernetes cluster. The operator installation scripts create these, and the operator verifies that they are correct when the cluster starts up. This document lists the RBAC definitions that are created.
 The general design goal is to provide the operator with the minimum amount of permissions that it requires, and to favor built-in roles over custom roles, where it make sense to do so.</description>
     </item>
     
     <item>
       <title>Using kubectl</title>
-      <link>/userguide/managing-operators/using-the-operator/using-kubectl/</link>
+      <link>/hugo-poc/userguide/managing-operators/using-the-operator/using-kubectl/</link>
       <pubDate>Sat, 23 Feb 2019 17:08:43 -0500</pubDate>
       
-      <guid>/userguide/managing-operators/using-the-operator/using-kubectl/</guid>
+      <guid>/hugo-poc/userguide/managing-operators/using-the-operator/using-kubectl/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Startup</title>
-      <link>/userguide/managing-domains/domain-lifecycle/startup/</link>
+      <link>/hugo-poc/userguide/managing-domains/domain-lifecycle/startup/</link>
       <pubDate>Sat, 23 Feb 2019 17:04:41 -0500</pubDate>
       
-      <guid>/userguide/managing-domains/domain-lifecycle/startup/</guid>
+      <guid>/hugo-poc/userguide/managing-domains/domain-lifecycle/startup/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Metrics Exporter</title>
-      <link>/userguide/managing-domains/integrations/exporting-metrics/metrics-exporter/</link>
+      <link>/hugo-poc/userguide/managing-domains/integrations/exporting-metrics/metrics-exporter/</link>
       <pubDate>Sat, 23 Feb 2019 16:48:44 -0500</pubDate>
       
-      <guid>/userguide/managing-domains/integrations/exporting-metrics/metrics-exporter/</guid>
+      <guid>/hugo-poc/userguide/managing-domains/integrations/exporting-metrics/metrics-exporter/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Getting Started</title>
-      <link>/userguide/introduction/introduction/</link>
+      <link>/hugo-poc/userguide/introduction/introduction/</link>
       <pubDate>Sat, 23 Feb 2019 16:40:54 -0500</pubDate>
       
-      <guid>/userguide/introduction/introduction/</guid>
+      <guid>/hugo-poc/userguide/introduction/introduction/</guid>
       <description>This document provides detailed user information for the Oracle WebLogic Server Kubernetes Operator. It provides instructions on how to install the operator in your Kubernetes cluster and how to use it to manage WebLogic domains.
 If you are looking for information about how the operator is designed, implemented, built, and such, then you should refer to the Developer guide.
 Table of contents The information in this guide is organized in the order that you would most likely need to use it.</description>
@@ -80,19 +80,19 @@ Table of contents The information in this guide is organized in the order that y
     
     <item>
       <title>Javadoc</title>
-      <link>/reference/javadoc/</link>
+      <link>/hugo-poc/reference/javadoc/</link>
       <pubDate>Fri, 22 Feb 2019 16:17:01 -0500</pubDate>
       
-      <guid>/reference/javadoc/</guid>
+      <guid>/hugo-poc/reference/javadoc/</guid>
       <description>You can view the Java API documentation here.</description>
     </item>
     
     <item>
       <title>Sample Page</title>
-      <link>/userguide/samplepage/</link>
+      <link>/hugo-poc/userguide/samplepage/</link>
       <pubDate>Fri, 22 Feb 2019 16:07:43 -0500</pubDate>
       
-      <guid>/userguide/samplepage/</guid>
+      <guid>/hugo-poc/userguide/samplepage/</guid>
       <description>Here is some neat stuff we can do We can draw decision diagrams:
 graph LR; A[Install Operator] --|Now decide| C{Domain Type} C --|Persistent| D[Create persistent domain] C --|Domain in Image| E[Create domain image]  And some more And have expanding more detail thingies
   Like this   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</description>
@@ -100,84 +100,84 @@ graph LR; A[Install Operator] --|Now decide| C{Domain Type} C --|Persistent| D[C
     
     <item>
       <title>Introduction</title>
-      <link>/quickstart/introduction/</link>
+      <link>/hugo-poc/quickstart/introduction/</link>
       <pubDate>Fri, 22 Feb 2019 15:44:42 -0500</pubDate>
       
-      <guid>/quickstart/introduction/</guid>
+      <guid>/hugo-poc/quickstart/introduction/</guid>
       <description>Use this Quick Start guide to create a WebLogic deployment in a Kubernetes cluster with the Oracle WebLogic Kubernetes Operator. Please note that this walk-through is for demonstration purposes only, not for use in production. These instructions assume that you are already familiar with Kubernetes. If you need more detailed instructions, please refer to the User guide.
 If you have an older version of the operator installed on your cluster, you must remove it before installing this version.</description>
     </item>
     
     <item>
       <title>Overview</title>
-      <link>/userguide/introduction/overview/</link>
+      <link>/hugo-poc/userguide/introduction/overview/</link>
       <pubDate>Sat, 23 Feb 2019 20:51:38 -0500</pubDate>
       
-      <guid>/userguide/introduction/overview/</guid>
+      <guid>/hugo-poc/userguide/introduction/overview/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ingress</title>
-      <link>/userguide/managing-domains/ingress/ingress/</link>
+      <link>/hugo-poc/userguide/managing-domains/ingress/ingress/</link>
       <pubDate>Sat, 23 Feb 2019 20:47:13 -0500</pubDate>
       
-      <guid>/userguide/managing-domains/ingress/ingress/</guid>
+      <guid>/hugo-poc/userguide/managing-domains/ingress/ingress/</guid>
       <description>Ingresses are one approach provided by Kubernetes to configure load balancers. Depending on the version of Kubernetes you are using, and your cloud provider, you may need to use Ingresses. Please refer to the Ingress documentation for more information about Ingresses.
 WebLogic clusters as backends of an Ingress In an Ingress object, a list of backends are provided for each target that will be load balanced. Each backend is typically a Kubernetes service, more specifically, a combination of a serviceName and a servicePort.</description>
     </item>
     
     <item>
       <title>Admin Console</title>
-      <link>/userguide/managing-domains/accessing-the-domain/admin-console/</link>
+      <link>/hugo-poc/userguide/managing-domains/accessing-the-domain/admin-console/</link>
       <pubDate>Sat, 23 Feb 2019 17:39:15 -0500</pubDate>
       
-      <guid>/userguide/managing-domains/accessing-the-domain/admin-console/</guid>
+      <guid>/hugo-poc/userguide/managing-domains/accessing-the-domain/admin-console/</guid>
       <description></description>
     </item>
     
     <item>
       <title>The REST API</title>
-      <link>/userguide/managing-operators/using-the-operator/the-rest-api/</link>
+      <link>/hugo-poc/userguide/managing-operators/using-the-operator/the-rest-api/</link>
       <pubDate>Sat, 23 Feb 2019 17:08:32 -0500</pubDate>
       
-      <guid>/userguide/managing-operators/using-the-operator/the-rest-api/</guid>
+      <guid>/hugo-poc/userguide/managing-operators/using-the-operator/the-rest-api/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Scaling</title>
-      <link>/userguide/managing-domains/domain-lifecycle/scaling/</link>
+      <link>/hugo-poc/userguide/managing-domains/domain-lifecycle/scaling/</link>
       <pubDate>Sat, 23 Feb 2019 17:04:45 -0500</pubDate>
       
-      <guid>/userguide/managing-domains/domain-lifecycle/scaling/</guid>
+      <guid>/hugo-poc/userguide/managing-domains/domain-lifecycle/scaling/</guid>
       <description>WebLogic Server supports two types of clustering configurations, configured and dynamic. Configured clusters are created by manually configuring each individual Managed Server instance. In dynamic clusters, the Managed Server configurations are generated from a single, shared template. With dynamic clusters, when additional server capacity is needed, new server instances can be added to the cluster without having to manually configure them individually. Also, unlike configured clusters, scaling up of dynamic clusters is not restricted to the set of servers defined in the cluster but can be increased based on runtime demands.</description>
     </item>
     
     <item>
       <title>Prometheus</title>
-      <link>/userguide/managing-domains/integrations/exporting-metrics/prometheus/</link>
+      <link>/hugo-poc/userguide/managing-domains/integrations/exporting-metrics/prometheus/</link>
       <pubDate>Sat, 23 Feb 2019 16:49:52 -0500</pubDate>
       
-      <guid>/userguide/managing-domains/integrations/exporting-metrics/prometheus/</guid>
+      <guid>/hugo-poc/userguide/managing-domains/integrations/exporting-metrics/prometheus/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Swagger</title>
-      <link>/reference/swagger/</link>
+      <link>/hugo-poc/reference/swagger/</link>
       <pubDate>Fri, 22 Feb 2019 16:17:07 -0500</pubDate>
       
-      <guid>/reference/swagger/</guid>
+      <guid>/hugo-poc/reference/swagger/</guid>
       <description>You can view the Swagger REST API documentation here.</description>
     </item>
     
     <item>
       <title>Prerequisites</title>
-      <link>/quickstart/prerequisites/</link>
+      <link>/hugo-poc/quickstart/prerequisites/</link>
       <pubDate>Fri, 22 Feb 2019 15:44:42 -0500</pubDate>
       
-      <guid>/quickstart/prerequisites/</guid>
+      <guid>/hugo-poc/quickstart/prerequisites/</guid>
       <description>For this exercise, you’ll need a Kubernetes cluster. If you need help setting one up, check out our cheat sheet. This guide assumes a single node cluster.
 The operator uses Helm to create and deploy the necessary resources and then run the operator in a Kubernetes cluster. For Helm installation and usage information, see Install Helm and Tiller.
 You should clone this repository to your local machine so that you have access to the various sample files mentioned throughout this guide:</description>
@@ -185,10 +185,10 @@ You should clone this repository to your local machine so that you have access t
     
     <item>
       <title>Restarting</title>
-      <link>/userguide/managing-domains/domain-lifecycle/restarting/</link>
+      <link>/hugo-poc/userguide/managing-domains/domain-lifecycle/restarting/</link>
       <pubDate>Sat, 23 Feb 2019 20:58:51 -0500</pubDate>
       
-      <guid>/userguide/managing-domains/domain-lifecycle/restarting/</guid>
+      <guid>/hugo-poc/userguide/managing-domains/domain-lifecycle/restarting/</guid>
       <description>Restarting Oracle WebLogic Server in Kubernetes This document describes when to restart servers in the Oracle WebLogic Server in Kubernetes environment.
 Overview There are many situations where changes to the Oracle WebLogic Server in Kubernetes environment require that all the servers in a domain or cluster be restarted, for example, when applying a WebLogic Server patch or when upgrading an application.
 One of the operator&amp;rsquo;s most important jobs is to start and stop WebLogic Servers by creating and deleting their corresponding Kubernetes pods.</description>
@@ -196,38 +196,38 @@ One of the operator&amp;rsquo;s most important jobs is to start and stop WebLogi
     
     <item>
       <title>Demo</title>
-      <link>/userguide/introduction/demo/</link>
+      <link>/hugo-poc/userguide/introduction/demo/</link>
       <pubDate>Sat, 23 Feb 2019 20:51:59 -0500</pubDate>
       
-      <guid>/userguide/introduction/demo/</guid>
+      <guid>/hugo-poc/userguide/introduction/demo/</guid>
       <description>This video provides a demonstration of the WebLogic Server Kubernetes Operator:
   </description>
     </item>
     
     <item>
       <title>WebLogic REST APIs</title>
-      <link>/userguide/managing-domains/accessing-the-domain/rest/</link>
+      <link>/hugo-poc/userguide/managing-domains/accessing-the-domain/rest/</link>
       <pubDate>Sat, 23 Feb 2019 17:39:23 -0500</pubDate>
       
-      <guid>/userguide/managing-domains/accessing-the-domain/rest/</guid>
+      <guid>/hugo-poc/userguide/managing-domains/accessing-the-domain/rest/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Using WLST</title>
-      <link>/userguide/managing-domains/accessing-the-domain/wlst/</link>
+      <link>/hugo-poc/userguide/managing-domains/accessing-the-domain/wlst/</link>
       <pubDate>Sat, 23 Feb 2019 17:39:19 -0500</pubDate>
       
-      <guid>/userguide/managing-domains/accessing-the-domain/wlst/</guid>
+      <guid>/hugo-poc/userguide/managing-domains/accessing-the-domain/wlst/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Building</title>
-      <link>/developerguide/building/</link>
+      <link>/hugo-poc/developerguide/building/</link>
       <pubDate>Sat, 23 Feb 2019 17:19:24 -0500</pubDate>
       
-      <guid>/developerguide/building/</guid>
+      <guid>/hugo-poc/developerguide/building/</guid>
       <description>The operator is built using Apache Maven. The build machine will also need to have Docker installed.
 To build the operator, issue the following command in the project directory:
 $ mvn clean install  This will compile the source files, build JAR files containing the compiled classes and libraries needed to run the operator, and will also execute all of the unit tests.
@@ -236,19 +236,19 @@ Contributions must conform to coding and formatting standards.</description>
     
     <item>
       <title>Lifecycle</title>
-      <link>/userguide/managing-operators/using-the-operator/lifecycle/</link>
+      <link>/hugo-poc/userguide/managing-operators/using-the-operator/lifecycle/</link>
       <pubDate>Sat, 23 Feb 2019 17:08:54 -0500</pubDate>
       
-      <guid>/userguide/managing-operators/using-the-operator/lifecycle/</guid>
+      <guid>/hugo-poc/userguide/managing-operators/using-the-operator/lifecycle/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Get Images</title>
-      <link>/quickstart/get-images/</link>
+      <link>/hugo-poc/quickstart/get-images/</link>
       <pubDate>Fri, 22 Feb 2019 15:44:42 -0500</pubDate>
       
-      <guid>/quickstart/get-images/</guid>
+      <guid>/hugo-poc/quickstart/get-images/</guid>
       <description>Get these images and put them into your local registry.
 a. If you don&amp;rsquo;t already have one, obtain a Docker store account, log in to the Docker store and accept the license agreement for the WebLogic Server image.
 b. Log in to the Docker store from your Docker client:
@@ -258,39 +258,39 @@ $ docker pull oracle/weblogic-kubernetes-operator:2.0-rc2  d. Pull the Traefik l
     
     <item>
       <title>Architectural overview</title>
-      <link>/userguide/introduction/architecture/</link>
+      <link>/hugo-poc/userguide/introduction/architecture/</link>
       <pubDate>Sat, 23 Feb 2019 20:51:45 -0500</pubDate>
       
-      <guid>/userguide/introduction/architecture/</guid>
+      <guid>/hugo-poc/userguide/introduction/architecture/</guid>
       <description>The operator consists of the following parts:
  The operator runtime, a process that runs in a Docker container deployed into a Kubernetes pod and which performs the actual management tasks. The model for a Kubernetes custom resource definition (CRD) that when installed in a Kubernetes cluster allows the Kubernetes API server to manage instances of this new type representing the operational details and status of WebLogic domains. A Helm chart for installing the operator runtime and related resources.</description>
     </item>
     
     <item>
       <title>Applications</title>
-      <link>/userguide/managing-domains/accessing-the-domain/applications/</link>
+      <link>/hugo-poc/userguide/managing-domains/accessing-the-domain/applications/</link>
       <pubDate>Sat, 23 Feb 2019 17:39:41 -0500</pubDate>
       
-      <guid>/userguide/managing-domains/accessing-the-domain/applications/</guid>
+      <guid>/hugo-poc/userguide/managing-domains/accessing-the-domain/applications/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Integration Tests</title>
-      <link>/developerguide/integration-tests/</link>
+      <link>/hugo-poc/developerguide/integration-tests/</link>
       <pubDate>Sat, 23 Feb 2019 17:23:22 -0500</pubDate>
       
-      <guid>/developerguide/integration-tests/</guid>
+      <guid>/hugo-poc/developerguide/integration-tests/</guid>
       <description>The project includes integration tests that can be run against a Kubernetes cluster. If you want to use these tests, you will need to provide your own Kubernetes cluster. The Kubernetes cluster must meet the version number requirements and have Helm installed. Ensure that the operator Docker image is in a Docker registry visible to the Kubernetes cluster.
 You will need to obtain the kube.config file for an administrative user and make it available on the machine running the build.</description>
     </item>
     
     <item>
       <title>Branching</title>
-      <link>/developerguide/branching/</link>
+      <link>/hugo-poc/developerguide/branching/</link>
       <pubDate>Sat, 23 Feb 2019 17:19:29 -0500</pubDate>
       
-      <guid>/developerguide/branching/</guid>
+      <guid>/hugo-poc/developerguide/branching/</guid>
       <description>The master branch is protected and contains source for the most recently published release, including release candidates.
 The develop branch is protected and contains source for the latest completed features and bug fixes. While this branch contains active work, we expect to keep it always &amp;ldquo;ready to release.&amp;rdquo; Therefore, longer running feature work will be performed on specific branches, such as feature/dynamic-clusters.
 Because we want to balance separating destabilizing work into feature branches against the possibility of later difficult merges, we encourage developers working on features to pull out any necessary refactoring or improvements that are general purpose into their own shorter-lived branches and create pull requests to develop when these smaller work items are completed.</description>
@@ -298,58 +298,58 @@ Because we want to balance separating destabilizing work into feature branches a
     
     <item>
       <title>Logs</title>
-      <link>/userguide/managing-operators/using-the-operator/logs/</link>
+      <link>/hugo-poc/userguide/managing-operators/using-the-operator/logs/</link>
       <pubDate>Sat, 23 Feb 2019 17:08:57 -0500</pubDate>
       
-      <guid>/userguide/managing-operators/using-the-operator/logs/</guid>
+      <guid>/hugo-poc/userguide/managing-operators/using-the-operator/logs/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Shutdown</title>
-      <link>/userguide/managing-domains/domain-lifecycle/shutdown/</link>
+      <link>/hugo-poc/userguide/managing-domains/domain-lifecycle/shutdown/</link>
       <pubDate>Sat, 23 Feb 2019 17:04:49 -0500</pubDate>
       
-      <guid>/userguide/managing-domains/domain-lifecycle/shutdown/</guid>
+      <guid>/hugo-poc/userguide/managing-domains/domain-lifecycle/shutdown/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Design philosophy</title>
-      <link>/userguide/introduction/design/</link>
+      <link>/hugo-poc/userguide/introduction/design/</link>
       <pubDate>Sat, 23 Feb 2019 20:51:51 -0500</pubDate>
       
-      <guid>/userguide/introduction/design/</guid>
+      <guid>/hugo-poc/userguide/introduction/design/</guid>
       <description>The Oracle WebLogic Server Kubernetes Operator (the “operator”) is designed to fulfill a similar role to that which a human operator would fill in a traditional data center deployment. It contains a set of useful built-in knowledge about how to perform various lifecycle operations on a domain correctly.
 Human operators are normally responsible for starting and stopping environments, initiating backups, performing scaling operations, performing manual tasks associated with disaster recovery and high availability needs and coordinating actions with other operators in other data centers.</description>
     </item>
     
     <item>
       <title>Coding Standards</title>
-      <link>/developerguide/coding-standards/</link>
+      <link>/hugo-poc/developerguide/coding-standards/</link>
       <pubDate>Sat, 23 Feb 2019 17:24:10 -0500</pubDate>
       
-      <guid>/developerguide/coding-standards/</guid>
+      <guid>/hugo-poc/developerguide/coding-standards/</guid>
       <description>This project has adopted the following coding standards:
  Code will be formated using Oracle / WebLogic standards, which are identical to the Google Java Style. Javadoc must be provided for all public packages, classes, and methods, and must include all parameters and returns. Javadoc is not required for methods that override or implement methods that are already documented. All non-trivial methods should include LOGGER.entering() and LOGGER.exiting() calls. The LOGGER.</description>
     </item>
     
     <item>
       <title>Install Operator and Load Balancer</title>
-      <link>/quickstart/install/</link>
+      <link>/hugo-poc/quickstart/install/</link>
       <pubDate>Fri, 22 Feb 2019 15:44:42 -0500</pubDate>
       
-      <guid>/quickstart/install/</guid>
+      <guid>/hugo-poc/quickstart/install/</guid>
       <description>2. Grant the Helm service account the cluster-admin role. $ cat &amp;lt;&amp;lt;EOF | kubectl apply -f - apiVersion: rbac.authorization.k8s.io/v1 kind: ClusterRoleBinding metadata: name: helm-user-cluster-admin-role roleRef: apiGroup: rbac.authorization.k8s.io kind: ClusterRole name: cluster-admin subjects: - kind: ServiceAccount name: default namespace: kube-system EOF  3. Create a Traefik (Ingress-based) load balancer. Use helm to install the Traefik load balancer. Use the values.yaml in the sample but set kubernetes.namespaces specifically.
 $ helm install stable/traefik \ --name traefik-operator \ --namespace traefik \ --values kubernetes/samples/charts/traefik/values.</description>
     </item>
     
     <item>
       <title>Prepare for a domain</title>
-      <link>/quickstart/prepare/</link>
+      <link>/hugo-poc/quickstart/prepare/</link>
       <pubDate>Fri, 22 Feb 2019 15:44:42 -0500</pubDate>
       
-      <guid>/quickstart/prepare/</guid>
+      <guid>/hugo-poc/quickstart/prepare/</guid>
       <description>a. Create a namespace that can host one or more domains:
 $ kubectl create namespace sample-domain1-ns  b. Use helm to configure the operator to manage domains in this namespace:
 $ helm upgrade \ --reuse-values \ --set &amp;quot;domainNamespaces={sample-domain1-ns}&amp;quot; \ --wait \ sample-weblogic-operator \ kubernetes/charts/weblogic-operator  c. Configure Traefik to manage Ingresses created in this namespace:
@@ -358,20 +358,20 @@ $ helm upgrade \ --reuse-values \ --set &amp;quot;kubernetes.namespaces={traefik
     
     <item>
       <title>Code Structure</title>
-      <link>/developerguide/code-structure/</link>
+      <link>/hugo-poc/developerguide/code-structure/</link>
       <pubDate>Sat, 23 Feb 2019 17:25:04 -0500</pubDate>
       
-      <guid>/developerguide/code-structure/</guid>
+      <guid>/hugo-poc/developerguide/code-structure/</guid>
       <description>This project has the following directory structure:
  docs: Generated Javadoc and Swagger integration-tests: Integration test suite json-schema: Java model to JSON schema generator json-schema-maven-plugin: Maven plugin for schema generator kubernetes/charts: Helm charts kubernetes/samples: All samples, including for WebLogic domain creation model: Domain resource Java model operator: Operator runtime site: This documentation src/scripts: Scripts operator injects into WebLogic server instance Pods swagger: Swagger files for the Kubernetes API server and domain resource  Watch package The Watch API in the Kubernetes Java client provides a watch capability across a specific list of resources for a limited amount of time.</description>
     </item>
     
     <item>
       <title>Create a domain</title>
-      <link>/quickstart/create-domain/</link>
+      <link>/hugo-poc/quickstart/create-domain/</link>
       <pubDate>Fri, 22 Feb 2019 15:44:42 -0500</pubDate>
       
-      <guid>/quickstart/create-domain/</guid>
+      <guid>/hugo-poc/quickstart/create-domain/</guid>
       <description>a. Create a Kubernetes secret containing the username and password for the domain using the create-weblogic-credentials script:
 $ kubernetes/samples/scripts/create-weblogic-domain-credentials/create-weblogic-credentials.sh \ -u weblogic -p welcome1 -n sample-domain1-ns -d sample-domain1  The sample will create a secret named domainUID-weblogic-credentials where the domainUID is replaced with the value you provided. For example, the command above would create a secret named sample-domain1-weblogic-credentials.
 b. Create a new image with a domain home by running the create-domain script.</description>
@@ -379,38 +379,38 @@ b. Create a new image with a domain home by running the create-domain script.</d
     
     <item>
       <title>Asynchronous Call Model</title>
-      <link>/developerguide/asynchronous-call-model/</link>
+      <link>/hugo-poc/developerguide/asynchronous-call-model/</link>
       <pubDate>Sat, 23 Feb 2019 17:20:00 -0500</pubDate>
       
-      <guid>/developerguide/asynchronous-call-model/</guid>
+      <guid>/hugo-poc/developerguide/asynchronous-call-model/</guid>
       <description>Our expectation is that customers will task the operator with managing hundreds of WebLogic domains across dozens of Kubernetes namespaces. Therefore, we have designed the operator with an efficient user-level threads pattern. We&amp;rsquo;ve used that pattern to implement an asynchronous call model for Kubernetes API requests. This call model has built-in support for timeouts, retries with exponential back-off, and lists that exceed the requested maximum size using the continuance functionality.</description>
     </item>
     
     <item>
       <title>Domain Processing</title>
-      <link>/developerguide/domain-processing/</link>
+      <link>/hugo-poc/developerguide/domain-processing/</link>
       <pubDate>Sat, 23 Feb 2019 17:20:20 -0500</pubDate>
       
-      <guid>/developerguide/domain-processing/</guid>
+      <guid>/hugo-poc/developerguide/domain-processing/</guid>
       <description>When the operator starts, it lists all existing Domain resources and processes these domains to create the necessary Kubernetes resources, such as Pods and Services, if they don&amp;rsquo;t already exist. This initialization also includes looking for any stranded resources that, while created by the operator, no longer correlate with a Domain resource.
 After this, the operator starts watches for changes to Domain resources and any changes to other resources created by the operator.</description>
     </item>
     
     <item>
       <title>Backwards Compatibility</title>
-      <link>/developerguide/backwards-compatibility/</link>
+      <link>/hugo-poc/developerguide/backwards-compatibility/</link>
       <pubDate>Sat, 23 Feb 2019 17:26:09 -0500</pubDate>
       
-      <guid>/developerguide/backwards-compatibility/</guid>
+      <guid>/hugo-poc/developerguide/backwards-compatibility/</guid>
       <description>Starting with the 2.0 release, future operator releases must be backward compatible with respect to the domain resource schema, operator Helm chart input values, configuration overrides template, Kubernetes resources created by the operator Helm chart, Kubernetes resources created by the operator, and the operator REST interface. We will maintain compatibility for three releases, except in the case of a clearly communicated deprecated feature, which will be maintained for one release after a replacement is available.</description>
     </item>
     
     <item>
       <title>Cleaning up</title>
-      <link>/quickstart/cleanup/</link>
+      <link>/hugo-poc/quickstart/cleanup/</link>
       <pubDate>Fri, 22 Feb 2019 15:44:42 -0500</pubDate>
       
-      <guid>/quickstart/cleanup/</guid>
+      <guid>/hugo-poc/quickstart/cleanup/</guid>
       <description>7. Remove the domain. a. Remove the domain&amp;rsquo;s Ingress by using helm:
 $ helm delete --purge sample-domain1-ingress  b. Remove the domain resources by using the sample delete-weblogic-domain-resources script.
 $ kubernetes/samples/scripts/delete-domain/delete-weblogic-domain-resources.sh -d sample-domain1  c. Use kubectl to confirm that the server pods and domain resource are gone:
@@ -419,55 +419,55 @@ $ kubectl get pods -n sample-domain1-ns $ kubectl get domains -n sample-domain1-
     
     <item>
       <title>Secrets</title>
-      <link>/security/secrets/</link>
+      <link>/hugo-poc/security/secrets/</link>
       <pubDate>Sat, 23 Feb 2019 17:36:33 -0500</pubDate>
       
-      <guid>/security/secrets/</guid>
+      <guid>/hugo-poc/security/secrets/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Encryption</title>
-      <link>/security/encryption/</link>
+      <link>/hugo-poc/security/encryption/</link>
       <pubDate>Sat, 23 Feb 2019 17:36:29 -0500</pubDate>
       
-      <guid>/security/encryption/</guid>
+      <guid>/hugo-poc/security/encryption/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Certificates</title>
-      <link>/security/certificates/</link>
+      <link>/hugo-poc/security/certificates/</link>
       <pubDate>Sat, 23 Feb 2019 17:36:18 -0500</pubDate>
       
-      <guid>/security/certificates/</guid>
+      <guid>/hugo-poc/security/certificates/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Service Accounts</title>
-      <link>/security/service-accounts/</link>
+      <link>/hugo-poc/security/service-accounts/</link>
       <pubDate>Sat, 23 Feb 2019 17:36:12 -0500</pubDate>
       
-      <guid>/security/service-accounts/</guid>
+      <guid>/hugo-poc/security/service-accounts/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Elastic Stack</title>
-      <link>/userguide/managing-domains/integrations/exporting-logs/elastic-stack/</link>
+      <link>/hugo-poc/userguide/managing-domains/integrations/exporting-logs/elastic-stack/</link>
       <pubDate>Sat, 23 Feb 2019 16:48:21 -0500</pubDate>
       
-      <guid>/userguide/managing-domains/integrations/exporting-logs/elastic-stack/</guid>
+      <guid>/hugo-poc/userguide/managing-domains/integrations/exporting-logs/elastic-stack/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Log Exporter</title>
-      <link>/userguide/managing-domains/integrations/exporting-logs/log-exporter/</link>
+      <link>/hugo-poc/userguide/managing-domains/integrations/exporting-logs/log-exporter/</link>
       <pubDate>Sat, 23 Feb 2019 16:48:10 -0500</pubDate>
       
-      <guid>/userguide/managing-domains/integrations/exporting-logs/log-exporter/</guid>
+      <guid>/hugo-poc/userguide/managing-domains/integrations/exporting-logs/log-exporter/</guid>
       <description></description>
     </item>
     

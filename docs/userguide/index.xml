@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>User Guide on WebLogic Kubernetes Operator</title>
-    <link>/userguide/</link>
+    <link>/hugo-poc/userguide/</link>
     <description>Recent content in User Guide on WebLogic Kubernetes Operator</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 22 Feb 2019 15:27:48 -0500</lastBuildDate>
     
-	<atom:link href="/userguide/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/hugo-poc/userguide/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Sample Page</title>
-      <link>/userguide/samplepage/</link>
+      <link>/hugo-poc/userguide/samplepage/</link>
       <pubDate>Fri, 22 Feb 2019 16:07:43 -0500</pubDate>
       
-      <guid>/userguide/samplepage/</guid>
+      <guid>/hugo-poc/userguide/samplepage/</guid>
       <description>Here is some neat stuff we can do We can draw decision diagrams:
 graph LR; A[Install Operator] --|Now decide| C{Domain Type} C --|Persistent| D[Create persistent domain] C --|Domain in Image| E[Create domain image]  And some more And have expanding more detail thingies
   Like this   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</description>

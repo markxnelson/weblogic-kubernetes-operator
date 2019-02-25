@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ingress on WebLogic Kubernetes Operator</title>
-    <link>/userguide/managing-domains/ingress/</link>
+    <link>/hugo-poc/userguide/managing-domains/ingress/</link>
     <description>Recent content in Ingress on WebLogic Kubernetes Operator</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 23 Feb 2019 20:46:32 -0500</lastBuildDate>
     
-	<atom:link href="/userguide/managing-domains/ingress/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/hugo-poc/userguide/managing-domains/ingress/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Nodeports</title>
-      <link>/userguide/managing-domains/ingress/nodeports/</link>
+      <link>/hugo-poc/userguide/managing-domains/ingress/nodeports/</link>
       <pubDate>Sat, 23 Feb 2019 20:47:58 -0500</pubDate>
       
-      <guid>/userguide/managing-domains/ingress/nodeports/</guid>
+      <guid>/hugo-poc/userguide/managing-domains/ingress/nodeports/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ingress</title>
-      <link>/userguide/managing-domains/ingress/ingress/</link>
+      <link>/hugo-poc/userguide/managing-domains/ingress/ingress/</link>
       <pubDate>Sat, 23 Feb 2019 20:47:13 -0500</pubDate>
       
-      <guid>/userguide/managing-domains/ingress/ingress/</guid>
+      <guid>/hugo-poc/userguide/managing-domains/ingress/ingress/</guid>
       <description>Ingresses are one approach provided by Kubernetes to configure load balancers. Depending on the version of Kubernetes you are using, and your cloud provider, you may need to use Ingresses. Please refer to the Ingress documentation for more information about Ingresses.
 WebLogic clusters as backends of an Ingress In an Ingress object, a list of backends are provided for each target that will be load balanced. Each backend is typically a Kubernetes service, more specifically, a combination of a serviceName and a servicePort.</description>
     </item>

@@ -3,412 +3,412 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/userguide/managing-domains/ingress/nodeports/</loc>
+    <loc>/hugo-poc/userguide/managing-domains/ingress/nodeports/</loc>
     <lastmod>2019-02-23T20:47:58-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/samples/simple/credentials/</loc>
+    <loc>/hugo-poc/samples/simple/credentials/</loc>
     <lastmod>2019-02-23T17:32:31-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/developerguide/requirements/</loc>
+    <loc>/hugo-poc/developerguide/requirements/</loc>
     <lastmod>2019-02-23T17:19:19-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/security/rbac/</loc>
+    <loc>/hugo-poc/security/rbac/</loc>
     <lastmod>2019-02-23T17:15:36-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/samples/simple/</loc>
+    <loc>/hugo-poc/samples/simple/</loc>
     <lastmod>2019-02-23T17:11:34-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/userguide/managing-operators/using-the-operator/using-kubectl/</loc>
+    <loc>/hugo-poc/userguide/managing-operators/using-the-operator/using-kubectl/</loc>
     <lastmod>2019-02-23T17:08:43-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/userguide/managing-domains/domain-lifecycle/startup/</loc>
+    <loc>/hugo-poc/userguide/managing-domains/domain-lifecycle/startup/</loc>
     <lastmod>2019-02-23T17:04:41-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/userguide/managing-domains/integrations/exporting-metrics/metrics-exporter/</loc>
+    <loc>/hugo-poc/userguide/managing-domains/integrations/exporting-metrics/metrics-exporter/</loc>
     <lastmod>2019-02-23T16:48:44-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/userguide/managing-operators/installation/</loc>
+    <loc>/hugo-poc/userguide/managing-operators/installation/</loc>
     <lastmod>2019-02-23T16:47:21-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/userguide/managing-domains/integrations/exporting-metrics/</loc>
+    <loc>/hugo-poc/userguide/managing-domains/integrations/exporting-metrics/</loc>
     <lastmod>2019-02-23T16:46:35-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/userguide/managing-domains/domain-in-image/base-images/</loc>
+    <loc>/hugo-poc/userguide/managing-domains/domain-in-image/base-images/</loc>
     <lastmod>2019-02-23T16:45:38-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/userguide/managing-domains/choosing-a-model/</loc>
+    <loc>/hugo-poc/userguide/managing-domains/choosing-a-model/</loc>
     <lastmod>2019-02-23T16:44:54-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/userguide/introduction/introduction/</loc>
+    <loc>/hugo-poc/userguide/introduction/introduction/</loc>
     <lastmod>2019-02-23T16:40:54-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/reference/javadoc/</loc>
+    <loc>/hugo-poc/reference/javadoc/</loc>
     <lastmod>2019-02-22T16:17:01-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/userguide/samplepage/</loc>
+    <loc>/hugo-poc/userguide/samplepage/</loc>
     <lastmod>2019-02-22T16:07:43-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/quickstart/introduction/</loc>
+    <loc>/hugo-poc/quickstart/introduction/</loc>
     <lastmod>2019-02-22T15:44:42-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/quickstart/</loc>
+    <loc>/hugo-poc/quickstart/</loc>
     <lastmod>2019-02-22T15:27:38-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/userguide/introduction/overview/</loc>
+    <loc>/hugo-poc/userguide/introduction/overview/</loc>
     <lastmod>2019-02-23T20:51:38-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/userguide/managing-domains/ingress/ingress/</loc>
+    <loc>/hugo-poc/userguide/managing-domains/ingress/ingress/</loc>
     <lastmod>2019-02-23T20:47:13-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/userguide/managing-domains/accessing-the-domain/admin-console/</loc>
+    <loc>/hugo-poc/userguide/managing-domains/accessing-the-domain/admin-console/</loc>
     <lastmod>2019-02-23T17:39:15-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/samples/simple/storage/</loc>
+    <loc>/hugo-poc/samples/simple/storage/</loc>
     <lastmod>2019-02-23T17:33:26-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/samples/production/</loc>
+    <loc>/hugo-poc/samples/production/</loc>
     <lastmod>2019-02-23T17:11:39-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/userguide/managing-operators/using-the-operator/the-rest-api/</loc>
+    <loc>/hugo-poc/userguide/managing-operators/using-the-operator/the-rest-api/</loc>
     <lastmod>2019-02-23T17:08:32-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/userguide/managing-operators/using-the-operator/</loc>
+    <loc>/hugo-poc/userguide/managing-operators/using-the-operator/</loc>
     <lastmod>2019-02-23T17:08:18-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/userguide/managing-domains/domain-lifecycle/scaling/</loc>
+    <loc>/hugo-poc/userguide/managing-domains/domain-lifecycle/scaling/</loc>
     <lastmod>2019-02-23T17:04:45-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/userguide/managing-domains/integrations/exporting-metrics/prometheus/</loc>
+    <loc>/hugo-poc/userguide/managing-domains/integrations/exporting-metrics/prometheus/</loc>
     <lastmod>2019-02-23T16:49:52-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/userguide/managing-domains/integrations/exporting-logs/</loc>
+    <loc>/hugo-poc/userguide/managing-domains/integrations/exporting-logs/</loc>
     <lastmod>2019-02-23T16:46:40-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/userguide/managing-domains/domain-in-image/patching/</loc>
+    <loc>/hugo-poc/userguide/managing-domains/domain-in-image/patching/</loc>
     <lastmod>2019-02-23T16:45:48-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/userguide/managing-domains/persistent-storage/</loc>
+    <loc>/hugo-poc/userguide/managing-domains/persistent-storage/</loc>
     <lastmod>2019-02-23T16:45:09-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/userguide/introduction/</loc>
+    <loc>/hugo-poc/userguide/introduction/</loc>
     <lastmod>2019-02-23T16:43:10-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/reference/swagger/</loc>
+    <loc>/hugo-poc/reference/swagger/</loc>
     <lastmod>2019-02-22T16:17:07-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/quickstart/prerequisites/</loc>
+    <loc>/hugo-poc/quickstart/prerequisites/</loc>
     <lastmod>2019-02-22T15:44:42-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/userguide/</loc>
+    <loc>/hugo-poc/userguide/</loc>
     <lastmod>2019-02-22T15:27:48-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/userguide/managing-domains/domain-lifecycle/restarting/</loc>
+    <loc>/hugo-poc/userguide/managing-domains/domain-lifecycle/restarting/</loc>
     <lastmod>2019-02-23T20:58:51-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/userguide/introduction/demo/</loc>
+    <loc>/hugo-poc/userguide/introduction/demo/</loc>
     <lastmod>2019-02-23T20:51:59-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/userguide/managing-domains/accessing-the-domain/rest/</loc>
+    <loc>/hugo-poc/userguide/managing-domains/accessing-the-domain/rest/</loc>
     <lastmod>2019-02-23T17:39:23-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/userguide/managing-domains/accessing-the-domain/wlst/</loc>
+    <loc>/hugo-poc/userguide/managing-domains/accessing-the-domain/wlst/</loc>
     <lastmod>2019-02-23T17:39:19-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/samples/simple/domains/</loc>
+    <loc>/hugo-poc/samples/simple/domains/</loc>
     <lastmod>2019-02-23T17:32:37-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/developerguide/building/</loc>
+    <loc>/hugo-poc/developerguide/building/</loc>
     <lastmod>2019-02-23T17:19:24-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/userguide/managing-operators/using-the-operator/lifecycle/</loc>
+    <loc>/hugo-poc/userguide/managing-operators/using-the-operator/lifecycle/</loc>
     <lastmod>2019-02-23T17:08:54-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/userguide/managing-domains/domain-in-image/domain-images/</loc>
+    <loc>/hugo-poc/userguide/managing-domains/domain-in-image/domain-images/</loc>
     <lastmod>2019-02-23T16:45:55-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/userguide/managing-domains/domain-in-image/</loc>
+    <loc>/hugo-poc/userguide/managing-domains/domain-in-image/</loc>
     <lastmod>2019-02-23T16:45:16-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/userguide/managing-operators/</loc>
+    <loc>/hugo-poc/userguide/managing-operators/</loc>
     <lastmod>2019-02-23T16:43:38-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/quickstart/get-images/</loc>
+    <loc>/hugo-poc/quickstart/get-images/</loc>
     <lastmod>2019-02-22T15:44:42-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/samples/</loc>
+    <loc>/hugo-poc/samples/</loc>
     <lastmod>2019-02-22T15:28:03-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/userguide/introduction/architecture/</loc>
+    <loc>/hugo-poc/userguide/introduction/architecture/</loc>
     <lastmod>2019-02-23T20:51:45-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/userguide/managing-domains/accessing-the-domain/applications/</loc>
+    <loc>/hugo-poc/userguide/managing-domains/accessing-the-domain/applications/</loc>
     <lastmod>2019-02-23T17:39:41-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/samples/simple/rest/</loc>
+    <loc>/hugo-poc/samples/simple/rest/</loc>
     <lastmod>2019-02-23T17:33:42-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/developerguide/integration-tests/</loc>
+    <loc>/hugo-poc/developerguide/integration-tests/</loc>
     <lastmod>2019-02-23T17:23:22-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/developerguide/branching/</loc>
+    <loc>/hugo-poc/developerguide/branching/</loc>
     <lastmod>2019-02-23T17:19:29-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/userguide/managing-operators/using-the-operator/logs/</loc>
+    <loc>/hugo-poc/userguide/managing-operators/using-the-operator/logs/</loc>
     <lastmod>2019-02-23T17:08:57-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/userguide/managing-domains/domain-lifecycle/shutdown/</loc>
+    <loc>/hugo-poc/userguide/managing-domains/domain-lifecycle/shutdown/</loc>
     <lastmod>2019-02-23T17:04:49-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/userguide/managing-domains/domain-lifecycle/</loc>
+    <loc>/hugo-poc/userguide/managing-domains/domain-lifecycle/</loc>
     <lastmod>2019-02-23T16:50:09-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/userguide/managing-domains/</loc>
+    <loc>/hugo-poc/userguide/managing-domains/</loc>
     <lastmod>2019-02-23T16:43:45-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/developerguide/</loc>
+    <loc>/hugo-poc/developerguide/</loc>
     <lastmod>2019-02-22T15:27:54-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/userguide/introduction/design/</loc>
+    <loc>/hugo-poc/userguide/introduction/design/</loc>
     <lastmod>2019-02-23T20:51:51-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/userguide/managing-domains/accessing-the-domain/</loc>
+    <loc>/hugo-poc/userguide/managing-domains/accessing-the-domain/</loc>
     <lastmod>2019-02-23T17:39:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/samples/simple/ingress/</loc>
+    <loc>/hugo-poc/samples/simple/ingress/</loc>
     <lastmod>2019-02-23T17:32:47-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/developerguide/coding-standards/</loc>
+    <loc>/hugo-poc/developerguide/coding-standards/</loc>
     <lastmod>2019-02-23T17:24:10-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/reference/</loc>
+    <loc>/hugo-poc/reference/</loc>
     <lastmod>2019-02-22T16:16:39-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/quickstart/install/</loc>
+    <loc>/hugo-poc/quickstart/install/</loc>
     <lastmod>2019-02-22T15:44:42-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/quickstart/prepare/</loc>
+    <loc>/hugo-poc/quickstart/prepare/</loc>
     <lastmod>2019-02-22T15:44:42-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/userguide/managing-domains/ingress/</loc>
+    <loc>/hugo-poc/userguide/managing-domains/ingress/</loc>
     <lastmod>2019-02-23T20:46:32-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/security/</loc>
+    <loc>/hugo-poc/security/</loc>
     <lastmod>2019-02-23T17:34:48-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/samples/simple/elastic-stack/</loc>
+    <loc>/hugo-poc/samples/simple/elastic-stack/</loc>
     <lastmod>2019-02-23T17:32:56-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/developerguide/code-structure/</loc>
+    <loc>/hugo-poc/developerguide/code-structure/</loc>
     <lastmod>2019-02-23T17:25:04-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/quickstart/create-domain/</loc>
+    <loc>/hugo-poc/quickstart/create-domain/</loc>
     <lastmod>2019-02-22T15:44:42-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/developerguide/asynchronous-call-model/</loc>
+    <loc>/hugo-poc/developerguide/asynchronous-call-model/</loc>
     <lastmod>2019-02-23T17:20:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/userguide/managing-domains/integrations/</loc>
+    <loc>/hugo-poc/userguide/managing-domains/integrations/</loc>
     <lastmod>2019-02-23T16:46:23-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/faq/</loc>
+    <loc>/hugo-poc/faq/</loc>
     <lastmod>2019-02-23T08:14:59-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/developerguide/domain-processing/</loc>
+    <loc>/hugo-poc/developerguide/domain-processing/</loc>
     <lastmod>2019-02-23T17:20:20-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/developerguide/backwards-compatibility/</loc>
+    <loc>/hugo-poc/developerguide/backwards-compatibility/</loc>
     <lastmod>2019-02-23T17:26:09-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/quickstart/cleanup/</loc>
+    <loc>/hugo-poc/quickstart/cleanup/</loc>
     <lastmod>2019-02-22T15:44:42-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/security/secrets/</loc>
+    <loc>/hugo-poc/security/secrets/</loc>
     <lastmod>2019-02-23T17:36:33-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/security/encryption/</loc>
+    <loc>/hugo-poc/security/encryption/</loc>
     <lastmod>2019-02-23T17:36:29-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/security/certificates/</loc>
+    <loc>/hugo-poc/security/certificates/</loc>
     <lastmod>2019-02-23T17:36:18-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/security/service-accounts/</loc>
+    <loc>/hugo-poc/security/service-accounts/</loc>
     <lastmod>2019-02-23T17:36:12-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/userguide/managing-domains/integrations/exporting-logs/elastic-stack/</loc>
+    <loc>/hugo-poc/userguide/managing-domains/integrations/exporting-logs/elastic-stack/</loc>
     <lastmod>2019-02-23T16:48:21-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/userguide/managing-domains/integrations/exporting-logs/log-exporter/</loc>
+    <loc>/hugo-poc/userguide/managing-domains/integrations/exporting-logs/log-exporter/</loc>
     <lastmod>2019-02-23T16:48:10-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/</loc>
+    <loc>/hugo-poc/</loc>
     <lastmod>2019-02-23T20:47:58-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/</loc>
+    <loc>/hugo-poc/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/</loc>
+    <loc>/hugo-poc/tags/</loc>
     <priority>0</priority>
   </url>
   
