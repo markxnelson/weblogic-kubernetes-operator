@@ -1,7 +1,7 @@
 ---
 title: "Branching"
 date: 2019-02-23T17:19:29-05:00
-draft: true
+draft: false
 weight: 4
 ---
 

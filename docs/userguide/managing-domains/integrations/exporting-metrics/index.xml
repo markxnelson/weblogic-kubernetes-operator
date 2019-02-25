@@ -11,5 +11,23 @@
 	<atom:link href="/userguide/managing-domains/integrations/exporting-metrics/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>Metrics Exporter</title>
+      <link>/userguide/managing-domains/integrations/exporting-metrics/metrics-exporter/</link>
+      <pubDate>Sat, 23 Feb 2019 16:48:44 -0500</pubDate>
+      
+      <guid>/userguide/managing-domains/integrations/exporting-metrics/metrics-exporter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Prometheus</title>
+      <link>/userguide/managing-domains/integrations/exporting-metrics/prometheus/</link>
+      <pubDate>Sat, 23 Feb 2019 16:49:52 -0500</pubDate>
+      
+      <guid>/userguide/managing-domains/integrations/exporting-metrics/prometheus/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

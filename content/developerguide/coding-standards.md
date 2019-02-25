@@ -1,7 +1,7 @@
 ---
 title: "Coding Standards"
 date: 2019-02-23T17:24:10-05:00
-draft: true
+draft: false
 weight: 5
 ---
 

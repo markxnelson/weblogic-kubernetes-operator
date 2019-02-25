@@ -1,7 +1,7 @@
 ---
 title: "Code Structure"
 date: 2019-02-23T17:25:04-05:00
-draft: true
+draft: false
 weight: 6
 ---
 

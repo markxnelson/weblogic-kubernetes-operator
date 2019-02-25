@@ -11,5 +11,51 @@
 	<atom:link href="/security/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>RBAC</title>
+      <link>/security/rbac/</link>
+      <pubDate>Sat, 23 Feb 2019 17:15:36 -0500</pubDate>
+      
+      <guid>/security/rbac/</guid>
+      <description>The operator assumes that certain roles and role bindings are created on the Kubernetes cluster. The operator installation scripts create these, and the operator verifies that they are correct when the cluster starts up. This document lists the RBAC definitions that are created.
+The general design goal is to provide the operator with the minimum amount of permissions that it requires, and to favor built-in roles over custom roles, where it make sense to do so.</description>
+    </item>
+    
+    <item>
+      <title>Secrets</title>
+      <link>/security/secrets/</link>
+      <pubDate>Sat, 23 Feb 2019 17:36:33 -0500</pubDate>
+      
+      <guid>/security/secrets/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Encryption</title>
+      <link>/security/encryption/</link>
+      <pubDate>Sat, 23 Feb 2019 17:36:29 -0500</pubDate>
+      
+      <guid>/security/encryption/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Certificates</title>
+      <link>/security/certificates/</link>
+      <pubDate>Sat, 23 Feb 2019 17:36:18 -0500</pubDate>
+      
+      <guid>/security/certificates/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Service Accounts</title>
+      <link>/security/service-accounts/</link>
+      <pubDate>Sat, 23 Feb 2019 17:36:12 -0500</pubDate>
+      
+      <guid>/security/service-accounts/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

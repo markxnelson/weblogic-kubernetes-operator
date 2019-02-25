@@ -1,7 +1,7 @@
 ---
 title: "Building"
 date: 2019-02-23T17:19:24-05:00
-draft: true
+draft: false
 weight: 3
 ---
 

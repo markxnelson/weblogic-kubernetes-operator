@@ -1,0 +1,3619 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.47.1" />
+    <meta name="description" content="">
+
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>Restarting :: WebLogic Kubernetes Operator</title>
+
+    
+    <link href="/css/nucleus.css?1551108788" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1551108788" rel="stylesheet">
+    <link href="/css/hybrid.css?1551108788" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1551108788" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1551108788" rel="stylesheet">
+    <link href="/css/auto-complete.css?1551108788" rel="stylesheet">
+    <link href="/css/theme.css?1551108788" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1551108788" rel="stylesheet">
+    
+
+    <script src="/js/jquery-2.x.min.js?1551108788"></script>
+
+    <style type="text/css">
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/userguide/managing-domains/domain-lifecycle/restarting/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="/">
+  <img src="//images/logo.png" height="60"><br/>
+  Kubernetes Operator
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1551108788"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1551108788"></script>
+<script type="text/javascript">
+    
+        var baseurl = "\/";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1551108788"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+        <li><a  class="padding" href="/">Home</a></li>
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/quickstart/" title="Quickstart" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/quickstart/">
+          <b>1. </b>Quickstart
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/quickstart/introduction/" title="Introduction" class="dd-item ">
+        <a href="/quickstart/introduction/">
+        Introduction
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/quickstart/prerequisites/" title="Prerequisites" class="dd-item ">
+        <a href="/quickstart/prerequisites/">
+        Prerequisites
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/quickstart/get-images/" title="Get Images" class="dd-item ">
+        <a href="/quickstart/get-images/">
+        Get Images
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/quickstart/install/" title="Install Operator and Load Balancer" class="dd-item ">
+        <a href="/quickstart/install/">
+        Install Operator and Load Balancer
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/quickstart/prepare/" title="Prepare for a domain" class="dd-item ">
+        <a href="/quickstart/prepare/">
+        Prepare for a domain
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/quickstart/create-domain/" title="Create a domain" class="dd-item ">
+        <a href="/quickstart/create-domain/">
+        Create a domain
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/quickstart/cleanup/" title="Cleaning up" class="dd-item ">
+        <a href="/quickstart/cleanup/">
+        Cleaning up
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/userguide/" title="User Guide" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/userguide/">
+          <b>2. </b>User Guide
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/userguide/samplepage/" title="Sample Page" class="dd-item ">
+        <a href="/userguide/samplepage/">
+        Sample Page
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/userguide/introduction/" title="Introduction" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/userguide/introduction/">
+          <b>1. </b>Introduction
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/userguide/introduction/introduction/" title="Getting Started" class="dd-item ">
+        <a href="/userguide/introduction/introduction/">
+        Getting Started
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/userguide/introduction/overview/" title="Overview" class="dd-item ">
+        <a href="/userguide/introduction/overview/">
+        Overview
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/userguide/introduction/demo/" title="Demo" class="dd-item ">
+        <a href="/userguide/introduction/demo/">
+        Demo
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/userguide/introduction/architecture/" title="Architectural overview" class="dd-item ">
+        <a href="/userguide/introduction/architecture/">
+        Architectural overview
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/userguide/introduction/design/" title="Design philosophy" class="dd-item ">
+        <a href="/userguide/introduction/design/">
+        Design philosophy
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/userguide/managing-operators/" title="Managing Operators" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/userguide/managing-operators/">
+          <b>2. </b>Managing Operators
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/userguide/managing-operators/installation/" title="Installation" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/userguide/managing-operators/installation/">
+          <b>1. </b>Installation
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/userguide/managing-operators/using-the-operator/" title="Using the Operator" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/userguide/managing-operators/using-the-operator/">
+          <b>2. </b>Using the Operator
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/userguide/managing-operators/using-the-operator/using-kubectl/" title="Using kubectl" class="dd-item ">
+        <a href="/userguide/managing-operators/using-the-operator/using-kubectl/">
+        Using kubectl
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/userguide/managing-operators/using-the-operator/the-rest-api/" title="The REST API" class="dd-item ">
+        <a href="/userguide/managing-operators/using-the-operator/the-rest-api/">
+        The REST API
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/userguide/managing-operators/using-the-operator/lifecycle/" title="Lifecycle" class="dd-item ">
+        <a href="/userguide/managing-operators/using-the-operator/lifecycle/">
+        Lifecycle
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/userguide/managing-operators/using-the-operator/logs/" title="Logs" class="dd-item ">
+        <a href="/userguide/managing-operators/using-the-operator/logs/">
+        Logs
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/userguide/managing-domains/" title="Managing Domains" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/userguide/managing-domains/">
+          <b>3. </b>Managing Domains
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/userguide/managing-domains/choosing-a-model/" title="Choosing a Model" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/userguide/managing-domains/choosing-a-model/">
+          <b>1. </b>Choosing a Model
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/userguide/managing-domains/persistent-storage/" title="Persistent Storage" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/userguide/managing-domains/persistent-storage/">
+          <b>2. </b>Persistent Storage
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/userguide/managing-domains/domain-in-image/" title="Domain in Image" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/userguide/managing-domains/domain-in-image/">
+          <b>3. </b>Domain in Image
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/userguide/managing-domains/domain-in-image/base-images/" title="Base Images" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/userguide/managing-domains/domain-in-image/base-images/">
+          <b>1. </b>Base Images
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/userguide/managing-domains/domain-in-image/patching/" title="Patching" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/userguide/managing-domains/domain-in-image/patching/">
+          <b>2. </b>Patching
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/userguide/managing-domains/domain-in-image/domain-images/" title="Domain Images" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/userguide/managing-domains/domain-in-image/domain-images/">
+          <b>3. </b>Domain Images
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/userguide/managing-domains/domain-lifecycle/" title="Domain Lifecycle" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/userguide/managing-domains/domain-lifecycle/">
+          <b>4. </b>Domain Lifecycle
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/userguide/managing-domains/domain-lifecycle/startup/" title="Startup" class="dd-item ">
+        <a href="/userguide/managing-domains/domain-lifecycle/startup/">
+        Startup
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/userguide/managing-domains/domain-lifecycle/scaling/" title="Scaling" class="dd-item ">
+        <a href="/userguide/managing-domains/domain-lifecycle/scaling/">
+        Scaling
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/userguide/managing-domains/domain-lifecycle/restarting/" title="Restarting" class="dd-item active">
+        <a href="/userguide/managing-domains/domain-lifecycle/restarting/">
+        Restarting
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/userguide/managing-domains/domain-lifecycle/shutdown/" title="Shutdown" class="dd-item ">
+        <a href="/userguide/managing-domains/domain-lifecycle/shutdown/">
+        Shutdown
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/userguide/managing-domains/accessing-the-domain/" title="Accessing the Domain" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/userguide/managing-domains/accessing-the-domain/">
+          <b>5. </b>Accessing the Domain
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/userguide/managing-domains/accessing-the-domain/admin-console/" title="Admin Console" class="dd-item ">
+        <a href="/userguide/managing-domains/accessing-the-domain/admin-console/">
+        Admin Console
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/userguide/managing-domains/accessing-the-domain/rest/" title="WebLogic REST APIs" class="dd-item ">
+        <a href="/userguide/managing-domains/accessing-the-domain/rest/">
+        WebLogic REST APIs
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/userguide/managing-domains/accessing-the-domain/wlst/" title="Using WLST" class="dd-item ">
+        <a href="/userguide/managing-domains/accessing-the-domain/wlst/">
+        Using WLST
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/userguide/managing-domains/accessing-the-domain/applications/" title="Applications" class="dd-item ">
+        <a href="/userguide/managing-domains/accessing-the-domain/applications/">
+        Applications
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/userguide/managing-domains/ingress/" title="Ingress" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/userguide/managing-domains/ingress/">
+          <b>6. </b>Ingress
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/userguide/managing-domains/ingress/nodeports/" title="Nodeports" class="dd-item ">
+        <a href="/userguide/managing-domains/ingress/nodeports/">
+        Nodeports
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/userguide/managing-domains/ingress/ingress/" title="Ingress" class="dd-item ">
+        <a href="/userguide/managing-domains/ingress/ingress/">
+        Ingress
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/userguide/managing-domains/integrations/" title="Integrations" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/userguide/managing-domains/integrations/">
+          <b>7. </b>Integrations
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/userguide/managing-domains/integrations/exporting-metrics/" title="Exporting Metrics" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/userguide/managing-domains/integrations/exporting-metrics/">
+          <b>1. </b>Exporting Metrics
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/userguide/managing-domains/integrations/exporting-metrics/metrics-exporter/" title="Metrics Exporter" class="dd-item ">
+        <a href="/userguide/managing-domains/integrations/exporting-metrics/metrics-exporter/">
+        Metrics Exporter
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/userguide/managing-domains/integrations/exporting-metrics/prometheus/" title="Prometheus" class="dd-item ">
+        <a href="/userguide/managing-domains/integrations/exporting-metrics/prometheus/">
+        Prometheus
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/userguide/managing-domains/integrations/exporting-logs/" title="Exporting Logs" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/userguide/managing-domains/integrations/exporting-logs/">
+          <b>2. </b>Exporting Logs
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/userguide/managing-domains/integrations/exporting-logs/elastic-stack/" title="Elastic Stack" class="dd-item ">
+        <a href="/userguide/managing-domains/integrations/exporting-logs/elastic-stack/">
+        Elastic Stack
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/userguide/managing-domains/integrations/exporting-logs/log-exporter/" title="Log Exporter" class="dd-item ">
+        <a href="/userguide/managing-domains/integrations/exporting-logs/log-exporter/">
+        Log Exporter
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/samples/" title="Samples" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/samples/">
+          <b>3. </b>Samples
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/samples/simple/" title="Simple" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/samples/simple/">
+          <b>1. </b>Simple
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/samples/simple/credentials/" title="Credentials" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/samples/simple/credentials/">
+          <b>1. </b>Credentials
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/samples/simple/storage/" title="Storage" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/samples/simple/storage/">
+          <b>2. </b>Storage
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/samples/simple/domains/" title="Domains" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/samples/simple/domains/">
+          <b>3. </b>Domains
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/samples/simple/rest/" title="REST APIs" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/samples/simple/rest/">
+          <b>4. </b>REST APIs
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/samples/simple/ingress/" title="Ingress" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/samples/simple/ingress/">
+          <b>5. </b>Ingress
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/samples/simple/elastic-stack/" title="Elastic Stack" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/samples/simple/elastic-stack/">
+          <b>6. </b>Elastic Stack
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/samples/production/" title="Production" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/samples/production/">
+          <b>2. </b>Production
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/developerguide/" title="Developer Guide" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/developerguide/">
+          <b>4. </b>Developer Guide
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/developerguide/requirements/" title="Requirements" class="dd-item ">
+        <a href="/developerguide/requirements/">
+        Requirements
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/developerguide/building/" title="Building" class="dd-item ">
+        <a href="/developerguide/building/">
+        Building
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/developerguide/integration-tests/" title="Integration Tests" class="dd-item ">
+        <a href="/developerguide/integration-tests/">
+        Integration Tests
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/developerguide/branching/" title="Branching" class="dd-item ">
+        <a href="/developerguide/branching/">
+        Branching
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/developerguide/coding-standards/" title="Coding Standards" class="dd-item ">
+        <a href="/developerguide/coding-standards/">
+        Coding Standards
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/developerguide/code-structure/" title="Code Structure" class="dd-item ">
+        <a href="/developerguide/code-structure/">
+        Code Structure
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/developerguide/asynchronous-call-model/" title="Asynchronous Call Model" class="dd-item ">
+        <a href="/developerguide/asynchronous-call-model/">
+        Asynchronous Call Model
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/developerguide/domain-processing/" title="Domain Processing" class="dd-item ">
+        <a href="/developerguide/domain-processing/">
+        Domain Processing
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/developerguide/backwards-compatibility/" title="Backwards Compatibility" class="dd-item ">
+        <a href="/developerguide/backwards-compatibility/">
+        Backwards Compatibility
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/reference/" title="Reference" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/reference/">
+          <b>5. </b>Reference
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/reference/javadoc/" title="Javadoc" class="dd-item ">
+        <a href="/reference/javadoc/">
+        Javadoc
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/reference/swagger/" title="Swagger" class="dd-item ">
+        <a href="/reference/swagger/">
+        Swagger
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/security/" title="Security" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/security/">
+          <b>6. </b>Security
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/security/rbac/" title="RBAC" class="dd-item ">
+        <a href="/security/rbac/">
+        RBAC
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/security/secrets/" title="Secrets" class="dd-item ">
+        <a href="/security/secrets/">
+        Secrets
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/security/encryption/" title="Encryption" class="dd-item ">
+        <a href="/security/encryption/">
+        Encryption
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/security/certificates/" title="Certificates" class="dd-item ">
+        <a href="/security/certificates/">
+        Certificates
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/security/service-accounts/" title="Service Accounts" class="dd-item ">
+        <a href="/security/service-accounts/">
+        Service Accounts
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/faq/" title="Frequently Asked Questions" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/faq/">
+          <b>7. </b>Frequently Asked Questions
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p>Created with <i class="fas fa-heart"></i> from <a href="https://www.oracle.com">Oracle</a></p>
+<p>&nbsp;</p>
+<p><a href="https://github.com/oracle/weblogic-kubernetes-operator"><i class="fab fa-github"></i> GitHub repo</a></p>
+<p><a href="https://weblogic-slack-inviter.herokuapp.com/"><i class="fab fa-slack"></i> Public Slack #operator</a></p>
+<p>&nbsp;</p>
+<img src="http://build.weblogick8s.org:8080/buildStatus/icon?job=weblogic-kubernetes-operator">
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'></a> > <a href='/userguide/'>User Guide</a> > <a href='/userguide/managing-domains/'>Managing Domains</a> > <a href='/userguide/managing-domains/domain-lifecycle/'>Domain Lifecycle</a> > Restarting
+          
+         
+          
+         
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#restarting-oracle-weblogic-server-in-kubernetes">Restarting Oracle WebLogic Server in Kubernetes</a>
+<ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#common-restart-scenarios">Common restart scenarios</a></li>
+<li><a href="#use-cases">Use cases</a>
+<ul>
+<li><a href="#modifying-the-weblogic-configuration">Modifying the WebLogic configuration</a></li>
+<li><a href="#changing-the-custom-domain-configuration-overrides">Changing the custom domain configuration overrides</a></li>
+<li><a href="#changing-the-weblogic-server-credentials">Changing the WebLogic Server credentials</a></li>
+<li><a href="#changing-properties-on-the-domain-resource-that-affect-server-pods">Changing properties on the domain resource that affect server pods</a></li>
+<li><a href="#applying-weblogic-server-patches">Applying WebLogic Server patches</a></li>
+<li><a href="#updating-deployed-applications-for-domain-home-in-image">Updating deployed applications for domain home in image</a></li>
+</ul></li>
+<li><a href="#rolling-out-an-updated-domain-home-in-image">Rolling out an updated domain home in image</a></li>
+<li><a href="#avoiding-a-rolling-restart-when-changing-image-property-on-a-domain-resource">Avoiding a rolling restart when changing <code>image</code> property on a domain resource</a></li>
+<li><a href="#other-considerations-for-restarting-a-domain">Other considerations for restarting a domain</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+
+        
+        <div id="body-inner">
+          
+            <h1>Restarting</h1>
+          
+
+        
+
+
+
+
+<h2 id="restarting-oracle-weblogic-server-in-kubernetes">Restarting Oracle WebLogic Server in Kubernetes</h2>
+
+<p>This document describes when to restart servers in the Oracle WebLogic Server in Kubernetes environment.</p>
+
+<h3 id="overview">Overview</h3>
+
+<p>There are many situations where changes to the Oracle WebLogic Server in Kubernetes environment require that all the servers in
+a domain or cluster be restarted, for example, when applying a WebLogic Server patch or when upgrading an application.</p>
+
+<p>One of the operator&rsquo;s most important jobs is to start and stop WebLogic Servers by creating and deleting their corresponding Kubernetes pods. Sometimes, you need to make changes that make the pods obsolete, therefore the pods need to be deleted and recreated. Depending on the change, sometimes the pods can be gradually recreated, without taking the entire domain out of service
+(for example, <code>rolling restarts</code>) and sometimes all the pods need to be deleted then recreated, taking the entire domain out of
+service for a while (for example, <code>full restarts</code>).</p>
+
+<p>The following types of server restarts are supported in Oracle WebLogic Server in Kubernetes:</p>
+
+<ul>
+<li><p>Rolling restarts - a coordinated and controlled shut down of all of the servers in a domain or cluster while ensuring that service to the end user is not interrupted.</p>
+
+<ul>
+<li><p>Operator initiated - where the WebLogic Kubernetes Operator can detect some types of changes and will automatically initiate rolling restarts of server pods in a WebLogic domain.</p></li>
+
+<li><p>Manually initiated - required when certain changes in the Oracle WebLogic Server in Kubernetes environment cannot be detected by the operator, so a rolling restart must be manually initiated.</p></li>
+</ul></li>
+
+<li><p>Full domain restarts - the Administration Server and all the Managed Servers in a domain are shutdown, impacting service availability to the end user, and then restarted.  Unlike a rolling restart, the operator cannot detect and initiate a full domain restart; it must always be manually initiated.</p></li>
+</ul>
+
+<p>For detailed information on how to restart servers in a Oracle WebLogic Server in Kubernetes environment, see <a href="server-lifecycle.md">Starting, stopping, and restarting servers</a>.</p>
+
+<h3 id="common-restart-scenarios">Common restart scenarios</h3>
+
+<p>This document describes what actions you need to take to properly restart your servers for a number of common scenarios:</p>
+
+<ul>
+<li>Modifying the WebLogic configuration</li>
+<li>Changing the custom domain configuration overrides (also called situational configuration)</li>
+<li>Changing the WebLogic Server credentials (the user name and password)</li>
+<li>Changing properties on the domain resource that affect server pods (such as <code>image</code>, <code>volumes</code>, and <code>env</code>)</li>
+<li>Applying WebLogic Server patches</li>
+<li>Updating deployed applications for domain home in image</li>
+</ul>
+
+<h3 id="use-cases">Use cases</h3>
+
+<h4 id="modifying-the-weblogic-configuration">Modifying the WebLogic configuration</h4>
+
+<p>Changes to the Oracle WebLogic Server configuration may require either a rolling or full domain restart depending on the domain home location and the type of configuration change.</p>
+
+<ul>
+<li><p><strong>Domain home in image:</strong>
+For domain home in image, any changes (dynamic or non-dynamic) to the WebLogic configuration requires a full domain restart.</p>
+
+<ul>
+<li>If you create a new image with a new name, then you must avoid a rolling restart, which can cause unexpected behavior for the running domain due to configuration inconsistencies as seen by the various servers, by following the steps in <a href="restart.md#avoiding-a-rolling-restart-when-changing-image-property-on-a-domain-resource">Avoiding a rolling restart when changing image property on a domain resource</a>.</li>
+<li>If you create a new image with the same name, then you must manually initiate a full domain restart. See <a href="server-lifecycle.md#full-domain-restarts">Full domain restarts</a> in Starting, stopping, and restarting servers.</li>
+</ul></li>
+
+<li><p><strong>Domain home on PV:</strong>
+For domain home on PV, the type of restart needed to apply the changes, depends on the nature of the WebLogic configuration change:</p>
+
+<ul>
+<li>Changes to parts of the WebLogic configuration that the operator introspects, require a full restart, even if the changes are dynamic.
+The following are the types of changes to the WebLogic Server configuration that the operator introspects:
+
+<ul>
+<li>Adding or removing a cluster, server, dynamic server, or network access point</li>
+<li>Changing a cluster, server, dynamic server, or network access point name</li>
+<li>Enabling or disabling the listen port, SSL port, or admin port</li>
+<li>Changing any port numbers</li>
+<li>Changing a network access point&rsquo;s public address</li>
+</ul></li>
+<li>Other dynamic WebLogic configuration changes do not require a restart.  For example, a change to a server&rsquo;s connection timeout property
+is dynamic and does not require a restart.</li>
+<li>Other non-dynamic WebLogic configuration changes require either a manually initiated rolling restart or a full domain restart, depending on the nature of the change.
+For example, a rolling restart is applicable when changing a WebLogic Server&rsquo;s <code>stuck thread timer interval</code> property. See <a href="server-lifecycle.md#restart-all-the-servers-in-the-domain">Restart all the servers in the domain</a> in Starting, stopping, and restarting servers.</li>
+</ul></li>
+</ul>
+
+<h4 id="changing-the-custom-domain-configuration-overrides">Changing the custom domain configuration overrides</h4>
+
+<p>Any change to domain configuration overrides requires a full domain restart.  This includes:
+  * Changing the domain resource&rsquo;s <code>configOverides</code> to point to a different configuration map
+  * Changing the domain resource&rsquo;s <code>configOverridesSecrets</code> to point to a different list of secrets
+  * Changing the contents of the configuration map referenced by <code>configOverrides</code>
+  * Changing the contents to any of the secrets referenced by <code>configOverridesSecrets</code></p>
+
+<h4 id="changing-the-weblogic-server-credentials">Changing the WebLogic Server credentials</h4>
+
+<p>A change to the WebLogic Server credentials (the user name and password), contained in the Kubernetes secret for the domain, requires a
+<em>full domain restart</em>.  The Kubernetes secret can be updated directly or a new secret can be created and then referenced by the <code>webLogicCredentialsSecret</code>
+property in the domain resource.</p>
+
+<h4 id="changing-properties-on-the-domain-resource-that-affect-server-pods">Changing properties on the domain resource that affect server pods</h4>
+
+<p>The operator will initiate a rolling restart of the domain when you modify any of the domain resource properties that affect the server pods configuration,
+such as <code>image</code>, <code>volumes</code>, and <code>env</code>.  For a complete list, see <a href="server-lifecycle.md#properties-that-cause-servers-to-be-restarted">Properties that cause servers to be restarted</a> in Starting, stopping, and restarting servers.</p>
+
+<p>You can modify these properties using the <code>kubectl</code> command-line tool&rsquo;s <code>edit</code> and <code>patch</code> commands or through the Kubernetes REST API.</p>
+
+<p>For example, to edit the domain resource directly using the <code>kubectl</code> command-line tool:</p>
+
+<pre><code>kubectl edit domain &lt;domain name&gt; -n &lt;domain namespace&gt;
+</code></pre>
+
+<p>The <code>edit</code> command opens a text editor which lets you edit the domain resource in place.</p>
+
+<p><strong>Note</strong>: Typically, it&rsquo;s better to edit the domain resource directly; otherwise, if you scaled the domain, and you just edit the original <code>domain.yaml</code> file and reapply it, you could go back to your old replicas count.</p>
+
+<h4 id="applying-weblogic-server-patches">Applying WebLogic Server patches</h4>
+
+<p>Oracle provides different types of patches for WebLogic Server, such as Patch Set Updates, Security Patch Updates, and One-Off patches.
+Information on whether a patch is rolling compatible or requires a manual full domain restart usually can be found in the patch&rsquo;s documentation, such as the README file.</p>
+
+<p>WebLogic Server patches can be applied to either a domain home in image or a domain home on PV:</p>
+
+<p>With rolling compatible patches:
+* If you update the <code>image</code> property with a new image name, then the operator will initiate a rolling restart.
+* If you keep the same image name, then you must manually initiate a rolling restart. See <a href="server-lifecycle.md#restart-all-the-servers-in-the-domain">Restart all the servers in the domain</a> in Starting, stopping, and restarting servers.</p>
+
+<p>With patches that are not rolling compatible:
+* If you keep the same image name, then you must manually initiate a full domain restart. See <a href="server-lifecycle.md#full-domain-restarts">Full domain restarts</a> in Starting, stopping, and restarting servers.
+* If you update the <code>image</code> property with a new image name, then you must avoid the rolling restart by following the steps in <a href="restart.md#Avoiding-a-rolling-restart-when-changing-image-property-on-a-domain-resource">Avoiding a rolling restart when changing image property on a domain resource</a>.</p>
+
+<h4 id="updating-deployed-applications-for-domain-home-in-image">Updating deployed applications for domain home in image</h4>
+
+<p>Frequent updates of deployed applications using a continuous integration/continuous delivery (CI/CD) process is a very common use case.
+The process for applying an updated application is different for domain home in image than it is for domain home on PV.
+A rolling compatible application update is where some servers are running the old version and some are running the new version
+of the application during the rolling restart process. On the other hand, an application update that is not rolling compatible requires that all the servers
+in the domain be shutdown and restarted.</p>
+
+<p>If the application update is rolling compatible:
+* If you update the <code>image</code> property with a new image name, then the operator will initiate a rolling restart.
+* If you keep the same image name, then you must manually initiate a rolling restart. See <a href="server-lifecycle.md#restart-all-the-servers-in-the-domain">Restart all the servers in the domain</a> in Starting, stopping, and restarting servers.</p>
+
+<p>If the application update is not rolling compatible:
+* If you keep the same image name, then you must manually initiate a full domain restart. See <a href="server-lifecycle.md#full-domain-restarts">Full domain restarts</a> in Starting, stopping, and restarting servers.
+* If you update the <code>image</code> property with a new image name, then you must avoid the rolling restart by following the steps in <a href="restart.md#Avoiding-a-rolling-restart-when-changing-image-property-on-a-domain-resource">Avoiding a rolling restart when changing image property on a domain resource</a>.</p>
+
+<h3 id="rolling-out-an-updated-domain-home-in-image">Rolling out an updated domain home in image</h3>
+
+<p>Follow these steps to create new rolling compatible image if you only need to patch your WebLogic Server domain or update application deployment files:</p>
+
+<ol>
+<li><p>Select a different name for the new image.</p></li>
+
+<li><p>Using the same domain home-in-image Docker image as a base, create a new Docker image by copying (<code>COPY</code>
+command in a Dockerfile) the updated application deployment files or WebLogic Server patches into the Docker image during the Docker image build.</p>
+
+<p><strong>NOTE</strong>: The key here is to make sure that you do not re-run WLST or WDT to create a new domain home even though it will
+have the same configuration. Creating a new domain will change the domain secret and you won&rsquo;t be able to do a
+rolling restart.</p></li>
+
+<li><p>Deploy the new Docker image to your Docker repository with the new name.</p></li>
+
+<li><p>Update the <code>image</code> property of the domain resource specifying the new image name.</p></li>
+</ol>
+
+<p>For example:</p>
+
+<pre><code> ```
+    domain:
+          spec:
+               image: oracle/weblogic-updated:2.0
+ ```
+</code></pre>
+
+<ol>
+<li>The operator will now initiate a rolling restart, which will apply the updated image, for all the server pods in the domain.</li>
+</ol>
+
+<h3 id="avoiding-a-rolling-restart-when-changing-image-property-on-a-domain-resource">Avoiding a rolling restart when changing <code>image</code> property on a domain resource</h3>
+
+<p>If you&rsquo;ve created a new image that is not rolling compatible, and you&rsquo;ve changed the image name, then:</p>
+
+<ol>
+<li><p>Bring the domain down (stopping all the server pods) by setting the <code>serverStartPolicy</code> to <code>NEVER</code>. See <a href="server-lifecycle.md#shut-down-all-the-servers">Shut down all the servers</a> in Starting, stopping, and restarting servers.</p></li>
+
+<li><p>Update the <code>image</code> property with a new image name.</p></li>
+
+<li><p>Start up the domain (starting all the server pods) by setting the <code>serverStartPolicy</code> to <code>IF_NEEDED</code>.</p></li>
+</ol>
+
+<h3 id="other-considerations-for-restarting-a-domain">Other considerations for restarting a domain</h3>
+
+<ul>
+<li><p><strong>Consider the order of changes</strong>:</p>
+
+<p>If you need to make multiple changes to your domain at the same time, you&rsquo;ll want to be careful
+about the order in which you do your changes, so that servers aren&rsquo;t restarted prematurely or restarted needlessly.
+For example, if you want to change the readiness probe&rsquo;s tuning parameters and the Java options (both of which are rolling compatible), then you should update the domain resource once, changing both values,
+so that the operator rolling restarts the servers once.  Or, if you want to change the readiness probe&rsquo;s tuning parameters (which is rolling compatible)
+and change the domain customizations (which require a full restart), then you should do a full shutdown first,
+then make the changes, and then restart the servers.</p>
+
+<p>Alternatively, if you know that your set of changes are not rolling compatible, then you must avoiding a rolling restart by:</p>
+
+<ol>
+<li><p>Bringing the domain down (stopping all the server pods) by setting the <code>serverStartPolicy</code> to <code>NEVER</code>. See <a href="server-lifecycle.md#shut-down-all-the-servers">Shut down all the servers</a> in Starting, stopping, and restarting servers.</p></li>
+
+<li><p>Make all your changes to the Oracle WebLogic Server in Kubernetes environment.</p></li>
+
+<li><p>Starting up the domain (starting all the server pods) by setting the <code>serverStartPolicy</code> to <code>IF_NEEDED</code>.</p></li>
+</ol></li>
+
+<li><p><strong>Changes that require domain knowledge</strong>.</p>
+
+<p>Sometimes you need to make changes that require server restarts, yet the changes are not to the WebLogic configuration,
+the image, or the Kubernetes resources that register your domain with the operator.  For example, your servers are caching information from an external database and you&rsquo;ve modified the contents of the database.</p>
+
+<p>In these cases, you must manually initiate a restart.</p></li>
+</ul>
+
+
+<footer class=" footline" >
+	
+</footer>
+
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/userguide/managing-domains/domain-lifecycle/scaling/" title="Scaling"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/userguide/managing-domains/domain-lifecycle/shutdown/" title="Shutdown" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1551108788"></script>
+    <script src="/js/perfect-scrollbar.min.js?1551108788"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1551108788"></script>
+    <script src="/js/jquery.sticky.js?1551108788"></script>
+    <script src="/js/featherlight.min.js?1551108788"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1551108788"></script>
+    <script src="/js/highlight.pack.js?1551108788"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom.71422.js?1551108788"></script>
+    <script src="/js/learn.js?1551108788"></script>
+    <script src="/js/hugo-learn.js?1551108788"></script>
+
+    <link href="/mermaid/mermaid.css?1551108788" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1551108788"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+
