@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Domain Lifecycle on WebLogic Kubernetes Operator</title>
-    <link>/hugo-poc/userguide/managing-domains/domain-lifecycle/</link>
+    <link>/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/</link>
     <description>Recent content in Domain Lifecycle on WebLogic Kubernetes Operator</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 23 Feb 2019 16:50:09 -0500</lastBuildDate>
     
-	<atom:link href="/hugo-poc/userguide/managing-domains/domain-lifecycle/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Startup</title>
-      <link>/hugo-poc/userguide/managing-domains/domain-lifecycle/startup/</link>
+      <link>/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/startup/</link>
       <pubDate>Sat, 23 Feb 2019 17:04:41 -0500</pubDate>
       
-      <guid>/hugo-poc/userguide/managing-domains/domain-lifecycle/startup/</guid>
+      <guid>/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/startup/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Scaling</title>
-      <link>/hugo-poc/userguide/managing-domains/domain-lifecycle/scaling/</link>
+      <link>/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/scaling/</link>
       <pubDate>Sat, 23 Feb 2019 17:04:45 -0500</pubDate>
       
-      <guid>/hugo-poc/userguide/managing-domains/domain-lifecycle/scaling/</guid>
+      <guid>/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/scaling/</guid>
       <description>WebLogic Server supports two types of clustering configurations, configured and dynamic. Configured clusters are created by manually configuring each individual Managed Server instance. In dynamic clusters, the Managed Server configurations are generated from a single, shared template. With dynamic clusters, when additional server capacity is needed, new server instances can be added to the cluster without having to manually configure them individually. Also, unlike configured clusters, scaling up of dynamic clusters is not restricted to the set of servers defined in the cluster but can be increased based on runtime demands.</description>
     </item>
     
     <item>
       <title>Restarting</title>
-      <link>/hugo-poc/userguide/managing-domains/domain-lifecycle/restarting/</link>
+      <link>/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/restarting/</link>
       <pubDate>Sat, 23 Feb 2019 20:58:51 -0500</pubDate>
       
-      <guid>/hugo-poc/userguide/managing-domains/domain-lifecycle/restarting/</guid>
+      <guid>/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/restarting/</guid>
       <description>Restarting Oracle WebLogic Server in Kubernetes This document describes when to restart servers in the Oracle WebLogic Server in Kubernetes environment.
 Overview There are many situations where changes to the Oracle WebLogic Server in Kubernetes environment require that all the servers in a domain or cluster be restarted, for example, when applying a WebLogic Server patch or when upgrading an application.
 One of the operator&amp;rsquo;s most important jobs is to start and stop WebLogic Servers by creating and deleting their corresponding Kubernetes pods.</description>
@@ -42,10 +42,10 @@ One of the operator&amp;rsquo;s most important jobs is to start and stop WebLogi
     
     <item>
       <title>Shutdown</title>
-      <link>/hugo-poc/userguide/managing-domains/domain-lifecycle/shutdown/</link>
+      <link>/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/shutdown/</link>
       <pubDate>Sat, 23 Feb 2019 17:04:49 -0500</pubDate>
       
-      <guid>/hugo-poc/userguide/managing-domains/domain-lifecycle/shutdown/</guid>
+      <guid>/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/shutdown/</guid>
       <description></description>
     </item>
     

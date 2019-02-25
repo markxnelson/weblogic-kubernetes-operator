@@ -1,4 +1,4 @@
-baseURL = "/hugo-poc/"
+baseURL = "/weblogic-kubernetes-operator/"
 languageCode = "en-us"
 title = "WebLogic Kubernetes Operator"
 

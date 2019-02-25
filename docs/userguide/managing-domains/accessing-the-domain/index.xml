@@ -2,48 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Accessing the Domain on WebLogic Kubernetes Operator</title>
-    <link>/hugo-poc/userguide/managing-domains/accessing-the-domain/</link>
+    <link>/weblogic-kubernetes-operator/userguide/managing-domains/accessing-the-domain/</link>
     <description>Recent content in Accessing the Domain on WebLogic Kubernetes Operator</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 23 Feb 2019 17:39:00 -0500</lastBuildDate>
     
-	<atom:link href="/hugo-poc/userguide/managing-domains/accessing-the-domain/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/weblogic-kubernetes-operator/userguide/managing-domains/accessing-the-domain/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Admin Console</title>
-      <link>/hugo-poc/userguide/managing-domains/accessing-the-domain/admin-console/</link>
+      <link>/weblogic-kubernetes-operator/userguide/managing-domains/accessing-the-domain/admin-console/</link>
       <pubDate>Sat, 23 Feb 2019 17:39:15 -0500</pubDate>
       
-      <guid>/hugo-poc/userguide/managing-domains/accessing-the-domain/admin-console/</guid>
+      <guid>/weblogic-kubernetes-operator/userguide/managing-domains/accessing-the-domain/admin-console/</guid>
       <description></description>
     </item>
     
     <item>
       <title>WebLogic REST APIs</title>
-      <link>/hugo-poc/userguide/managing-domains/accessing-the-domain/rest/</link>
+      <link>/weblogic-kubernetes-operator/userguide/managing-domains/accessing-the-domain/rest/</link>
       <pubDate>Sat, 23 Feb 2019 17:39:23 -0500</pubDate>
       
-      <guid>/hugo-poc/userguide/managing-domains/accessing-the-domain/rest/</guid>
+      <guid>/weblogic-kubernetes-operator/userguide/managing-domains/accessing-the-domain/rest/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Using WLST</title>
-      <link>/hugo-poc/userguide/managing-domains/accessing-the-domain/wlst/</link>
+      <link>/weblogic-kubernetes-operator/userguide/managing-domains/accessing-the-domain/wlst/</link>
       <pubDate>Sat, 23 Feb 2019 17:39:19 -0500</pubDate>
       
-      <guid>/hugo-poc/userguide/managing-domains/accessing-the-domain/wlst/</guid>
+      <guid>/weblogic-kubernetes-operator/userguide/managing-domains/accessing-the-domain/wlst/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Applications</title>
-      <link>/hugo-poc/userguide/managing-domains/accessing-the-domain/applications/</link>
+      <link>/weblogic-kubernetes-operator/userguide/managing-domains/accessing-the-domain/applications/</link>
       <pubDate>Sat, 23 Feb 2019 17:39:41 -0500</pubDate>
       
-      <guid>/hugo-poc/userguide/managing-domains/accessing-the-domain/applications/</guid>
+      <guid>/weblogic-kubernetes-operator/userguide/managing-domains/accessing-the-domain/applications/</guid>
       <description></description>
     </item>
     

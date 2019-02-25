@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Exporting Metrics on WebLogic Kubernetes Operator</title>
-    <link>/hugo-poc/userguide/managing-domains/integrations/exporting-metrics/</link>
+    <link>/weblogic-kubernetes-operator/userguide/managing-domains/integrations/exporting-metrics/</link>
     <description>Recent content in Exporting Metrics on WebLogic Kubernetes Operator</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 23 Feb 2019 16:46:35 -0500</lastBuildDate>
     
-	<atom:link href="/hugo-poc/userguide/managing-domains/integrations/exporting-metrics/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/weblogic-kubernetes-operator/userguide/managing-domains/integrations/exporting-metrics/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Metrics Exporter</title>
-      <link>/hugo-poc/userguide/managing-domains/integrations/exporting-metrics/metrics-exporter/</link>
+      <link>/weblogic-kubernetes-operator/userguide/managing-domains/integrations/exporting-metrics/metrics-exporter/</link>
       <pubDate>Sat, 23 Feb 2019 16:48:44 -0500</pubDate>
       
-      <guid>/hugo-poc/userguide/managing-domains/integrations/exporting-metrics/metrics-exporter/</guid>
+      <guid>/weblogic-kubernetes-operator/userguide/managing-domains/integrations/exporting-metrics/metrics-exporter/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Prometheus</title>
-      <link>/hugo-poc/userguide/managing-domains/integrations/exporting-metrics/prometheus/</link>
+      <link>/weblogic-kubernetes-operator/userguide/managing-domains/integrations/exporting-metrics/prometheus/</link>
       <pubDate>Sat, 23 Feb 2019 16:49:52 -0500</pubDate>
       
-      <guid>/hugo-poc/userguide/managing-domains/integrations/exporting-metrics/prometheus/</guid>
+      <guid>/weblogic-kubernetes-operator/userguide/managing-domains/integrations/exporting-metrics/prometheus/</guid>
       <description></description>
     </item>
     
