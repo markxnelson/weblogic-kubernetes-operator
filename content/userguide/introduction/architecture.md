@@ -1,5 +1,5 @@
 ---
-title: "Architectural overview"
+title: "Architecture"
 date: 2019-02-23T20:51:45-05:00
 draft: false
 weight: 3

@@ -68,13 +68,22 @@ The general design goal is to provide the operator with the minimum amount of pe
     </item>
     
     <item>
-      <title>Getting Started</title>
+      <title>Get Started</title>
       <link>/weblogic-kubernetes-operator/userguide/introduction/introduction/</link>
       <pubDate>Sat, 23 Feb 2019 16:40:54 -0500</pubDate>
       
       <guid>/weblogic-kubernetes-operator/userguide/introduction/introduction/</guid>
       <description>An operator is an application-specific controller that extends Kubernetes to create, configure, and manage instances of complex applications. The Oracle WebLogic Server Kubernetes Operator follows the standard Kubernetes operator pattern, and simplifies the management and operation of WebLogic domains and deployments.
 You can have one or more operators in your Kubernetes cluster that manage one or more WebLogic domains each. We provide a Helm chart to manage the installation and configuration of the operator.</description>
+    </item>
+    
+    <item>
+      <title>Load balancing</title>
+      <link>/weblogic-kubernetes-operator/userguide/prepare/load-balance/</link>
+      <pubDate>Sat, 23 Feb 2019 16:40:54 -0500</pubDate>
+      
+      <guid>/weblogic-kubernetes-operator/userguide/prepare/load-balance/</guid>
+      <description>Load balancing with an Ingress controller or a web server You can choose a load balancer provider for your WebLogic domains running in a Kubernetes cluster. Please refer to the WebLogic Operator Load Balancer Samples for information about the current capabilities and setup instructions for each of the supported load balancers.</description>
     </item>
     
     <item>
@@ -164,6 +173,15 @@ WebLogic clusters as backends of an Ingress In an Ingress object, a list of back
     </item>
     
     <item>
+      <title>Configure Elasticsearch</title>
+      <link>/weblogic-kubernetes-operator/userguide/prepare/configure-elasticsearch/</link>
+      <pubDate>Sat, 23 Feb 2019 16:40:54 -0500</pubDate>
+      
+      <guid>/weblogic-kubernetes-operator/userguide/prepare/configure-elasticsearch/</guid>
+      <description>Configure Kibana and Elasticsearch You can send the operator logs to Elasticsearch, to be displayed in Kibana. Use this sample script to configure Elasticsearch and Kibana deployments and services.</description>
+    </item>
+    
+    <item>
       <title>Swagger</title>
       <link>/weblogic-kubernetes-operator/reference/swagger/</link>
       <pubDate>Fri, 22 Feb 2019 16:17:07 -0500</pubDate>
@@ -195,7 +213,7 @@ One of the operator&amp;rsquo;s most important jobs is to start and stop WebLogi
     </item>
     
     <item>
-      <title>Architectural overview</title>
+      <title>Architecture</title>
       <link>/weblogic-kubernetes-operator/userguide/introduction/architecture/</link>
       <pubDate>Sat, 23 Feb 2019 20:51:45 -0500</pubDate>
       
@@ -385,7 +403,7 @@ b. Create a new image with a domain home by running the create-domain script.</d
     </item>
     
     <item>
-      <title>Cleaning up</title>
+      <title>Clean up</title>
       <link>/weblogic-kubernetes-operator/quickstart/cleanup/</link>
       <pubDate>Fri, 22 Feb 2019 15:44:42 -0500</pubDate>
       

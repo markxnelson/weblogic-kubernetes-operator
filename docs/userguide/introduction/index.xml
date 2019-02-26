@@ -12,7 +12,7 @@
     
     
     <item>
-      <title>Getting Started</title>
+      <title>Get Started</title>
       <link>/weblogic-kubernetes-operator/userguide/introduction/introduction/</link>
       <pubDate>Sat, 23 Feb 2019 16:40:54 -0500</pubDate>
       
@@ -32,7 +32,7 @@ You can have one or more operators in your Kubernetes cluster that manage one or
     </item>
     
     <item>
-      <title>Architectural overview</title>
+      <title>Architecture</title>
       <link>/weblogic-kubernetes-operator/userguide/introduction/architecture/</link>
       <pubDate>Sat, 23 Feb 2019 20:51:45 -0500</pubDate>
       

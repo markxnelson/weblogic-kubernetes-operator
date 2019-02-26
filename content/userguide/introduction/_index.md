@@ -2,13 +2,12 @@
 title = "Introduction"
 date = 2019-02-23T16:43:10-05:00
 weight = 2
-chapter = true
 pre = "<b> </b>"
 +++
 
 
 
-# Introduction
+
 
 This document provides detailed user information for the Oracle WebLogic
 Server Kubernetes Operator.  It provides instructions on how to install the operator in your
@@ -18,7 +17,7 @@ If you are looking for information about how the operator is designed, implement
 you should refer to the [Developer guide](/developerguide).
 
 
-## Important terms
+### Important terms
 
 This documentation uses several important terms which are intended to have a specific meaning.
 
@@ -35,5 +34,5 @@ This documentation uses several important terms which are intended to have a spe
 | Service	| A Kubernetes service exposes application endpoints inside a pod to other pods, or outside the Kubernetes cluster.  A service may also provide additional features like load balancing. |
 
 
-## Additional reading
+### Additional reading
 Before using the operator, you might want to read the [design philosophy](design.md) to develop an understanding of the operator's design, and the [architectural overview](architecture.md) to understand its architecture, including how WebLogic domains are deployed in Kubernetes using the operator. Also, worth reading are the details of the [Kubernetes RBAC definitions](rbac.md) required by the operator.

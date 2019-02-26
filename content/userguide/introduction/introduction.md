@@ -1,5 +1,5 @@
 ---
-title: "Getting Started"
+title: "Get Started"
 date: 2019-02-23T16:40:54-05:00
 draft: false
 weight: 1
@@ -14,7 +14,7 @@ We provide a Helm chart to manage the installation and configuration of the oper
 Detailed instructions are available [here](install.md).
 
 
-## Prerequisites
+### Prerequisites
 
 * Kubernetes 1.10.11+, 1.11.5+, and 1.12.3+  (check with `kubectl version`).
 * Flannel networking v0.9.1-amd64 (check with `docker images | grep flannel`).

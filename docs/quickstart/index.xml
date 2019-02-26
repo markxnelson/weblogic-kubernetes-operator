@@ -78,7 +78,7 @@ b. Create a new image with a domain home by running the create-domain script.</d
     </item>
     
     <item>
-      <title>Cleaning up</title>
+      <title>Clean up</title>
       <link>/weblogic-kubernetes-operator/quickstart/cleanup/</link>
       <pubDate>Fri, 22 Feb 2019 15:44:42 -0500</pubDate>
       
