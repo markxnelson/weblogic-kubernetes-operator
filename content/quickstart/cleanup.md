@@ -6,7 +6,7 @@ weight: 10
 ---
 
 
-### 7. Remove the domain.
+##### Remove the domain.
 
 a.	Remove the domain's Ingress by using `helm`:
 
@@ -26,7 +26,7 @@ $ kubectl get pods -n sample-domain1-ns
 $ kubectl get domains -n sample-domain1-ns
 ```
 
-### 8. Remove the domain namespace.
+##### Remove the domain namespace.
 a.	Configure the Traefik load balancer to stop managing the Ingresses in the domain namespace:
 
 ```bash
@@ -55,7 +55,7 @@ $ kubectl delete namespace sample-domain1-ns
 ```
 
 
-### 9. Remove the operator.
+##### Remove the operator.
 
 a.	Remove the operator:
 
@@ -69,7 +69,7 @@ b.	Remove the operator's namespace:
 $ kubectl delete namespace sample-weblogic-operator-ns
 ```
 
-### 10. Remove the load balancer.
+##### Remove the load balancer.
 
 a.	Remove the Traefik load balancer:
 

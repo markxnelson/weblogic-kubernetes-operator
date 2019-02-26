@@ -1,34 +1,34 @@
 ---
-title: "Get Images"
+title: "Get images"
 date: 2019-02-22T15:44:42-05:00
 draft: false
 weight: 3
 ---
 
-Get these images and put them into your local registry.
+##### Get these images and put them into your local registry.
 
-a.  If you don't already have one, obtain a Docker store account, log in to the Docker store
-    and accept the license agreement for the [WebLogic Server image](https://hub.docker.com/_/oracle-weblogic-server-12c).
+a. If you don't already have one, obtain a Docker store account, log in to the Docker store
+and accept the license agreement for the [WebLogic Server image](https://hub.docker.com/_/oracle-weblogic-server-12c).
 
-b.  Log in to the Docker store from your Docker client:
+b. Log in to the Docker store from your Docker client:
 
 ```bash
 $ docker login
 ```
 
-c.	Pull the operator image:
+c. Pull the operator image:
 
 ```bash
 $ docker pull oracle/weblogic-kubernetes-operator:2.0-rc2
 ```
 
-d.	Pull the Traefik load balancer image:
+d. Pull the Traefik load balancer image:
 
 ```bash
 $ docker pull traefik:1.7.6
 ```
 
-e.	Pull the WebLogic 12.2.1.3 install image:
+e. Pull the WebLogic 12.2.1.3 install image:
 
 ```bash
 $ docker pull store/oracle/weblogic:12.2.1.3
@@ -39,4 +39,4 @@ The existing WebLogic Docker image, `store/oracle/weblogic:12.2.1.3`, was update
 {{% /notice %}}
 
 
-f. Copy the image to all the nodes in your cluster, or put it in a Docker registry that your cluster can access.
+  f. Copy the image to all the nodes in your cluster, or put it in a Docker registry that your cluster can access.

@@ -94,8 +94,8 @@ Table of contents The information in this guide is organized in the order that y
       
       <guid>/weblogic-kubernetes-operator/userguide/samplepage/</guid>
       <description>Here is some neat stuff we can do We can draw decision diagrams:
-graph LR; A[Install Operator] --|Now decide| C{Domain Type} C --|Persistent| D[Create persistent domain] C --|Domain in Image| E[Create domain image]  And some more And have expanding more detail thingies
-  Like this   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</description>
+graph LR;A[Install Operator] --|Now decide| C{Domain Type}C --|Persistent| D[Create persistent domain]C --|Domain in Image| E[Create domain image]And some more And have expanding more detail thingies
+Like thisLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</description>
     </item>
     
     <item>
@@ -244,13 +244,12 @@ Contributions must conform to coding and formatting standards.</description>
     </item>
     
     <item>
-      <title>Get Images</title>
+      <title>Get images</title>
       <link>/weblogic-kubernetes-operator/quickstart/get-images/</link>
       <pubDate>Fri, 22 Feb 2019 15:44:42 -0500</pubDate>
       
       <guid>/weblogic-kubernetes-operator/quickstart/get-images/</guid>
-      <description>Get these images and put them into your local registry.
-a. If you don&amp;rsquo;t already have one, obtain a Docker store account, log in to the Docker store and accept the license agreement for the WebLogic Server image.
+      <description>Get these images and put them into your local registry. a. If you don&amp;rsquo;t already have one, obtain a Docker store account, log in to the Docker store and accept the license agreement for the WebLogic Server image.
 b. Log in to the Docker store from your Docker client:
 $ docker login  c. Pull the operator image:
 $ docker pull oracle/weblogic-kubernetes-operator:2.0-rc2  d. Pull the Traefik load balancer image:</description>
@@ -335,12 +334,12 @@ Human operators are normally responsible for starting and stopping environments,
     </item>
     
     <item>
-      <title>Install Operator and Load Balancer</title>
+      <title>Install the operator and load balancer</title>
       <link>/weblogic-kubernetes-operator/quickstart/install/</link>
       <pubDate>Fri, 22 Feb 2019 15:44:42 -0500</pubDate>
       
       <guid>/weblogic-kubernetes-operator/quickstart/install/</guid>
-      <description>2. Grant the Helm service account the cluster-admin role. $ cat &amp;lt;&amp;lt;EOF | kubectl apply -f - apiVersion: rbac.authorization.k8s.io/v1 kind: ClusterRoleBinding metadata: name: helm-user-cluster-admin-role roleRef: apiGroup: rbac.authorization.k8s.io kind: ClusterRole name: cluster-admin subjects: - kind: ServiceAccount name: default namespace: kube-system EOF  3. Create a Traefik (Ingress-based) load balancer. Use helm to install the Traefik load balancer. Use the values.yaml in the sample but set kubernetes.namespaces specifically.
+      <description>Grant the Helm service account the cluster-admin role. $ cat &amp;lt;&amp;lt;EOF | kubectl apply -f - apiVersion: rbac.authorization.k8s.io/v1 kind: ClusterRoleBinding metadata: name: helm-user-cluster-admin-role roleRef: apiGroup: rbac.authorization.k8s.io kind: ClusterRole name: cluster-admin subjects: - kind: ServiceAccount name: default namespace: kube-system EOF  Create a Traefik (Ingress-based) load balancer. Use helm to install the Traefik load balancer. Use the values.yaml in the sample but set kubernetes.namespaces specifically.
 $ helm install stable/traefik \ --name traefik-operator \ --namespace traefik \ --values kubernetes/samples/charts/traefik/values.</description>
     </item>
     
@@ -411,10 +410,10 @@ After this, the operator starts watches for changes to Domain resources and any 
       <pubDate>Fri, 22 Feb 2019 15:44:42 -0500</pubDate>
       
       <guid>/weblogic-kubernetes-operator/quickstart/cleanup/</guid>
-      <description>7. Remove the domain. a. Remove the domain&amp;rsquo;s Ingress by using helm:
+      <description>Remove the domain. a. Remove the domain&amp;rsquo;s Ingress by using helm:
 $ helm delete --purge sample-domain1-ingress  b. Remove the domain resources by using the sample delete-weblogic-domain-resources script.
 $ kubernetes/samples/scripts/delete-domain/delete-weblogic-domain-resources.sh -d sample-domain1  c. Use kubectl to confirm that the server pods and domain resource are gone:
-$ kubectl get pods -n sample-domain1-ns $ kubectl get domains -n sample-domain1-ns  8. Remove the domain namespace. a. Configure the Traefik load balancer to stop managing the Ingresses in the domain namespace:</description>
+$ kubectl get pods -n sample-domain1-ns $ kubectl get domains -n sample-domain1-ns  Remove the domain namespace. a. Configure the Traefik load balancer to stop managing the Ingresses in the domain namespace:</description>
     </item>
     
     <item>
