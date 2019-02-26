@@ -2,7 +2,7 @@
 title: "Install the operator and load balancer"
 date: 2019-02-22T15:44:42-05:00
 draft: false
-weight: 5
+weight: 4
 ---
 
 ##### Grant the Helm service account the `cluster-admin` role.

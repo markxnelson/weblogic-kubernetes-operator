@@ -6,8 +6,8 @@ chapter = true
 pre = "<b>2. </b>"
 +++
 
-### Chapter 2
+
 
 # User Guide
 
-Lorem Ipsum.
+The User Guide provides detailed information about all aspects of using the operator.

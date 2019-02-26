@@ -103,7 +103,7 @@ e.	To confirm that the load balancer noticed the new Ingress and is successfully
 
 ```bash
 $ kubectl get po -n sample-domain1-ns -o wide
-TODO SOMETHING MISSING 
+TODO SOMETHING MISSING
 
 $ curl -v -H 'host: sample-domain1.org' http://your.server.com:30305/weblogic/ready
 * About to connect() to your.server.com port 30305 (#0)

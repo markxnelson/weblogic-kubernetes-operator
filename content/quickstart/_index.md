@@ -10,4 +10,4 @@ pre = "<b>1. </b>"
 
 # Quick Start
 
-This section provides a simple tutorial to get up an running quickly.
+This section provides a simple tutorial to get you up an running quickly.
