@@ -68,11 +68,6 @@
   </url>
   
   <url>
-    <loc>/weblogic-kubernetes-operator/userguide/prepare/load-balance/</loc>
-    <lastmod>2019-02-23T16:40:54-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/weblogic-kubernetes-operator/reference/javadoc/</loc>
     <lastmod>2019-02-22T16:17:01-05:00</lastmod>
   </url>
@@ -158,8 +153,8 @@
   </url>
   
   <url>
-    <loc>/weblogic-kubernetes-operator/userguide/prepare/configure-elasticsearch/</loc>
-    <lastmod>2019-02-23T16:40:54-05:00</lastmod>
+    <loc>/weblogic-kubernetes-operator/userguide/prepare/</loc>
+    <lastmod>2019-02-23T16:43:10-05:00</lastmod>
   </url>
   
   <url>
@@ -170,6 +165,11 @@
   <url>
     <loc>/weblogic-kubernetes-operator/quickstart/prerequisites/</loc>
     <lastmod>2019-02-22T15:44:42-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/weblogic-kubernetes-operator/userguide/</loc>
+    <lastmod>2019-02-22T15:27:48-05:00</lastmod>
   </url>
   
   <url>
@@ -218,8 +218,8 @@
   </url>
   
   <url>
-    <loc>/weblogic-kubernetes-operator/userguide/prepare/</loc>
-    <lastmod>2019-02-23T16:43:10-05:00</lastmod>
+    <loc>/weblogic-kubernetes-operator/userguide/managing-operators/</loc>
+    <lastmod>2019-02-23T16:43:38-05:00</lastmod>
   </url>
   
   <url>
@@ -230,11 +230,6 @@
   <url>
     <loc>/weblogic-kubernetes-operator/samples/</loc>
     <lastmod>2019-02-22T15:28:03-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/weblogic-kubernetes-operator/userguide/</loc>
-    <lastmod>2019-02-22T15:27:48-05:00</lastmod>
   </url>
   
   <url>
@@ -280,11 +275,6 @@
   <url>
     <loc>/weblogic-kubernetes-operator/userguide/managing-domains/</loc>
     <lastmod>2019-02-23T16:43:45-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/weblogic-kubernetes-operator/userguide/managing-operators/</loc>
-    <lastmod>2019-02-23T16:43:38-05:00</lastmod>
   </url>
   
   <url>

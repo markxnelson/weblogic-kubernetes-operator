@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Using the Operator on WebLogic Kubernetes Operator</title>
+    <title>Use the Operator on WebLogic Kubernetes Operator</title>
     <link>/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/</link>
-    <description>Recent content in Using the Operator on WebLogic Kubernetes Operator</description>
+    <description>Recent content in Use the Operator on WebLogic Kubernetes Operator</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 23 Feb 2019 17:08:18 -0500</lastBuildDate>

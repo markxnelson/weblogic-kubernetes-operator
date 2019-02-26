@@ -11,7 +11,7 @@
 	"title": "Credentials",
 	"tags": [],
 	"description": "",
-	"content": " Chapter 1 Credentials Lorem Ipsum.\n"
+	"content": "Lorem Ipsum.\n"
 },
 {
 	"uri": "/weblogic-kubernetes-operator/developerguide/requirements/",
@@ -29,10 +29,10 @@
 },
 {
 	"uri": "/weblogic-kubernetes-operator/samples/simple/",
-	"title": "Simple",
+	"title": "Simple Samples",
 	"tags": [],
 	"description": "",
-	"content": " Chapter 1 Simple Samples This section provides details about simple samples for individual tasks. The samples in this section are intended to be modified before production use.\n"
+	"content": "This section provides details about simple samples for individual tasks. The samples in this section are intended to be modified before production use.\n"
 },
 {
 	"uri": "/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/using-kubectl/",
@@ -60,28 +60,28 @@
 	"title": "Installation",
 	"tags": [],
 	"description": "",
-	"content": " Chapter 1 Installation Lorem Ipsum.\n"
+	"content": " Install the operator Lorem Ipsum.\n"
 },
 {
 	"uri": "/weblogic-kubernetes-operator/userguide/managing-domains/integrations/exporting-metrics/",
 	"title": "Exporting Metrics",
 	"tags": [],
 	"description": "",
-	"content": " Chapter 1 Exporting Metrics Lorem Ipsum.\n"
+	"content": "Lorem Ipsum.\n"
 },
 {
 	"uri": "/weblogic-kubernetes-operator/userguide/managing-domains/domain-in-image/base-images/",
 	"title": "Base Images",
 	"tags": [],
 	"description": "",
-	"content": " Chapter 1 Base Images Lorem Ipsum.\n"
+	"content": "Lorem Ipsum.\n"
 },
 {
 	"uri": "/weblogic-kubernetes-operator/userguide/managing-domains/choosing-a-model/",
 	"title": "Choosing a Model",
 	"tags": [],
 	"description": "",
-	"content": " Chapter 1 Choosing a model Lorem Ipsum.\n"
+	"content": "Lorem Ipsum.\n"
 },
 {
 	"uri": "/weblogic-kubernetes-operator/userguide/introduction/introduction/",
@@ -89,13 +89,6 @@
 	"tags": [],
 	"description": "",
 	"content": " An operator is an application-specific controller that extends Kubernetes to create, configure, and manage instances of complex applications. The Oracle WebLogic Server Kubernetes Operator follows the standard Kubernetes operator pattern, and simplifies the management and operation of WebLogic domains and deployments.\nYou can have one or more operators in your Kubernetes cluster that manage one or more WebLogic domains each. We provide a Helm chart to manage the installation and configuration of the operator. Detailed instructions are available here.\nPrerequisites  Kubernetes 1.10.11+, 1.11.5+, and 1.12.3+ (check with kubectl version). Flannel networking v0.9.1-amd64 (check with docker images | grep flannel). Docker 18.03.1.ce (check with docker version). Helm 2.8.2+ (check with helm version). Oracle WebLogic Server 12.2.1.3.0 with patch 29135930.  The existing WebLogic Docker image, store/oracle/weblogic:12.2.1.3, was updated on January 17, 2019, and has all the necessary patches applied. A docker pull is required if you pulled the image prior to that date.  You must have the cluster-admin role to install the operator.  Operator Docker image You can find the operator image in Docker Hub.\n"
-},
-{
-	"uri": "/weblogic-kubernetes-operator/userguide/prepare/load-balance/",
-	"title": "Load balancing",
-	"tags": [],
-	"description": "",
-	"content": " Load balancing with an Ingress controller or a web server You can choose a load balancer provider for your WebLogic domains running in a Kubernetes cluster. Please refer to the WebLogic Operator Load Balancer Samples for information about the current capabilities and setup instructions for each of the supported load balancers.\n"
 },
 {
 	"uri": "/weblogic-kubernetes-operator/reference/javadoc/",
@@ -151,14 +144,14 @@
 	"title": "Storage",
 	"tags": [],
 	"description": "",
-	"content": " Chapter 2 Storage Lorem Ipsum.\n"
+	"content": "Lorem Ipsum.\n"
 },
 {
 	"uri": "/weblogic-kubernetes-operator/samples/production/",
-	"title": "Production",
+	"title": "Production Samples",
 	"tags": [],
 	"description": "",
-	"content": " Chapter 2 Production Samples The samples in this section are intended to help you create a production deployment of WebLogic on Kubernetes.\n"
+	"content": "The samples in this section are intended to help you create a production deployment of WebLogic on Kubernetes.\n"
 },
 {
 	"uri": "/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/the-rest-api/",
@@ -169,10 +162,10 @@
 },
 {
 	"uri": "/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/",
-	"title": "Using the Operator",
+	"title": "Use the Operator",
 	"tags": [],
 	"description": "",
-	"content": " Chapter 2 Using the Operator Lorem Ipsum.\n"
+	"content": " Use the Operator Lorem Ipsum.\n"
 },
 {
 	"uri": "/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/scaling/",
@@ -193,21 +186,21 @@
 	"title": "Exporting Logs",
 	"tags": [],
 	"description": "",
-	"content": " Chapter 2 Exporting Logs Lorem Ipsum.\n"
+	"content": "Lorem Ipsum.\n"
 },
 {
 	"uri": "/weblogic-kubernetes-operator/userguide/managing-domains/domain-in-image/patching/",
 	"title": "Patching",
 	"tags": [],
 	"description": "",
-	"content": " Chapter 2 Patching Lorem Ipsum.\n"
+	"content": "Lorem Ipsum.\n"
 },
 {
 	"uri": "/weblogic-kubernetes-operator/userguide/managing-domains/persistent-storage/",
 	"title": "Persistent Storage",
 	"tags": [],
 	"description": "",
-	"content": " Chapter 2 Persistent Storage Lorem Ipsum.\n"
+	"content": "Lorem Ipsum.\n"
 },
 {
 	"uri": "/weblogic-kubernetes-operator/userguide/introduction/",
@@ -217,11 +210,11 @@
 	"content": " This document provides detailed user information for the Oracle WebLogic Server Kubernetes Operator. It provides instructions on how to install the operator in your Kubernetes cluster and how to use it to manage WebLogic domains.\nIf you are looking for information about how the operator is designed, implemented, built, and such, then you should refer to the Developer guide.\nImportant terms This documentation uses several important terms which are intended to have a specific meaning.\n   Term Definition     Cluster Because this term is ambiguous, it will be prefixed to indicate which type of cluster is meant. A WebLogic cluster is a group of Managed Servers that together host some application or component and which are able to share load and state between them. A Kubernetes cluster is a group of machines (“nodes”) that all host Kubernetes resources, like pods and services, and which appear to the external user as a single entity. If the term “cluster” is not prefixed, it should be assumed to mean a Kubernetes cluster.   Domain A WebLogic domain is a group of related applications and resources along with the configuration information necessary to run them.   Ingress A Kubernetes Ingress provides access to applications and services in a Kubernetes environment to external clients. An Ingress may also provide additional features like load balancing.   Namespace A Kubernetes namespace is a named entity that can be used to group together related objects, for example, pods and services.   Operator A Kubernetes operator is software that performs management of complex applications.   Pod A Kubernetes pod contains one or more containers and is the object that provides the execution environment for an instance of an application component, such as a web server or database.   Job A Kubernetes job is a type of controller that creates one or more pods that run to completion to complete a specific task.   Secret A Kubernetes secret is a named object that can store secret information like user names, passwords, X.509 certificates, or any other arbitrary data.   Service A Kubernetes service exposes application endpoints inside a pod to other pods, or outside the Kubernetes cluster. A service may also provide additional features like load balancing.    Additional reading Before using the operator, you might want to read the design philosophy to develop an understanding of the operator\u0026rsquo;s design, and the architectural overview to understand its architecture, including how WebLogic domains are deployed in Kubernetes using the operator. Also, worth reading are the details of the Kubernetes RBAC definitions required by the operator.\n"
 },
 {
-	"uri": "/weblogic-kubernetes-operator/userguide/prepare/configure-elasticsearch/",
-	"title": "Configure Elasticsearch",
+	"uri": "/weblogic-kubernetes-operator/userguide/prepare/",
+	"title": "Prepare your environment",
 	"tags": [],
 	"description": "",
-	"content": " Configure Kibana and Elasticsearch You can send the operator logs to Elasticsearch, to be displayed in Kibana. Use this sample script to configure Elasticsearch and Kibana deployments and services.\n"
+	"content": " Set up your Kubernetes cluster If you need help setting up a Kubernetes environment, check our cheat sheet.\nAfter creating Kubernetes clusters, you can optionally:\n Create load balancers to direct traffic to backend domains. Configure Kibana and Elasticsearch for your operator logs.  Load balancing with an Ingress controller or a web server You can choose a load balancer provider for your WebLogic domains running in a Kubernetes cluster. Please refer to the WebLogic Operator Load Balancer Samples for information about the current capabilities and setup instructions for each of the supported load balancers.\nConfiguring Kibana and Elasticsearch You can send the operator logs to Elasticsearch, to be displayed in Kibana. Use this sample script to configure Elasticsearch and Kibana deployments and services.\n"
 },
 {
 	"uri": "/weblogic-kubernetes-operator/reference/swagger/",
@@ -236,6 +229,13 @@
 	"tags": [],
 	"description": "",
 	"content": "For this exercise, you’ll need a Kubernetes cluster. If you need help setting one up, check out our cheat sheet. This guide assumes a single node cluster.\nThe operator uses Helm to create and deploy the necessary resources and then run the operator in a Kubernetes cluster. For Helm installation and usage information, see Install Helm and Tiller.\nYou should clone this repository to your local machine so that you have access to the various sample files mentioned throughout this guide:\n$ git clone https://github.com/oracle/weblogic-kubernetes-operator  "
+},
+{
+	"uri": "/weblogic-kubernetes-operator/userguide/",
+	"title": "User Guide",
+	"tags": [],
+	"description": "",
+	"content": " User Guide The User Guide provides detailed information about all aspects of using the operator.\n"
 },
 {
 	"uri": "/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/restarting/",
@@ -270,7 +270,7 @@
 	"title": "Domains",
 	"tags": [],
 	"description": "",
-	"content": " Chapter 3 Domains Lorem Ipsum.\n"
+	"content": "Lorem Ipsum.\n"
 },
 {
 	"uri": "/weblogic-kubernetes-operator/developerguide/building/",
@@ -291,21 +291,21 @@
 	"title": "Domain Images",
 	"tags": [],
 	"description": "",
-	"content": " Chapter 3 Domain Images Lorem Ipsum.\n"
+	"content": "Lorem Ipsum.\n"
 },
 {
 	"uri": "/weblogic-kubernetes-operator/userguide/managing-domains/domain-in-image/",
 	"title": "Domain in Image",
 	"tags": [],
 	"description": "",
-	"content": " Chapter 3 Domain in Image Lorem Ipsum.\n"
+	"content": "Lorem Ipsum.\n"
 },
 {
-	"uri": "/weblogic-kubernetes-operator/userguide/prepare/",
-	"title": "Prepare your environment",
+	"uri": "/weblogic-kubernetes-operator/userguide/managing-operators/",
+	"title": "Managing Operators",
 	"tags": [],
 	"description": "",
-	"content": " Set up your Kubernetes cluster If you need help setting up a Kubernetes environment, check our cheat sheet.\nAfter creating Kubernetes clusters, you can optionally: * Create load balancers to direct traffic to backend domains. * Configure Kibana and Elasticsearch for your operator logs.\n"
+	"content": "Lorem Ipsum.\n"
 },
 {
 	"uri": "/weblogic-kubernetes-operator/quickstart/get-images/",
@@ -319,14 +319,7 @@
 	"title": "Samples",
 	"tags": [],
 	"description": "",
-	"content": " Chapter 3 Samples Lorem Ipsum.\n"
-},
-{
-	"uri": "/weblogic-kubernetes-operator/userguide/",
-	"title": "User Guide",
-	"tags": [],
-	"description": "",
-	"content": " User Guide The User Guide provides detailed information about all aspects of using the operator.\n"
+	"content": " Samples Lorem Ipsum.\n"
 },
 {
 	"uri": "/weblogic-kubernetes-operator/userguide/introduction/design/",
@@ -347,7 +340,7 @@
 	"title": "REST APIs",
 	"tags": [],
 	"description": "",
-	"content": " Chapter 4 REST APIs Lorem Ipsum.\n"
+	"content": "Lorem Ipsum.\n"
 },
 {
 	"uri": "/weblogic-kubernetes-operator/developerguide/integration-tests/",
@@ -382,21 +375,14 @@
 	"title": "Domain Lifecycle",
 	"tags": [],
 	"description": "",
-	"content": " Chapter 4 Domain Lifecycle Lorem Ipsum.\n"
+	"content": "Lorem Ipsum.\n"
 },
 {
 	"uri": "/weblogic-kubernetes-operator/userguide/managing-domains/",
-	"title": "Managing Domains",
+	"title": "Manage Domains",
 	"tags": [],
 	"description": "",
-	"content": " Chapter 3 Managing Domains Lorem Ipsum.\n"
-},
-{
-	"uri": "/weblogic-kubernetes-operator/userguide/managing-operators/",
-	"title": "Managing Operators",
-	"tags": [],
-	"description": "",
-	"content": " Managing Operators Lorem Ipsum.\n"
+	"content": "Lorem Ipsum.\n"
 },
 {
 	"uri": "/weblogic-kubernetes-operator/quickstart/install/",
@@ -424,14 +410,14 @@
 	"title": "Accessing the Domain",
 	"tags": [],
 	"description": "",
-	"content": " Chapter 5 Accessing the Domain Lorem Ipsum.\n"
+	"content": "Lorem Ipsum.\n"
 },
 {
 	"uri": "/weblogic-kubernetes-operator/samples/simple/ingress/",
 	"title": "Ingress",
 	"tags": [],
 	"description": "",
-	"content": " Chapter 5 Ingress Lorem Ipsum.\n"
+	"content": "Lorem Ipsum.\n"
 },
 {
 	"uri": "/weblogic-kubernetes-operator/developerguide/coding-standards/",
@@ -459,7 +445,7 @@
 	"title": "Ingress",
 	"tags": [],
 	"description": "",
-	"content": " Chapter 6 Ingress Lorem Ipsum.\n"
+	"content": "Lorem Ipsum.\n"
 },
 {
 	"uri": "/weblogic-kubernetes-operator/security/",
@@ -473,7 +459,7 @@
 	"title": "Elastic Stack",
 	"tags": [],
 	"description": "",
-	"content": " Chapter 6 Elastic Stack Lorem Ipsum.\n"
+	"content": "Lorem Ipsum.\n"
 },
 {
 	"uri": "/weblogic-kubernetes-operator/developerguide/code-structure/",
@@ -501,7 +487,7 @@
 	"title": "Integrations",
 	"tags": [],
 	"description": "",
-	"content": " Chapter 7 Integrations Lorem Ipsum.\n"
+	"content": "Lorem Ipsum.\n"
 },
 {
 	"uri": "/weblogic-kubernetes-operator/faq/",

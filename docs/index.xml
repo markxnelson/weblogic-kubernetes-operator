@@ -78,15 +78,6 @@ You can have one or more operators in your Kubernetes cluster that manage one or
     </item>
     
     <item>
-      <title>Load balancing</title>
-      <link>/weblogic-kubernetes-operator/userguide/prepare/load-balance/</link>
-      <pubDate>Sat, 23 Feb 2019 16:40:54 -0500</pubDate>
-      
-      <guid>/weblogic-kubernetes-operator/userguide/prepare/load-balance/</guid>
-      <description>Load balancing with an Ingress controller or a web server You can choose a load balancer provider for your WebLogic domains running in a Kubernetes cluster. Please refer to the WebLogic Operator Load Balancer Samples for information about the current capabilities and setup instructions for each of the supported load balancers.</description>
-    </item>
-    
-    <item>
       <title>Javadoc</title>
       <link>/weblogic-kubernetes-operator/reference/javadoc/</link>
       <pubDate>Fri, 22 Feb 2019 16:17:01 -0500</pubDate>
@@ -170,15 +161,6 @@ WebLogic clusters as backends of an Ingress In an Ingress object, a list of back
       
       <guid>/weblogic-kubernetes-operator/userguide/managing-domains/integrations/exporting-metrics/prometheus/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>Configure Elasticsearch</title>
-      <link>/weblogic-kubernetes-operator/userguide/prepare/configure-elasticsearch/</link>
-      <pubDate>Sat, 23 Feb 2019 16:40:54 -0500</pubDate>
-      
-      <guid>/weblogic-kubernetes-operator/userguide/prepare/configure-elasticsearch/</guid>
-      <description>Configure Kibana and Elasticsearch You can send the operator logs to Elasticsearch, to be displayed in Kibana. Use this sample script to configure Elasticsearch and Kibana deployments and services.</description>
     </item>
     
     <item>
