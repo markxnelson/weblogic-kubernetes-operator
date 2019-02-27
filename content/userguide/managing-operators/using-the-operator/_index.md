@@ -320,15 +320,11 @@ Error: release op2 failed: secrets "weblogic-operator-secrets" already exists
 
 Both the previous and new release own the resources created by the previous operator.
 
-You can't modify it to change the namespace (because `helm upgrade` doesn't let you change the namespace).
-
-You can't fix it by deleting this release because it removes your previous operator's resources.
-
-You can't fix it by rolling back this release because it is not in the `DEPLOYED` state.
-
-You can't fix it by deleting the previous release because it removes the operator's resources too.
-
-All you can do is delete both operator releases and reinstall the original operator.
+* You can't modify it to change the namespace (because `helm upgrade` doesn't let you change the namespace).
+* You can't fix it by deleting this release because it removes your previous operator's resources.
+* You can't fix it by rolling back this release because it is not in the `DEPLOYED` state.
+* You can't fix it by deleting the previous release because it removes the operator's resources too.
+* All you can do is delete both operator releases and reinstall the original operator.
 See https://github.com/helm/helm/issues/2349
 
 #### Installing an operator and telling it to manage a domain namespace that another operator is already managing
@@ -353,9 +349,8 @@ The `helm upgrade` succeeds, and silently adopts the resources the first operato
 
 For example, if you delete this release, then the first operator will get messed up because the role binding it needs is gone. The big problem is that you don't get a warning, so you don't know that there's a problem to fix.
 
-This can be fixed by just upgrading the Helm release.
-
-This may also be fixed by rolling back the Helm release.
+* This can be fixed by just upgrading the Helm release.
+* This may also be fixed by rolling back the Helm release.
 
 #### Installing an operator and telling it to use the same external REST port number as another operator
 
@@ -378,8 +373,8 @@ $ helm upgrade --no-hooks --values o23.yaml op2 kubernetes/charts/weblogic-opera
 Error: UPGRADE FAILED: Service "external-weblogic-operator-svc" is invalid: spec.ports[0].nodePort: Invalid value: 31023: provided port is already allocated
 ```
 
-You can fix this by upgrading the Helm release (to fix the port number).
-You can also fix this by rolling back the Helm release.
+* You can fix this by upgrading the Helm release (to fix the port number).
+* You can also fix this by rolling back the Helm release.
 
 #### Installing an operator and telling it to use a service account that doesn't exist
 

@@ -253,7 +253,7 @@ Set `restartVersion` at the `managedServer` level to a new value.
          restartVersion: "v1"
        ...
 ```
-### Full domain restarts
+#### Full domain restarts
 
 To do a full domain restart, first shut down all of the domain's servers (Administration and Managed Servers), taking the domain out of service,
 then restart them.  Unlike rolling restarts, the operator cannot detect and initiate a full domain restart; you must always manually initiate it.

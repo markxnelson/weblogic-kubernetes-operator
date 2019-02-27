@@ -12,17 +12,17 @@
     <title>Use the Operator :: WebLogic Kubernetes Operator</title>
 
     
-    <link href="/weblogic-kubernetes-operator/css/nucleus.css?1551295438" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/fontawesome-all.min.css?1551295438" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/hybrid.css?1551295438" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/featherlight.min.css?1551295438" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/perfect-scrollbar.min.css?1551295438" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/auto-complete.css?1551295438" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/theme.css?1551295438" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/hugo-theme.css?1551295438" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/nucleus.css?1551304083" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/fontawesome-all.min.css?1551304083" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/hybrid.css?1551304083" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/featherlight.min.css?1551304083" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/perfect-scrollbar.min.css?1551304083" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/auto-complete.css?1551304083" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/theme.css?1551304083" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/hugo-theme.css?1551304083" rel="stylesheet">
     
 
-    <script src="/weblogic-kubernetes-operator/js/jquery-2.x.min.js?1551295438"></script>
+    <script src="/weblogic-kubernetes-operator/js/jquery-2.x.min.js?1551304083"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/lunr.min.js?1551295438"></script>
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/auto-complete.js?1551295438"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/lunr.min.js?1551304083"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/auto-complete.js?1551304083"></script>
 <script type="text/javascript">
     
         var baseurl = "\/weblogic-kubernetes-operator\/";
     
 </script>
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/search.js?1551295438"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/search.js?1551304083"></script>
 
     
   </div>
@@ -639,6 +639,25 @@
       
               
     </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/weblogic-kubernetes-operator/userguide/managing-domains/prepare/" title="Prepare to run a domain" class="dd-item ">
+        <a href="/weblogic-kubernetes-operator/userguide/managing-domains/prepare/">
+        <b> </b>Prepare to run a domain
+        
+        </a>
+    </li>
+     
   
  
 
@@ -2448,16 +2467,14 @@ Error: release op2 failed: secrets &quot;weblogic-operator-secrets&quot; already
 
 <p>Both the previous and new release own the resources created by the previous operator.</p>
 
-<p>You can&rsquo;t modify it to change the namespace (because <code>helm upgrade</code> doesn&rsquo;t let you change the namespace).</p>
-
-<p>You can&rsquo;t fix it by deleting this release because it removes your previous operator&rsquo;s resources.</p>
-
-<p>You can&rsquo;t fix it by rolling back this release because it is not in the <code>DEPLOYED</code> state.</p>
-
-<p>You can&rsquo;t fix it by deleting the previous release because it removes the operator&rsquo;s resources too.</p>
-
-<p>All you can do is delete both operator releases and reinstall the original operator.
-See <a href="https://github.com/helm/helm/issues/2349">https://github.com/helm/helm/issues/2349</a></p>
+<ul>
+<li>You can&rsquo;t modify it to change the namespace (because <code>helm upgrade</code> doesn&rsquo;t let you change the namespace).</li>
+<li>You can&rsquo;t fix it by deleting this release because it removes your previous operator&rsquo;s resources.</li>
+<li>You can&rsquo;t fix it by rolling back this release because it is not in the <code>DEPLOYED</code> state.</li>
+<li>You can&rsquo;t fix it by deleting the previous release because it removes the operator&rsquo;s resources too.</li>
+<li>All you can do is delete both operator releases and reinstall the original operator.
+See <a href="https://github.com/helm/helm/issues/2349">https://github.com/helm/helm/issues/2349</a></li>
+</ul>
 
 <h4 id="installing-an-operator-and-telling-it-to-manage-a-domain-namespace-that-another-operator-is-already-managing">Installing an operator and telling it to manage a domain namespace that another operator is already managing</h4>
 
@@ -2489,9 +2506,10 @@ Error: release op2 failed: rolebindings.rbac.authorization.k8s.io &quot;weblogic
 
 <p>For example, if you delete this release, then the first operator will get messed up because the role binding it needs is gone. The big problem is that you don&rsquo;t get a warning, so you don&rsquo;t know that there&rsquo;s a problem to fix.</p>
 
-<p>This can be fixed by just upgrading the Helm release.</p>
-
-<p>This may also be fixed by rolling back the Helm release.</p>
+<ul>
+<li>This can be fixed by just upgrading the Helm release.</li>
+<li>This may also be fixed by rolling back the Helm release.</li>
+</ul>
 
 <h4 id="installing-an-operator-and-telling-it-to-use-the-same-external-rest-port-number-as-another-operator">Installing an operator and telling it to use the same external REST port number as another operator</h4>
 
@@ -2516,8 +2534,10 @@ Error: release op2 failed: Service &quot;external-weblogic-operator-svc&quot; is
 Error: UPGRADE FAILED: Service &quot;external-weblogic-operator-svc&quot; is invalid: spec.ports[0].nodePort: Invalid value: 31023: provided port is already allocated
 </code></pre>
 
-<p>You can fix this by upgrading the Helm release (to fix the port number).
-You can also fix this by rolling back the Helm release.</p>
+<ul>
+<li>You can fix this by upgrading the Helm release (to fix the port number).</li>
+<li>You can also fix this by rolling back the Helm release.</li>
+</ul>
 
 <h4 id="installing-an-operator-and-telling-it-to-use-a-service-account-that-doesn-t-exist">Installing an operator and telling it to use a service account that doesn&rsquo;t exist</h4>
 
@@ -3022,6 +3042,22 @@ Error: UPGRADE FAILED: failed to create resource: namespaces &quot;myuser-d2-ns&
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -3971,20 +4007,20 @@ Error: UPGRADE FAILED: failed to create resource: namespaces &quot;myuser-d2-ns&
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/weblogic-kubernetes-operator/js/clipboard.min.js?1551295438"></script>
-    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.min.js?1551295438"></script>
-    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.jquery.min.js?1551295438"></script>
-    <script src="/weblogic-kubernetes-operator/js/jquery.sticky.js?1551295438"></script>
-    <script src="/weblogic-kubernetes-operator/js/featherlight.min.js?1551295438"></script>
-    <script src="/weblogic-kubernetes-operator/js/html5shiv-printshiv.min.js?1551295438"></script>
-    <script src="/weblogic-kubernetes-operator/js/highlight.pack.js?1551295438"></script>
+    <script src="/weblogic-kubernetes-operator/js/clipboard.min.js?1551304083"></script>
+    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.min.js?1551304083"></script>
+    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.jquery.min.js?1551304083"></script>
+    <script src="/weblogic-kubernetes-operator/js/jquery.sticky.js?1551304083"></script>
+    <script src="/weblogic-kubernetes-operator/js/featherlight.min.js?1551304083"></script>
+    <script src="/weblogic-kubernetes-operator/js/html5shiv-printshiv.min.js?1551304083"></script>
+    <script src="/weblogic-kubernetes-operator/js/highlight.pack.js?1551304083"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/weblogic-kubernetes-operator/js/modernizr.custom.71422.js?1551295438"></script>
-    <script src="/weblogic-kubernetes-operator/js/learn.js?1551295438"></script>
-    <script src="/weblogic-kubernetes-operator/js/hugo-learn.js?1551295438"></script>
+    <script src="/weblogic-kubernetes-operator/js/modernizr.custom.71422.js?1551304083"></script>
+    <script src="/weblogic-kubernetes-operator/js/learn.js?1551304083"></script>
+    <script src="/weblogic-kubernetes-operator/js/hugo-learn.js?1551304083"></script>
 
-    <link href="/weblogic-kubernetes-operator/mermaid/mermaid.css?1551295438" type="text/css" rel="stylesheet" />
-    <script src="/weblogic-kubernetes-operator/mermaid/mermaid.js?1551295438"></script>
+    <link href="/weblogic-kubernetes-operator/mermaid/mermaid.css?1551304083" type="text/css" rel="stylesheet" />
+    <script src="/weblogic-kubernetes-operator/mermaid/mermaid.js?1551304083"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

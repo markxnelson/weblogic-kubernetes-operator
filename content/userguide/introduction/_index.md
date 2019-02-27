@@ -9,7 +9,7 @@ pre = "<b> </b>"
 
 
 
-The User Guide provides detailed user information for the Oracle WebLogic
+This guide provides detailed user information for the Oracle WebLogic
 Server Kubernetes Operator.  It provides instructions on how to install the operator in your
 Kubernetes cluster and how to use it to manage WebLogic domains.  
 

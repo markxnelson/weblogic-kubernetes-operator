@@ -63,6 +63,11 @@
   </url>
   
   <url>
+    <loc>/weblogic-kubernetes-operator/userguide/managing-domains/prepare/</loc>
+    <lastmod>2019-02-23T16:43:45-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/weblogic-kubernetes-operator/userguide/overview/prepare/</loc>
     <lastmod>2019-02-23T16:43:10-05:00</lastmod>
   </url>
