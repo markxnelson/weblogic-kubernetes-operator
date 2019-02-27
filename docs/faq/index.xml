@@ -18,8 +18,8 @@
       
       <guid>/weblogic-kubernetes-operator/faq/samplepage/</guid>
       <description>Here is some neat stuff we can do We can draw decision diagrams:
-graph LR; A[Install Operator] --|Now decide| C{Domain Type} C --|Persistent| D[Create persistent domain] C --|Domain in Image| E[Create domain image]  And some more And have expanding more detail thingies
-  Like this   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</description>
+graph LR;A[Install Operator] --|Now decide| C{Domain Type}C --|Persistent| D[Create persistent domain]C --|Domain in Image| E[Create domain image]And some more And have expanding more detail thingies
+Like thisLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</description>
     </item>
     
   </channel>

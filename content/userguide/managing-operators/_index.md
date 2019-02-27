@@ -49,14 +49,17 @@ subjects:
 EOF
 ```
 
-**Note** Oracle strongly recommends that you create a new service account to be used exclusively by Tiller and grant
+{{% notice note %}}
+Oracle strongly recommends that you create a new service account to be used exclusively by Tiller and grant
 `cluster-admin` to that service account, rather than using the `default` one.
+{{% /notice %}}
 
 ### Operator's Helm chart configuration
 
 The operator Helm chart is pre-configured with default values for the configuration of the operator.
 
 You can override these values by doing one of the following:
+
 - Creating a custom YAML file with only the values to be overridden, and specifying the `--value` option on the Helm command line.
 - Overriding individual values directly on the Helm command line, using the `--set` option.
 

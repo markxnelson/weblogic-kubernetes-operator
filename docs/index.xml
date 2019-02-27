@@ -104,8 +104,8 @@ You can have one or more operators in your Kubernetes cluster that manage one or
       
       <guid>/weblogic-kubernetes-operator/faq/samplepage/</guid>
       <description>Here is some neat stuff we can do We can draw decision diagrams:
-graph LR; A[Install Operator] --|Now decide| C{Domain Type} C --|Persistent| D[Create persistent domain] C --|Domain in Image| E[Create domain image]  And some more And have expanding more detail thingies
-  Like this   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</description>
+graph LR;A[Install Operator] --|Now decide| C{Domain Type}C --|Persistent| D[Create persistent domain]C --|Domain in Image| E[Create domain image]And some more And have expanding more detail thingies
+Like thisLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</description>
     </item>
     
     <item>
@@ -162,7 +162,9 @@ WebLogic clusters as backends of an Ingress In an Ingress object, a list of back
       <pubDate>Sat, 23 Feb 2019 17:08:32 -0500</pubDate>
       
       <guid>/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/the-rest-api/</guid>
-      <description></description>
+      <description>Use the operator&amp;rsquo;s REST services The operator provides a REST server which can be used to get a list of WebLogic domains and clusters and to initiate scaling operations. Swagger documentation for the REST API is available here.
+You can access most of the REST services using GET, for example:
+ To obtain a list of domains, send a GET request to the URL /operator/latest/domains To obtain a list of clusters in a domain, send a GET request to the URL /operator/latest/domains/&amp;lt;domainUID&amp;gt;/clusters  All of the REST services require authentication.</description>
     </item>
     
     <item>
@@ -269,7 +271,10 @@ Contributions must conform to coding and formatting standards.</description>
       <pubDate>Sat, 23 Feb 2019 17:08:54 -0500</pubDate>
       
       <guid>/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/lifecycle/</guid>
-      <description></description>
+      <description>This document describes how you can start, stop, and restart the domain&amp;rsquo;s servers.
+Overview There are properties on the domain resource that specify which servers should be running and which servers should be restarted.
+To start, stop, or restart servers, modify these properties on the domain resource (for example, by using kubectl or the Kubernetes REST API). The operator will notice the changes and apply them.
+Starting and stopping servers The serverStartPolicy property on the domain resource controls which servers should be running.</description>
     </item>
     
     <item>
