@@ -409,7 +409,7 @@ After this, the operator starts watches for changes to Domain resources and any 
     </item>
     
     <item>
-      <title>Backwards Compatibility</title>
+      <title>Backward Compatibility</title>
       <link>/weblogic-kubernetes-operator/developerguide/backwards-compatibility/</link>
       <pubDate>Sat, 23 Feb 2019 17:26:09 -0500</pubDate>
       

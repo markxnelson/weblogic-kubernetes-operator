@@ -10,4 +10,4 @@ pre = "<b>1. </b>"
 
 # Quick Start
 
-The Quick Start guide provides a simple tutorial to get the operator up and running quickly.
+The Quick Start guide provides a simple tutorial to help you get the operator up and running quickly.
