@@ -64,7 +64,7 @@
 },
 {
 	"uri": "/weblogic-kubernetes-operator/userguide/managing-domains/integrations/exporting-metrics/",
-	"title": "Exporting Metrics",
+	"title": "Export Metrics",
 	"tags": [],
 	"description": "",
 	"content": "Lorem Ipsum.\n"
@@ -78,7 +78,7 @@
 },
 {
 	"uri": "/weblogic-kubernetes-operator/userguide/managing-domains/choosing-a-model/",
-	"title": "Choosing a Model",
+	"title": "Choose a Model",
 	"tags": [],
 	"description": "",
 	"content": "Lorem Ipsum.\n"
@@ -116,7 +116,7 @@
 	"title": "Quick Start",
 	"tags": [],
 	"description": "",
-	"content": " Quick Start This section provides a simple tutorial to get you up an running quickly.\n"
+	"content": " Quick Start The Quick Start guide provides a simple tutorial to get the operator up and running quickly.\n"
 },
 {
 	"uri": "/weblogic-kubernetes-operator/userguide/introduction/demo/",
@@ -183,7 +183,7 @@
 },
 {
 	"uri": "/weblogic-kubernetes-operator/userguide/managing-domains/integrations/exporting-logs/",
-	"title": "Exporting Logs",
+	"title": "Export Logs",
 	"tags": [],
 	"description": "",
 	"content": "Lorem Ipsum.\n"
@@ -207,7 +207,7 @@
 	"title": "Introduction",
 	"tags": [],
 	"description": "",
-	"content": " This document provides detailed user information for the Oracle WebLogic Server Kubernetes Operator. It provides instructions on how to install the operator in your Kubernetes cluster and how to use it to manage WebLogic domains.\nIf you are looking for information about how the operator is designed, implemented, built, and such, then you should refer to the Developer guide.\nImportant terms This documentation uses several important terms which are intended to have a specific meaning.\n   Term Definition     Cluster Because this term is ambiguous, it will be prefixed to indicate which type of cluster is meant. A WebLogic cluster is a group of Managed Servers that together host some application or component and which are able to share load and state between them. A Kubernetes cluster is a group of machines (“nodes”) that all host Kubernetes resources, like pods and services, and which appear to the external user as a single entity. If the term “cluster” is not prefixed, it should be assumed to mean a Kubernetes cluster.   Domain A WebLogic domain is a group of related applications and resources along with the configuration information necessary to run them.   Ingress A Kubernetes Ingress provides access to applications and services in a Kubernetes environment to external clients. An Ingress may also provide additional features like load balancing.   Namespace A Kubernetes namespace is a named entity that can be used to group together related objects, for example, pods and services.   Operator A Kubernetes operator is software that performs management of complex applications.   Pod A Kubernetes pod contains one or more containers and is the object that provides the execution environment for an instance of an application component, such as a web server or database.   Job A Kubernetes job is a type of controller that creates one or more pods that run to completion to complete a specific task.   Secret A Kubernetes secret is a named object that can store secret information like user names, passwords, X.509 certificates, or any other arbitrary data.   Service A Kubernetes service exposes application endpoints inside a pod to other pods, or outside the Kubernetes cluster. A service may also provide additional features like load balancing.    Additional reading Before using the operator, you might want to read the design philosophy to develop an understanding of the operator\u0026rsquo;s design, and the architectural overview to understand its architecture, including how WebLogic domains are deployed in Kubernetes using the operator. Also, worth reading are the details of the Kubernetes RBAC definitions required by the operator.\n"
+	"content": " The User Guide provides detailed user information for the Oracle WebLogic Server Kubernetes Operator. It provides instructions on how to install the operator in your Kubernetes cluster and how to use it to manage WebLogic domains.\nIf you are looking for information about how the operator is designed, implemented, built, and such, then you should refer to the Developer guide.\nImportant terms This documentation uses several important terms which are intended to have a specific meaning.\n   Term Definition     Cluster Because this term is ambiguous, it will be prefixed to indicate which type of cluster is meant. A WebLogic cluster is a group of Managed Servers that together host some application or component and which are able to share load and state between them. A Kubernetes cluster is a group of machines (“nodes”) that all host Kubernetes resources, like pods and services, and which appear to the external user as a single entity. If the term “cluster” is not prefixed, it should be assumed to mean a Kubernetes cluster.   Domain A WebLogic domain is a group of related applications and resources along with the configuration information necessary to run them.   Ingress A Kubernetes Ingress provides access to applications and services in a Kubernetes environment to external clients. An Ingress may also provide additional features like load balancing.   Namespace A Kubernetes namespace is a named entity that can be used to group together related objects, for example, pods and services.   Operator A Kubernetes operator is software that performs management of complex applications.   Pod A Kubernetes pod contains one or more containers and is the object that provides the execution environment for an instance of an application component, such as a web server or database.   Job A Kubernetes job is a type of controller that creates one or more pods that run to completion to complete a specific task.   Secret A Kubernetes secret is a named object that can store secret information like user names, passwords, X.509 certificates, or any other arbitrary data.   Service A Kubernetes service exposes application endpoints inside a pod to other pods, or outside the Kubernetes cluster. A service may also provide additional features like load balancing.    Additional reading Before using the operator, you might want to read the design philosophy to develop an understanding of the operator\u0026rsquo;s design, and the architectural overview to understand its architecture, including how WebLogic domains are deployed in Kubernetes using the operator. Also, worth reading are the details of the Kubernetes RBAC definitions required by the operator.\n"
 },
 {
 	"uri": "/weblogic-kubernetes-operator/userguide/prepare/",
