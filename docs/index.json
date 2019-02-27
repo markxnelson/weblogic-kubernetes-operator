@@ -140,6 +140,13 @@
 	"content": ""
 },
 {
+	"uri": "/weblogic-kubernetes-operator/security/service-accounts/",
+	"title": "Service Accounts",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "/weblogic-kubernetes-operator/samples/simple/storage/",
 	"title": "Storage",
 	"tags": [],
@@ -254,6 +261,13 @@
 {
 	"uri": "/weblogic-kubernetes-operator/userguide/managing-domains/accessing-the-domain/wlst/",
 	"title": "Using WLST",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/weblogic-kubernetes-operator/security/secrets/",
+	"title": "Secrets",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -511,11 +525,11 @@
 	"content": " 7. Remove the domain. a. Remove the domain\u0026rsquo;s Ingress by using helm:\n$ helm delete --purge sample-domain1-ingress  b. Remove the domain resources by using the sample delete-weblogic-domain-resources script.\n$ kubernetes/samples/scripts/delete-domain/delete-weblogic-domain-resources.sh -d sample-domain1  c. Use kubectl to confirm that the server pods and domain resource are gone:\n$ kubectl get pods -n sample-domain1-ns $ kubectl get domains -n sample-domain1-ns  8. Remove the domain namespace. a. Configure the Traefik load balancer to stop managing the Ingresses in the domain namespace:\n$ helm upgrade \\ --reuse-values \\ --set \u0026quot;kubernetes.namespaces={traefik}\u0026quot; \\ --wait \\ traefik-operator \\ stable/traefik  b. Configure the operator to stop managing the domain:\n$ helm upgrade \\ --reuse-values \\ --set \u0026quot;domainNamespaces={}\u0026quot; \\ --wait \\ sample-weblogic-operator \\ kubernetes/charts/weblogic-operator  c. Delete the domain namespace:\n$ kubectl delete namespace sample-domain1-ns  9. Remove the operator. a. Remove the operator:\n$ helm delete --purge sample-weblogic-operator  b. Remove the operator\u0026rsquo;s namespace:\n$ kubectl delete namespace sample-weblogic-operator-ns  10. Remove the load balancer. a. Remove the Traefik load balancer:\n$ helm delete --purge traefik-operator  b. Remove the Traefik namespace:\n$ kubectl delete namespace traefik  "
 },
 {
-	"uri": "/weblogic-kubernetes-operator/security/secrets/",
-	"title": "Secrets",
+	"uri": "/weblogic-kubernetes-operator/security/domain-security/",
+	"title": "Domain Security",
 	"tags": [],
 	"description": "",
-	"content": ""
+	"content": "TODO discuss T3 channels - recommendation is to not expose them outisde the cluster unless absolulety necessary preference is to kubectl exec into a pod and run wlst from there - or a bastion also could talk about private vpn if you need cross-domain t3 across clouds/etc.\n"
 },
 {
 	"uri": "/weblogic-kubernetes-operator/security/encryption/",
@@ -527,13 +541,6 @@
 {
 	"uri": "/weblogic-kubernetes-operator/security/certificates/",
 	"title": "Certificates",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "/weblogic-kubernetes-operator/security/service-accounts/",
-	"title": "Service Accounts",
 	"tags": [],
 	"description": "",
 	"content": ""

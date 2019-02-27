@@ -137,6 +137,15 @@ WebLogic clusters as backends of an Ingress In an Ingress object, a list of back
     </item>
     
     <item>
+      <title>Service Accounts</title>
+      <link>/weblogic-kubernetes-operator/security/service-accounts/</link>
+      <pubDate>Sat, 23 Feb 2019 17:36:12 -0500</pubDate>
+      
+      <guid>/weblogic-kubernetes-operator/security/service-accounts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>The REST API</title>
       <link>/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/the-rest-api/</link>
       <pubDate>Sat, 23 Feb 2019 17:08:32 -0500</pubDate>
@@ -219,6 +228,15 @@ One of the operator&amp;rsquo;s most important jobs is to start and stop WebLogi
       <pubDate>Sat, 23 Feb 2019 17:39:19 -0500</pubDate>
       
       <guid>/weblogic-kubernetes-operator/userguide/managing-domains/accessing-the-domain/wlst/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Secrets</title>
+      <link>/weblogic-kubernetes-operator/security/secrets/</link>
+      <pubDate>Sat, 23 Feb 2019 17:36:33 -0500</pubDate>
+      
+      <guid>/weblogic-kubernetes-operator/security/secrets/</guid>
       <description></description>
     </item>
     
@@ -418,12 +436,12 @@ $ kubectl get pods -n sample-domain1-ns $ kubectl get domains -n sample-domain1-
     </item>
     
     <item>
-      <title>Secrets</title>
-      <link>/weblogic-kubernetes-operator/security/secrets/</link>
-      <pubDate>Sat, 23 Feb 2019 17:36:33 -0500</pubDate>
+      <title>Domain Security</title>
+      <link>/weblogic-kubernetes-operator/security/domain-security/</link>
+      <pubDate>Wed, 27 Feb 2019 11:26:21 -0500</pubDate>
       
-      <guid>/weblogic-kubernetes-operator/security/secrets/</guid>
-      <description></description>
+      <guid>/weblogic-kubernetes-operator/security/domain-security/</guid>
+      <description>TODO discuss T3 channels - recommendation is to not expose them outisde the cluster unless absolulety necessary preference is to kubectl exec into a pod and run wlst from there - or a bastion also could talk about private vpn if you need cross-domain t3 across clouds/etc.</description>
     </item>
     
     <item>
@@ -441,15 +459,6 @@ $ kubectl get pods -n sample-domain1-ns $ kubectl get domains -n sample-domain1-
       <pubDate>Sat, 23 Feb 2019 17:36:18 -0500</pubDate>
       
       <guid>/weblogic-kubernetes-operator/security/certificates/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Service Accounts</title>
-      <link>/weblogic-kubernetes-operator/security/service-accounts/</link>
-      <pubDate>Sat, 23 Feb 2019 17:36:12 -0500</pubDate>
-      
-      <guid>/weblogic-kubernetes-operator/security/service-accounts/</guid>
       <description></description>
     </item>
     
