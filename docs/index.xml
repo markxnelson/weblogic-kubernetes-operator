@@ -104,8 +104,8 @@ You can have one or more operators in your Kubernetes cluster that manage one or
       
       <guid>/weblogic-kubernetes-operator/faq/samplepage/</guid>
       <description>Here is some neat stuff we can do We can draw decision diagrams:
-graph LR;A[Install Operator] --|Now decide| C{Domain Type}C --|Persistent| D[Create persistent domain]C --|Domain in Image| E[Create domain image]And some more And have expanding more detail thingies
-Like thisLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</description>
+graph LR; A[Install Operator] --|Now decide| C{Domain Type} C --|Persistent| D[Create persistent domain] C --|Domain in Image| E[Create domain image]  And some more And have expanding more detail thingies
+  Like this   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</description>
     </item>
     
     <item>
@@ -436,27 +436,9 @@ After this, the operator starts watches for changes to Domain resources and any 
     </item>
     
     <item>
-<<<<<<< HEAD
-      <title>Cleaning up</title>
-      <link>/weblogic-kubernetes-operator/quickstart/cleanup/</link>
-      <pubDate>Fri, 22 Feb 2019 15:44:42 -0500</pubDate>
-      
-      <guid>/weblogic-kubernetes-operator/quickstart/cleanup/</guid>
-      <description>7. Remove the domain. a. Remove the domain&amp;rsquo;s Ingress by using helm:
-$ helm delete --purge sample-domain1-ingress  b. Remove the domain resources by using the sample delete-weblogic-domain-resources script.
-$ kubernetes/samples/scripts/delete-domain/delete-weblogic-domain-resources.sh -d sample-domain1  c. Use kubectl to confirm that the server pods and domain resource are gone:
-$ kubectl get pods -n sample-domain1-ns $ kubectl get domains -n sample-domain1-ns  8. Remove the domain namespace. a. Configure the Traefik load balancer to stop managing the Ingresses in the domain namespace:</description>
-    </item>
-    
-    <item>
       <title>Domain Security</title>
       <link>/weblogic-kubernetes-operator/security/domain-security/</link>
       <pubDate>Wed, 27 Feb 2019 11:26:21 -0500</pubDate>
-=======
-      <title>Secrets</title>
-      <link>/weblogic-kubernetes-operator/security/secrets/</link>
-      <pubDate>Sat, 23 Feb 2019 17:36:33 -0500</pubDate>
->>>>>>> b5da2bbdad5b3b7069b78bb8e9804c4f74cf6eb3
       
       <guid>/weblogic-kubernetes-operator/security/domain-security/</guid>
       <description>TODO discuss T3 channels - recommendation is to not expose them outisde the cluster unless absolulety necessary preference is to kubectl exec into a pod and run wlst from there - or a bastion also could talk about private vpn if you need cross-domain t3 across clouds/etc.</description>

@@ -383,18 +383,8 @@
   </url>
   
   <url>
-<<<<<<< HEAD
-    <loc>/weblogic-kubernetes-operator/quickstart/cleanup/</loc>
-    <lastmod>2019-02-22T15:44:42-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/weblogic-kubernetes-operator/security/domain-security/</loc>
     <lastmod>2019-02-27T11:26:21-05:00</lastmod>
-=======
-    <loc>/weblogic-kubernetes-operator/security/secrets/</loc>
-    <lastmod>2019-02-23T17:36:33-05:00</lastmod>
->>>>>>> b5da2bbdad5b3b7069b78bb8e9804c4f74cf6eb3
   </url>
   
   <url>
