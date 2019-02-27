@@ -6,8 +6,7 @@ chapter = true
 pre = "<b>4. </b>"
 +++
 
-### Chapter 4
 
 # Developer Guide
 
-This guide provides information for developers who wish to understand or contribute to the code.
+This guide provides information for developers who want to understand or contribute to the code.

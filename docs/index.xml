@@ -41,7 +41,7 @@ The general design goal is to provide the operator with the minimum amount of pe
     </item>
     
     <item>
-      <title>Using kubectl</title>
+      <title>Use kubectl</title>
       <link>/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/using-kubectl/</link>
       <pubDate>Sat, 23 Feb 2019 17:08:43 -0500</pubDate>
       
@@ -68,14 +68,24 @@ The general design goal is to provide the operator with the minimum amount of pe
     </item>
     
     <item>
-      <title>Getting Started</title>
+      <title>Prepare your environment</title>
+      <link>/weblogic-kubernetes-operator/userguide/overview/prepare/</link>
+      <pubDate>Sat, 23 Feb 2019 16:43:10 -0500</pubDate>
+      
+      <guid>/weblogic-kubernetes-operator/userguide/overview/prepare/</guid>
+      <description>Set up your Kubernetes cluster If you need help setting up a Kubernetes environment, check our cheat sheet.
+After creating Kubernetes clusters, you can optionally:
+ Create load balancers to direct traffic to backend domains. Configure Kibana and Elasticsearch for your operator logs.  Load balancing with an Ingress controller or a web server You can choose a load balancer provider for your WebLogic domains running in a Kubernetes cluster.</description>
+    </item>
+    
+    <item>
+      <title>Get Started</title>
       <link>/weblogic-kubernetes-operator/userguide/introduction/introduction/</link>
       <pubDate>Sat, 23 Feb 2019 16:40:54 -0500</pubDate>
       
       <guid>/weblogic-kubernetes-operator/userguide/introduction/introduction/</guid>
-      <description>This document provides detailed user information for the Oracle WebLogic Server Kubernetes Operator. It provides instructions on how to install the operator in your Kubernetes cluster and how to use it to manage WebLogic domains.
-If you are looking for information about how the operator is designed, implemented, built, and such, then you should refer to the Developer guide.
-Table of contents The information in this guide is organized in the order that you would most likely need to use it.</description>
+      <description>An operator is an application-specific controller that extends Kubernetes to create, configure, and manage instances of complex applications. The Oracle WebLogic Server Kubernetes Operator follows the standard Kubernetes operator pattern, and simplifies the management and operation of WebLogic domains and deployments.
+You can have one or more operators in your Kubernetes cluster that manage one or more WebLogic domains each. We provide a Helm chart to manage the installation and configuration of the operator.</description>
     </item>
     
     <item>
@@ -89,13 +99,13 @@ Table of contents The information in this guide is organized in the order that y
     
     <item>
       <title>Sample Page</title>
-      <link>/weblogic-kubernetes-operator/userguide/samplepage/</link>
+      <link>/weblogic-kubernetes-operator/faq/samplepage/</link>
       <pubDate>Fri, 22 Feb 2019 16:07:43 -0500</pubDate>
       
-      <guid>/weblogic-kubernetes-operator/userguide/samplepage/</guid>
+      <guid>/weblogic-kubernetes-operator/faq/samplepage/</guid>
       <description>Here is some neat stuff we can do We can draw decision diagrams:
-graph LR; A[Install Operator] --|Now decide| C{Domain Type} C --|Persistent| D[Create persistent domain] C --|Domain in Image| E[Create domain image]  And some more And have expanding more detail thingies
-  Like this   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</description>
+graph LR;A[Install Operator] --|Now decide| C{Domain Type}C --|Persistent| D[Create persistent domain]C --|Domain in Image| E[Create domain image]And some more And have expanding more detail thingies
+Like thisLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</description>
     </item>
     
     <item>
@@ -109,12 +119,13 @@ If you have an older version of the operator installed on your cluster, you must
     </item>
     
     <item>
-      <title>Overview</title>
-      <link>/weblogic-kubernetes-operator/userguide/introduction/overview/</link>
-      <pubDate>Sat, 23 Feb 2019 20:51:38 -0500</pubDate>
+      <title>Demo</title>
+      <link>/weblogic-kubernetes-operator/userguide/introduction/demo/</link>
+      <pubDate>Sat, 23 Feb 2019 20:51:59 -0500</pubDate>
       
-      <guid>/weblogic-kubernetes-operator/userguide/introduction/overview/</guid>
-      <description></description>
+      <guid>/weblogic-kubernetes-operator/userguide/introduction/demo/</guid>
+      <description>This video provides a demonstration of the WebLogic Server Kubernetes Operator:
+  </description>
     </item>
     
     <item>
@@ -128,7 +139,7 @@ WebLogic clusters as backends of an Ingress In an Ingress object, a list of back
     </item>
     
     <item>
-      <title>Admin Console</title>
+      <title>Administration Console</title>
       <link>/weblogic-kubernetes-operator/userguide/managing-domains/accessing-the-domain/admin-console/</link>
       <pubDate>Sat, 23 Feb 2019 17:39:15 -0500</pubDate>
       
@@ -204,13 +215,13 @@ One of the operator&amp;rsquo;s most important jobs is to start and stop WebLogi
     </item>
     
     <item>
-      <title>Demo</title>
-      <link>/weblogic-kubernetes-operator/userguide/introduction/demo/</link>
-      <pubDate>Sat, 23 Feb 2019 20:51:59 -0500</pubDate>
+      <title>Architecture</title>
+      <link>/weblogic-kubernetes-operator/userguide/introduction/architecture/</link>
+      <pubDate>Sat, 23 Feb 2019 20:51:45 -0500</pubDate>
       
-      <guid>/weblogic-kubernetes-operator/userguide/introduction/demo/</guid>
-      <description>This video provides a demonstration of the WebLogic Server Kubernetes Operator:
-  </description>
+      <guid>/weblogic-kubernetes-operator/userguide/introduction/architecture/</guid>
+      <description>The operator consists of the following parts:
+ The operator runtime, a process that runs in a Docker container deployed into a Kubernetes pod and which performs the actual management tasks. The model for a Kubernetes custom resource definition (CRD) that when installed in a Kubernetes cluster allows the Kubernetes API server to manage instances of this new type representing the operational details and status of WebLogic domains. A Helm chart for installing the operator runtime and related resources.</description>
     </item>
     
     <item>
@@ -253,7 +264,7 @@ Contributions must conform to coding and formatting standards.</description>
     </item>
     
     <item>
-      <title>Lifecycle</title>
+      <title>Life Cycle</title>
       <link>/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/lifecycle/</link>
       <pubDate>Sat, 23 Feb 2019 17:08:54 -0500</pubDate>
       
@@ -262,26 +273,25 @@ Contributions must conform to coding and formatting standards.</description>
     </item>
     
     <item>
-      <title>Get Images</title>
+      <title>Get images</title>
       <link>/weblogic-kubernetes-operator/quickstart/get-images/</link>
       <pubDate>Fri, 22 Feb 2019 15:44:42 -0500</pubDate>
       
       <guid>/weblogic-kubernetes-operator/quickstart/get-images/</guid>
-      <description>Get these images and put them into your local registry.
-a. If you don&amp;rsquo;t already have one, obtain a Docker store account, log in to the Docker store and accept the license agreement for the WebLogic Server image.
+      <description>Get these images and put them into your local registry. a. If you don&amp;rsquo;t already have one, obtain a Docker store account, log in to the Docker store and accept the license agreement for the WebLogic Server image.
 b. Log in to the Docker store from your Docker client:
 $ docker login  c. Pull the operator image:
 $ docker pull oracle/weblogic-kubernetes-operator:2.0-rc2  d. Pull the Traefik load balancer image:</description>
     </item>
     
     <item>
-      <title>Architectural overview</title>
-      <link>/weblogic-kubernetes-operator/userguide/introduction/architecture/</link>
-      <pubDate>Sat, 23 Feb 2019 20:51:45 -0500</pubDate>
+      <title>Design philosophy</title>
+      <link>/weblogic-kubernetes-operator/userguide/introduction/design/</link>
+      <pubDate>Sat, 23 Feb 2019 20:51:51 -0500</pubDate>
       
-      <guid>/weblogic-kubernetes-operator/userguide/introduction/architecture/</guid>
-      <description>The operator consists of the following parts:
- The operator runtime, a process that runs in a Docker container deployed into a Kubernetes pod and which performs the actual management tasks. The model for a Kubernetes custom resource definition (CRD) that when installed in a Kubernetes cluster allows the Kubernetes API server to manage instances of this new type representing the operational details and status of WebLogic domains. A Helm chart for installing the operator runtime and related resources.</description>
+      <guid>/weblogic-kubernetes-operator/userguide/introduction/design/</guid>
+      <description>The Oracle WebLogic Server Kubernetes Operator (the “operator”) is designed to fulfill a similar role to that which a human operator would fill in a traditional data center deployment. It contains a set of useful built-in knowledge about how to perform various life cycle operations on a domain correctly.
+Human operators are normally responsible for starting and stopping environments, initiating backups, performing scaling operations, performing manual tasks associated with disaster recovery and high availability needs and coordinating actions with other operators in other data centers.</description>
     </item>
     
     <item>
@@ -333,13 +343,13 @@ Because we want to balance separating destabilizing work into feature branches a
     </item>
     
     <item>
-      <title>Design philosophy</title>
-      <link>/weblogic-kubernetes-operator/userguide/introduction/design/</link>
-      <pubDate>Sat, 23 Feb 2019 20:51:51 -0500</pubDate>
+      <title>Install the operator and load balancer</title>
+      <link>/weblogic-kubernetes-operator/quickstart/install/</link>
+      <pubDate>Fri, 22 Feb 2019 15:44:42 -0500</pubDate>
       
-      <guid>/weblogic-kubernetes-operator/userguide/introduction/design/</guid>
-      <description>The Oracle WebLogic Server Kubernetes Operator (the “operator”) is designed to fulfill a similar role to that which a human operator would fill in a traditional data center deployment. It contains a set of useful built-in knowledge about how to perform various lifecycle operations on a domain correctly.
-Human operators are normally responsible for starting and stopping environments, initiating backups, performing scaling operations, performing manual tasks associated with disaster recovery and high availability needs and coordinating actions with other operators in other data centers.</description>
+      <guid>/weblogic-kubernetes-operator/quickstart/install/</guid>
+      <description>Grant the Helm service account the cluster-admin role. $ cat &amp;lt;&amp;lt;EOF | kubectl apply -f - apiVersion: rbac.authorization.k8s.io/v1 kind: ClusterRoleBinding metadata: name: helm-user-cluster-admin-role roleRef: apiGroup: rbac.authorization.k8s.io kind: ClusterRole name: cluster-admin subjects: - kind: ServiceAccount name: default namespace: kube-system EOF  Create a Traefik (Ingress-based) load balancer. Use helm to install the Traefik load balancer. Use the values.yaml in the sample but set kubernetes.namespaces specifically.
+$ helm install stable/traefik \ --name traefik-operator \ --namespace traefik \ --values kubernetes/samples/charts/traefik/values.</description>
     </item>
     
     <item>
@@ -350,16 +360,6 @@ Human operators are normally responsible for starting and stopping environments,
       <guid>/weblogic-kubernetes-operator/developerguide/coding-standards/</guid>
       <description>This project has adopted the following coding standards:
  Code will be formated using Oracle / WebLogic standards, which are identical to the Google Java Style. Javadoc must be provided for all public packages, classes, and methods, and must include all parameters and returns. Javadoc is not required for methods that override or implement methods that are already documented. All non-trivial methods should include LOGGER.entering() and LOGGER.exiting() calls. The LOGGER.</description>
-    </item>
-    
-    <item>
-      <title>Install Operator and Load Balancer</title>
-      <link>/weblogic-kubernetes-operator/quickstart/install/</link>
-      <pubDate>Fri, 22 Feb 2019 15:44:42 -0500</pubDate>
-      
-      <guid>/weblogic-kubernetes-operator/quickstart/install/</guid>
-      <description>2. Grant the Helm service account the cluster-admin role. $ cat &amp;lt;&amp;lt;EOF | kubectl apply -f - apiVersion: rbac.authorization.k8s.io/v1 kind: ClusterRoleBinding metadata: name: helm-user-cluster-admin-role roleRef: apiGroup: rbac.authorization.k8s.io kind: ClusterRole name: cluster-admin subjects: - kind: ServiceAccount name: default namespace: kube-system EOF  3. Create a Traefik (Ingress-based) load balancer. Use helm to install the Traefik load balancer. Use the values.yaml in the sample but set kubernetes.namespaces specifically.
-$ helm install stable/traefik \ --name traefik-operator \ --namespace traefik \ --values kubernetes/samples/charts/traefik/values.</description>
     </item>
     
     <item>
@@ -405,6 +405,18 @@ b. Create a new image with a domain home by running the create-domain script.</d
     </item>
     
     <item>
+      <title>Clean up</title>
+      <link>/weblogic-kubernetes-operator/quickstart/cleanup/</link>
+      <pubDate>Fri, 22 Feb 2019 15:44:42 -0500</pubDate>
+      
+      <guid>/weblogic-kubernetes-operator/quickstart/cleanup/</guid>
+      <description>Remove the domain. a. Remove the domain&amp;rsquo;s Ingress by using helm:
+$ helm delete --purge sample-domain1-ingress  b. Remove the domain resources by using the sample delete-weblogic-domain-resources script.
+$ kubernetes/samples/scripts/delete-domain/delete-weblogic-domain-resources.sh -d sample-domain1  c. Use kubectl to confirm that the server pods and domain resource are gone:
+$ kubectl get pods -n sample-domain1-ns $ kubectl get domains -n sample-domain1-ns  Remove the domain namespace. a. Configure the Traefik load balancer to stop managing the Ingresses in the domain namespace:</description>
+    </item>
+    
+    <item>
       <title>Domain Processing</title>
       <link>/weblogic-kubernetes-operator/developerguide/domain-processing/</link>
       <pubDate>Sat, 23 Feb 2019 17:20:20 -0500</pubDate>
@@ -415,7 +427,7 @@ After this, the operator starts watches for changes to Domain resources and any 
     </item>
     
     <item>
-      <title>Backwards Compatibility</title>
+      <title>Backward Compatibility</title>
       <link>/weblogic-kubernetes-operator/developerguide/backwards-compatibility/</link>
       <pubDate>Sat, 23 Feb 2019 17:26:09 -0500</pubDate>
       
@@ -424,6 +436,7 @@ After this, the operator starts watches for changes to Domain resources and any 
     </item>
     
     <item>
+<<<<<<< HEAD
       <title>Cleaning up</title>
       <link>/weblogic-kubernetes-operator/quickstart/cleanup/</link>
       <pubDate>Fri, 22 Feb 2019 15:44:42 -0500</pubDate>
@@ -439,6 +452,11 @@ $ kubectl get pods -n sample-domain1-ns $ kubectl get domains -n sample-domain1-
       <title>Domain Security</title>
       <link>/weblogic-kubernetes-operator/security/domain-security/</link>
       <pubDate>Wed, 27 Feb 2019 11:26:21 -0500</pubDate>
+=======
+      <title>Secrets</title>
+      <link>/weblogic-kubernetes-operator/security/secrets/</link>
+      <pubDate>Sat, 23 Feb 2019 17:36:33 -0500</pubDate>
+>>>>>>> b5da2bbdad5b3b7069b78bb8e9804c4f74cf6eb3
       
       <guid>/weblogic-kubernetes-operator/security/domain-security/</guid>
       <description>TODO discuss T3 channels - recommendation is to not expose them outisde the cluster unless absolulety necessary preference is to kubectl exec into a pod and run wlst from there - or a bastion also could talk about private vpn if you need cross-domain t3 across clouds/etc.</description>

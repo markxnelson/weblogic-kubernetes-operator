@@ -2,10 +2,9 @@
 title: "Demo"
 date: 2019-02-23T20:51:59-05:00
 draft: false
-weight: 3
+weight: 2
 ---
 
 This video provides a demonstration of the WebLogic Server Kubernetes Operator:
 
 {{< youtube yVdr4GmpxqY >}}
-

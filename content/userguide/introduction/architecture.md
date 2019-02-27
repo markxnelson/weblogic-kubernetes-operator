@@ -1,8 +1,8 @@
 ---
-title: "Architectural overview"
+title: "Architecture"
 date: 2019-02-23T20:51:45-05:00
 draft: false
-weight: 4
+weight: 3
 ---
 
 The operator consists of the following parts:
@@ -26,7 +26,7 @@ The operator registers a Kubernetes custom resource definition called `domain.we
 
 The diagram below shows the general layout of high-level components, including optional components, in a Kubernetes cluster that is hosting WebLogic domains and the operator:
 
-![High level architecture](/images/high-level-architecture.png)
+![High level architecture](https://markxnelson.github.io/weblogic-kubernetes-operator/userguide/introduction/images/high-level-architecture.png)
 
 The Kubernetes cluster has several namespaces.  Components may be deployed into namespaces as follows:
 
@@ -39,7 +39,7 @@ The Kubernetes cluster has several namespaces.  Components may be deployed into 
 
 The diagram below shows how the various parts of a WebLogic domain are manifest in Kubernetes by the operator.
 
-![Domain architecture](/images/domain-architecture2.png)
+![Domain architecture](https://markxnelson.github.io/weblogic-kubernetes-operator/userguide/introduction/images/domain-architecture2.png)
 
 This diagram shows the following details:
 

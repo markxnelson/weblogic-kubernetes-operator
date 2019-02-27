@@ -97,7 +97,9 @@ kubectl edit domain <domain name> -n <domain namespace>
 
 The `edit` command opens a text editor which lets you edit the domain resource in place.
 
-**Note**: Typically, it's better to edit the domain resource directly; otherwise, if you scaled the domain, and you just edit the original `domain.yaml` file and reapply it, you could go back to your old replicas count.
+{{% notice note %}}
+Typically, it's better to edit the domain resource directly; otherwise, if you scaled the domain, and you just edit the original `domain.yaml` file and reapply it, you could go back to your old replicas count.
+{{% /notice %}}
 
 #### Applying WebLogic Server patches
 
