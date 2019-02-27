@@ -12,7 +12,7 @@
     
     
     <item>
-      <title>Using kubectl</title>
+      <title>Use kubectl</title>
       <link>/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/using-kubectl/</link>
       <pubDate>Sat, 23 Feb 2019 17:08:43 -0500</pubDate>
       
@@ -30,7 +30,7 @@
     </item>
     
     <item>
-      <title>Lifecycle</title>
+      <title>Life Cycle</title>
       <link>/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/lifecycle/</link>
       <pubDate>Sat, 23 Feb 2019 17:08:54 -0500</pubDate>
       

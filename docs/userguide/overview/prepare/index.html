@@ -9,20 +9,20 @@
 
     <link rel="icon" href="/weblogic-kubernetes-operator/images/favicon.png" type="image/png">
 
-    <title>Code Structure :: WebLogic Kubernetes Operator</title>
+    <title>Prepare your environment :: WebLogic Kubernetes Operator</title>
 
     
-    <link href="/weblogic-kubernetes-operator/css/nucleus.css?1551275108" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/fontawesome-all.min.css?1551275108" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/hybrid.css?1551275108" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/featherlight.min.css?1551275108" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/perfect-scrollbar.min.css?1551275108" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/auto-complete.css?1551275108" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/theme.css?1551275108" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/hugo-theme.css?1551275108" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/nucleus.css?1551275107" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/fontawesome-all.min.css?1551275107" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/hybrid.css?1551275107" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/featherlight.min.css?1551275107" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/perfect-scrollbar.min.css?1551275107" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/auto-complete.css?1551275107" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/theme.css?1551275107" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/hugo-theme.css?1551275107" rel="stylesheet">
     
 
-    <script src="/weblogic-kubernetes-operator/js/jquery-2.x.min.js?1551275108"></script>
+    <script src="/weblogic-kubernetes-operator/js/jquery-2.x.min.js?1551275107"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -32,7 +32,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/weblogic-kubernetes-operator/developerguide/code-structure/">
+  <body class="" data-url="/weblogic-kubernetes-operator/userguide/overview/prepare/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/lunr.min.js?1551275108"></script>
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/auto-complete.js?1551275108"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/lunr.min.js?1551275107"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/auto-complete.js?1551275107"></script>
 <script type="text/javascript">
     
         var baseurl = "\/weblogic-kubernetes-operator\/";
     
 </script>
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/search.js?1551275108"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/search.js?1551275107"></script>
 
     
   </div>
@@ -241,7 +241,7 @@
   
     
     <li data-nav-id="/weblogic-kubernetes-operator/userguide/" title="User Guide" class="dd-item 
-        
+        parent
         
         
         ">
@@ -378,7 +378,7 @@
   
     
     <li data-nav-id="/weblogic-kubernetes-operator/userguide/overview/" title="Overview" class="dd-item 
-        
+        parent
         
         
         ">
@@ -402,7 +402,7 @@
  
   
     
-      <li data-nav-id="/weblogic-kubernetes-operator/userguide/overview/prepare/" title="Prepare your environment" class="dd-item ">
+      <li data-nav-id="/weblogic-kubernetes-operator/userguide/overview/prepare/" title="Prepare your environment" class="dd-item active">
         <a href="/weblogic-kubernetes-operator/userguide/overview/prepare/">
         <b> </b>Prepare your environment
         
@@ -1510,7 +1510,7 @@
   
     
     <li data-nav-id="/weblogic-kubernetes-operator/developerguide/" title="Developer Guide" class="dd-item 
-        parent
+        
         
         
         ">
@@ -1629,7 +1629,7 @@
  
   
     
-      <li data-nav-id="/weblogic-kubernetes-operator/developerguide/code-structure/" title="Code Structure" class="dd-item active">
+      <li data-nav-id="/weblogic-kubernetes-operator/developerguide/code-structure/" title="Code Structure" class="dd-item ">
         <a href="/weblogic-kubernetes-operator/developerguide/code-structure/">
         Code Structure
         
@@ -2007,7 +2007,13 @@
             
           
           
-            <a href='/weblogic-kubernetes-operator/'></a> > <a href='/weblogic-kubernetes-operator/developerguide/'>Developer Guide</a> > Code Structure
+            
+            
+          
+          
+            <a href='/weblogic-kubernetes-operator/'></a> > <a href='/weblogic-kubernetes-operator/userguide/'>User Guide</a> > <a href='/weblogic-kubernetes-operator/userguide/overview/'>Overview</a> > Prepare your environment
+          
+         
           
          
           
@@ -2026,7 +2032,14 @@
 <ul>
 <li>
 <ul>
-<li><a href="#watch-package">Watch package</a></li>
+<li>
+<ul>
+<li><a href="#set-up-your-kubernetes-cluster">Set up your Kubernetes cluster</a>
+<ul>
+<li><a href="#load-balancing-with-an-ingress-controller-or-a-web-server">Load balancing with an Ingress controller or a web server</a></li>
+<li><a href="#configuring-kibana-and-elasticsearch">Configuring Kibana and Elasticsearch</a></li>
+</ul></li>
+</ul></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -2042,7 +2055,7 @@
         
         <div id="body-inner">
           
-            <h1>Code Structure</h1>
+            <h1>Prepare your environment</h1>
           
 
         
@@ -2050,25 +2063,25 @@
 
 
 
-<p>This project has the following directory structure:</p>
+<h4 id="set-up-your-kubernetes-cluster">Set up your Kubernetes cluster</h4>
+
+<p>If you need help setting up a Kubernetes environment, check our <a href="k8s_setup.md">cheat sheet</a>.</p>
+
+<p>After creating Kubernetes clusters, you can optionally:</p>
 
 <ul>
-<li><code>docs</code>: Generated Javadoc and Swagger</li>
-<li><code>integration-tests</code>: Integration test suite</li>
-<li><code>json-schema</code>: Java model to JSON schema generator</li>
-<li><code>json-schema-maven-plugin</code>: Maven plugin for schema generator</li>
-<li><code>kubernetes/charts</code>: Helm charts</li>
-<li><code>kubernetes/samples</code>: All samples, including for WebLogic domain creation</li>
-<li><code>model</code>: Domain resource Java model</li>
-<li><code>operator</code>: Operator runtime</li>
-<li><code>site</code>: This documentation</li>
-<li><code>src/scripts</code>: Scripts operator injects into WebLogic server instance Pods</li>
-<li><code>swagger</code>: Swagger files for the Kubernetes API server and domain resource</li>
+<li>Create load balancers to direct traffic to backend domains.</li>
+<li>Configure Kibana and Elasticsearch for your operator logs.</li>
 </ul>
 
-<h3 id="watch-package">Watch package</h3>
+<h5 id="load-balancing-with-an-ingress-controller-or-a-web-server">Load balancing with an Ingress controller or a web server</h5>
 
-<p>The Watch API in the Kubernetes Java client provides a watch capability across a specific list of resources for a limited amount of time. As such, it is not ideally suited for our use case, where a continuous stream of watches is desired, with watch events generated in real time. The watch-wrapper in this repository extends the default Watch API to provide a continuous stream of watch events until the stream is specifically closed. It also provides <code>resourceVersion</code> tracking to exclude events that have already been seen.  The watch-wrapper provides callbacks so events, as they occur, can trigger actions.</p>
+<p>You can choose a load balancer provider for your WebLogic domains running in a Kubernetes cluster. Please refer to the <a href="../kubernetes/samples/charts/README.md">WebLogic Operator Load Balancer Samples</a> for information about the current capabilities and setup instructions for each of the supported load balancers.</p>
+
+<h5 id="configuring-kibana-and-elasticsearch">Configuring Kibana and Elasticsearch</h5>
+
+<p>You can send the operator logs to Elasticsearch, to be displayed in Kibana. Use
+this <a href="/kubernetes/samples/scripts/elasticsearch-and-kibana/README.md">sample script</a> to configure Elasticsearch and Kibana deployments and services.</p>
 
 
 <footer class=" footline" >
@@ -2238,132 +2251,6 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -2380,21 +2267,8 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
+                        
                     
                 
                 
@@ -2471,6 +2345,154 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
             
         
                     
@@ -2535,86 +2557,6 @@
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -2792,37 +2734,6 @@
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
                         
             
             
@@ -2906,6 +2817,117 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
             
         
                     
@@ -3068,7 +3090,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -3081,9 +3102,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -3165,7 +3183,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -3181,9 +3198,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -3416,10 +3430,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/weblogic-kubernetes-operator/developerguide/coding-standards/" title="Coding Standards"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/weblogic-kubernetes-operator/userguide/overview/" title="Overview"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/weblogic-kubernetes-operator/developerguide/asynchronous-call-model/" title="Asynchronous Call Model" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/weblogic-kubernetes-operator/userguide/managing-operators/" title="Manage Operators" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

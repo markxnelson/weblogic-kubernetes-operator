@@ -36,7 +36,7 @@
 },
 {
 	"uri": "/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/using-kubectl/",
-	"title": "Using kubectl",
+	"title": "Use kubectl",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -57,10 +57,10 @@
 },
 {
 	"uri": "/weblogic-kubernetes-operator/userguide/managing-operators/installation/",
-	"title": "Installation",
+	"title": "Install the operator",
 	"tags": [],
 	"description": "",
-	"content": " Install the operator Lorem Ipsum.\n"
+	"content": "Lorem Ipsum.\n"
 },
 {
 	"uri": "/weblogic-kubernetes-operator/userguide/managing-domains/integrations/exporting-metrics/",
@@ -82,6 +82,13 @@
 	"tags": [],
 	"description": "",
 	"content": "Lorem Ipsum.\n"
+},
+{
+	"uri": "/weblogic-kubernetes-operator/userguide/overview/prepare/",
+	"title": "Prepare your environment",
+	"tags": [],
+	"description": "",
+	"content": " Set up your Kubernetes cluster If you need help setting up a Kubernetes environment, check our cheat sheet.\nAfter creating Kubernetes clusters, you can optionally:\n Create load balancers to direct traffic to backend domains. Configure Kibana and Elasticsearch for your operator logs.  Load balancing with an Ingress controller or a web server You can choose a load balancer provider for your WebLogic domains running in a Kubernetes cluster. Please refer to the WebLogic Operator Load Balancer Samples for information about the current capabilities and setup instructions for each of the supported load balancers.\nConfiguring Kibana and Elasticsearch You can send the operator logs to Elasticsearch, to be displayed in Kibana. Use this sample script to configure Elasticsearch and Kibana deployments and services.\n"
 },
 {
 	"uri": "/weblogic-kubernetes-operator/userguide/introduction/introduction/",
@@ -134,7 +141,7 @@
 },
 {
 	"uri": "/weblogic-kubernetes-operator/userguide/managing-domains/accessing-the-domain/admin-console/",
-	"title": "Admin Console",
+	"title": "Administration Console",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -165,7 +172,7 @@
 	"title": "Use the Operator",
 	"tags": [],
 	"description": "",
-	"content": " Use the Operator Lorem Ipsum.\n"
+	"content": "Lorem Ipsum.\n"
 },
 {
 	"uri": "/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/scaling/",
@@ -210,11 +217,11 @@
 	"content": " The User Guide provides detailed user information for the Oracle WebLogic Server Kubernetes Operator. It provides instructions on how to install the operator in your Kubernetes cluster and how to use it to manage WebLogic domains.\nIf you are looking for information about how the operator is designed, implemented, built, and such, then you should refer to the Developer guide.\nImportant terms This documentation uses several important terms which are intended to have a specific meaning.\n   Term Definition     Cluster Because this term is ambiguous, it will be prefixed to indicate which type of cluster is meant. A WebLogic cluster is a group of Managed Servers that together host some application or component and which are able to share load and state between them. A Kubernetes cluster is a group of machines (“nodes”) that all host Kubernetes resources, like pods and services, and which appear to the external user as a single entity. If the term “cluster” is not prefixed, it should be assumed to mean a Kubernetes cluster.   Domain A WebLogic domain is a group of related applications and resources along with the configuration information necessary to run them.   Ingress A Kubernetes Ingress provides access to applications and services in a Kubernetes environment to external clients. An Ingress may also provide additional features like load balancing.   Namespace A Kubernetes namespace is a named entity that can be used to group together related objects, for example, pods and services.   Operator A Kubernetes operator is software that performs management of complex applications.   Pod A Kubernetes pod contains one or more containers and is the object that provides the execution environment for an instance of an application component, such as a web server or database.   Job A Kubernetes job is a type of controller that creates one or more pods that run to completion to complete a specific task.   Secret A Kubernetes secret is a named object that can store secret information like user names, passwords, X.509 certificates, or any other arbitrary data.   Service A Kubernetes service exposes application endpoints inside a pod to other pods, or outside the Kubernetes cluster. A service may also provide additional features like load balancing.    Additional reading Before using the operator, you might want to read the design philosophy to develop an understanding of the operator\u0026rsquo;s design, and the architectural overview to understand its architecture, including how WebLogic domains are deployed in Kubernetes using the operator. Also, worth reading are the details of the Kubernetes RBAC definitions required by the operator.\n"
 },
 {
-	"uri": "/weblogic-kubernetes-operator/userguide/prepare/",
-	"title": "Prepare your environment",
+	"uri": "/weblogic-kubernetes-operator/userguide/overview/",
+	"title": "Overview",
 	"tags": [],
 	"description": "",
-	"content": " Set up your Kubernetes cluster If you need help setting up a Kubernetes environment, check our cheat sheet.\nAfter creating Kubernetes clusters, you can optionally:\n Create load balancers to direct traffic to backend domains. Configure Kibana and Elasticsearch for your operator logs.  Load balancing with an Ingress controller or a web server You can choose a load balancer provider for your WebLogic domains running in a Kubernetes cluster. Please refer to the WebLogic Operator Load Balancer Samples for information about the current capabilities and setup instructions for each of the supported load balancers.\nConfiguring Kibana and Elasticsearch You can send the operator logs to Elasticsearch, to be displayed in Kibana. Use this sample script to configure Elasticsearch and Kibana deployments and services.\n"
+	"content": "The information in the following sections is organized in the order that you would most likely need to use it. If you want to set up an operator and use it to create and manage WebLogic domains, you should follow the User Guide sections from top to bottom, and the necessary information will be presented in the correct order.\n"
 },
 {
 	"uri": "/weblogic-kubernetes-operator/reference/swagger/",
@@ -281,7 +288,7 @@
 },
 {
 	"uri": "/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/lifecycle/",
-	"title": "Lifecycle",
+	"title": "Life Cycle",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -302,7 +309,7 @@
 },
 {
 	"uri": "/weblogic-kubernetes-operator/userguide/managing-operators/",
-	"title": "Managing Operators",
+	"title": "Manage Operators",
 	"tags": [],
 	"description": "",
 	"content": "Lorem Ipsum.\n"
@@ -326,7 +333,7 @@
 	"title": "Design philosophy",
 	"tags": [],
 	"description": "",
-	"content": "The Oracle WebLogic Server Kubernetes Operator (the “operator”) is designed to fulfill a similar role to that which a human operator would fill in a traditional data center deployment. It contains a set of useful built-in knowledge about how to perform various lifecycle operations on a domain correctly.\nHuman operators are normally responsible for starting and stopping environments, initiating backups, performing scaling operations, performing manual tasks associated with disaster recovery and high availability needs and coordinating actions with other operators in other data centers. It is envisaged that the operator will have similar responsibilities in a Kubernetes environment.\nIt is important to note the distinction between an operator and an administrator. A WebLogic Server administrator typically has different responsibilities centered around managing the detailed configuration of the WebLogic domains. The operator has only limited interest in the domain configuration, with its main concern being the high-level topology of the domain; for example, how many clusters and servers, and information about network access points, such as channels.\nHuman operators may manage more than one domain, and the operator is also designed to be able to manage more than one domain. Like its human counterpart, the operator will only take actions against domains that it is told to manage, and will ignore any other domains that may be present in the same environment.\nLike a human operator, the operator is designed to be event-based. It waits for a significant event to occur, or for a scheduled time to perform some action, and then takes the appropriate action. Examples of significant events include being made aware of a new domain that needs to be managed, receiving a request to scale up a WebLogic cluster, or receiving a request to perform a backup of a domain.\nThe operator is designed with security in mind from the outset. Some examples of the specific security practices we follow are:\n During the deployment of the operator, Kubernetes roles are defined and assigned to the operator. These roles are designed to give the operator the minimum amount of privileges that it requires to perform its tasks. The code base is regularly scanned with security auditing tools and any issues that are identified are promptly resolved. All HTTP communications – between the operator and an external client, between the operator and WebLogic Administration Servers, and so on – are configured to require SSL and TLS 1.2. Unused code is pruned from the code base regularly. Dependencies are kept as up-to-date as possible and are regularly reviewed for security vulnerabilities.  The operator is designed to avoid imposing any arbitrary restriction on how WebLogic Server may be configured or used in Kubernetes. Where there are restrictions, these are based on the availability of some specific feature in Kubernetes; for example, multicast support.\nThe operator learns of WebLogic domains through instances of a domain Kubernetes resource. When the operator is installed, it creates a Kubernetes Custom Resource Definition. This custom resource definition defines the domain resource type. After this type is defined, you can manage domain resources using kubectl just like any other resource type. For instance, kubectl get domain or kubectl edit domain domain1.\nSchema for domain resources is here.\nThe schema for the domain resource is designed to be as sparse as possible. It includes the connection details for the Administration Server, but all of the other content is operational details about which servers should be started, environment variables, and details about what should be exposed outside the Kubernetes cluster. This way, the WebLogic domain\u0026rsquo;s configuration remains the normative configuration.\n"
+	"content": "The Oracle WebLogic Server Kubernetes Operator (the “operator”) is designed to fulfill a similar role to that which a human operator would fill in a traditional data center deployment. It contains a set of useful built-in knowledge about how to perform various life cycle operations on a domain correctly.\nHuman operators are normally responsible for starting and stopping environments, initiating backups, performing scaling operations, performing manual tasks associated with disaster recovery and high availability needs and coordinating actions with other operators in other data centers. It is envisaged that the operator will have similar responsibilities in a Kubernetes environment.\nIt is important to note the distinction between an operator and an administrator. A WebLogic Server administrator typically has different responsibilities centered around managing the detailed configuration of the WebLogic domains. The operator has only limited interest in the domain configuration, with its main concern being the high-level topology of the domain; for example, how many clusters and servers, and information about network access points, such as channels.\nHuman operators may manage more than one domain, and the operator is also designed to be able to manage more than one domain. Like its human counterpart, the operator will only take actions against domains that it is told to manage, and will ignore any other domains that may be present in the same environment.\nLike a human operator, the operator is designed to be event-based. It waits for a significant event to occur, or for a scheduled time to perform some action, and then takes the appropriate action. Examples of significant events include being made aware of a new domain that needs to be managed, receiving a request to scale up a WebLogic cluster, or receiving a request to perform a backup of a domain.\nThe operator is designed with security in mind from the outset. Some examples of the specific security practices we follow are:\n During the deployment of the operator, Kubernetes roles are defined and assigned to the operator. These roles are designed to give the operator the minimum amount of privileges that it requires to perform its tasks. The code base is regularly scanned with security auditing tools and any issues that are identified are promptly resolved. All HTTP communications – between the operator and an external client, between the operator and WebLogic Administration Servers, and so on – are configured to require SSL and TLS 1.2. Unused code is pruned from the code base regularly. Dependencies are kept as up-to-date as possible and are regularly reviewed for security vulnerabilities.  The operator is designed to avoid imposing any arbitrary restriction on how WebLogic Server may be configured or used in Kubernetes. Where there are restrictions, these are based on the availability of some specific feature in Kubernetes; for example, multicast support.\nThe operator learns of WebLogic domains through instances of a domain Kubernetes resource. When the operator is installed, it creates a Kubernetes Custom Resource Definition. This custom resource definition defines the domain resource type. After this type is defined, you can manage domain resources using kubectl just like any other resource type. For instance, kubectl get domain or kubectl edit domain domain1.\nSchema for domain resources is here.\nThe schema for the domain resource is designed to be as sparse as possible. It includes the connection details for the Administration Server, but all of the other content is operational details about which servers should be started, environment variables, and details about what should be exposed outside the Kubernetes cluster. This way, the WebLogic domain\u0026rsquo;s configuration remains the normative configuration.\n"
 },
 {
 	"uri": "/weblogic-kubernetes-operator/userguide/managing-domains/accessing-the-domain/applications/",
@@ -372,7 +379,7 @@
 },
 {
 	"uri": "/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/",
-	"title": "Domain Lifecycle",
+	"title": "Domain Life Cycle",
 	"tags": [],
 	"description": "",
 	"content": "Lorem Ipsum.\n"
@@ -397,13 +404,6 @@
 	"tags": [],
 	"description": "",
 	"content": " Chapter 4 Developer Guide This guide provides information for developers who wish to understand or contribute to the code.\n"
-},
-{
-	"uri": "/weblogic-kubernetes-operator/userguide/introduction/overview/",
-	"title": "Overview",
-	"tags": [],
-	"description": "",
-	"content": "The information in the following sections is organized in the order that you would most likely need to use it. If you want to set up an operator and use it to create and manage WebLogic domains, you should follow the User Guide sections from top to bottom, and the necessary information will be presented in the correct order.\n"
 },
 {
 	"uri": "/weblogic-kubernetes-operator/userguide/managing-domains/accessing-the-domain/",

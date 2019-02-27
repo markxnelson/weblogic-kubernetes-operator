@@ -47,17 +47,8 @@ You can have one or more operators in your Kubernetes cluster that manage one or
       <pubDate>Sat, 23 Feb 2019 20:51:51 -0500</pubDate>
       
       <guid>/weblogic-kubernetes-operator/userguide/introduction/design/</guid>
-      <description>The Oracle WebLogic Server Kubernetes Operator (the “operator”) is designed to fulfill a similar role to that which a human operator would fill in a traditional data center deployment. It contains a set of useful built-in knowledge about how to perform various lifecycle operations on a domain correctly.
+      <description>The Oracle WebLogic Server Kubernetes Operator (the “operator”) is designed to fulfill a similar role to that which a human operator would fill in a traditional data center deployment. It contains a set of useful built-in knowledge about how to perform various life cycle operations on a domain correctly.
 Human operators are normally responsible for starting and stopping environments, initiating backups, performing scaling operations, performing manual tasks associated with disaster recovery and high availability needs and coordinating actions with other operators in other data centers.</description>
-    </item>
-    
-    <item>
-      <title>Overview</title>
-      <link>/weblogic-kubernetes-operator/userguide/introduction/overview/</link>
-      <pubDate>Sat, 23 Feb 2019 20:51:38 -0500</pubDate>
-      
-      <guid>/weblogic-kubernetes-operator/userguide/introduction/overview/</guid>
-      <description>The information in the following sections is organized in the order that you would most likely need to use it. If you want to set up an operator and use it to create and manage WebLogic domains, you should follow the User Guide sections from top to bottom, and the necessary information will be presented in the correct order.</description>
     </item>
     
   </channel>
