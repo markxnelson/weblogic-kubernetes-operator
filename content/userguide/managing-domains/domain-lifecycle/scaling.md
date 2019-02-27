@@ -96,7 +96,9 @@ The internal REST endpoint is enabled by default and thus always available, wher
 is disabled by default and only exposed if explicitly configured.
 Detailed instructions for configuring the external REST endpoint are available [here](install.md).
 
-**NOTE**: Regardless of which endpoint is being invoked, the URL format for scaling is the same.
+{{% notice note %}}
+Regardless of which endpoint is being invoked, the URL format for scaling is the same.
+{{% /notice %}}
 
 ### What does the operator do in response to a scaling request?
 
