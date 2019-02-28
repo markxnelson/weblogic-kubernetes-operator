@@ -10,9 +10,7 @@ This document describes how you can start, stop, and restart the domain's server
 ### Overview
 
 There are properties on the domain resource that specify which servers should be running
-and which servers should be restarted.
-
-To start, stop, or restart servers, modify these properties on the domain resource
+and which servers should be restarted. To start, stop, or restart servers, modify these properties on the domain resource
 (for example, by using `kubectl` or the Kubernetes REST API).  The operator will notice the changes and apply them.
 
 #### Starting and stopping servers

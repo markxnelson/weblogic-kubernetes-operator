@@ -5,11 +5,11 @@ draft: false
 weight: 3
 ---
 
-## Restarting Oracle WebLogic Server in Kubernetes
+### Restarting Oracle WebLogic Server in Kubernetes
 
 This document describes when to restart servers in the Oracle WebLogic Server in Kubernetes environment.
 
-### Overview
+#### Overview
 
 There are many situations where changes to the Oracle WebLogic Server in Kubernetes environment require that all the servers in
 a domain or cluster be restarted, for example, when applying a WebLogic Server patch or when upgrading an application.
@@ -30,7 +30,7 @@ The following types of server restarts are supported in Oracle WebLogic Server i
 
 For detailed information on how to restart servers in a Oracle WebLogic Server in Kubernetes environment, see [Starting, stopping, and restarting servers](server-lifecycle.md).
 
-### Common restart scenarios
+#### Common restart scenarios
 
 This document describes what actions you need to take to properly restart your servers for a number of common scenarios:
 
@@ -71,6 +71,7 @@ is dynamic and does not require a restart.
 #### Changing the custom domain configuration overrides
 
 Any change to domain configuration overrides requires a full domain restart.  This includes:
+
   * Changing the domain resource's `configOverides` to point to a different configuration map
   * Changing the domain resource's `configOverridesSecrets` to point to a different list of secrets
   * Changing the contents of the configuration map referenced by `configOverrides`
@@ -106,13 +107,15 @@ Typically, it's better to edit the domain resource directly; otherwise, if you s
 Oracle provides different types of patches for WebLogic Server, such as Patch Set Updates, Security Patch Updates, and One-Off patches.
 Information on whether a patch is rolling compatible or requires a manual full domain restart usually can be found in the patch's documentation, such as the README file.
 
-WebLogic Server patches can be applied to either a domain home in image or a domain home on PV:
+WebLogic Server patches can be applied to either a domain home in image or a domain home on PV.
 
 With rolling compatible patches:
+
 * If you update the `image` property with a new image name, then the operator will initiate a rolling restart.
 * If you keep the same image name, then you must manually initiate a rolling restart. See [Restart all the servers in the domain](server-lifecycle.md#restart-all-the-servers-in-the-domain) in Starting, stopping, and restarting servers.
 
 With patches that are not rolling compatible:
+
 * If you keep the same image name, then you must manually initiate a full domain restart. See [Full domain restarts](server-lifecycle.md#full-domain-restarts) in Starting, stopping, and restarting servers.
 * If you update the `image` property with a new image name, then you must avoid the rolling restart by following the steps in [Avoiding a rolling restart when changing image property on a domain resource](restart.md#Avoiding-a-rolling-restart-when-changing-image-property-on-a-domain-resource).
 
@@ -125,10 +128,12 @@ of the application during the rolling restart process. On the other hand, an app
 in the domain be shutdown and restarted.
 
 If the application update is rolling compatible:
+
 * If you update the `image` property with a new image name, then the operator will initiate a rolling restart.
 * If you keep the same image name, then you must manually initiate a rolling restart. See [Restart all the servers in the domain](server-lifecycle.md#restart-all-the-servers-in-the-domain) in Starting, stopping, and restarting servers.
 
 If the application update is not rolling compatible:
+
 * If you keep the same image name, then you must manually initiate a full domain restart. See [Full domain restarts](server-lifecycle.md#full-domain-restarts) in Starting, stopping, and restarting servers.
 * If you update the `image` property with a new image name, then you must avoid the rolling restart by following the steps in [Avoiding a rolling restart when changing image property on a domain resource](restart.md#Avoiding-a-rolling-restart-when-changing-image-property-on-a-domain-resource).
 
@@ -136,17 +141,20 @@ If the application update is not rolling compatible:
 
 Follow these steps to create new rolling compatible image if you only need to patch your WebLogic Server domain or update application deployment files:
 
-1. Select a different name for the new image.
+a. Select a different name for the new image.
 
-2. Using the same domain home-in-image Docker image as a base, create a new Docker image by copying (`COPY`
+b. Using the same domain home-in-image Docker image as a base, create a new Docker image by copying (`COPY`
 command in a Dockerfile) the updated application deployment files or WebLogic Server patches into the Docker image during the Docker image build.
 
-    **NOTE**: The key here is to make sure that you do not re-run WLST or WDT to create a new domain home even though it will
+{{% notice note %}}
+The key here is to make sure that you do not re-run WLST or WDT to create a new domain home even though it will
     have the same configuration. Creating a new domain will change the domain secret and you won't be able to do a
     rolling restart.
+{{% /notice %}}
 
-3. Deploy the new Docker image to your Docker repository with the new name.
-4. Update the `image` property of the domain resource specifying the new image name.
+c. Deploy the new Docker image to your Docker repository with the new name.
+
+d. Update the `image` property of the domain resource specifying the new image name.
 
    For example:
 
@@ -155,7 +163,7 @@ command in a Dockerfile) the updated application deployment files or WebLogic Se
               spec:
                    image: oracle/weblogic-updated:2.0
      ```
-5. The operator will now initiate a rolling restart, which will apply the updated image, for all the server pods in the domain.
+e. The operator will now initiate a rolling restart, which will apply the updated image, for all the server pods in the domain.
 
 ### Avoiding a rolling restart when changing `image` property on a domain resource
 If you've created a new image that is not rolling compatible, and you've changed the image name, then:
