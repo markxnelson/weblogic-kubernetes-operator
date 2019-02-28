@@ -9,4 +9,4 @@ pre = "<b>4. </b>"
 
 # Developer Guide
 
-This guide provides information for developers who want to understand or contribute to the code.
+The Developer Guide provides information for developers who want to understand or contribute to the code.

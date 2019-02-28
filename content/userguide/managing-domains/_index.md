@@ -83,7 +83,7 @@ For information about the domain resource, see [Domain resource](domain-resource
 
 ### Managing life cycle operations
 
-You can perform lifecycle operations on WebLogic servers, clusters, or domains.
+You can perform life cycle operations on WebLogic servers, clusters, or domains.
 See [Starting, stopping, and restarting servers](server-lifecycle.md) and [Restarting WebLogic servers](restart.md).
 
 ### Scaling clusters

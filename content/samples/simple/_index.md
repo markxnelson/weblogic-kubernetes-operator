@@ -6,4 +6,4 @@ pre = "<b> </b>"
 +++
 
 
-This section provides details about simple samples for individual tasks.  The samples in this section are intended to be modified before production use.
+This section provides samples for individual tasks.  The samples in this section are intended to be modified before production use.
