@@ -5,7 +5,7 @@ draft: false
 weight: 4
 ---
 
-##### Grant the Helm service account the `cluster-admin` role.
+#### Grant the Helm service account the `cluster-admin` role.
 
 ```bash
 $ cat <<EOF | kubectl apply -f -
@@ -24,7 +24,7 @@ subjects:
 EOF
 ```
 
-##### Create a Traefik (Ingress-based) load balancer.
+#### Create a Traefik (Ingress-based) load balancer.
 
 Use `helm` to install the [Traefik](../kubernetes/samples/charts/traefik/README.md) load balancer. Use the [values.yaml](../kubernetes/samples/charts/traefik/values.yaml) in the sample but set `kubernetes.namespaces` specifically.
 
@@ -37,7 +37,7 @@ $ helm install stable/traefik \
   --wait
 ```
 
-##### Install the operator.
+#### Install the operator.
 
 a.  Create a namespace for the operator:
 

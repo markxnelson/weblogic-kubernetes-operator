@@ -12,17 +12,17 @@
     <title>Install the operator and load balancer :: WebLogic Kubernetes Operator</title>
 
     
-    <link href="/weblogic-kubernetes-operator/css/nucleus.css?1551379296" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/fontawesome-all.min.css?1551379296" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/hybrid.css?1551379296" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/featherlight.min.css?1551379296" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/perfect-scrollbar.min.css?1551379296" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/auto-complete.css?1551379296" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/theme.css?1551379296" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/hugo-theme.css?1551379296" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/nucleus.css?1551443097" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/fontawesome-all.min.css?1551443097" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/hybrid.css?1551443097" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/featherlight.min.css?1551443097" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/perfect-scrollbar.min.css?1551443097" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/auto-complete.css?1551443097" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/theme.css?1551443097" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/hugo-theme.css?1551443097" rel="stylesheet">
     
 
-    <script src="/weblogic-kubernetes-operator/js/jquery-2.x.min.js?1551379296"></script>
+    <script src="/weblogic-kubernetes-operator/js/jquery-2.x.min.js?1551443097"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/lunr.min.js?1551379296"></script>
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/auto-complete.js?1551379296"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/lunr.min.js?1551443097"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/auto-complete.js?1551443097"></script>
 <script type="text/javascript">
     
         var baseurl = "\/weblogic-kubernetes-operator\/";
     
 </script>
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/search.js?1551379296"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/search.js?1551443097"></script>
 
     
   </div>
@@ -2066,12 +2066,9 @@
 <ul>
 <li>
 <ul>
-<li>
-<ul>
 <li><a href="#grant-the-helm-service-account-the-cluster-admin-role">Grant the Helm service account the <code>cluster-admin</code> role.</a></li>
 <li><a href="#create-a-traefik-ingress-based-load-balancer">Create a Traefik (Ingress-based) load balancer.</a></li>
 <li><a href="#install-the-operator">Install the operator.</a></li>
-</ul></li>
 </ul></li>
 </ul></li>
 </ul></li>
@@ -2096,7 +2093,7 @@
 
 
 
-<h5 id="grant-the-helm-service-account-the-cluster-admin-role">Grant the Helm service account the <code>cluster-admin</code> role.</h5>
+<h4 id="grant-the-helm-service-account-the-cluster-admin-role">Grant the Helm service account the <code>cluster-admin</code> role.</h4>
 
 <pre><code class="language-bash">$ cat &lt;&lt;EOF | kubectl apply -f -
 apiVersion: rbac.authorization.k8s.io/v1
@@ -2114,7 +2111,7 @@ subjects:
 EOF
 </code></pre>
 
-<h5 id="create-a-traefik-ingress-based-load-balancer">Create a Traefik (Ingress-based) load balancer.</h5>
+<h4 id="create-a-traefik-ingress-based-load-balancer">Create a Traefik (Ingress-based) load balancer.</h4>
 
 <p>Use <code>helm</code> to install the <a href="../kubernetes/samples/charts/traefik/README.md">Traefik</a> load balancer. Use the <a href="../kubernetes/samples/charts/traefik/values.yaml">values.yaml</a> in the sample but set <code>kubernetes.namespaces</code> specifically.</p>
 
@@ -2126,7 +2123,7 @@ EOF
   --wait
 </code></pre>
 
-<h5 id="install-the-operator">Install the operator.</h5>
+<h4 id="install-the-operator">Install the operator.</h4>
 
 <p>a.  Create a namespace for the operator:</p>
 
@@ -3547,20 +3544,20 @@ EOF
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/weblogic-kubernetes-operator/js/clipboard.min.js?1551379296"></script>
-    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.min.js?1551379296"></script>
-    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.jquery.min.js?1551379296"></script>
-    <script src="/weblogic-kubernetes-operator/js/jquery.sticky.js?1551379296"></script>
-    <script src="/weblogic-kubernetes-operator/js/featherlight.min.js?1551379296"></script>
-    <script src="/weblogic-kubernetes-operator/js/html5shiv-printshiv.min.js?1551379296"></script>
-    <script src="/weblogic-kubernetes-operator/js/highlight.pack.js?1551379296"></script>
+    <script src="/weblogic-kubernetes-operator/js/clipboard.min.js?1551443097"></script>
+    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.min.js?1551443097"></script>
+    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.jquery.min.js?1551443097"></script>
+    <script src="/weblogic-kubernetes-operator/js/jquery.sticky.js?1551443097"></script>
+    <script src="/weblogic-kubernetes-operator/js/featherlight.min.js?1551443097"></script>
+    <script src="/weblogic-kubernetes-operator/js/html5shiv-printshiv.min.js?1551443097"></script>
+    <script src="/weblogic-kubernetes-operator/js/highlight.pack.js?1551443097"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/weblogic-kubernetes-operator/js/modernizr.custom.71422.js?1551379296"></script>
-    <script src="/weblogic-kubernetes-operator/js/learn.js?1551379296"></script>
-    <script src="/weblogic-kubernetes-operator/js/hugo-learn.js?1551379296"></script>
+    <script src="/weblogic-kubernetes-operator/js/modernizr.custom.71422.js?1551443097"></script>
+    <script src="/weblogic-kubernetes-operator/js/learn.js?1551443097"></script>
+    <script src="/weblogic-kubernetes-operator/js/hugo-learn.js?1551443097"></script>
 
-    <link href="/weblogic-kubernetes-operator/mermaid/mermaid.css?1551379296" type="text/css" rel="stylesheet" />
-    <script src="/weblogic-kubernetes-operator/mermaid/mermaid.js?1551379296"></script>
+    <link href="/weblogic-kubernetes-operator/mermaid/mermaid.css?1551443097" type="text/css" rel="stylesheet" />
+    <script src="/weblogic-kubernetes-operator/mermaid/mermaid.js?1551443097"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
