@@ -8,7 +8,7 @@ pre = "<b> </b>"
 The operator uses Helm to create and deploy the necessary resources and
 then run the operator in a Kubernetes cluster.
 
-### Install the operator Helm chart
+#### Install the operator Helm chart
 
 Use the `helm install` command to install the operator Helm chart. As part of this, you must specify a "release" name for the operator.
 
@@ -39,7 +39,7 @@ If `weblogic-operator-namespace` exists, then it will be used.  If it does not e
 
 You can verify the operator installation by examining the output from the `helm install` command.
 
-## Removing the operator
+#### Removing the operator
 
 The `helm delete` command is used to remove an operator release and its associated resources from the Kubernetes cluster.  The release name used with the `helm delete` command is the same release name used with the `helm install` command (see [Install the Helm chart](#install-the-helm-chart)).  For example:
 ```

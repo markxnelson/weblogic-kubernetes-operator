@@ -5,7 +5,6 @@ draft: false
 weight: 3
 ---
 
-### Restarting Oracle WebLogic Server in Kubernetes
 
 This document describes when to restart servers in the Oracle WebLogic Server in Kubernetes environment.
 
@@ -137,7 +136,7 @@ If the application update is not rolling compatible:
 * If you keep the same image name, then you must manually initiate a full domain restart. See [Full domain restarts](server-lifecycle.md#full-domain-restarts) in Starting, stopping, and restarting servers.
 * If you update the `image` property with a new image name, then you must avoid the rolling restart by following the steps in [Avoiding a rolling restart when changing image property on a domain resource](restart.md#Avoiding-a-rolling-restart-when-changing-image-property-on-a-domain-resource).
 
-### Rolling out an updated domain home in image
+#### Rolling out an updated domain home in image
 
 Follow these steps to create new rolling compatible image if you only need to patch your WebLogic Server domain or update application deployment files:
 
@@ -165,7 +164,7 @@ d. Update the `image` property of the domain resource specifying the new image n
      ```
 e. The operator will now initiate a rolling restart, which will apply the updated image, for all the server pods in the domain.
 
-### Avoiding a rolling restart when changing `image` property on a domain resource
+#### Avoiding a rolling restart when changing `image` property on a domain resource
 If you've created a new image that is not rolling compatible, and you've changed the image name, then:
 
 1. Bring the domain down (stopping all the server pods) by setting the `serverStartPolicy` to `NEVER`. See [Shut down all the servers](server-lifecycle.md#shut-down-all-the-servers) in Starting, stopping, and restarting servers.
@@ -174,7 +173,7 @@ If you've created a new image that is not rolling compatible, and you've changed
 
 3. Start up the domain (starting all the server pods) by setting the `serverStartPolicy` to `IF_NEEDED`.
 
-### Other considerations for restarting a domain
+#### Other considerations for restarting a domain
 
 * **Consider the order of changes**:
 

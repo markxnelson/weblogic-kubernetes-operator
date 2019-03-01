@@ -5,7 +5,7 @@ weight = 2
 pre = "<b> </b>"
 +++
 
-### Useful Helm operations
+#### Useful Helm operations
 
 Show the available operator configuration parameters and their default values:
 ```

@@ -6,7 +6,7 @@ pre = "<b> </b>"
 +++
 
 
-### Set up your Kubernetes cluster
+#### Set up your Kubernetes cluster
 
 If you need help setting up a Kubernetes environment, check our [cheat sheet](k8s_setup.md).
 

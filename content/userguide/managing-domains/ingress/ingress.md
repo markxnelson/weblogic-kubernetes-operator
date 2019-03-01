@@ -10,7 +10,7 @@ Depending on the version of Kubernetes you are using, and your cloud provider, y
 Please refer to [the Ingress documentation](https://kubernetes.io/docs/concepts/services-networking/ingress/)
 for more information about Ingresses.  
 
-## WebLogic clusters as backends of an Ingress
+#### WebLogic clusters as backends of an Ingress
 
 In an Ingress object, a list of backends are provided for each target that will be load balanced.  Each backend is typically
 [a Kubernetes service](https://kubernetes.io/docs/concepts/services-networking/service/), more specifically, a combination of a `serviceName` and a `servicePort`.
@@ -44,7 +44,7 @@ subscribe to updates on the service and adjust their internal backend sets when
 additional pods become ready, or pods enter a non-ready state.
 {{% /notice %}}
 
-### Steps to set up an Ingress load balancer
+#### Steps to set up an Ingress load balancer
 
 a. Install the Ingress controller.
 
@@ -63,7 +63,7 @@ b. Create Ingress resource(s).
 
      Manually create an Ingress YAML file and then apply it to the Kubernetes cluster.
 
-### Guide and samples for Traefik and Voyager/HAProxy
+#### Guide and samples for Traefik and Voyager/HAProxy
 Traefik and Voyager/HAProxy are both popular Ingress controllers.
 Information about how to install and configure these to load balance WebLogic clusters is provided here:
 

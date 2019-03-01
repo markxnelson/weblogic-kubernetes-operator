@@ -12,17 +12,17 @@
     <title>Restarting :: WebLogic Kubernetes Operator</title>
 
     
-    <link href="/weblogic-kubernetes-operator/css/nucleus.css?1551443096" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/fontawesome-all.min.css?1551443096" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/hybrid.css?1551443096" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/featherlight.min.css?1551443096" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/perfect-scrollbar.min.css?1551443096" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/auto-complete.css?1551443096" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/theme.css?1551443096" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/hugo-theme.css?1551443096" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/nucleus.css?1551447295" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/fontawesome-all.min.css?1551447295" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/hybrid.css?1551447295" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/featherlight.min.css?1551447295" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/perfect-scrollbar.min.css?1551447295" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/auto-complete.css?1551447295" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/theme.css?1551447295" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/hugo-theme.css?1551447295" rel="stylesheet">
     
 
-    <script src="/weblogic-kubernetes-operator/js/jquery-2.x.min.js?1551443096"></script>
+    <script src="/weblogic-kubernetes-operator/js/jquery-2.x.min.js?1551447295"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/lunr.min.js?1551443096"></script>
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/auto-complete.js?1551443096"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/lunr.min.js?1551447295"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/auto-complete.js?1551447295"></script>
 <script type="text/javascript">
     
         var baseurl = "\/weblogic-kubernetes-operator\/";
     
 </script>
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/search.js?1551443096"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/search.js?1551447295"></script>
 
     
   </div>
@@ -2076,7 +2076,7 @@
 <ul>
 <li>
 <ul>
-<li><a href="#restarting-oracle-weblogic-server-in-kubernetes">Restarting Oracle WebLogic Server in Kubernetes</a>
+<li>
 <ul>
 <li><a href="#overview">Overview</a></li>
 <li><a href="#common-restart-scenarios">Common restart scenarios</a></li>
@@ -2089,10 +2089,10 @@
 <li><a href="#changing-properties-on-the-domain-resource-that-affect-server-pods">Changing properties on the domain resource that affect server pods</a></li>
 <li><a href="#applying-weblogic-server-patches">Applying WebLogic Server patches</a></li>
 <li><a href="#updating-deployed-applications-for-domain-home-in-image">Updating deployed applications for domain home in image</a></li>
-</ul></li>
 <li><a href="#rolling-out-an-updated-domain-home-in-image">Rolling out an updated domain home in image</a></li>
 <li><a href="#avoiding-a-rolling-restart-when-changing-image-property-on-a-domain-resource">Avoiding a rolling restart when changing <code>image</code> property on a domain resource</a></li>
 <li><a href="#other-considerations-for-restarting-a-domain">Other considerations for restarting a domain</a></li>
+</ul></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -2115,8 +2115,6 @@
 
 
 
-
-<h3 id="restarting-oracle-weblogic-server-in-kubernetes">Restarting Oracle WebLogic Server in Kubernetes</h3>
 
 <p>This document describes when to restart servers in the Oracle WebLogic Server in Kubernetes environment.</p>
 
@@ -2272,7 +2270,7 @@ in the domain be shutdown and restarted.</p>
 <li>If you update the <code>image</code> property with a new image name, then you must avoid the rolling restart by following the steps in <a href="restart.md#Avoiding-a-rolling-restart-when-changing-image-property-on-a-domain-resource">Avoiding a rolling restart when changing image property on a domain resource</a>.</li>
 </ul>
 
-<h3 id="rolling-out-an-updated-domain-home-in-image">Rolling out an updated domain home in image</h3>
+<h4 id="rolling-out-an-updated-domain-home-in-image">Rolling out an updated domain home in image</h4>
 
 <p>Follow these steps to create new rolling compatible image if you only need to patch your WebLogic Server domain or update application deployment files:</p>
 
@@ -2302,7 +2300,7 @@ command in a Dockerfile) the updated application deployment files or WebLogic Se
 
 <p>e. The operator will now initiate a rolling restart, which will apply the updated image, for all the server pods in the domain.</p>
 
-<h3 id="avoiding-a-rolling-restart-when-changing-image-property-on-a-domain-resource">Avoiding a rolling restart when changing <code>image</code> property on a domain resource</h3>
+<h4 id="avoiding-a-rolling-restart-when-changing-image-property-on-a-domain-resource">Avoiding a rolling restart when changing <code>image</code> property on a domain resource</h4>
 
 <p>If you&rsquo;ve created a new image that is not rolling compatible, and you&rsquo;ve changed the image name, then:</p>
 
@@ -2314,7 +2312,7 @@ command in a Dockerfile) the updated application deployment files or WebLogic Se
 <li><p>Start up the domain (starting all the server pods) by setting the <code>serverStartPolicy</code> to <code>IF_NEEDED</code>.</p></li>
 </ol>
 
-<h3 id="other-considerations-for-restarting-a-domain">Other considerations for restarting a domain</h3>
+<h4 id="other-considerations-for-restarting-a-domain">Other considerations for restarting a domain</h4>
 
 <ul>
 <li><p><strong>Consider the order of changes</strong>:</p>
@@ -3743,20 +3741,20 @@ the image, or the Kubernetes resources that register your domain with the operat
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/weblogic-kubernetes-operator/js/clipboard.min.js?1551443096"></script>
-    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.min.js?1551443096"></script>
-    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.jquery.min.js?1551443096"></script>
-    <script src="/weblogic-kubernetes-operator/js/jquery.sticky.js?1551443096"></script>
-    <script src="/weblogic-kubernetes-operator/js/featherlight.min.js?1551443096"></script>
-    <script src="/weblogic-kubernetes-operator/js/html5shiv-printshiv.min.js?1551443096"></script>
-    <script src="/weblogic-kubernetes-operator/js/highlight.pack.js?1551443096"></script>
+    <script src="/weblogic-kubernetes-operator/js/clipboard.min.js?1551447295"></script>
+    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.min.js?1551447295"></script>
+    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.jquery.min.js?1551447295"></script>
+    <script src="/weblogic-kubernetes-operator/js/jquery.sticky.js?1551447295"></script>
+    <script src="/weblogic-kubernetes-operator/js/featherlight.min.js?1551447295"></script>
+    <script src="/weblogic-kubernetes-operator/js/html5shiv-printshiv.min.js?1551447295"></script>
+    <script src="/weblogic-kubernetes-operator/js/highlight.pack.js?1551447295"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/weblogic-kubernetes-operator/js/modernizr.custom.71422.js?1551443096"></script>
-    <script src="/weblogic-kubernetes-operator/js/learn.js?1551443096"></script>
-    <script src="/weblogic-kubernetes-operator/js/hugo-learn.js?1551443096"></script>
+    <script src="/weblogic-kubernetes-operator/js/modernizr.custom.71422.js?1551447295"></script>
+    <script src="/weblogic-kubernetes-operator/js/learn.js?1551447295"></script>
+    <script src="/weblogic-kubernetes-operator/js/hugo-learn.js?1551447295"></script>
 
-    <link href="/weblogic-kubernetes-operator/mermaid/mermaid.css?1551443096" type="text/css" rel="stylesheet" />
-    <script src="/weblogic-kubernetes-operator/mermaid/mermaid.js?1551443096"></script>
+    <link href="/weblogic-kubernetes-operator/mermaid/mermaid.css?1551447295" type="text/css" rel="stylesheet" />
+    <script src="/weblogic-kubernetes-operator/mermaid/mermaid.js?1551447295"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
