@@ -59,7 +59,7 @@ The general design goal is to provide the operator with the minimum amount of pe
     </item>
     
     <item>
-      <title>Metrics Exporter</title>
+      <title>Monitoring Exporter</title>
       <link>/weblogic-kubernetes-operator/userguide/managing-domains/integrations/exporting-metrics/metrics-exporter/</link>
       <pubDate>Sat, 23 Feb 2019 16:48:44 -0500</pubDate>
       

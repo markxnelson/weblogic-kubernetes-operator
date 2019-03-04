@@ -50,7 +50,7 @@
 },
 {
 	"uri": "/weblogic-kubernetes-operator/userguide/managing-domains/integrations/exporting-metrics/metrics-exporter/",
-	"title": "Metrics Exporter",
+	"title": "Monitoring Exporter",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -347,7 +347,7 @@
 	"title": "Samples",
 	"tags": [],
 	"description": "",
-	"content": " Samples Lorem Ipsum.\n"
+	"content": "The samples are divided into two types: Simple and Production.\nThe simple samples provide demonstrations of how to accomplish common tasks. These samples are provided for educational and demonstration purposes only; they are not intended to be used in production deployments or to be depended upon to create production environments.\nThe production samples\u0026hellip;\nWhile these samples may be useful and usable as is, it is intended that you would read through all of the sample code in detail, understand how the given sample works, and then customize it to suit your needs.\n"
 },
 {
 	"uri": "/weblogic-kubernetes-operator/userguide/introduction/design/",
