@@ -24,13 +24,13 @@ The fastest way to experience the operator is to follow the [Quick Start guide](
 + However, this release candidate is suitable for testing and early adopters.
 ```
 
-##### Known issues
+##### **Known issues**
 
 | Issue | Description |
 | --- | --- |
-| [#726](https://github.com/oracle/weblogic-kubernetes-operator/issues/726) | Clusters only support default channel. |
+|  |  |
 
-##### Operator version 1.1
+##### **Operator version 1.1**
 
 Documentation for the 1.1 release of the operator is available [here](site/v1.1/README.md).
 
@@ -152,7 +152,7 @@ $ helm repo add weblogic-operator https://oracle.github.io/weblogic-kubernetes-o
 
 Verify repository was added correctly:
 
-````
+```
 $ helm repo list
 NAME           URL
 weblogic-operator    https://oracle.github.io/weblogic-kubernetes-operator/charts

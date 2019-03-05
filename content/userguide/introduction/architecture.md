@@ -35,7 +35,7 @@ The Kubernetes cluster has several namespaces.  Components may be deployed into 
 * Customers are responsible for load balancer configuration, which will typically be in the same namespace with domains or in a system, shared namespace such as the `kube-system` namespace.
 *	Customers are responsible for Elasticsearch and Kibana deployment, which are typically deployed in the `default` namespace.
 
-## Domain architecture
+### Domain architecture
 
 The diagram below shows how the various parts of a WebLogic domain are manifest in Kubernetes by the operator.
 
@@ -65,7 +65,7 @@ Within the container, the following aspects are configured by the operator:
 *	The readiness probe is configured to use the WebLogic Server ReadyApp framework.  The readiness probe is used to determine if the server is ready to accept user requests.  The readiness is used to determine when a server should be included in a load balancer's endpoints, when a restarted server is fully started in the case of a rolling restart, and for various other purposes.
 *	A shutdown hook is configured that will execute a script that performs a graceful shutdown of the server.  This ensures that servers have an opportunity to shut down cleanly before they are killed.
 
-## Domain state stored outside Docker images
+### Domain state stored outside Docker images
 The operator expects (and requires) that all state be stored outside of the Docker images that are used to run the domain.  This means either in a persistent file system, or in a database.  The WebLogic configuration, that is, the domain directory and the applications directory may come from the Docker image or a persistent volume.  However, other state, such as file-based persistent stores, and such, must be stored on a persistent volume or in a database.  All of the containers that are participating in the WebLogic domain use the same image, and take on their personality; that is, which server they execute, at startup time.  Each pod mounts storage, according to the domain resource, and has access to the state information that it needs to fulfill its role in the domain.
 
 It is worth providing some background information on why this approach was adopted, in addition to the fact that this separation is consistent with other existing operators (for other products) and the Kubernetes “cattle, not pets” philosophy when it comes to containers.
@@ -80,6 +80,6 @@ It is envisaged that in some future release of the operator, it will be desirabl
 
 The team developing the operator felt that these considerations provided adequate justification for adopting the external state approach.
 
-## Network name predictability
+### Network name predictability
 
 The operator uses services to provide stable, well-known DNS names for each server.  These names are known in advance of starting up a pod to run a server, and are used in the `ListenAddress` fields in the WebLogic Server configuration to ensure that servers will always be able to find each other.  This also eliminates the need for pod names or the actual WebLogic Server instance names to be the same as the DNS addresses.
