@@ -12,17 +12,17 @@
     <title>Asynchronous Call Model :: WebLogic Kubernetes Operator</title>
 
     
-    <link href="/weblogic-kubernetes-operator/css/nucleus.css?1551733191" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/fontawesome-all.min.css?1551733191" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/hybrid.css?1551733191" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/featherlight.min.css?1551733191" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/perfect-scrollbar.min.css?1551733191" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/auto-complete.css?1551733191" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/theme.css?1551733191" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/hugo-theme.css?1551733191" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/nucleus.css?1551809645" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/fontawesome-all.min.css?1551809645" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/hybrid.css?1551809645" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/featherlight.min.css?1551809645" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/perfect-scrollbar.min.css?1551809645" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/auto-complete.css?1551809645" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/theme.css?1551809645" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/hugo-theme.css?1551809645" rel="stylesheet">
     
 
-    <script src="/weblogic-kubernetes-operator/js/jquery-2.x.min.js?1551733191"></script>
+    <script src="/weblogic-kubernetes-operator/js/jquery-2.x.min.js?1551809645"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/lunr.min.js?1551733191"></script>
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/auto-complete.js?1551733191"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/lunr.min.js?1551809645"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/auto-complete.js?1551809645"></script>
 <script type="text/javascript">
     
         var baseurl = "\/weblogic-kubernetes-operator\/";
     
 </script>
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/search.js?1551733191"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/search.js?1551809645"></script>
 
     
   </div>
@@ -1402,6 +1402,90 @@
           
       </a>
       
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/weblogic-kubernetes-operator/samples/simple/domains/manually-create-domain/" title="Manually" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/weblogic-kubernetes-operator/samples/simple/domains/manually-create-domain/">
+          <b> </b>Manually
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/weblogic-kubernetes-operator/samples/simple/domains/domain-home-on-pv/" title="Domain Home on a PV" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/weblogic-kubernetes-operator/samples/simple/domains/domain-home-on-pv/">
+          <b> </b>Domain Home on a PV
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/weblogic-kubernetes-operator/samples/simple/domains/domain-home-in-image/" title="Domain Home in Image" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/weblogic-kubernetes-operator/samples/simple/domains/domain-home-in-image/">
+          <b> </b>Domain Home in Image
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
               
     </li>
   
@@ -2064,8 +2148,11 @@
 <ul>
 <li>
 <ul>
+<li>
+<ul>
 <li><a href="#user-level-thread-pattern">User-Level Thread Pattern</a></li>
 <li><a href="#call-builder-pattern">Call Builder Pattern</a></li>
+</ul></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -2091,7 +2178,7 @@
 
 <p>Our expectation is that customers will task the operator with managing hundreds of WebLogic domains across dozens of Kubernetes namespaces.  Therefore, we have designed the operator with an efficient user-level threads pattern.  We&rsquo;ve used that pattern to implement an asynchronous call model for Kubernetes API requests.  This call model has built-in support for timeouts, retries with exponential back-off, and lists that exceed the requested maximum size using the continuance functionality.</p>
 
-<h3 id="user-level-thread-pattern">User-Level Thread Pattern</h3>
+<h4 id="user-level-thread-pattern">User-Level Thread Pattern</h4>
 
 <p>The user-level thread pattern is implemented by the classes in the <code>oracle.kubernetes.operator.work</code> package.</p>
 
@@ -2112,12 +2199,12 @@
 <pre><code class="language-java">static class SomeClass {
   public static void main(String[] args) {
     Engine engine = new Engine(&quot;worker-pool&quot;);
-  
+
     Fiber fiber = engine.createFiber();
-  
+
     Step step = new StepOne(new StepTwo(new StepThree(null)));
       Packet packet = new Packet();
-  
+
     fiber.start(
         step,
         packet,
@@ -2180,7 +2267,7 @@
     }
 </code></pre>
 
-<h3 id="call-builder-pattern">Call Builder Pattern</h3>
+<h4 id="call-builder-pattern">Call Builder Pattern</h4>
 
 <p>The asynchronous call model is implemented by classes in the <code>oracle.kubernetes.operator.helpers</code> package, including <code>CallBuilder</code> and <code>ResponseStep</code>.  The model is based on the <code>Fiber</code> suspend/resume pattern described above.  <code>CallBuilder</code> provides many methods having names ending with &ldquo;Async&rdquo;, such as <code>listPodAsync()</code> or <code>deleteServiceAsync()</code>.  These methods return a <code>Step</code> that can be returned as part of a <code>NextAction</code>.  When creating these <code>Steps</code>, the developer must provide a <code>ResponseStep</code>.  Only <code>ResponseStep.onSuccess()</code> must be implemented; however, it is often useful to override <code>onFailure()</code> as Kubernetes treats <code>404 (Not Found)</code> as a failure.</p>
 
@@ -3160,8 +3247,58 @@
 
                     
                     
+                        
+                    
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
             
         
@@ -3618,20 +3755,20 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/weblogic-kubernetes-operator/js/clipboard.min.js?1551733191"></script>
-    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.min.js?1551733191"></script>
-    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.jquery.min.js?1551733191"></script>
-    <script src="/weblogic-kubernetes-operator/js/jquery.sticky.js?1551733191"></script>
-    <script src="/weblogic-kubernetes-operator/js/featherlight.min.js?1551733191"></script>
-    <script src="/weblogic-kubernetes-operator/js/html5shiv-printshiv.min.js?1551733191"></script>
-    <script src="/weblogic-kubernetes-operator/js/highlight.pack.js?1551733191"></script>
+    <script src="/weblogic-kubernetes-operator/js/clipboard.min.js?1551809645"></script>
+    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.min.js?1551809645"></script>
+    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.jquery.min.js?1551809645"></script>
+    <script src="/weblogic-kubernetes-operator/js/jquery.sticky.js?1551809645"></script>
+    <script src="/weblogic-kubernetes-operator/js/featherlight.min.js?1551809645"></script>
+    <script src="/weblogic-kubernetes-operator/js/html5shiv-printshiv.min.js?1551809645"></script>
+    <script src="/weblogic-kubernetes-operator/js/highlight.pack.js?1551809645"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/weblogic-kubernetes-operator/js/modernizr.custom.71422.js?1551733191"></script>
-    <script src="/weblogic-kubernetes-operator/js/learn.js?1551733191"></script>
-    <script src="/weblogic-kubernetes-operator/js/hugo-learn.js?1551733191"></script>
+    <script src="/weblogic-kubernetes-operator/js/modernizr.custom.71422.js?1551809645"></script>
+    <script src="/weblogic-kubernetes-operator/js/learn.js?1551809645"></script>
+    <script src="/weblogic-kubernetes-operator/js/hugo-learn.js?1551809645"></script>
 
-    <link href="/weblogic-kubernetes-operator/mermaid/mermaid.css?1551733191" type="text/css" rel="stylesheet" />
-    <script src="/weblogic-kubernetes-operator/mermaid/mermaid.js?1551733191"></script>
+    <link href="/weblogic-kubernetes-operator/mermaid/mermaid.css?1551809645" type="text/css" rel="stylesheet" />
+    <script src="/weblogic-kubernetes-operator/mermaid/mermaid.js?1551809645"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

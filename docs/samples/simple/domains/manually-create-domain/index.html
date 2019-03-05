@@ -9,20 +9,20 @@
 
     <link rel="icon" href="/weblogic-kubernetes-operator/images/favicon.png" type="image/png">
 
-    <title>Security :: WebLogic Kubernetes Operator</title>
+    <title>Manually :: WebLogic Kubernetes Operator</title>
 
     
-    <link href="/weblogic-kubernetes-operator/css/nucleus.css?1551809645" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/fontawesome-all.min.css?1551809645" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/hybrid.css?1551809645" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/featherlight.min.css?1551809645" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/perfect-scrollbar.min.css?1551809645" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/auto-complete.css?1551809645" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/theme.css?1551809645" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/hugo-theme.css?1551809645" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/nucleus.css?1551809644" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/fontawesome-all.min.css?1551809644" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/hybrid.css?1551809644" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/featherlight.min.css?1551809644" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/perfect-scrollbar.min.css?1551809644" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/auto-complete.css?1551809644" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/theme.css?1551809644" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/hugo-theme.css?1551809644" rel="stylesheet">
     
 
-    <script src="/weblogic-kubernetes-operator/js/jquery-2.x.min.js?1551809645"></script>
+    <script src="/weblogic-kubernetes-operator/js/jquery-2.x.min.js?1551809644"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -32,7 +32,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/weblogic-kubernetes-operator/security/">
+  <body class="" data-url="/weblogic-kubernetes-operator/samples/simple/domains/manually-create-domain/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/lunr.min.js?1551809645"></script>
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/auto-complete.js?1551809645"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/lunr.min.js?1551809644"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/auto-complete.js?1551809644"></script>
 <script type="text/javascript">
     
         var baseurl = "\/weblogic-kubernetes-operator\/";
     
 </script>
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/search.js?1551809645"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/search.js?1551809644"></script>
 
     
   </div>
@@ -1291,7 +1291,7 @@
   
     
     <li data-nav-id="/weblogic-kubernetes-operator/samples/" title="Samples" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1318,7 +1318,7 @@
   
     
     <li data-nav-id="/weblogic-kubernetes-operator/samples/simple/" title="Simple Samples" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1393,7 +1393,7 @@
   
     
     <li data-nav-id="/weblogic-kubernetes-operator/samples/simple/domains/" title="Domains" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1420,8 +1420,8 @@
   
     
     <li data-nav-id="/weblogic-kubernetes-operator/samples/simple/domains/manually-create-domain/" title="Manually" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/weblogic-kubernetes-operator/samples/simple/domains/manually-create-domain/">
@@ -1886,8 +1886,8 @@
   
     
     <li data-nav-id="/weblogic-kubernetes-operator/security/" title="Security" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/weblogic-kubernetes-operator/security/">
@@ -2113,6 +2113,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
                   <span class="links">
                  
                  
@@ -2123,7 +2125,25 @@
             
           
           
-            <a href='/weblogic-kubernetes-operator/'></a> > Security
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/weblogic-kubernetes-operator/'></a> > <a href='/weblogic-kubernetes-operator/samples/'>Samples</a> > <a href='/weblogic-kubernetes-operator/samples/simple/'>Simple Samples</a> > <a href='/weblogic-kubernetes-operator/samples/simple/domains/'>Domains</a> > Manually
+          
+         
+          
+         
+          
+         
           
          
           
@@ -2132,14 +2152,34 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#manually-creating-the-domain-custom-resource">Manually creating the domain custom resource</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
               </div>
             </div>
             
 
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>Manually</h1>
           
 
         
@@ -2147,29 +2187,37 @@
 
 
 
-<h3 id="chapter-6">Chapter 6</h3>
+<h4 id="manually-creating-the-domain-custom-resource">Manually creating the domain custom resource</h4>
 
-<h1 id="security">Security</h1>
+<p>In some circumstances you may wish to manually create your domain custom resource.  If you have created your own
+Docker image containing your domain and the specific patches that you require, then this approach will probably
+be most suitable for your needs.</p>
 
-<p>Lorem Ipsum.</p>
+<p>To create the domain custom resource, just make a copy of the sample <a href="./domain.yaml">domain.yaml</a>, and then edit
+it as per the instructions provided in the comments in that file.
+When it is ready, you can create the domain in your Kubernetes cluster using the command:</p>
 
-<pre><code>pain itself.
+<pre><code>$ kubectl apply -f domain.yaml
 </code></pre>
 
-<h4 id="or">OR</h4>
+<p>You can verify the domain custom resource was created using this command:</p>
 
-<pre><code>placeholder text used to visualize the graphic layout of a document where actual text will eventually be
+<pre><code>$ kubectl -n YOUR_NAMESPACE get domains
 </code></pre>
 
-<p><strong>You Decide</strong><strong><em>!</em></strong></p>
+<p>You can view details of the domain using this command:</p>
+
+<pre><code>$ kubectl -n YOUR_NAMESPACE describe domain YOUR_DOMAIN
+</code></pre>
+
+<p>In both of these commands, replace <code>YOUR_NAMESPACE</code> with the namespace that you created the domain in, and
+replace <code>YOUR_DOMAIN</code> with the <code>domainUID</code> you chose.</p>
 
 
 <footer class=" footline" >
 	
 </footer>
 
-        
-            </div> 
         
         </div> 
         
@@ -3030,20 +3078,6 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -3059,6 +3093,25 @@
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -3092,6 +3145,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -3106,6 +3160,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -3123,56 +3178,8 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -3203,38 +3210,6 @@
                     
             
         
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
                     
                         
             
@@ -3283,6 +3258,41 @@
                     
             
         
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
                     
                         
             
@@ -3380,6 +3390,54 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -3436,7 +3494,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -3449,9 +3506,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -3588,10 +3642,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/weblogic-kubernetes-operator/reference/swagger/" title="Swagger"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/weblogic-kubernetes-operator/samples/simple/domains/" title="Domains"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/weblogic-kubernetes-operator/security/rbac/" title="RBAC" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/weblogic-kubernetes-operator/samples/simple/domains/domain-home-on-pv/" title="Domain Home on a PV" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -3601,20 +3655,20 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/weblogic-kubernetes-operator/js/clipboard.min.js?1551809645"></script>
-    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.min.js?1551809645"></script>
-    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.jquery.min.js?1551809645"></script>
-    <script src="/weblogic-kubernetes-operator/js/jquery.sticky.js?1551809645"></script>
-    <script src="/weblogic-kubernetes-operator/js/featherlight.min.js?1551809645"></script>
-    <script src="/weblogic-kubernetes-operator/js/html5shiv-printshiv.min.js?1551809645"></script>
-    <script src="/weblogic-kubernetes-operator/js/highlight.pack.js?1551809645"></script>
+    <script src="/weblogic-kubernetes-operator/js/clipboard.min.js?1551809644"></script>
+    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.min.js?1551809644"></script>
+    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.jquery.min.js?1551809644"></script>
+    <script src="/weblogic-kubernetes-operator/js/jquery.sticky.js?1551809644"></script>
+    <script src="/weblogic-kubernetes-operator/js/featherlight.min.js?1551809644"></script>
+    <script src="/weblogic-kubernetes-operator/js/html5shiv-printshiv.min.js?1551809644"></script>
+    <script src="/weblogic-kubernetes-operator/js/highlight.pack.js?1551809644"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/weblogic-kubernetes-operator/js/modernizr.custom.71422.js?1551809645"></script>
-    <script src="/weblogic-kubernetes-operator/js/learn.js?1551809645"></script>
-    <script src="/weblogic-kubernetes-operator/js/hugo-learn.js?1551809645"></script>
+    <script src="/weblogic-kubernetes-operator/js/modernizr.custom.71422.js?1551809644"></script>
+    <script src="/weblogic-kubernetes-operator/js/learn.js?1551809644"></script>
+    <script src="/weblogic-kubernetes-operator/js/hugo-learn.js?1551809644"></script>
 
-    <link href="/weblogic-kubernetes-operator/mermaid/mermaid.css?1551809645" type="text/css" rel="stylesheet" />
-    <script src="/weblogic-kubernetes-operator/mermaid/mermaid.js?1551809645"></script>
+    <link href="/weblogic-kubernetes-operator/mermaid/mermaid.css?1551809644" type="text/css" rel="stylesheet" />
+    <script src="/weblogic-kubernetes-operator/mermaid/mermaid.js?1551809644"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
