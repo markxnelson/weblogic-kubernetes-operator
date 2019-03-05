@@ -7,4 +7,4 @@ pre = "<b> </b>"
 
 
 
-Lorem Ipsum.
+These samples show various choices for creating domains.
