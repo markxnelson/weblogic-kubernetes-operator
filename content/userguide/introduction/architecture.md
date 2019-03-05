@@ -53,7 +53,7 @@ This diagram shows the following details:
 
 The diagram below shows the components inside the containers running WebLogic Server instances:
 
-![Inside a container](/images/inside-a-container.png)
+![Inside a container](https://markxnelson.github.io/weblogic-kubernetes-operator/userguide/images/inside-a-container.png)
 
 The domain resource specifies a Docker image, defaulting to `store/oracle/weblogic:12.2.1.3`. All containers running WebLogic Server use this same Docker image. Depending on the use case, this image could contain the WebLogic Server product binaries or also include the domain directory.
 **Note**: During a rolling event caused by a change to the domain resource's `image` field, containers will be using a mix of the updated value of the `image` field and its previous value.
