@@ -5,7 +5,7 @@ weight = 1
 pre = "<b> </b>"
 +++
 
-### Creating credentials for a WebLogic domain
+#### Creating credentials for a WebLogic domain
 
 This sample demonstrates how to create a Kubernetes secret containing the
 credentials for a WebLogic domain.  The operator expects this secret to be

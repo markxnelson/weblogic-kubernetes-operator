@@ -10,7 +10,7 @@ The operator assumes that certain roles and role bindings are created on the Kub
 
 The general design goal is to provide the operator with the minimum amount of permissions that it requires, and to favor built-in roles over custom roles, where it make sense to do so.
 
-### Kubernetes role definitions
+#### Kubernetes role definitions
 
 | Cluster role | Resources | Verbs | Notes |
 | --- | --- | --- | --- |

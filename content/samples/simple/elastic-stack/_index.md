@@ -5,7 +5,7 @@ weight = 6
 pre = "<b> </b>"
 +++
 
-### Sample to deploy Elasticsearch and Kibana
+#### Sample to deploy Elasticsearch and Kibana
 
 
 When you install the WebLogic operator Helm chart, you can set

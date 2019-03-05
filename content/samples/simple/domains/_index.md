@@ -7,4 +7,4 @@ pre = "<b> </b>"
 
 
 
-These samples show various choices for creating domains.
+These samples show various choices for working with domains.
