@@ -210,7 +210,39 @@ Example:
 externalRestHttpsPort: 32009
 ```
 
-##### `externalOperatorCert` (Deprecated, use `externalRestIdentitySecret` instead)
+##### `externalRestIdentitySecret`
+
+Specifies the user supplied secret that contains the SSL/TLS certificate and private key for the external operator REST HTTPS interface. The value must be the name of the Kubernetes tls secret previously created in the namespace where the WebLogic operator is deployed. This parameter is required if `externalRestEnabled` is `true`, otherwise, it is ignored. In order to create the Kubernetes tls secret you can use the following command:
+
+```
+$ kubectl create secret tls <secret-name> \
+  -n <operator-namespace> \
+  --cert=<path-to-certificate> \
+  --key=<path-to-private-key>
+```
+
+There is no default value.
+
+The Helm installation will produce an error, similar to the following, if `externalRestIdentitySecret` is not specified (left blank) and `externalRestEnabled` is `true`:
+```
+Error: render error in "weblogic-operator/templates/main.yaml": template: weblogic-operator/templates/main.yaml:9:3: executing "weblogic-operator/templates/main.yaml"
+    at <include "operator.va...>: error calling include: template: weblogic-operator/templates/_validate-inputs.tpl:42:14: executing "operator.validateInputs"
+    at <include "utils.endVa...>: error calling include: template: weblogic-operator/templates/_utils.tpl:22:6: executing "utils.endValidation"
+    at <fail $scope.validati...>: error calling fail:
+ string externalRestIdentitySecret must be specified
+
+```
+
+Example:
+```
+externalRestIdentitySecret: weblogic-operator-external-rest-identity
+```
+
+##### `externalOperatorCert` ***(Deprecated)***
+
+{{% notice info %}}
+Use **`externalRestIdentitySecret`** instead
+{{% /notice %}}
 
 Specifies the user supplied certificate to use for the external operator REST HTTPS interface. The value must be a string containing a Base64 encoded PEM certificate. This parameter is required if `externalRestEnabled` is `true`, otherwise, it is ignored.
 
@@ -229,7 +261,11 @@ Example:
 externalOperatorCert: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUQwakNDQXJxZ0F3S ...
 ```
 
-##### `externalOperatorKey` (Deprecated, use `externalRestIdentitySecret` instead)
+##### `externalOperatorKey` ***(Deprecated)***
+
+{{% notice info %}}
+Use **`externalRestIdentitySecret`** instead
+{{% /notice %}}
 
 Specifies user supplied private key to use for the external operator REST HTTPS interface. The value must be a string containing a Base64 encoded PEM key. This parameter is required if `externalRestEnabled` is `true`, otherwise, it is ignored.
 
@@ -246,27 +282,6 @@ Error: render error in "weblogic-operator/templates/main.yaml": template: weblog
 Example:
 ```
 externalOperatorKey: QmFnIEF0dHJpYnV0ZXMKICAgIGZyaWVuZGx5TmFtZTogd2VibG9naWMtb3B ...
-```
-##### `externalRestIdentitySecret`
-
-Specifies the user supplied secret that contains the tls certificate and private key for the external operator REST HTTPS interface. The value must be the name of the Kubernetes tls secret previously created. This parameter is required if `externalRestEnabled` is `true`, otherwise, it is ignored. In order to create the Kubernetes tls secret you can use the following command:
-`kubectl create secret tls <secret-name> --cert=<path_to_certificate> --key=<path_to_private_key> -n <namespace>`
-
-There is no default value.
-
-The Helm installation will produce an error, similar to the following, if `externalRestIdentitySecret` is not specified (left blank) and `externalRestEnabled` is `true`:
-```
-Error: render error in "weblogic-operator/templates/main.yaml": template: weblogic-operator/templates/main.yaml:9:3: executing "weblogic-operator/templates/main.yaml"
-    at <include "operator.va...>: error calling include: template: weblogic-operator/templates/_validate-inputs.tpl:42:14: executing "operator.validateInputs"
-    at <include "utils.endVa...>: error calling include: template: weblogic-operator/templates/_utils.tpl:22:6: executing "utils.endValidation"
-    at <fail $scope.validati...>: error calling fail:
- string externalRestIdentitySecret must be specified
-
-```
-
-Example: `externalRestIdentitySecret`: `weblogic-operator-external-rest-identity`
-```
-externalOperatorCert: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUQwakNDQXJxZ0F3S ...
 ```
 
 #### Debugging options
