@@ -5,41 +5,50 @@ weight = 4
 pre = "<b> </b>"
 +++
 
-#### Sample to create certificates and keys for the operator
+#### Sample to create certificate and key
 
 When a user enables the operator's external REST API (by setting
-`externalRestEnabled` to `true` when installing the operator Helm chart), the user needs
-to provide the certificate and private key for api's SSL identity too (by creating a
-`tls secret` before the installation of the operator helm chart).
+`externalRestEnabled` to `true` when installing or upgrading the operator Helm chart), the user also needs
+to provide the certificate(s) and private key used for the SSL/TLS identity on the external REST API endpoint by creating a
+kubernetes `tls secret` and using that secret's name with the operator Helm chart values.
 
 This sample script generates a self-signed certificate and private key that can be used
-for the operator's external REST api when experimenting with the operator.  They should
-not be used in a production environment.
+for the operator's external REST API when experimenting with the operator.
+
+{{% notice warning %}}
+The certificate and key generated with this script should ***not*** be used in a production environment.
+{{% /notice %}}
 
 The syntax of the script is:
 ```
-$ kubernetes/samples/scripts/rest/generate-external-rest-identity.sh <SANs> -n <namespace> [-s <secret-name> ]
+$ kubernetes/samples/scripts/rest/generate-external-rest-identity.sh \
+  -a <SANs> -n <operator-namespace> [-s <secret-name>]
 ```
 
 Where `<SANs>` lists the subject alternative names to put into the generated self-signed
-certificate for the external WebLogic Operator REST HTTPS interface, <namespace> should match
+certificate for the external WebLogic Operator REST HTTPS interface, `<operator-namespace>` should match
 the namespace where the operator will be installed, and optionally the secret name, which defaults
-to `weblogic-operator-external-rest-identity`.  Each must be prefaced
-by `DNS:` (for a name) or `IP:` (for an address), for example:
+to `weblogic-operator-external-rest-identity`.
+
+You should include the addresses of all masters and load balancers in the subject alternative name list. In addition, each name must be prefaced
+by `DNS:` for a name, or `IP:` for an address, as with this example:
 ```
-DNS:myhost,DNS:localhost,IP:127.0.0.1
+-a "DNS:myhost,DNS:localhost,IP:127.0.0.1"
 ```
 
-You should include the addresses of all masters and load balancers in this list.  The certificate
-cannot be conveniently changed after installation of the operator.
+The external certificate and key can be changed after installation of the operator, for
+more information see [updating operator external certificate]({{<relref "/security/certificates.md#updating-operator-external-certificate">}})
+in the ***Security*** section.
 
-The script creates the secret in the weblogic-operator namespace with the self-signed
-certificate and private key
-
-Example usage:
+The script as used below will create the `tls secret` named `weblogic-operator-identity` in the namespace `weblogic-operator-ns` using a self-signed
+certificate and private key:
 ```
-$  generate-external-rest-identity.sh IP:127.0.0.1 -n weblogic-operator > my_values.yaml
-$  echo "externalRestEnabled: true" >> my_values.yaml
-   ...
-$  helm install kubernetes/charts/weblogic-operator --name my_operator --namespace my_operator-ns --values my_values.yaml --wait
+$ generate-external-rest-identity.sh -a "DNS:localhost,IP:127.0.0.1" \
+  -n weblogic-operator-ns -s weblogic-operator-identity > my_values.yaml
+$ echo "externalRestEnabled: true" >> my_values.yaml
+#
+$ kubectl -n weblogic-operator-ns describe secret weblogic-operator-identity
+#
+$ helm install kubernetes/charts/weblogic-operator --name my_operator \
+  --namespace weblogic-operator-ns --values my_values.yaml --wait
 ```
