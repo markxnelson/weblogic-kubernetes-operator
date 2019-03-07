@@ -12,17 +12,17 @@
     <title>Use the Operator :: WebLogic Kubernetes Operator</title>
 
     
-    <link href="/weblogic-kubernetes-operator/css/nucleus.css?1551812265" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/fontawesome-all.min.css?1551812265" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/hybrid.css?1551812265" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/featherlight.min.css?1551812265" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/perfect-scrollbar.min.css?1551812265" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/auto-complete.css?1551812265" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/theme.css?1551812265" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/hugo-theme.css?1551812265" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/nucleus.css?1551982935" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/fontawesome-all.min.css?1551982935" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/hybrid.css?1551982935" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/featherlight.min.css?1551982935" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/perfect-scrollbar.min.css?1551982935" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/auto-complete.css?1551982935" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/theme.css?1551982935" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/hugo-theme.css?1551982935" rel="stylesheet">
     
 
-    <script src="/weblogic-kubernetes-operator/js/jquery-2.x.min.js?1551812265"></script>
+    <script src="/weblogic-kubernetes-operator/js/jquery-2.x.min.js?1551982935"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/lunr.min.js?1551812265"></script>
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/auto-complete.js?1551812265"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/lunr.min.js?1551982935"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/auto-complete.js?1551982935"></script>
 <script type="text/javascript">
     
         var baseurl = "\/weblogic-kubernetes-operator\/";
     
 </script>
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/search.js?1551812265"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/search.js?1551982935"></script>
 
     
   </div>
@@ -1967,6 +1967,25 @@
  
   
     
+      <li data-nav-id="/weblogic-kubernetes-operator/security/certificates/" title="Certificates" class="dd-item ">
+        <a href="/weblogic-kubernetes-operator/security/certificates/">
+        Certificates
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
       <li data-nav-id="/weblogic-kubernetes-operator/security/domain-security/" title="Domain Security" class="dd-item ">
         <a href="/weblogic-kubernetes-operator/security/domain-security/">
         Domain Security
@@ -1989,25 +2008,6 @@
       <li data-nav-id="/weblogic-kubernetes-operator/security/encryption/" title="Encryption" class="dd-item ">
         <a href="/weblogic-kubernetes-operator/security/encryption/">
         Encryption
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
- 
-  
-    
-      <li data-nav-id="/weblogic-kubernetes-operator/security/certificates/" title="Certificates" class="dd-item ">
-        <a href="/weblogic-kubernetes-operator/security/certificates/">
-        Certificates
         
         </a>
     </li>
@@ -2186,9 +2186,9 @@
 <ul>
 <li><a href="#externalrestenabled"><code>externalRestEnabled</code></a></li>
 <li><a href="#externalresthttpsport"><code>externalRestHttpsPort</code></a></li>
-<li><a href="#externaloperatorcert-deprecated-use-externalrestidentitysecret-instead"><code>externalOperatorCert</code> (Deprecated, use <code>externalRestIdentitySecret</code> instead)</a></li>
-<li><a href="#externaloperatorkey-deprecated-use-externalrestidentitysecret-instead"><code>externalOperatorKey</code> (Deprecated, use <code>externalRestIdentitySecret</code> instead)</a></li>
 <li><a href="#externalrestidentitysecret"><code>externalRestIdentitySecret</code></a></li>
+<li><a href="#externaloperatorcert-deprecated"><code>externalOperatorCert</code> <strong><em>(Deprecated)</em></strong></a></li>
+<li><a href="#externaloperatorkey-deprecated"><code>externalOperatorKey</code> <strong><em>(Deprecated)</em></strong></a></li>
 </ul></li>
 <li><a href="#debugging-options">Debugging options</a>
 <ul>
@@ -2443,7 +2443,38 @@
 <pre><code>externalRestHttpsPort: 32009
 </code></pre>
 
-<h5 id="externaloperatorcert-deprecated-use-externalrestidentitysecret-instead"><code>externalOperatorCert</code> (Deprecated, use <code>externalRestIdentitySecret</code> instead)</h5>
+<h5 id="externalrestidentitysecret"><code>externalRestIdentitySecret</code></h5>
+
+<p>Specifies the user supplied secret that contains the SSL/TLS certificate and private key for the external operator REST HTTPS interface. The value must be the name of the Kubernetes tls secret previously created in the namespace where the WebLogic operator is deployed. This parameter is required if <code>externalRestEnabled</code> is <code>true</code>, otherwise, it is ignored. In order to create the Kubernetes tls secret you can use the following command:</p>
+
+<pre><code>$ kubectl create secret tls &lt;secret-name&gt; \
+  -n &lt;operator-namespace&gt; \
+  --cert=&lt;path-to-certificate&gt; \
+  --key=&lt;path-to-private-key&gt;
+</code></pre>
+
+<p>There is no default value.</p>
+
+<p>The Helm installation will produce an error, similar to the following, if <code>externalRestIdentitySecret</code> is not specified (left blank) and <code>externalRestEnabled</code> is <code>true</code>:</p>
+
+<pre><code>Error: render error in &quot;weblogic-operator/templates/main.yaml&quot;: template: weblogic-operator/templates/main.yaml:9:3: executing &quot;weblogic-operator/templates/main.yaml&quot;
+    at &lt;include &quot;operator.va...&gt;: error calling include: template: weblogic-operator/templates/_validate-inputs.tpl:42:14: executing &quot;operator.validateInputs&quot;
+    at &lt;include &quot;utils.endVa...&gt;: error calling include: template: weblogic-operator/templates/_utils.tpl:22:6: executing &quot;utils.endValidation&quot;
+    at &lt;fail $scope.validati...&gt;: error calling fail:
+ string externalRestIdentitySecret must be specified
+
+</code></pre>
+
+<p>Example:</p>
+
+<pre><code>externalRestIdentitySecret: weblogic-operator-external-rest-identity
+</code></pre>
+
+<h5 id="externaloperatorcert-deprecated"><code>externalOperatorCert</code> <strong><em>(Deprecated)</em></strong></h5>
+
+<div class="notices info" ><p>Use <strong><code>externalRestIdentitySecret</code></strong> instead</p>
+</div>
+
 
 <p>Specifies the user supplied certificate to use for the external operator REST HTTPS interface. The value must be a string containing a Base64 encoded PEM certificate. This parameter is required if <code>externalRestEnabled</code> is <code>true</code>, otherwise, it is ignored.</p>
 
@@ -2462,7 +2493,11 @@
 <pre><code>externalOperatorCert: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUQwakNDQXJxZ0F3S ...
 </code></pre>
 
-<h5 id="externaloperatorkey-deprecated-use-externalrestidentitysecret-instead"><code>externalOperatorKey</code> (Deprecated, use <code>externalRestIdentitySecret</code> instead)</h5>
+<h5 id="externaloperatorkey-deprecated"><code>externalOperatorKey</code> <strong><em>(Deprecated)</em></strong></h5>
+
+<div class="notices info" ><p>Use <strong><code>externalRestIdentitySecret</code></strong> instead</p>
+</div>
+
 
 <p>Specifies user supplied private key to use for the external operator REST HTTPS interface. The value must be a string containing a Base64 encoded PEM key. This parameter is required if <code>externalRestEnabled</code> is <code>true</code>, otherwise, it is ignored.</p>
 
@@ -2479,28 +2514,6 @@
 <p>Example:</p>
 
 <pre><code>externalOperatorKey: QmFnIEF0dHJpYnV0ZXMKICAgIGZyaWVuZGx5TmFtZTogd2VibG9naWMtb3B ...
-</code></pre>
-
-<h5 id="externalrestidentitysecret"><code>externalRestIdentitySecret</code></h5>
-
-<p>Specifies the user supplied secret that contains the tls certificate and private key for the external operator REST HTTPS interface. The value must be the name of the Kubernetes tls secret previously created. This parameter is required if <code>externalRestEnabled</code> is <code>true</code>, otherwise, it is ignored. In order to create the Kubernetes tls secret you can use the following command:
-<code>kubectl create secret tls &lt;secret-name&gt; --cert=&lt;path_to_certificate&gt; --key=&lt;path_to_private_key&gt; -n &lt;namespace&gt;</code></p>
-
-<p>There is no default value.</p>
-
-<p>The Helm installation will produce an error, similar to the following, if <code>externalRestIdentitySecret</code> is not specified (left blank) and <code>externalRestEnabled</code> is <code>true</code>:</p>
-
-<pre><code>Error: render error in &quot;weblogic-operator/templates/main.yaml&quot;: template: weblogic-operator/templates/main.yaml:9:3: executing &quot;weblogic-operator/templates/main.yaml&quot;
-    at &lt;include &quot;operator.va...&gt;: error calling include: template: weblogic-operator/templates/_validate-inputs.tpl:42:14: executing &quot;operator.validateInputs&quot;
-    at &lt;include &quot;utils.endVa...&gt;: error calling include: template: weblogic-operator/templates/_utils.tpl:22:6: executing &quot;utils.endValidation&quot;
-    at &lt;fail $scope.validati...&gt;: error calling fail:
- string externalRestIdentitySecret must be specified
-
-</code></pre>
-
-<p>Example: <code>externalRestIdentitySecret</code>: <code>weblogic-operator-external-rest-identity</code></p>
-
-<pre><code>externalOperatorCert: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUQwakNDQXJxZ0F3S ...
 </code></pre>
 
 <h4 id="debugging-options">Debugging options</h4>
@@ -4144,20 +4157,20 @@ Error: UPGRADE FAILED: failed to create resource: namespaces &quot;myuser-d2-ns&
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/weblogic-kubernetes-operator/js/clipboard.min.js?1551812265"></script>
-    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.min.js?1551812265"></script>
-    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.jquery.min.js?1551812265"></script>
-    <script src="/weblogic-kubernetes-operator/js/jquery.sticky.js?1551812265"></script>
-    <script src="/weblogic-kubernetes-operator/js/featherlight.min.js?1551812265"></script>
-    <script src="/weblogic-kubernetes-operator/js/html5shiv-printshiv.min.js?1551812265"></script>
-    <script src="/weblogic-kubernetes-operator/js/highlight.pack.js?1551812265"></script>
+    <script src="/weblogic-kubernetes-operator/js/clipboard.min.js?1551982935"></script>
+    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.min.js?1551982935"></script>
+    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.jquery.min.js?1551982935"></script>
+    <script src="/weblogic-kubernetes-operator/js/jquery.sticky.js?1551982935"></script>
+    <script src="/weblogic-kubernetes-operator/js/featherlight.min.js?1551982935"></script>
+    <script src="/weblogic-kubernetes-operator/js/html5shiv-printshiv.min.js?1551982935"></script>
+    <script src="/weblogic-kubernetes-operator/js/highlight.pack.js?1551982935"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/weblogic-kubernetes-operator/js/modernizr.custom.71422.js?1551812265"></script>
-    <script src="/weblogic-kubernetes-operator/js/learn.js?1551812265"></script>
-    <script src="/weblogic-kubernetes-operator/js/hugo-learn.js?1551812265"></script>
+    <script src="/weblogic-kubernetes-operator/js/modernizr.custom.71422.js?1551982935"></script>
+    <script src="/weblogic-kubernetes-operator/js/learn.js?1551982935"></script>
+    <script src="/weblogic-kubernetes-operator/js/hugo-learn.js?1551982935"></script>
 
-    <link href="/weblogic-kubernetes-operator/mermaid/mermaid.css?1551812265" type="text/css" rel="stylesheet" />
-    <script src="/weblogic-kubernetes-operator/mermaid/mermaid.js?1551812265"></script>
+    <link href="/weblogic-kubernetes-operator/mermaid/mermaid.css?1551982935" type="text/css" rel="stylesheet" />
+    <script src="/weblogic-kubernetes-operator/mermaid/mermaid.js?1551982935"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

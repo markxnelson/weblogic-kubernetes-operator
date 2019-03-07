@@ -452,6 +452,15 @@ After this, the operator starts watches for changes to Domain resources and any 
     </item>
     
     <item>
+      <title>Certificates</title>
+      <link>/weblogic-kubernetes-operator/security/certificates/</link>
+      <pubDate>Wed, 06 Mar 2019 21:14:18 -0500</pubDate>
+      
+      <guid>/weblogic-kubernetes-operator/security/certificates/</guid>
+      <description>Reference  Configure the external REST interface SSL/TLS identity REST interface configuration settings Sample to create external certificate and key  Updating operator external certificate If the operator needs to update the external certificate and key currently being used or was installed without an external REST API SSL/TLS identity, the helm upgrade command is used to re-start the operator with the new or updated kubernetes tls secret that contains the desired certificate(s).</description>
+    </item>
+    
+    <item>
       <title>Domain Security</title>
       <link>/weblogic-kubernetes-operator/security/domain-security/</link>
       <pubDate>Wed, 27 Feb 2019 11:26:21 -0500</pubDate>
@@ -466,15 +475,6 @@ After this, the operator starts watches for changes to Domain resources and any 
       <pubDate>Sat, 23 Feb 2019 17:36:29 -0500</pubDate>
       
       <guid>/weblogic-kubernetes-operator/security/encryption/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Certificates</title>
-      <link>/weblogic-kubernetes-operator/security/certificates/</link>
-      <pubDate>Sat, 23 Feb 2019 17:36:18 -0500</pubDate>
-      
-      <guid>/weblogic-kubernetes-operator/security/certificates/</guid>
       <description></description>
     </item>
     

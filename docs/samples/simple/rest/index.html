@@ -12,17 +12,17 @@
     <title>REST APIs :: WebLogic Kubernetes Operator</title>
 
     
-    <link href="/weblogic-kubernetes-operator/css/nucleus.css?1551812265" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/fontawesome-all.min.css?1551812265" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/hybrid.css?1551812265" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/featherlight.min.css?1551812265" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/perfect-scrollbar.min.css?1551812265" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/auto-complete.css?1551812265" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/theme.css?1551812265" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/hugo-theme.css?1551812265" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/nucleus.css?1551982935" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/fontawesome-all.min.css?1551982935" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/hybrid.css?1551982935" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/featherlight.min.css?1551982935" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/perfect-scrollbar.min.css?1551982935" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/auto-complete.css?1551982935" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/theme.css?1551982935" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/hugo-theme.css?1551982935" rel="stylesheet">
     
 
-    <script src="/weblogic-kubernetes-operator/js/jquery-2.x.min.js?1551812265"></script>
+    <script src="/weblogic-kubernetes-operator/js/jquery-2.x.min.js?1551982935"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/lunr.min.js?1551812265"></script>
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/auto-complete.js?1551812265"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/lunr.min.js?1551982935"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/auto-complete.js?1551982935"></script>
 <script type="text/javascript">
     
         var baseurl = "\/weblogic-kubernetes-operator\/";
     
 </script>
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/search.js?1551812265"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/search.js?1551982935"></script>
 
     
   </div>
@@ -1967,6 +1967,25 @@
  
   
     
+      <li data-nav-id="/weblogic-kubernetes-operator/security/certificates/" title="Certificates" class="dd-item ">
+        <a href="/weblogic-kubernetes-operator/security/certificates/">
+        Certificates
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
       <li data-nav-id="/weblogic-kubernetes-operator/security/domain-security/" title="Domain Security" class="dd-item ">
         <a href="/weblogic-kubernetes-operator/security/domain-security/">
         Domain Security
@@ -1989,25 +2008,6 @@
       <li data-nav-id="/weblogic-kubernetes-operator/security/encryption/" title="Encryption" class="dd-item ">
         <a href="/weblogic-kubernetes-operator/security/encryption/">
         Encryption
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
- 
-  
-    
-      <li data-nav-id="/weblogic-kubernetes-operator/security/certificates/" title="Certificates" class="dd-item ">
-        <a href="/weblogic-kubernetes-operator/security/certificates/">
-        Certificates
         
         </a>
     </li>
@@ -2156,7 +2156,7 @@
 <ul>
 <li>
 <ul>
-<li><a href="#sample-to-create-certificates-and-keys-for-the-operator">Sample to create certificates and keys for the operator</a></li>
+<li><a href="#sample-to-create-certificate-and-key">Sample to create certificate and key</a></li>
 </ul></li>
 </ul></li>
 </ul></li>
@@ -2181,43 +2181,55 @@
 
 
 
-<h4 id="sample-to-create-certificates-and-keys-for-the-operator">Sample to create certificates and keys for the operator</h4>
+<h4 id="sample-to-create-certificate-and-key">Sample to create certificate and key</h4>
 
 <p>When a user enables the operator&rsquo;s external REST API (by setting
-<code>externalRestEnabled</code> to <code>true</code> when installing the operator Helm chart), the user needs
-to provide the certificate and private key for api&rsquo;s SSL identity too (by creating a
-<code>tls secret</code> before the installation of the operator helm chart).</p>
+<code>externalRestEnabled</code> to <code>true</code> when installing or upgrading the operator Helm chart), the user also needs
+to provide the certificate(s) and private key used for the SSL/TLS identity on the external REST API endpoint by creating a
+kubernetes <code>tls secret</code> and using that secret&rsquo;s name with the operator Helm chart values.</p>
 
 <p>This sample script generates a self-signed certificate and private key that can be used
-for the operator&rsquo;s external REST api when experimenting with the operator.  They should
-not be used in a production environment.</p>
+for the operator&rsquo;s external REST API when experimenting with the operator.</p>
+
+<div class="notices warning" ><p>The certificate and key generated with this script should <strong><em>not</em></strong> be used in a production environment.</p>
+</div>
+
 
 <p>The syntax of the script is:</p>
 
-<pre><code>$ kubernetes/samples/scripts/rest/generate-external-rest-identity.sh &lt;SANs&gt; -n &lt;namespace&gt; [-s &lt;secret-name&gt; ]
+<pre><code>$ kubernetes/samples/scripts/rest/generate-external-rest-identity.sh \
+  -a &lt;SANs&gt; -n &lt;operator-namespace&gt; [-s &lt;secret-name&gt;]
 </code></pre>
 
 <p>Where <code>&lt;SANs&gt;</code> lists the subject alternative names to put into the generated self-signed
-certificate for the external WebLogic Operator REST HTTPS interface, <namespace> should match
+certificate for the external WebLogic Operator REST HTTPS interface, <code>&lt;operator-namespace&gt;</code> should match
 the namespace where the operator will be installed, and optionally the secret name, which defaults
-to <code>weblogic-operator-external-rest-identity</code>.  Each must be prefaced
-by <code>DNS:</code> (for a name) or <code>IP:</code> (for an address), for example:</p>
+to <code>weblogic-operator-external-rest-identity</code>.</p>
 
-<pre><code>DNS:myhost,DNS:localhost,IP:127.0.0.1
+<p>You should include the addresses of all masters and load balancers
+(i.e. what a client specifies to access the external REST endpoint)
+in the subject alternative name list. In addition, each name must be prefaced
+by <code>DNS:</code> for a host name, or <code>IP:</code> for an address, as with this example:</p>
+
+<pre><code>-a &quot;DNS:myhost,DNS:localhost,IP:127.0.0.1&quot;
 </code></pre>
 
-<p>You should include the addresses of all masters and load balancers in this list.  The certificate
-cannot be conveniently changed after installation of the operator.</p>
+<p>The external certificate and key can be changed after installation of the operator, for
+more information see <a href="/weblogic-kubernetes-operator/security/certificates/#updating-operator-external-certificate">updating operator external certificate</a>
+in the <strong><em>Security</em></strong> section.</p>
 
-<p>The script creates the secret in the weblogic-operator namespace with the self-signed
-certificate and private key</p>
+<p>The script as used below will create the <code>tls secret</code> named <code>weblogic-operator-identity</code> in the namespace <code>weblogic-operator-ns</code> using a self-signed
+certificate and private key:</p>
 
-<p>Example usage:</p>
-
-<pre><code>$  generate-external-rest-identity.sh IP:127.0.0.1 -n weblogic-operator &gt; my_values.yaml
-$  echo &quot;externalRestEnabled: true&quot; &gt;&gt; my_values.yaml
-   ...
-$  helm install kubernetes/charts/weblogic-operator --name my_operator --namespace my_operator-ns --values my_values.yaml --wait
+<pre><code>$ echo &quot;externalRestEnabled: true&quot; &gt; my_values.yaml
+$ generate-external-rest-identity.sh \
+  -a &quot;DNS:${HOSTNAME},DNS:localhost,IP:127.0.0.1&quot; \
+  -n weblogic-operator-ns -s weblogic-operator-identity &gt;&gt; my_values.yaml
+#
+$ kubectl -n weblogic-operator-ns describe secret weblogic-operator-identity
+#
+$ helm install kubernetes/charts/weblogic-operator --name my_operator \
+  --namespace weblogic-operator-ns --values my_values.yaml --wait
 </code></pre>
 
 
@@ -3661,20 +3673,20 @@ $  helm install kubernetes/charts/weblogic-operator --name my_operator --namespa
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/weblogic-kubernetes-operator/js/clipboard.min.js?1551812265"></script>
-    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.min.js?1551812265"></script>
-    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.jquery.min.js?1551812265"></script>
-    <script src="/weblogic-kubernetes-operator/js/jquery.sticky.js?1551812265"></script>
-    <script src="/weblogic-kubernetes-operator/js/featherlight.min.js?1551812265"></script>
-    <script src="/weblogic-kubernetes-operator/js/html5shiv-printshiv.min.js?1551812265"></script>
-    <script src="/weblogic-kubernetes-operator/js/highlight.pack.js?1551812265"></script>
+    <script src="/weblogic-kubernetes-operator/js/clipboard.min.js?1551982935"></script>
+    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.min.js?1551982935"></script>
+    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.jquery.min.js?1551982935"></script>
+    <script src="/weblogic-kubernetes-operator/js/jquery.sticky.js?1551982935"></script>
+    <script src="/weblogic-kubernetes-operator/js/featherlight.min.js?1551982935"></script>
+    <script src="/weblogic-kubernetes-operator/js/html5shiv-printshiv.min.js?1551982935"></script>
+    <script src="/weblogic-kubernetes-operator/js/highlight.pack.js?1551982935"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/weblogic-kubernetes-operator/js/modernizr.custom.71422.js?1551812265"></script>
-    <script src="/weblogic-kubernetes-operator/js/learn.js?1551812265"></script>
-    <script src="/weblogic-kubernetes-operator/js/hugo-learn.js?1551812265"></script>
+    <script src="/weblogic-kubernetes-operator/js/modernizr.custom.71422.js?1551982935"></script>
+    <script src="/weblogic-kubernetes-operator/js/learn.js?1551982935"></script>
+    <script src="/weblogic-kubernetes-operator/js/hugo-learn.js?1551982935"></script>
 
-    <link href="/weblogic-kubernetes-operator/mermaid/mermaid.css?1551812265" type="text/css" rel="stylesheet" />
-    <script src="/weblogic-kubernetes-operator/mermaid/mermaid.js?1551812265"></script>
+    <link href="/weblogic-kubernetes-operator/mermaid/mermaid.css?1551982935" type="text/css" rel="stylesheet" />
+    <script src="/weblogic-kubernetes-operator/mermaid/mermaid.js?1551982935"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
