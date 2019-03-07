@@ -1,12 +1,13 @@
 ---
 title: "Certificates"
-date: 2019-03-06T19:36:18-05:00
+date: 2019-03-06T21:14:18-05:00
 draft: false
 ---
 
 #### Reference
-* [REST interface configuration]({{<relref "/userguide/managing-operators/using-the-operator/_index.md#rest-interface-configuration">}})
-* [Sample to create certificate and key]({{<relref "/samples/simple/rest/_index.md#sample-to-create-certificate-and-key">}})
+* [Configure the external REST interface SSL/TLS identity]({{<relref "/userguide/managing-operators/_index.md#optional-configure-the-operator-s-external-rest-https-interface">}})
+* [REST interface configuration settings]({{<relref "/userguide/managing-operators/using-the-operator/_index.md#rest-interface-configuration">}})
+* [Sample to create external certificate and key]({{<relref "/samples/simple/rest/_index.md#sample-to-create-certificate-and-key">}})
 
 #### Updating operator external certificate
 

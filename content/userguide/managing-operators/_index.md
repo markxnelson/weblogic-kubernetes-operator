@@ -54,7 +54,7 @@ Oracle strongly recommends that you create a new service account to be used excl
 `cluster-admin` to that service account, rather than using the `default` one.
 {{% /notice %}}
 
-### Operator's Helm chart configuration
+### Operator's Helm Chart Configuration
 
 The operator Helm chart is pre-configured with default values for the configuration of the operator.
 
@@ -68,32 +68,41 @@ You can find out the configuration values that the Helm chart supports, as well 
 $ helm inspect values kubernetes/charts/weblogic-operator
 ```
 
-The available configuration values are explained by category in [Operator Helm configuration values](#operator-helm-configuration-values).
+The available configuration values are explained by category in
+[Operator Helm configuration values]({{<relref "/userguide/managing-operators/using-the-operator/_index.md#operator-helm-configuration-values">}}).
 
-Helm commands are explained in more detail in [Useful Helm operations](#useful-helm-operations).
+Helm commands are explained in more detail in
+[Useful Helm operations]({{<relref "/userguide/managing-operators/using-the-operator/_index.md#useful-helm-operations">}}).
 
 #### Optional: Configure the operator's external REST HTTPS interface
 
-The operator can expose an external REST HTTPS interface which can be accessed from outside the Kubernetes cluster. As with the operator's internal REST interface, the external REST interface requires an SSL certificate and private key that the operator will use as the identity of the external REST interface (see below).
+The operator can expose an external REST HTTPS interface which can be accessed from outside the Kubernetes cluster. As with the operator's internal REST interface, the external REST interface requires an SSL/TLS certificate and private key that the operator will use as the identity of the external REST interface (see below).
 
 To enable the external REST interface, configure these values in a custom configuration file, or on the Helm command line:
 
 * Set `externalRestEnabled` to `true`.
-* Set `externalRestIdentitySecret` to the name of the Kubernetes secret that contains the certificate and private key.
+* Set `externalRestIdentitySecret` to the name of the kubernetes `tls secret` that contains the certificate(s) and private key.
 * Optionally, set `externalRestHttpsPort` to the external port number for the operator REST interface (defaults to `31001`).
 
-More detailed information about configuration values can be found in [Operator Helm configuration values](#operator-helm-configuration-values).
+More detailed information about REST interface configuration values can be found from the
+[operator Helm configuration values]({{<relref "/userguide/managing-operators/using-the-operator/_index.md#rest-interface-configuration">}}).
 
-##### SSL certificate and private key for the REST interface
+##### Sample SSL certificate and private key for the REST interface
 
-For testing purposes, the WebLogic Kubernetes Operator project provides a sample script that generates a self-signed certificate and private key for the operator REST interface, store them in a Kubernetes tls secret and outputs the corresponding configuration values in YAML format. These values can be added to your custom YAML configuration file, for use when the operator's Helm chart is installed.
+For testing purposes, the WebLogic Kubernetes Operator project provides a sample script
+that generates a self-signed certificate and private key for the operator external REST interface.
+The generated certificate and key is stored in a kubernetes `tls secret` and the sample
+script outputs the corresponding configuration values in YAML format. These values can be added to your custom YAML configuration file, for use when the operator's Helm chart is installed.
 
-___This script should not be used in a production environment (because typically, self-signed certificates are not considered safe).___
+{{% notice warning %}}
+The sample script should ***not*** be used in a production environment because
+typically a self-signed certificate for external communucation is not considered safe.
+A certficate signed by a commercial certificate authority is more widely accepted and
+should contain valid host names, expiration dates and key constraints.
+{{% /notice %}}
 
-The script takes the subject alternative names that should be added to the certificate, for example, the list of hostnames that clients can use to access the external REST interface, the optional secret name to store the certificate (defaults to weblogic-operator-external-rest-identity) and the namespace where the operator will be installed. In this example, the output is directly appended to your custom YAML configuration:
-```
-$ kubernetes/samples/scripts/rest/generate-external-rest-identity.sh -a "DNS:${HOSTNAME},DNS:localhost,IP:127.0.0.1" -n weblogic-operator >> custom-values.yaml
-```
+More detailed information about the sample script and how to run the script
+can be found in the ***Samples*** section under the [REST APIs]({{<relref "/samples/simple/rest/_index.md#sample-to-create-certificate-and-key">}}).
 
 #### Optional: Elastic Stack (Elasticsearch, Logstash, and Kibana) integration
 

@@ -30,8 +30,10 @@ certificate for the external WebLogic Operator REST HTTPS interface, `<operator-
 the namespace where the operator will be installed, and optionally the secret name, which defaults
 to `weblogic-operator-external-rest-identity`.
 
-You should include the addresses of all masters and load balancers in the subject alternative name list. In addition, each name must be prefaced
-by `DNS:` for a name, or `IP:` for an address, as with this example:
+You should include the addresses of all masters and load balancers
+(i.e. what a client specifies to access the external REST endpoint)
+in the subject alternative name list. In addition, each name must be prefaced
+by `DNS:` for a host name, or `IP:` for an address, as with this example:
 ```
 -a "DNS:myhost,DNS:localhost,IP:127.0.0.1"
 ```
@@ -43,9 +45,10 @@ in the ***Security*** section.
 The script as used below will create the `tls secret` named `weblogic-operator-identity` in the namespace `weblogic-operator-ns` using a self-signed
 certificate and private key:
 ```
-$ generate-external-rest-identity.sh -a "DNS:localhost,IP:127.0.0.1" \
-  -n weblogic-operator-ns -s weblogic-operator-identity > my_values.yaml
-$ echo "externalRestEnabled: true" >> my_values.yaml
+$ echo "externalRestEnabled: true" > my_values.yaml
+$ generate-external-rest-identity.sh \
+  -a "DNS:${HOSTNAME},DNS:localhost,IP:127.0.0.1" \
+  -n weblogic-operator-ns -s weblogic-operator-identity >> my_values.yaml
 #
 $ kubectl -n weblogic-operator-ns describe secret weblogic-operator-identity
 #
