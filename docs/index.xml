@@ -40,21 +40,27 @@
     </item>
     
     <item>
-      <title>Use kubectl</title>
-      <link>/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/using-kubectl/</link>
+      <title>Use Helm</title>
+      <link>/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/using-helm/</link>
       <pubDate>Sat, 23 Feb 2019 17:08:43 -0500</pubDate>
       
-      <guid>/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/using-kubectl/</guid>
-      <description></description>
+      <guid>/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/using-helm/</guid>
+      <description>Useful Helm operations Show the available operator configuration parameters and their default values:
+$ helm inspect values kubernetes/charts/weblogic-operator  Show the custom values you configured for the operator Helm release:
+$ helm get values weblogic-operator  Show all of the values your operator Helm release is using:
+$ helm get values --all weblogic-operator  List the Helm releases that have been installed in this Kubernetes cluster:
+$ helm list  Get the status of the operator Helm release:</description>
     </item>
     
     <item>
-      <title>Startup</title>
+      <title>Startup and shutdown</title>
       <link>/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/startup/</link>
       <pubDate>Sat, 23 Feb 2019 17:04:41 -0500</pubDate>
       
       <guid>/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/startup/</guid>
-      <description></description>
+      <description>This document describes how you can start, stop, and restart the domain&amp;rsquo;s servers.
+There are properties on the domain resource that specify which servers should be running and which servers should be restarted. To start, stop, or restart servers, modify these properties on the domain resource (for example, by using kubectl or the Kubernetes REST API). The operator will notice the changes and apply them.
+Starting and stopping servers The serverStartPolicy property on the domain resource controls which servers should be running.</description>
     </item>
     
     <item>
@@ -169,14 +175,12 @@ WebLogic clusters as backends of an Ingress In an Ingress object, a list of back
     </item>
     
     <item>
-      <title>The REST API</title>
-      <link>/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/the-rest-api/</link>
-      <pubDate>Sat, 23 Feb 2019 17:08:32 -0500</pubDate>
+      <title>Use kubectl</title>
+      <link>/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/using-kubectl/</link>
+      <pubDate>Sat, 23 Feb 2019 17:08:43 -0500</pubDate>
       
-      <guid>/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/the-rest-api/</guid>
-      <description>Use the operator&amp;rsquo;s REST services The operator provides a REST server which you can use to get a list of WebLogic domains and clusters and to initiate scaling operations. Swagger documentation for the REST API is available here.
-You can access most of the REST services using GET, for example:
- To obtain a list of domains, send a GET request to the URL /operator/latest/domains To obtain a list of clusters in a domain, send a GET request to the URL /operator/latest/domains/&amp;lt;domainUID&amp;gt;/clusters  All of the REST services require authentication.</description>
+      <guid>/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/using-kubectl/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -278,14 +282,14 @@ Contributions must conform to coding and formatting standards.</description>
     </item>
     
     <item>
-      <title>Life Cycle</title>
-      <link>/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/lifecycle/</link>
-      <pubDate>Sat, 23 Feb 2019 17:08:54 -0500</pubDate>
+      <title>The REST API</title>
+      <link>/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/the-rest-api/</link>
+      <pubDate>Sat, 23 Feb 2019 17:08:32 -0500</pubDate>
       
-      <guid>/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/lifecycle/</guid>
-      <description>This document describes how you can start, stop, and restart the domain&amp;rsquo;s servers.
-There are properties on the domain resource that specify which servers should be running and which servers should be restarted. To start, stop, or restart servers, modify these properties on the domain resource (for example, by using kubectl or the Kubernetes REST API). The operator will notice the changes and apply them.
-Starting and stopping servers The serverStartPolicy property on the domain resource controls which servers should be running.</description>
+      <guid>/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/the-rest-api/</guid>
+      <description>Use the operator&amp;rsquo;s REST services The operator provides a REST server which you can use to get a list of WebLogic domains and clusters and to initiate scaling operations. Swagger documentation for the REST API is available here.
+You can access most of the REST services using GET, for example:
+ To obtain a list of domains, send a GET request to the URL /operator/latest/domains To obtain a list of clusters in a domain, send a GET request to the URL /operator/latest/domains/&amp;lt;domainUID&amp;gt;/clusters  All of the REST services require authentication.</description>
     </item>
     
     <item>
@@ -350,20 +354,11 @@ Because we want to balance separating destabilizing work into feature branches a
     </item>
     
     <item>
-      <title>Logs</title>
-      <link>/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/logs/</link>
-      <pubDate>Sat, 23 Feb 2019 17:08:57 -0500</pubDate>
+      <title>Life Cycle</title>
+      <link>/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/lifecycle/</link>
+      <pubDate>Sat, 23 Feb 2019 17:08:54 -0500</pubDate>
       
-      <guid>/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/logs/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Shutdown</title>
-      <link>/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/shutdown/</link>
-      <pubDate>Sat, 23 Feb 2019 17:04:49 -0500</pubDate>
-      
-      <guid>/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/shutdown/</guid>
+      <guid>/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/lifecycle/</guid>
       <description></description>
     </item>
     
@@ -395,6 +390,15 @@ $ helm install stable/traefik \ --name traefik-operator \ --namespace traefik \ 
       <guid>/weblogic-kubernetes-operator/security/rbac/</guid>
       <description>The operator assumes that certain roles and role bindings are created on the Kubernetes cluster. The operator installation scripts create these, and the operator verifies that they are correct when the cluster starts up. This document lists the RBAC definitions that are created.
 The general design goal is to provide the operator with the minimum amount of permissions that it requires, and to favor built-in roles over custom roles, where it make sense to do so.</description>
+    </item>
+    
+    <item>
+      <title>Logs</title>
+      <link>/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/logs/</link>
+      <pubDate>Sat, 23 Feb 2019 17:08:57 -0500</pubDate>
+      
+      <guid>/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/logs/</guid>
+      <description></description>
     </item>
     
     <item>

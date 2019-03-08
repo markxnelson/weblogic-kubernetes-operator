@@ -33,7 +33,7 @@
   </url>
   
   <url>
-    <loc>/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/using-kubectl/</loc>
+    <loc>/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/using-helm/</loc>
     <lastmod>2019-02-23T17:08:43-05:00</lastmod>
   </url>
   
@@ -138,8 +138,8 @@
   </url>
   
   <url>
-    <loc>/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/the-rest-api/</loc>
-    <lastmod>2019-02-23T17:08:32-05:00</lastmod>
+    <loc>/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/using-kubectl/</loc>
+    <lastmod>2019-02-23T17:08:43-05:00</lastmod>
   </url>
   
   <url>
@@ -238,8 +238,8 @@
   </url>
   
   <url>
-    <loc>/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/lifecycle/</loc>
-    <lastmod>2019-02-23T17:08:54-05:00</lastmod>
+    <loc>/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/the-rest-api/</loc>
+    <lastmod>2019-02-23T17:08:32-05:00</lastmod>
   </url>
   
   <url>
@@ -298,13 +298,8 @@
   </url>
   
   <url>
-    <loc>/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/logs/</loc>
-    <lastmod>2019-02-23T17:08:57-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/shutdown/</loc>
-    <lastmod>2019-02-23T17:04:49-05:00</lastmod>
+    <loc>/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/lifecycle/</loc>
+    <lastmod>2019-02-23T17:08:54-05:00</lastmod>
   </url>
   
   <url>
@@ -345,6 +340,11 @@
   <url>
     <loc>/weblogic-kubernetes-operator/security/rbac/</loc>
     <lastmod>2019-02-23T17:15:36-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/logs/</loc>
+    <lastmod>2019-02-23T17:08:57-05:00</lastmod>
   </url>
   
   <url>
