@@ -6,10 +6,19 @@
     <description>Recent content on WebLogic Kubernetes Operator</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 23 Feb 2019 20:47:58 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 06 Mar 2019 21:14:18 -0500</lastBuildDate>
     
 	<atom:link href="/weblogic-kubernetes-operator/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Certificates</title>
+      <link>/weblogic-kubernetes-operator/security/certificates/</link>
+      <pubDate>Wed, 06 Mar 2019 21:14:18 -0500</pubDate>
+      
+      <guid>/weblogic-kubernetes-operator/security/certificates/</guid>
+      <description>Reference  Configure the external REST interface SSL/TLS identity REST interface configuration settings Sample to create external certificate and key  Updating operator external certificate If the operator needs to update the external certificate and key currently being used or was installed without an external REST API SSL/TLS identity, the helm upgrade command is used to re-start the operator with the new or updated kubernetes tls secret that contains the desired certificate(s).</description>
+    </item>
     
     <item>
       <title>Nodeports</title>
@@ -28,16 +37,6 @@
       <guid>/weblogic-kubernetes-operator/developerguide/requirements/</guid>
       <description>In addition to the requirements listed in the User Guide, the following software is also required to obtain and build the operator:
  Git (1.8 or later recommended) Java Developer Kit (1.8u131 or later recommended; please use 1.8, tests will not work on 1.9 or later versions) Apache Maven (3.3 or later recommended)  The operator is written primarily in Java, BASH shell scripts, and WLST scripts. The Java code uses features introduced in Java 1.</description>
-    </item>
-    
-    <item>
-      <title>RBAC</title>
-      <link>/weblogic-kubernetes-operator/security/rbac/</link>
-      <pubDate>Sat, 23 Feb 2019 17:15:36 -0500</pubDate>
-      
-      <guid>/weblogic-kubernetes-operator/security/rbac/</guid>
-      <description>The operator assumes that certain roles and role bindings are created on the Kubernetes cluster. The operator installation scripts create these, and the operator verifies that they are correct when the cluster starts up. This document lists the RBAC definitions that are created.
-The general design goal is to provide the operator with the minimum amount of permissions that it requires, and to favor built-in roles over custom roles, where it make sense to do so.</description>
     </item>
     
     <item>
@@ -131,6 +130,16 @@ If you have an older version of the operator installed on your cluster, you must
     </item>
     
     <item>
+      <title>Domain Security</title>
+      <link>/weblogic-kubernetes-operator/security/domain-security/</link>
+      <pubDate>Wed, 27 Feb 2019 11:26:21 -0500</pubDate>
+      
+      <guid>/weblogic-kubernetes-operator/security/domain-security/</guid>
+      <description>WebLogic T3 Channels Oracle recommends not to expose any T3 channels outisde the Kubernetes cluster unless absolulety necessary. If exposing a T3 channel, limit access using controls like security lists or setup a Bastion to provide access.
+When accesing T3 channels, the preferred approach is to kubectl exec into the kubernetes pod and then run wlst or setup Bastion access and then run wlst from the Bastion host to connect to the Kubernetes cluster.</description>
+    </item>
+    
+    <item>
       <title>Demo</title>
       <link>/weblogic-kubernetes-operator/userguide/introduction/demo/</link>
       <pubDate>Sat, 23 Feb 2019 20:51:59 -0500</pubDate>
@@ -156,15 +165,6 @@ WebLogic clusters as backends of an Ingress In an Ingress object, a list of back
       <pubDate>Sat, 23 Feb 2019 17:39:15 -0500</pubDate>
       
       <guid>/weblogic-kubernetes-operator/userguide/managing-domains/accessing-the-domain/admin-console/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Service Accounts</title>
-      <link>/weblogic-kubernetes-operator/security/service-accounts/</link>
-      <pubDate>Sat, 23 Feb 2019 17:36:12 -0500</pubDate>
-      
-      <guid>/weblogic-kubernetes-operator/security/service-accounts/</guid>
       <description></description>
     </item>
     
@@ -257,12 +257,12 @@ One of the operator&amp;rsquo;s most important jobs is to start and stop WebLogi
     </item>
     
     <item>
-      <title>Secrets</title>
-      <link>/weblogic-kubernetes-operator/security/secrets/</link>
-      <pubDate>Sat, 23 Feb 2019 17:36:33 -0500</pubDate>
+      <title>Encryption</title>
+      <link>/weblogic-kubernetes-operator/security/encryption/</link>
+      <pubDate>Sat, 23 Feb 2019 17:36:29 -0500</pubDate>
       
-      <guid>/weblogic-kubernetes-operator/security/secrets/</guid>
-      <description></description>
+      <guid>/weblogic-kubernetes-operator/security/encryption/</guid>
+      <description>TODO</description>
     </item>
     
     <item>
@@ -317,6 +317,15 @@ Human operators are normally responsible for starting and stopping environments,
       
       <guid>/weblogic-kubernetes-operator/userguide/managing-domains/accessing-the-domain/applications/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Service Accounts</title>
+      <link>/weblogic-kubernetes-operator/security/service-accounts/</link>
+      <pubDate>Sat, 23 Feb 2019 17:36:12 -0500</pubDate>
+      
+      <guid>/weblogic-kubernetes-operator/security/service-accounts/</guid>
+      <description>TODO</description>
     </item>
     
     <item>
@@ -379,6 +388,16 @@ $ helm install stable/traefik \ --name traefik-operator \ --namespace traefik \ 
     </item>
     
     <item>
+      <title>RBAC</title>
+      <link>/weblogic-kubernetes-operator/security/rbac/</link>
+      <pubDate>Sat, 23 Feb 2019 17:15:36 -0500</pubDate>
+      
+      <guid>/weblogic-kubernetes-operator/security/rbac/</guid>
+      <description>The operator assumes that certain roles and role bindings are created on the Kubernetes cluster. The operator installation scripts create these, and the operator verifies that they are correct when the cluster starts up. This document lists the RBAC definitions that are created.
+The general design goal is to provide the operator with the minimum amount of permissions that it requires, and to favor built-in roles over custom roles, where it make sense to do so.</description>
+    </item>
+    
+    <item>
       <title>Prepare for a domain</title>
       <link>/weblogic-kubernetes-operator/quickstart/prepare/</link>
       <pubDate>Fri, 22 Feb 2019 15:44:42 -0500</pubDate>
@@ -388,6 +407,15 @@ $ helm install stable/traefik \ --name traefik-operator \ --namespace traefik \ 
 $ kubectl create namespace sample-domain1-ns  b. Use helm to configure the operator to manage domains in this namespace:
 $ helm upgrade \ --reuse-values \ --set &amp;quot;domainNamespaces={sample-domain1-ns}&amp;quot; \ --wait \ sample-weblogic-operator \ kubernetes/charts/weblogic-operator  c. Configure Traefik to manage Ingresses created in this namespace:
 $ helm upgrade \ --reuse-values \ --set &amp;quot;kubernetes.namespaces={traefik,sample-domain1-ns}&amp;quot; \ --wait \ traefik-operator \ stable/traefik  </description>
+    </item>
+    
+    <item>
+      <title>Secrets</title>
+      <link>/weblogic-kubernetes-operator/security/secrets/</link>
+      <pubDate>Sat, 23 Feb 2019 17:36:33 -0500</pubDate>
+      
+      <guid>/weblogic-kubernetes-operator/security/secrets/</guid>
+      <description>TODO</description>
     </item>
     
     <item>
@@ -449,33 +477,6 @@ After this, the operator starts watches for changes to Domain resources and any 
       
       <guid>/weblogic-kubernetes-operator/developerguide/backwards-compatibility/</guid>
       <description>Starting with the 2.0 release, future operator releases must be backward compatible with respect to the domain resource schema, operator Helm chart input values, configuration overrides template, Kubernetes resources created by the operator Helm chart, Kubernetes resources created by the operator, and the operator REST interface. We will maintain compatibility for three releases, except in the case of a clearly communicated deprecated feature, which will be maintained for one release after a replacement is available.</description>
-    </item>
-    
-    <item>
-      <title>Certificates</title>
-      <link>/weblogic-kubernetes-operator/security/certificates/</link>
-      <pubDate>Wed, 06 Mar 2019 21:14:18 -0500</pubDate>
-      
-      <guid>/weblogic-kubernetes-operator/security/certificates/</guid>
-      <description>Reference  Configure the external REST interface SSL/TLS identity REST interface configuration settings Sample to create external certificate and key  Updating operator external certificate If the operator needs to update the external certificate and key currently being used or was installed without an external REST API SSL/TLS identity, the helm upgrade command is used to re-start the operator with the new or updated kubernetes tls secret that contains the desired certificate(s).</description>
-    </item>
-    
-    <item>
-      <title>Domain Security</title>
-      <link>/weblogic-kubernetes-operator/security/domain-security/</link>
-      <pubDate>Wed, 27 Feb 2019 11:26:21 -0500</pubDate>
-      
-      <guid>/weblogic-kubernetes-operator/security/domain-security/</guid>
-      <description>TODO discuss T3 channels - recommendation is to not expose them outisde the cluster unless absolulety necessary preference is to kubectl exec into a pod and run wlst from there - or a bastion also could talk about private vpn if you need cross-domain t3 across clouds/etc.</description>
-    </item>
-    
-    <item>
-      <title>Encryption</title>
-      <link>/weblogic-kubernetes-operator/security/encryption/</link>
-      <pubDate>Sat, 23 Feb 2019 17:36:29 -0500</pubDate>
-      
-      <guid>/weblogic-kubernetes-operator/security/encryption/</guid>
-      <description></description>
     </item>
     
     <item>

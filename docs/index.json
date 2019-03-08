@@ -1,5 +1,12 @@
 [
 {
+	"uri": "/weblogic-kubernetes-operator/security/certificates/",
+	"title": "Certificates",
+	"tags": [],
+	"description": "WebLogic Operator SSL/TLS certificate handling",
+	"content": " Reference  Configure the external REST interface SSL/TLS identity REST interface configuration settings Sample to create external certificate and key  Updating operator external certificate If the operator needs to update the external certificate and key currently being used or was installed without an external REST API SSL/TLS identity, the helm upgrade command is used to re-start the operator with the new or updated kubernetes tls secret that contains the desired certificate(s).\nThe operator requires a re-start in order to begin using the new or udpated external certificate. The Helm --recreate-pods flag is used to cause the existing kubernetes pod to be terminated and a new pod to be started with the updated configuration.\nFor example, if the operator was installed with the Helm release name weblogic-operator in the namespace weblogic-operator-ns and the kubernetes tls secret is named weblogic-operator-cert, the following commands can be used to update the operator certificate(s) and key:\n$ kubectl create secret tls weblogic-operator-cert -n weblogic-operator-ns \\ --cert=\u0026lt;path-to-certificate\u0026gt; --key=\u0026lt;path-to-private-key\u0026gt; # $ helm get values weblogic-operator # $ helm upgrade --wait --recreate-pods --reuse-values \\ --set externalRestEnabled=true \\ --set externalRestIdentitySecret=weblogic-operator-cert \\ weblogic-operator kubernetes/charts/weblogic-operator  "
+},
+{
 	"uri": "/weblogic-kubernetes-operator/userguide/managing-domains/ingress/nodeports/",
 	"title": "Nodeports",
 	"tags": [],
@@ -26,13 +33,6 @@
 	"tags": [],
 	"description": "",
 	"content": " In addition to the requirements listed in the User Guide, the following software is also required to obtain and build the operator:\n Git (1.8 or later recommended) Java Developer Kit (1.8u131 or later recommended; please use 1.8, tests will not work on 1.9 or later versions) Apache Maven (3.3 or later recommended)  The operator is written primarily in Java, BASH shell scripts, and WLST scripts. The Java code uses features introduced in Java 1.8 \u0026ndash; for example, closures \u0026ndash; but does not use any Java 1.9 features.\nBecause the target runtime environment for the operator is Oracle Linux, no particular effort has been made to ensure the build or tests run on any other operating system. Please be aware that Oracle will not provide support, or accept pull requests to add support, for other operating systems.\nObtaining the operator source code The operator source code is published on GitHub at https://github.com/oracle/weblogic-kubernetes-operator. Developers may clone this repository to a local machine or, if desired, create a fork in their personal namespace and clone the fork. Developers who are planning to submit a pull request are advised to create a fork.\nTo clone the repository from GitHub, issue this command:\n$ git clone https://github.com/oracle/weblogic-kubernetes-operator.git  "
-},
-{
-	"uri": "/weblogic-kubernetes-operator/security/rbac/",
-	"title": "RBAC",
-	"tags": [],
-	"description": "",
-	"content": " The operator assumes that certain roles and role bindings are created on the Kubernetes cluster. The operator installation scripts create these, and the operator verifies that they are correct when the cluster starts up. This document lists the RBAC definitions that are created.\nThe general design goal is to provide the operator with the minimum amount of permissions that it requires, and to favor built-in roles over custom roles, where it make sense to do so.\nKubernetes role definitions    Cluster role Resources Verbs Notes     NAMESPACE-weblogic-operator-clusterrole-general namespaces, persistentvolumes get, list, watch 1    customresourcedefinitions in API group apiextensions.k8s.io get, list, watch, create, update, patch, delete, deletecollection     domains in API group weblogic.oracle get, list, watch, update, patch     Ingresses in API group extensions get, list, watch, create, update, patch, delete, deletecollection    NAMESPACE-weblogic-operator-clusterrole-nonresource nonResourceURLs: [\u0026ldquo;/version/*\u0026ldquo;] get 1   NAMESPACE-weblogic-operator-clusterrole-namespace secrets, persistentvolumeclaims get, list, watch 2    services, pods, networkpolicies get, list, watch, create, update, patch, delete, deletecollection    NAMESPACE-weblogic-operator-clusterrolebinding-discovery system:discovery in API group rbac.authorization.k8s.io  1   NAMESPACE-weblogic-operator-clusterrolebinding-auth-delegator system:auth-delegator in API group rbac.authorization.k8s.io  1    Notes:\n This cluster role is assigned to the operator’s service account in the operator’s namespace. The uppercase text NAMESPACE in the cluster role name is replaced with the operator’s namespace. This cluster role is assigned to the operator’s service account in each of the “target namespaces”; that is, each namespace that the operator is configured to manage.  "
 },
 {
 	"uri": "/weblogic-kubernetes-operator/samples/simple/",
@@ -140,6 +140,13 @@
 	"content": " Quick Start The Quick Start guide provides a simple tutorial to help you get the operator up and running quickly.\n"
 },
 {
+	"uri": "/weblogic-kubernetes-operator/security/domain-security/",
+	"title": "Domain Security",
+	"tags": [],
+	"description": "WebLogic Domain security and the WebLogic Operator",
+	"content": " WebLogic T3 Channels Oracle recommends not to expose any T3 channels outisde the Kubernetes cluster unless absolulety necessary. If exposing a T3 channel, limit access using controls like security lists or setup a Bastion to provide access.\n\rWhen accesing T3 channels, the preferred approach is to kubectl exec into the kubernetes pod and then run wlst or setup Bastion access and then run wlst from the Bastion host to connect to the Kubernetes cluster.\nAlso, consider a private VPN if you need use cross-domain T3 access between clouds, data centers, etc.\n"
+},
+{
 	"uri": "/weblogic-kubernetes-operator/userguide/introduction/demo/",
 	"title": "Demo",
 	"tags": [],
@@ -156,13 +163,6 @@
 {
 	"uri": "/weblogic-kubernetes-operator/userguide/managing-domains/accessing-the-domain/admin-console/",
 	"title": "Administration Console",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "/weblogic-kubernetes-operator/security/service-accounts/",
-	"title": "Service Accounts",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -301,11 +301,11 @@
 	"content": ""
 },
 {
-	"uri": "/weblogic-kubernetes-operator/security/secrets/",
-	"title": "Secrets",
+	"uri": "/weblogic-kubernetes-operator/security/encryption/",
+	"title": "Encryption",
 	"tags": [],
-	"description": "",
-	"content": ""
+	"description": "WebLogic Domain encryption and the WebLogic Operator",
+	"content": "TODO\n"
 },
 {
 	"uri": "/weblogic-kubernetes-operator/samples/simple/domains/domain-home-in-image/",
@@ -383,6 +383,13 @@
 	"tags": [],
 	"description": "",
 	"content": ""
+},
+{
+	"uri": "/weblogic-kubernetes-operator/security/service-accounts/",
+	"title": "Service Accounts",
+	"tags": [],
+	"description": "Kubernetes service accounts for the WebLogic Operator",
+	"content": "TODO\n"
 },
 {
 	"uri": "/weblogic-kubernetes-operator/samples/simple/rest/",
@@ -469,6 +476,13 @@
 	"content": " This project has adopted the following coding standards:\n Code will be formated using Oracle / WebLogic standards, which are identical to the Google Java Style. Javadoc must be provided for all public packages, classes, and methods, and must include all parameters and returns. Javadoc is not required for methods that override or implement methods that are already documented. All non-trivial methods should include LOGGER.entering() and LOGGER.exiting() calls. The LOGGER.exiting() call should include the value that is going to be returned from the method, unless that value includes a credential or other sensitive information. All logged messages must be internationalized using the resource bundle src/main/resources/Operator.properties and using a key itemized in src/main/java/oracle/kubernetes/operator/logging/MessageKeys.java. After operator initialization, all operator work must be implemented using the asynchronous call model (described below). In particular, worker threads must not use sleep() or IO or lock-based blocking methods.  Code formatting plugins The following IDE plugins are available to assist with following the code formatting standards\nIntelliJ An IntelliJ plugin is available from the plugin repository.\nThe plugin will be enabled by default. To disable it in the current project, go to File \u0026gt; Settings... \u0026gt; google-java-format Settings (or IntelliJ IDEA \u0026gt; Preferences... \u0026gt; Other Settings \u0026gt; google-java-format Settings on macOS) and uncheck the \u0026ldquo;Enable google-java-format\u0026rdquo; checkbox.\nTo disable it by default in new projects, use File \u0026gt; Other Settings \u0026gt; Default Settings....\nWhen enabled, it will replace the normal \u0026ldquo;Reformat Code\u0026rdquo; action, which can be triggered from the \u0026ldquo;Code\u0026rdquo; menu or with the Ctrl-Alt-L (by default) keyboard shortcut.\nThe import ordering is not handled by this plugin, unfortunately. To fix the import order, download the IntelliJ Java Google Style file and import it into File→Settings→Editor→Code Style.\nEclipse An Eclipse plugin can be downloaded from the releases page. Drop it into the Eclipse drop-ins folder to activate the plugin.\nThe plugin adds a google-java-format formatter implementation that can be configured in Eclipse \u0026gt; Preferences \u0026gt; Java \u0026gt; Code Style \u0026gt; Formatter \u0026gt; Formatter Implementation.\n"
 },
 {
+	"uri": "/weblogic-kubernetes-operator/security/rbac/",
+	"title": "RBAC",
+	"tags": [],
+	"description": "Role based authorization for the WebLogic Operator",
+	"content": " The operator assumes that certain roles and role bindings are created on the Kubernetes cluster. The operator installation scripts create these, and the operator verifies that they are correct when the cluster starts up. This document lists the RBAC definitions that are created.\nThe general design goal is to provide the operator with the minimum amount of permissions that it requires, and to favor built-in roles over custom roles, where it make sense to do so.\nKubernetes role definitions    Cluster role Resources Verbs Notes     NAMESPACE-weblogic-operator-clusterrole-general namespaces, persistentvolumes get, list, watch 1    customresourcedefinitions in API group apiextensions.k8s.io get, list, watch, create, update, patch, delete, deletecollection     domains in API group weblogic.oracle get, list, watch, update, patch     Ingresses in API group extensions get, list, watch, create, update, patch, delete, deletecollection    NAMESPACE-weblogic-operator-clusterrole-nonresource nonResourceURLs: [\u0026ldquo;/version/*\u0026ldquo;] get 1   NAMESPACE-weblogic-operator-clusterrole-namespace secrets, persistentvolumeclaims get, list, watch 2    services, pods, networkpolicies get, list, watch, create, update, patch, delete, deletecollection    NAMESPACE-weblogic-operator-clusterrolebinding-discovery system:discovery in API group rbac.authorization.k8s.io  1   NAMESPACE-weblogic-operator-clusterrolebinding-auth-delegator system:auth-delegator in API group rbac.authorization.k8s.io  1    Notes:\n This cluster role is assigned to the operator’s service account in the operator’s namespace. The uppercase text NAMESPACE in the cluster role name is replaced with the operator’s namespace. This cluster role is assigned to the operator’s service account in each of the “target namespaces”; that is, each namespace that the operator is configured to manage.  "
+},
+{
 	"uri": "/weblogic-kubernetes-operator/reference/",
 	"title": "Reference",
 	"tags": [],
@@ -490,11 +504,18 @@
 	"content": "Lorem Ipsum.\n"
 },
 {
+	"uri": "/weblogic-kubernetes-operator/security/secrets/",
+	"title": "Secrets",
+	"tags": [],
+	"description": "Kubernetes secrets for the WebLogic Operator",
+	"content": "TODO\n"
+},
+{
 	"uri": "/weblogic-kubernetes-operator/security/",
 	"title": "Security",
 	"tags": [],
 	"description": "",
-	"content": " Chapter 6 Security Lorem Ipsum.\npain itself.  OR placeholder text used to visualize the graphic layout of a document where actual text will eventually be  You Decide!\n"
+	"content": " Chapter 6 Security \rCertificates\r\rWebLogic Operator SSL/TLS certificate handling\n\rDomain Security\r\rWebLogic Domain security and the WebLogic Operator\n\rEncryption\r\rWebLogic Domain encryption and the WebLogic Operator\n\rService Accounts\r\rKubernetes service accounts for the WebLogic Operator\n\rRBAC\r\rRole based authorization for the WebLogic Operator\n\rSecrets\r\rKubernetes secrets for the WebLogic Operator\n\r"
 },
 {
 	"uri": "/weblogic-kubernetes-operator/samples/simple/elastic-stack/",
@@ -558,27 +579,6 @@
 	"tags": [],
 	"description": "",
 	"content": "Starting with the 2.0 release, future operator releases must be backward compatible with respect to the domain resource schema, operator Helm chart input values, configuration overrides template, Kubernetes resources created by the operator Helm chart, Kubernetes resources created by the operator, and the operator REST interface. We will maintain compatibility for three releases, except in the case of a clearly communicated deprecated feature, which will be maintained for one release after a replacement is available.\n"
-},
-{
-	"uri": "/weblogic-kubernetes-operator/security/certificates/",
-	"title": "Certificates",
-	"tags": [],
-	"description": "",
-	"content": " Reference  Configure the external REST interface SSL/TLS identity REST interface configuration settings Sample to create external certificate and key  Updating operator external certificate If the operator needs to update the external certificate and key currently being used or was installed without an external REST API SSL/TLS identity, the helm upgrade command is used to re-start the operator with the new or updated kubernetes tls secret that contains the desired certificate(s).\nThe operator requires a re-start in order to begin using the new or udpated external certificate. The Helm --recreate-pods flag is used to cause the existing kubernetes pod to be terminated and a new pod to be started with the updated configuration.\nFor example, if the operator was installed with the Helm release name weblogic-operator in the namespace weblogic-operator-ns and the kubernetes tls secret is named weblogic-operator-cert, the following commands can be used to update the operator certificate(s) and key:\n$ kubectl create secret tls weblogic-operator-cert -n weblogic-operator-ns \\ --cert=\u0026lt;path-to-certificate\u0026gt; --key=\u0026lt;path-to-private-key\u0026gt; # $ helm get values weblogic-operator # $ helm upgrade --wait --recreate-pods --reuse-values \\ --set externalRestEnabled=true \\ --set externalRestIdentitySecret=weblogic-operator-cert \\ weblogic-operator kubernetes/charts/weblogic-operator  "
-},
-{
-	"uri": "/weblogic-kubernetes-operator/security/domain-security/",
-	"title": "Domain Security",
-	"tags": [],
-	"description": "",
-	"content": "TODO discuss T3 channels - recommendation is to not expose them outisde the cluster unless absolulety necessary preference is to kubectl exec into a pod and run wlst from there - or a bastion also could talk about private vpn if you need cross-domain t3 across clouds/etc.\n"
-},
-{
-	"uri": "/weblogic-kubernetes-operator/security/encryption/",
-	"title": "Encryption",
-	"tags": [],
-	"description": "",
-	"content": ""
 },
 {
 	"uri": "/weblogic-kubernetes-operator/userguide/managing-domains/integrations/exporting-logs/elastic-stack/",
