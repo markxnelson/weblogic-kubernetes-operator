@@ -58,9 +58,8 @@ $ helm list  Get the status of the operator Helm release:</description>
       <pubDate>Sat, 23 Feb 2019 17:04:41 -0500</pubDate>
       
       <guid>/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/startup/</guid>
-      <description>This document describes how you can start, stop, and restart the domain&amp;rsquo;s servers.
-There are properties on the domain resource that specify which servers should be running and which servers should be restarted. To start, stop, or restart servers, modify these properties on the domain resource (for example, by using kubectl or the Kubernetes REST API). The operator will notice the changes and apply them.
-Starting and stopping servers The serverStartPolicy property on the domain resource controls which servers should be running.</description>
+      <description>There are properties on the domain resource that specify which servers should be running and which servers should be restarted. To start, stop, or restart servers, modify these properties on the domain resource (for example, by using kubectl or the Kubernetes REST API). The operator will notice the changes and apply them.
+Starting and stopping servers The serverStartPolicy property on the domain resource controls which servers should be running. The operator runtime monitors this property and creates or deletes the corresponding server pods.</description>
     </item>
     
     <item>
@@ -79,9 +78,9 @@ Starting and stopping servers The serverStartPolicy property on the domain resou
       
       <guid>/weblogic-kubernetes-operator/userguide/managing-domains/prepare/</guid>
       <description>Perform these steps to prepare your Kubernetes cluster to run a WebLogic domain:
-a. Create the domain namespace(s). One or more domains can share a namespace. A single instance of the operator can manage multiple namespaces.
- $ kubectl create namespace domain-namespace-1  Replace domain-namespace-1 with name you want to use. The name must follow standard Kubernetes naming conventions, that is, lower case, numbers, and hyphens.
-b. Create a Kubernetes secret containing the Administration Server boot credentials.</description>
+ Create the domain namespace(s). One or more domains can share a namespace. A single instance of the operator can manage multiple namespaces.
+$ kubectl create namespace domain-namespace-1  Replace domain-namespace-1 with name you want to use. The name must follow standard Kubernetes naming conventions, that is, lower case, numbers, and hyphens.
+ Create a Kubernetes secret containing the Administration Server boot credentials.</description>
     </item>
     
     <item>
@@ -146,6 +145,17 @@ If you have an older version of the operator installed on your cluster, you must
     </item>
     
     <item>
+      <title>Restarting</title>
+      <link>/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/restarting/</link>
+      <pubDate>Sat, 23 Feb 2019 20:58:51 -0500</pubDate>
+      
+      <guid>/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/restarting/</guid>
+      <description>This document describes when to restart servers in the Oracle WebLogic Server in Kubernetes environment.
+Overview There are many situations where changes to the Oracle WebLogic Server in Kubernetes environment require that all the servers in a domain or cluster be restarted, for example, when applying a WebLogic Server patch or when upgrading an application.
+One of the operator&amp;rsquo;s most important jobs is to start and stop WebLogic Servers by creating and deleting their corresponding Kubernetes pods.</description>
+    </item>
+    
+    <item>
       <title>Demo</title>
       <link>/weblogic-kubernetes-operator/userguide/introduction/demo/</link>
       <pubDate>Sat, 23 Feb 2019 20:51:59 -0500</pubDate>
@@ -184,15 +194,6 @@ WebLogic clusters as backends of an Ingress In an Ingress object, a list of back
     </item>
     
     <item>
-      <title>Scaling</title>
-      <link>/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/scaling/</link>
-      <pubDate>Sat, 23 Feb 2019 17:04:45 -0500</pubDate>
-      
-      <guid>/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/scaling/</guid>
-      <description>WebLogic Server supports two types of clustering configurations, configured and dynamic. Configured clusters are created by manually configuring each individual Managed Server instance. In dynamic clusters, the Managed Server configurations are generated from a single, shared template. With dynamic clusters, when additional server capacity is needed, new server instances can be added to the cluster without having to manually configure them individually. Also, unlike configured clusters, scaling up of dynamic clusters is not restricted to the set of servers defined in the cluster but can be increased based on runtime demands.</description>
-    </item>
-    
-    <item>
       <title>Prometheus</title>
       <link>/weblogic-kubernetes-operator/userguide/managing-domains/integrations/exporting-metrics/prometheus/</link>
       <pubDate>Sat, 23 Feb 2019 16:49:52 -0500</pubDate>
@@ -219,17 +220,6 @@ WebLogic clusters as backends of an Ingress In an Ingress object, a list of back
       <description>For this exercise, you’ll need a Kubernetes cluster. If you need help setting one up, check out our cheat sheet. This guide assumes a single node cluster.
 The operator uses Helm to create and deploy the necessary resources and then run the operator in a Kubernetes cluster. For Helm installation and usage information, see Install Helm and Tiller.
 You should clone this repository to your local machine so that you have access to the various sample files mentioned throughout this guide:</description>
-    </item>
-    
-    <item>
-      <title>Restarting</title>
-      <link>/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/restarting/</link>
-      <pubDate>Sat, 23 Feb 2019 20:58:51 -0500</pubDate>
-      
-      <guid>/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/restarting/</guid>
-      <description>This document describes when to restart servers in the Oracle WebLogic Server in Kubernetes environment.
-Overview There are many situations where changes to the Oracle WebLogic Server in Kubernetes environment require that all the servers in a domain or cluster be restarted, for example, when applying a WebLogic Server patch or when upgrading an application.
-One of the operator&amp;rsquo;s most important jobs is to start and stop WebLogic Servers by creating and deleting their corresponding Kubernetes pods.</description>
     </item>
     
     <item>
@@ -293,15 +283,25 @@ You can access most of the REST services using GET, for example:
     </item>
     
     <item>
+      <title>Scaling</title>
+      <link>/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/scaling/</link>
+      <pubDate>Sat, 23 Feb 2019 17:04:45 -0500</pubDate>
+      
+      <guid>/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/scaling/</guid>
+      <description>WebLogic Server supports two types of clustering configurations, configured and dynamic. Configured clusters are created by manually configuring each individual Managed Server instance. In dynamic clusters, the Managed Server configurations are generated from a single, shared template. With dynamic clusters, when additional server capacity is needed, new server instances can be added to the cluster without having to manually configure them individually. Also, unlike configured clusters, scaling up of dynamic clusters is not restricted to the set of servers defined in the cluster but can be increased based on runtime demands.</description>
+    </item>
+    
+    <item>
       <title>Get images</title>
       <link>/weblogic-kubernetes-operator/quickstart/get-images/</link>
       <pubDate>Fri, 22 Feb 2019 15:44:42 -0500</pubDate>
       
       <guid>/weblogic-kubernetes-operator/quickstart/get-images/</guid>
-      <description>Get these images and put them into your local registry. a. If you don&amp;rsquo;t already have one, obtain a Docker store account, log in to the Docker store and accept the license agreement for the WebLogic Server image.
-b. Log in to the Docker store from your Docker client:
-$ docker login  c. Pull the operator image:
-$ docker pull oracle/weblogic-kubernetes-operator:2.0-rc2  d. Pull the Traefik load balancer image:</description>
+      <description>Get these images and put them into your local registry.  If you don&amp;rsquo;t already have one, obtain a Docker store account, log in to the Docker store and accept the license agreement for the WebLogic Server image.
+ Log in to the Docker store from your Docker client:
+$ docker login  Pull the operator image:
+$ docker pull oracle/weblogic-kubernetes-operator:2.0-rc2  Pull the Traefik load balancer image:
+$ docker pull traefik:1.</description>
     </item>
     
     <item>
@@ -407,10 +407,10 @@ The general design goal is to provide the operator with the minimum amount of pe
       <pubDate>Fri, 22 Feb 2019 15:44:42 -0500</pubDate>
       
       <guid>/weblogic-kubernetes-operator/quickstart/prepare/</guid>
-      <description>a. Create a namespace that can host one or more domains:
-$ kubectl create namespace sample-domain1-ns  b. Use helm to configure the operator to manage domains in this namespace:
-$ helm upgrade \ --reuse-values \ --set &amp;quot;domainNamespaces={sample-domain1-ns}&amp;quot; \ --wait \ sample-weblogic-operator \ kubernetes/charts/weblogic-operator  c. Configure Traefik to manage Ingresses created in this namespace:
-$ helm upgrade \ --reuse-values \ --set &amp;quot;kubernetes.namespaces={traefik,sample-domain1-ns}&amp;quot; \ --wait \ traefik-operator \ stable/traefik  </description>
+      <description> Create a namespace that can host one or more domains:
+$ kubectl create namespace sample-domain1-ns  Use helm to configure the operator to manage domains in this namespace:
+$ helm upgrade \ --reuse-values \ --set &amp;quot;domainNamespaces={sample-domain1-ns}&amp;quot; \ --wait \ sample-weblogic-operator \ kubernetes/charts/weblogic-operator  Configure Traefik to manage Ingresses created in this namespace:
+$ helm upgrade \ --reuse-values \ --set &amp;quot;kubernetes.namespaces={traefik,sample-domain1-ns}&amp;quot; \ --wait \ traefik-operator \ stable/traefik   </description>
     </item>
     
     <item>
@@ -438,9 +438,9 @@ $ helm upgrade \ --reuse-values \ --set &amp;quot;kubernetes.namespaces={traefik
       <pubDate>Fri, 22 Feb 2019 15:44:42 -0500</pubDate>
       
       <guid>/weblogic-kubernetes-operator/quickstart/create-domain/</guid>
-      <description>a. Create a Kubernetes secret containing the username and password for the domain using the create-weblogic-credentials script:
+      <description>Create a Kubernetes secret containing the username and password for the domain using the create-weblogic-credentials script:
 $ kubernetes/samples/scripts/create-weblogic-domain-credentials/create-weblogic-credentials.sh \ -u weblogic -p welcome1 -n sample-domain1-ns -d sample-domain1  The sample will create a secret named domainUID-weblogic-credentials where the domainUID is replaced with the value you provided. For example, the command above would create a secret named sample-domain1-weblogic-credentials.
-b. Create a new image with a domain home by running the create-domain script.</description>
+ Create a new image with a domain home by running the create-domain script.</description>
     </item>
     
     <item>
@@ -458,10 +458,10 @@ b. Create a new image with a domain home by running the create-domain script.</d
       <pubDate>Fri, 22 Feb 2019 15:44:42 -0500</pubDate>
       
       <guid>/weblogic-kubernetes-operator/quickstart/cleanup/</guid>
-      <description>Remove the domain. a. Remove the domain&amp;rsquo;s Ingress by using helm:
-$ helm delete --purge sample-domain1-ingress  b. Remove the domain resources by using the sample delete-weblogic-domain-resources script.
-$ kubernetes/samples/scripts/delete-domain/delete-weblogic-domain-resources.sh -d sample-domain1  c. Use kubectl to confirm that the server pods and domain resource are gone:
-$ kubectl get pods -n sample-domain1-ns $ kubectl get domains -n sample-domain1-ns  Remove the domain namespace. a. Configure the Traefik load balancer to stop managing the Ingresses in the domain namespace:</description>
+      <description>Remove the domain.  Remove the domain&amp;rsquo;s Ingress by using helm:
+$ helm delete --purge sample-domain1-ingress  Remove the domain resources by using the sample delete-weblogic-domain-resources script.
+$ kubernetes/samples/scripts/delete-domain/delete-weblogic-domain-resources.sh -d sample-domain1  Use kubectl to confirm that the server pods and domain resource are gone:
+$ kubectl get pods -n sample-domain1-ns $ kubectl get domains -n sample-domain1-ns   Remove the domain namespace.  Configure the Traefik load balancer to stop managing the Ingresses in the domain namespace:</description>
     </item>
     
     <item>

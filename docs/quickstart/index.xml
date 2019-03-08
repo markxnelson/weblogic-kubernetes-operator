@@ -38,10 +38,11 @@ You should clone this repository to your local machine so that you have access t
       <pubDate>Fri, 22 Feb 2019 15:44:42 -0500</pubDate>
       
       <guid>/weblogic-kubernetes-operator/quickstart/get-images/</guid>
-      <description>Get these images and put them into your local registry. a. If you don&amp;rsquo;t already have one, obtain a Docker store account, log in to the Docker store and accept the license agreement for the WebLogic Server image.
-b. Log in to the Docker store from your Docker client:
-$ docker login  c. Pull the operator image:
-$ docker pull oracle/weblogic-kubernetes-operator:2.0-rc2  d. Pull the Traefik load balancer image:</description>
+      <description>Get these images and put them into your local registry.  If you don&amp;rsquo;t already have one, obtain a Docker store account, log in to the Docker store and accept the license agreement for the WebLogic Server image.
+ Log in to the Docker store from your Docker client:
+$ docker login  Pull the operator image:
+$ docker pull oracle/weblogic-kubernetes-operator:2.0-rc2  Pull the Traefik load balancer image:
+$ docker pull traefik:1.</description>
     </item>
     
     <item>
@@ -60,10 +61,10 @@ $ helm install stable/traefik \ --name traefik-operator \ --namespace traefik \ 
       <pubDate>Fri, 22 Feb 2019 15:44:42 -0500</pubDate>
       
       <guid>/weblogic-kubernetes-operator/quickstart/prepare/</guid>
-      <description>a. Create a namespace that can host one or more domains:
-$ kubectl create namespace sample-domain1-ns  b. Use helm to configure the operator to manage domains in this namespace:
-$ helm upgrade \ --reuse-values \ --set &amp;quot;domainNamespaces={sample-domain1-ns}&amp;quot; \ --wait \ sample-weblogic-operator \ kubernetes/charts/weblogic-operator  c. Configure Traefik to manage Ingresses created in this namespace:
-$ helm upgrade \ --reuse-values \ --set &amp;quot;kubernetes.namespaces={traefik,sample-domain1-ns}&amp;quot; \ --wait \ traefik-operator \ stable/traefik  </description>
+      <description> Create a namespace that can host one or more domains:
+$ kubectl create namespace sample-domain1-ns  Use helm to configure the operator to manage domains in this namespace:
+$ helm upgrade \ --reuse-values \ --set &amp;quot;domainNamespaces={sample-domain1-ns}&amp;quot; \ --wait \ sample-weblogic-operator \ kubernetes/charts/weblogic-operator  Configure Traefik to manage Ingresses created in this namespace:
+$ helm upgrade \ --reuse-values \ --set &amp;quot;kubernetes.namespaces={traefik,sample-domain1-ns}&amp;quot; \ --wait \ traefik-operator \ stable/traefik   </description>
     </item>
     
     <item>
@@ -72,9 +73,9 @@ $ helm upgrade \ --reuse-values \ --set &amp;quot;kubernetes.namespaces={traefik
       <pubDate>Fri, 22 Feb 2019 15:44:42 -0500</pubDate>
       
       <guid>/weblogic-kubernetes-operator/quickstart/create-domain/</guid>
-      <description>a. Create a Kubernetes secret containing the username and password for the domain using the create-weblogic-credentials script:
+      <description>Create a Kubernetes secret containing the username and password for the domain using the create-weblogic-credentials script:
 $ kubernetes/samples/scripts/create-weblogic-domain-credentials/create-weblogic-credentials.sh \ -u weblogic -p welcome1 -n sample-domain1-ns -d sample-domain1  The sample will create a secret named domainUID-weblogic-credentials where the domainUID is replaced with the value you provided. For example, the command above would create a secret named sample-domain1-weblogic-credentials.
-b. Create a new image with a domain home by running the create-domain script.</description>
+ Create a new image with a domain home by running the create-domain script.</description>
     </item>
     
     <item>
@@ -83,10 +84,10 @@ b. Create a new image with a domain home by running the create-domain script.</d
       <pubDate>Fri, 22 Feb 2019 15:44:42 -0500</pubDate>
       
       <guid>/weblogic-kubernetes-operator/quickstart/cleanup/</guid>
-      <description>Remove the domain. a. Remove the domain&amp;rsquo;s Ingress by using helm:
-$ helm delete --purge sample-domain1-ingress  b. Remove the domain resources by using the sample delete-weblogic-domain-resources script.
-$ kubernetes/samples/scripts/delete-domain/delete-weblogic-domain-resources.sh -d sample-domain1  c. Use kubectl to confirm that the server pods and domain resource are gone:
-$ kubectl get pods -n sample-domain1-ns $ kubectl get domains -n sample-domain1-ns  Remove the domain namespace. a. Configure the Traefik load balancer to stop managing the Ingresses in the domain namespace:</description>
+      <description>Remove the domain.  Remove the domain&amp;rsquo;s Ingress by using helm:
+$ helm delete --purge sample-domain1-ingress  Remove the domain resources by using the sample delete-weblogic-domain-resources script.
+$ kubernetes/samples/scripts/delete-domain/delete-weblogic-domain-resources.sh -d sample-domain1  Use kubectl to confirm that the server pods and domain resource are gone:
+$ kubectl get pods -n sample-domain1-ns $ kubectl get domains -n sample-domain1-ns   Remove the domain namespace.  Configure the Traefik load balancer to stop managing the Ingresses in the domain namespace:</description>
     </item>
     
   </channel>

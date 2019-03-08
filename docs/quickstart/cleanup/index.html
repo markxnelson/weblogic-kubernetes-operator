@@ -12,17 +12,17 @@
     <title>Clean up :: WebLogic Kubernetes Operator</title>
 
     
-    <link href="/weblogic-kubernetes-operator/css/nucleus.css?1552069081" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/fontawesome-all.min.css?1552069081" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/hybrid.css?1552069081" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/featherlight.min.css?1552069081" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/perfect-scrollbar.min.css?1552069081" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/auto-complete.css?1552069081" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/theme.css?1552069081" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/hugo-theme.css?1552069081" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/nucleus.css?1552081398" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/fontawesome-all.min.css?1552081398" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/hybrid.css?1552081398" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/featherlight.min.css?1552081398" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/perfect-scrollbar.min.css?1552081398" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/auto-complete.css?1552081398" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/theme.css?1552081398" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/hugo-theme.css?1552081398" rel="stylesheet">
     
 
-    <script src="/weblogic-kubernetes-operator/js/jquery-2.x.min.js?1552069081"></script>
+    <script src="/weblogic-kubernetes-operator/js/jquery-2.x.min.js?1552081398"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/lunr.min.js?1552069081"></script>
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/auto-complete.js?1552069081"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/lunr.min.js?1552081398"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/auto-complete.js?1552081398"></script>
 <script type="text/javascript">
     
         var baseurl = "\/weblogic-kubernetes-operator\/";
     
 </script>
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/search.js?1552069081"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/search.js?1552081398"></script>
 
     
   </div>
@@ -865,9 +865,9 @@
  
   
     
-      <li data-nav-id="/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/scaling/" title="Scaling" class="dd-item ">
-        <a href="/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/scaling/">
-        Scaling
+      <li data-nav-id="/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/restarting/" title="Restarting" class="dd-item ">
+        <a href="/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/restarting/">
+        Restarting
         
         </a>
     </li>
@@ -884,9 +884,9 @@
  
   
     
-      <li data-nav-id="/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/restarting/" title="Restarting" class="dd-item ">
-        <a href="/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/restarting/">
-        Restarting
+      <li data-nav-id="/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/scaling/" title="Scaling" class="dd-item ">
+        <a href="/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/scaling/">
+        Scaling
         
         </a>
     </li>
@@ -2180,25 +2180,28 @@
 
 <h4 id="remove-the-domain">Remove the domain.</h4>
 
-<p>a.  Remove the domain&rsquo;s Ingress by using <code>helm</code>:</p>
+<ol>
+<li><p>Remove the domain&rsquo;s Ingress by using <code>helm</code>:</p>
 
 <pre><code class="language-bash">$ helm delete --purge sample-domain1-ingress
-</code></pre>
+</code></pre></li>
 
-<p>b.  Remove the domain resources by using the sample <a href="../kubernetes/samples/scripts/delete-domain/delete-weblogic-domain-resources.sh"><code>delete-weblogic-domain-resources</code></a> script.</p>
+<li><p>Remove the domain resources by using the sample <a href="../kubernetes/samples/scripts/delete-domain/delete-weblogic-domain-resources.sh"><code>delete-weblogic-domain-resources</code></a> script.</p>
 
 <pre><code class="language-bash">$ kubernetes/samples/scripts/delete-domain/delete-weblogic-domain-resources.sh -d sample-domain1
-</code></pre>
+</code></pre></li>
 
-<p>c.  Use <code>kubectl</code> to confirm that the server pods and domain resource are gone:</p>
+<li><p>Use <code>kubectl</code> to confirm that the server pods and domain resource are gone:</p>
 
 <pre><code class="language-bash">$ kubectl get pods -n sample-domain1-ns
 $ kubectl get domains -n sample-domain1-ns
-</code></pre>
+</code></pre></li>
+</ol>
 
 <h4 id="remove-the-domain-namespace">Remove the domain namespace.</h4>
 
-<p>a.  Configure the Traefik load balancer to stop managing the Ingresses in the domain namespace:</p>
+<ol>
+<li><p>Configure the Traefik load balancer to stop managing the Ingresses in the domain namespace:</p>
 
 <pre><code class="language-bash">$ helm upgrade \
   --reuse-values \
@@ -2206,9 +2209,9 @@ $ kubectl get domains -n sample-domain1-ns
   --wait \
   traefik-operator \
   stable/traefik
-</code></pre>
+</code></pre></li>
 
-<p>b.  Configure the operator to stop managing the domain:</p>
+<li><p>Configure the operator to stop managing the domain:</p>
 
 <pre><code class="language-bash">$ helm upgrade \
   --reuse-values \
@@ -2216,36 +2219,41 @@ $ kubectl get domains -n sample-domain1-ns
   --wait \
   sample-weblogic-operator \
   kubernetes/charts/weblogic-operator
-</code></pre>
+</code></pre></li>
 
-<p>c.  Delete the domain namespace:</p>
+<li><p>Delete the domain namespace:</p>
 
 <pre><code class="language-bash">$ kubectl delete namespace sample-domain1-ns
-</code></pre>
+</code></pre></li>
+</ol>
 
 <h4 id="remove-the-operator">Remove the operator.</h4>
 
-<p>a.  Remove the operator:</p>
+<ol>
+<li><p>Remove the operator:</p>
 
 <pre><code class="language-bash">$ helm delete --purge sample-weblogic-operator
-</code></pre>
+</code></pre></li>
 
-<p>b.  Remove the operator&rsquo;s namespace:</p>
+<li><p>Remove the operator&rsquo;s namespace:</p>
 
 <pre><code class="language-bash">$ kubectl delete namespace sample-weblogic-operator-ns
-</code></pre>
+</code></pre></li>
+</ol>
 
 <h4 id="remove-the-load-balancer">Remove the load balancer.</h4>
 
-<p>a.  Remove the Traefik load balancer:</p>
+<ol>
+<li><p>Remove the Traefik load balancer:</p>
 
 <pre><code class="language-bash">$ helm delete --purge traefik-operator
-</code></pre>
+</code></pre></li>
 
-<p>b.  Remove the Traefik namespace:</p>
+<li><p>Remove the Traefik namespace:</p>
 
 <pre><code class="language-bash">$ kubectl delete namespace traefik
-</code></pre>
+</code></pre></li>
+</ol>
 
 
 <footer class=" footline" >
@@ -3685,20 +3693,20 @@ $ kubectl get domains -n sample-domain1-ns
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/weblogic-kubernetes-operator/js/clipboard.min.js?1552069081"></script>
-    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.min.js?1552069081"></script>
-    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.jquery.min.js?1552069081"></script>
-    <script src="/weblogic-kubernetes-operator/js/jquery.sticky.js?1552069081"></script>
-    <script src="/weblogic-kubernetes-operator/js/featherlight.min.js?1552069081"></script>
-    <script src="/weblogic-kubernetes-operator/js/html5shiv-printshiv.min.js?1552069081"></script>
-    <script src="/weblogic-kubernetes-operator/js/highlight.pack.js?1552069081"></script>
+    <script src="/weblogic-kubernetes-operator/js/clipboard.min.js?1552081398"></script>
+    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.min.js?1552081398"></script>
+    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.jquery.min.js?1552081398"></script>
+    <script src="/weblogic-kubernetes-operator/js/jquery.sticky.js?1552081398"></script>
+    <script src="/weblogic-kubernetes-operator/js/featherlight.min.js?1552081398"></script>
+    <script src="/weblogic-kubernetes-operator/js/html5shiv-printshiv.min.js?1552081398"></script>
+    <script src="/weblogic-kubernetes-operator/js/highlight.pack.js?1552081398"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/weblogic-kubernetes-operator/js/modernizr.custom.71422.js?1552069081"></script>
-    <script src="/weblogic-kubernetes-operator/js/learn.js?1552069081"></script>
-    <script src="/weblogic-kubernetes-operator/js/hugo-learn.js?1552069081"></script>
+    <script src="/weblogic-kubernetes-operator/js/modernizr.custom.71422.js?1552081398"></script>
+    <script src="/weblogic-kubernetes-operator/js/learn.js?1552081398"></script>
+    <script src="/weblogic-kubernetes-operator/js/hugo-learn.js?1552081398"></script>
 
-    <link href="/weblogic-kubernetes-operator/mermaid/mermaid.css?1552069081" type="text/css" rel="stylesheet" />
-    <script src="/weblogic-kubernetes-operator/mermaid/mermaid.js?1552069081"></script>
+    <link href="/weblogic-kubernetes-operator/mermaid/mermaid.css?1552081398" type="text/css" rel="stylesheet" />
+    <script src="/weblogic-kubernetes-operator/mermaid/mermaid.js?1552081398"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -108,6 +108,11 @@
   </url>
   
   <url>
+    <loc>/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/restarting/</loc>
+    <lastmod>2019-02-23T20:58:51-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/weblogic-kubernetes-operator/userguide/introduction/demo/</loc>
     <lastmod>2019-02-23T20:51:59-05:00</lastmod>
   </url>
@@ -145,11 +150,6 @@
   <url>
     <loc>/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/</loc>
     <lastmod>2019-02-23T17:08:18-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/scaling/</loc>
-    <lastmod>2019-02-23T17:04:45-05:00</lastmod>
   </url>
   
   <url>
@@ -198,11 +198,6 @@
   </url>
   
   <url>
-    <loc>/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/restarting/</loc>
-    <lastmod>2019-02-23T20:58:51-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/weblogic-kubernetes-operator/userguide/introduction/architecture/</loc>
     <lastmod>2019-02-23T20:51:45-05:00</lastmod>
   </url>
@@ -240,6 +235,11 @@
   <url>
     <loc>/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/the-rest-api/</loc>
     <lastmod>2019-02-23T17:08:32-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/scaling/</loc>
+    <lastmod>2019-02-23T17:04:45-05:00</lastmod>
   </url>
   
   <url>

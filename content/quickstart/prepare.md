@@ -6,30 +6,30 @@ weight: 5
 ---
 
 
-a.  Create a namespace that can host one or more domains:
+1.  Create a namespace that can host one or more domains:
 
-```bash
-$ kubectl create namespace sample-domain1-ns
-```
+    ```bash
+    $ kubectl create namespace sample-domain1-ns
+    ```
 
-b.	Use `helm` to configure the operator to manage domains in this namespace:
+1.	Use `helm` to configure the operator to manage domains in this namespace:
 
-```bash
-$ helm upgrade \
-  --reuse-values \
-  --set "domainNamespaces={sample-domain1-ns}" \
-  --wait \
-  sample-weblogic-operator \
-  kubernetes/charts/weblogic-operator
-```
+    ```bash
+    $ helm upgrade \
+      --reuse-values \
+      --set "domainNamespaces={sample-domain1-ns}" \
+      --wait \
+      sample-weblogic-operator \
+      kubernetes/charts/weblogic-operator
+    ```
 
-c.  Configure Traefik to manage Ingresses created in this namespace:
+1.  Configure Traefik to manage Ingresses created in this namespace:
 
-```bash
-$ helm upgrade \
-  --reuse-values \
-  --set "kubernetes.namespaces={traefik,sample-domain1-ns}" \
-  --wait \
-  traefik-operator \
-  stable/traefik
-```
+    ```bash
+    $ helm upgrade \
+      --reuse-values \
+      --set "kubernetes.namespaces={traefik,sample-domain1-ns}" \
+      --wait \
+      traefik-operator \
+      stable/traefik
+    ```
