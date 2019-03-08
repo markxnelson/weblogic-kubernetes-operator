@@ -1,10 +1,9 @@
 ---
 title: "RBAC"
 date: 2019-02-23T17:15:36-05:00
-draft: false
-weight: 1
+weight: 5
+description: "Role based authorization for the WebLogic Operator"
 ---
-
 
 The operator assumes that certain roles and role bindings are created on the Kubernetes cluster.  The operator installation scripts create these, and the operator verifies that they are correct when the cluster starts up.  This document lists the [RBAC](https://kubernetes.io/docs/admin/authorization/rbac/) definitions that are created.
 

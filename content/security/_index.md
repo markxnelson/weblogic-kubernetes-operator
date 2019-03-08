@@ -10,16 +10,4 @@ pre = "<b>6. </b>"
 
 # Security
 
-Lorem Ipsum.
-
-```
-pain itself.
-```
-
-#### OR
-
-```
-placeholder text used to visualize the graphic layout of a document where actual text will eventually be
-```
-
-**You Decide*****!***
+{{% children style="h4" description="true" %}}
