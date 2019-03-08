@@ -55,6 +55,7 @@ Kubernetes YAML files *and* apply them to your cluster.  If you omit the `-e` op
 script will just generate the YAML files, but will not take any action on your cluster.
 
 If you run the sample from a machine that is remote to the Kubernetes cluster, and you need to push the new image to a registry that is local to the cluster, you need to do the following:
+
 * Set the `image` property in the inputs file to the target image name (including the registry hostname/port, and the tag if needed).
 * If you want Kubernetes to pull the image from a private registry, create a Kubernetes secret to hold your credentials and set the `imagePullSecretName` property in the inputs file to the name of the secret. Note that the secret needs to be in the same namespace as where you want to run the domain.
 * Run the `create-domain.sh` script without the `-e` option.
@@ -66,6 +67,7 @@ $ kubectl apply -f /some/output/directory/weblogic-domains/sample-domain1/domain
 ```
 
 c.	Confirm that the operator started the servers for the domain:
+
 * Use `kubectl` to show that the domain resource was created:
 
 ```bash

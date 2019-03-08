@@ -39,4 +39,4 @@ The existing WebLogic Docker image, `store/oracle/weblogic:12.2.1.3`, was update
 {{% /notice %}}
 
 
-  f. Copy the image to all the nodes in your cluster, or put it in a Docker registry that your cluster can access.
+f. Copy the image to all the nodes in your cluster, or put it in a Docker registry that your cluster can access.
