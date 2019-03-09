@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/weblogic-kubernetes-operator/security/certificates/</loc>
+    <lastmod>2019-03-06T21:14:18-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/weblogic-kubernetes-operator/userguide/managing-domains/ingress/nodeports/</loc>
     <lastmod>2019-02-23T20:47:58-05:00</lastmod>
   </url>
@@ -23,17 +28,12 @@
   </url>
   
   <url>
-    <loc>/weblogic-kubernetes-operator/security/rbac/</loc>
-    <lastmod>2019-02-23T17:15:36-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/weblogic-kubernetes-operator/samples/simple/</loc>
     <lastmod>2019-02-23T17:11:34-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/using-kubectl/</loc>
+    <loc>/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/using-helm/</loc>
     <lastmod>2019-02-23T17:08:43-05:00</lastmod>
   </url>
   
@@ -103,6 +103,16 @@
   </url>
   
   <url>
+    <loc>/weblogic-kubernetes-operator/security/domain-security/</loc>
+    <lastmod>2019-02-27T11:26:21-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/restarting/</loc>
+    <lastmod>2019-02-23T20:58:51-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/weblogic-kubernetes-operator/userguide/introduction/demo/</loc>
     <lastmod>2019-02-23T20:51:59-05:00</lastmod>
   </url>
@@ -115,11 +125,6 @@
   <url>
     <loc>/weblogic-kubernetes-operator/userguide/managing-domains/accessing-the-domain/admin-console/</loc>
     <lastmod>2019-02-23T17:39:15-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/weblogic-kubernetes-operator/security/service-accounts/</loc>
-    <lastmod>2019-02-23T17:36:12-05:00</lastmod>
   </url>
   
   <url>
@@ -138,18 +143,13 @@
   </url>
   
   <url>
-    <loc>/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/the-rest-api/</loc>
-    <lastmod>2019-02-23T17:08:32-05:00</lastmod>
+    <loc>/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/using-kubectl/</loc>
+    <lastmod>2019-02-23T17:08:43-05:00</lastmod>
   </url>
   
   <url>
     <loc>/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/</loc>
     <lastmod>2019-02-23T17:08:18-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/scaling/</loc>
-    <lastmod>2019-02-23T17:04:45-05:00</lastmod>
   </url>
   
   <url>
@@ -198,11 +198,6 @@
   </url>
   
   <url>
-    <loc>/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/restarting/</loc>
-    <lastmod>2019-02-23T20:58:51-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/weblogic-kubernetes-operator/userguide/introduction/architecture/</loc>
     <lastmod>2019-02-23T20:51:45-05:00</lastmod>
   </url>
@@ -218,8 +213,8 @@
   </url>
   
   <url>
-    <loc>/weblogic-kubernetes-operator/security/secrets/</loc>
-    <lastmod>2019-02-23T17:36:33-05:00</lastmod>
+    <loc>/weblogic-kubernetes-operator/security/encryption/</loc>
+    <lastmod>2019-02-23T17:36:29-05:00</lastmod>
   </url>
   
   <url>
@@ -238,8 +233,13 @@
   </url>
   
   <url>
-    <loc>/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/lifecycle/</loc>
-    <lastmod>2019-02-23T17:08:54-05:00</lastmod>
+    <loc>/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/the-rest-api/</loc>
+    <lastmod>2019-02-23T17:08:32-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/scaling/</loc>
+    <lastmod>2019-02-23T17:04:45-05:00</lastmod>
   </url>
   
   <url>
@@ -278,6 +278,11 @@
   </url>
   
   <url>
+    <loc>/weblogic-kubernetes-operator/security/service-accounts/</loc>
+    <lastmod>2019-02-23T17:36:12-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/weblogic-kubernetes-operator/samples/simple/rest/</loc>
     <lastmod>2019-02-23T17:33:42-05:00</lastmod>
   </url>
@@ -293,13 +298,8 @@
   </url>
   
   <url>
-    <loc>/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/logs/</loc>
-    <lastmod>2019-02-23T17:08:57-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/shutdown/</loc>
-    <lastmod>2019-02-23T17:04:49-05:00</lastmod>
+    <loc>/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/lifecycle/</loc>
+    <lastmod>2019-02-23T17:08:54-05:00</lastmod>
   </url>
   
   <url>
@@ -338,6 +338,16 @@
   </url>
   
   <url>
+    <loc>/weblogic-kubernetes-operator/security/rbac/</loc>
+    <lastmod>2019-02-23T17:15:36-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/logs/</loc>
+    <lastmod>2019-02-23T17:08:57-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/weblogic-kubernetes-operator/reference/</loc>
     <lastmod>2019-02-22T16:16:39-05:00</lastmod>
   </url>
@@ -350,6 +360,11 @@
   <url>
     <loc>/weblogic-kubernetes-operator/userguide/managing-domains/ingress/</loc>
     <lastmod>2019-02-23T20:46:32-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/weblogic-kubernetes-operator/security/secrets/</loc>
+    <lastmod>2019-02-23T17:36:33-05:00</lastmod>
   </url>
   
   <url>
@@ -403,21 +418,6 @@
   </url>
   
   <url>
-    <loc>/weblogic-kubernetes-operator/security/certificates/</loc>
-    <lastmod>2019-03-06T21:14:18-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/weblogic-kubernetes-operator/security/domain-security/</loc>
-    <lastmod>2019-02-27T11:26:21-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/weblogic-kubernetes-operator/security/encryption/</loc>
-    <lastmod>2019-02-23T17:36:29-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/weblogic-kubernetes-operator/userguide/managing-domains/integrations/exporting-logs/elastic-stack/</loc>
     <lastmod>2019-02-23T16:48:21-05:00</lastmod>
   </url>
@@ -429,7 +429,7 @@
   
   <url>
     <loc>/weblogic-kubernetes-operator/</loc>
-    <lastmod>2019-02-23T20:47:58-05:00</lastmod>
+    <lastmod>2019-03-06T21:14:18-05:00</lastmod>
   </url>
   
   <url>

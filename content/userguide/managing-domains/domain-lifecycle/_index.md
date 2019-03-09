@@ -7,4 +7,4 @@ pre = "<b> </b>"
 
 
 
-Lorem Ipsum.
+This section describes how you can start, stop, restart, and scale the domain's servers.

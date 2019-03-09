@@ -12,21 +12,13 @@
     
     
     <item>
-      <title>Startup</title>
+      <title>Startup and shutdown</title>
       <link>/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/startup/</link>
       <pubDate>Sat, 23 Feb 2019 17:04:41 -0500</pubDate>
       
       <guid>/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/startup/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Scaling</title>
-      <link>/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/scaling/</link>
-      <pubDate>Sat, 23 Feb 2019 17:04:45 -0500</pubDate>
-      
-      <guid>/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/scaling/</guid>
-      <description>WebLogic Server supports two types of clustering configurations, configured and dynamic. Configured clusters are created by manually configuring each individual Managed Server instance. In dynamic clusters, the Managed Server configurations are generated from a single, shared template. With dynamic clusters, when additional server capacity is needed, new server instances can be added to the cluster without having to manually configure them individually. Also, unlike configured clusters, scaling up of dynamic clusters is not restricted to the set of servers defined in the cluster but can be increased based on runtime demands.</description>
+      <description>There are properties on the domain resource that specify which servers should be running and which servers should be restarted. To start, stop, or restart servers, modify these properties on the domain resource (for example, by using kubectl or the Kubernetes REST API). The operator will notice the changes and apply them.
+Starting and stopping servers The serverStartPolicy property on the domain resource controls which servers should be running. The operator runtime monitors this property and creates or deletes the corresponding server pods.</description>
     </item>
     
     <item>
@@ -41,12 +33,12 @@ One of the operator&amp;rsquo;s most important jobs is to start and stop WebLogi
     </item>
     
     <item>
-      <title>Shutdown</title>
-      <link>/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/shutdown/</link>
-      <pubDate>Sat, 23 Feb 2019 17:04:49 -0500</pubDate>
+      <title>Scaling</title>
+      <link>/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/scaling/</link>
+      <pubDate>Sat, 23 Feb 2019 17:04:45 -0500</pubDate>
       
-      <guid>/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/shutdown/</guid>
-      <description></description>
+      <guid>/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/scaling/</guid>
+      <description>WebLogic Server supports two types of clustering configurations, configured and dynamic. Configured clusters are created by manually configuring each individual Managed Server instance. In dynamic clusters, the Managed Server configurations are generated from a single, shared template. With dynamic clusters, when additional server capacity is needed, new server instances can be added to the cluster without having to manually configure them individually. Also, unlike configured clusters, scaling up of dynamic clusters is not restricted to the set of servers defined in the cluster but can be increased based on runtime demands.</description>
     </item>
     
   </channel>

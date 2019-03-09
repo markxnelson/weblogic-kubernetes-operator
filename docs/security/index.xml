@@ -12,34 +12,6 @@
     
     
     <item>
-      <title>RBAC</title>
-      <link>/weblogic-kubernetes-operator/security/rbac/</link>
-      <pubDate>Sat, 23 Feb 2019 17:15:36 -0500</pubDate>
-      
-      <guid>/weblogic-kubernetes-operator/security/rbac/</guid>
-      <description>The operator assumes that certain roles and role bindings are created on the Kubernetes cluster. The operator installation scripts create these, and the operator verifies that they are correct when the cluster starts up. This document lists the RBAC definitions that are created.
-The general design goal is to provide the operator with the minimum amount of permissions that it requires, and to favor built-in roles over custom roles, where it make sense to do so.</description>
-    </item>
-    
-    <item>
-      <title>Service Accounts</title>
-      <link>/weblogic-kubernetes-operator/security/service-accounts/</link>
-      <pubDate>Sat, 23 Feb 2019 17:36:12 -0500</pubDate>
-      
-      <guid>/weblogic-kubernetes-operator/security/service-accounts/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Secrets</title>
-      <link>/weblogic-kubernetes-operator/security/secrets/</link>
-      <pubDate>Sat, 23 Feb 2019 17:36:33 -0500</pubDate>
-      
-      <guid>/weblogic-kubernetes-operator/security/secrets/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Certificates</title>
       <link>/weblogic-kubernetes-operator/security/certificates/</link>
       <pubDate>Wed, 06 Mar 2019 21:14:18 -0500</pubDate>
@@ -54,7 +26,8 @@ The general design goal is to provide the operator with the minimum amount of pe
       <pubDate>Wed, 27 Feb 2019 11:26:21 -0500</pubDate>
       
       <guid>/weblogic-kubernetes-operator/security/domain-security/</guid>
-      <description>TODO discuss T3 channels - recommendation is to not expose them outisde the cluster unless absolulety necessary preference is to kubectl exec into a pod and run wlst from there - or a bastion also could talk about private vpn if you need cross-domain t3 across clouds/etc.</description>
+      <description>WebLogic T3 Channels Oracle recommends not to expose any T3 channels outisde the Kubernetes cluster unless absolulety necessary. If exposing a T3 channel, limit access using controls like security lists or setup a Bastion to provide access.
+When accesing T3 channels, the preferred approach is to kubectl exec into the kubernetes pod and then run wlst or setup Bastion access and then run wlst from the Bastion host to connect to the Kubernetes cluster.</description>
     </item>
     
     <item>
@@ -63,7 +36,35 @@ The general design goal is to provide the operator with the minimum amount of pe
       <pubDate>Sat, 23 Feb 2019 17:36:29 -0500</pubDate>
       
       <guid>/weblogic-kubernetes-operator/security/encryption/</guid>
-      <description></description>
+      <description>TODO</description>
+    </item>
+    
+    <item>
+      <title>Service Accounts</title>
+      <link>/weblogic-kubernetes-operator/security/service-accounts/</link>
+      <pubDate>Sat, 23 Feb 2019 17:36:12 -0500</pubDate>
+      
+      <guid>/weblogic-kubernetes-operator/security/service-accounts/</guid>
+      <description>TODO</description>
+    </item>
+    
+    <item>
+      <title>RBAC</title>
+      <link>/weblogic-kubernetes-operator/security/rbac/</link>
+      <pubDate>Sat, 23 Feb 2019 17:15:36 -0500</pubDate>
+      
+      <guid>/weblogic-kubernetes-operator/security/rbac/</guid>
+      <description>The operator assumes that certain roles and role bindings are created on the Kubernetes cluster. The operator installation scripts create these, and the operator verifies that they are correct when the cluster starts up. This document lists the RBAC definitions that are created.
+The general design goal is to provide the operator with the minimum amount of permissions that it requires, and to favor built-in roles over custom roles, where it make sense to do so.</description>
+    </item>
+    
+    <item>
+      <title>Secrets</title>
+      <link>/weblogic-kubernetes-operator/security/secrets/</link>
+      <pubDate>Sat, 23 Feb 2019 17:36:33 -0500</pubDate>
+      
+      <guid>/weblogic-kubernetes-operator/security/secrets/</guid>
+      <description>TODO</description>
     </item>
     
   </channel>

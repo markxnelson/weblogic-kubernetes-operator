@@ -2,7 +2,7 @@
 title: "Restarting"
 date: 2019-02-23T20:58:51-05:00
 draft: false
-weight: 3
+weight: 2
 ---
 
 
