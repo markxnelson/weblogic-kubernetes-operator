@@ -14,6 +14,15 @@ Please be aware of the following important considerations for WebLogic domains r
   assume that the domain home is a directory under `/u01/oracle/user_projects/domains/` and report an error if no domain is found
   or more than one domain is found.  If a domain resource `domainHome` field is not set and `domainHomeInImage` is `false`, then the operator will
   assume that the domain home is `/shared/domains/DOMAIN_UID`.
+  {{% notice warning %}}
+  Oracle strongly recommends storing an image containing a WebLogic Domain Home
+  as private in the registry (e.g. Oracle Cloud Infrastructure Registry, Docker Hub, etc.).
+  A Docker image that contains a WebLogic Domain has sensitive information including
+  keys and credentials that are used access external resources (e.g. datasource password).
+  For more information about
+  [domain home in image protection]({{<relref "/security/domain-security/image-protection.md#weblogic-domain-in-docker-image-protection">}})
+  see the ***Security*** section.
+  {{% /notice %}}
 
 * _Log File Locations:_ The operator can automatically override WebLogic domain and server log locations using situational
   configuration overrides.  This occurs if the domain resource `logHomeEnabled` field is explicitly set to `true`, or if `logHomeEnabled` isn't set
@@ -34,12 +43,13 @@ Please be aware of the following important considerations for WebLogic domains r
   unique port number across the entire Kubernetes cluster.  If you expose the administration port in each WebLogic domain in
   the Kubernetes cluster, then each one must have a different port.  This is required because `NodePorts` are used to
   expose channels outside the Kubernetes cluster.  
-
-{{% notice warning %}}
-Exposing admin, RMI, or T3 capable channels via a node port
-can create an insecure configuration; in general only HTTP protocols should be made available externally and this exposure
-is usually accomplished by setting up an external load balancer that can access internal (non-NodePort) services.
-{{% /notice %}}
+  {{% notice warning %}}
+  Exposing admin, RMI, or T3 capable channels via a Kubernetes `NodePort`
+  can create an insecure configuration. In general, only HTTP protocols should be made available externally and this exposure
+  is usually accomplished by setting up an external load balancer that can access internal (non-NodePort) services.
+  For more information about [T3 channels]({{<relref "/security/domain-security/weblogic-channels.md#weblogic-t3-channels">}})
+  see the ***Security*** section.
+  {{% /notice %}}
 
 * _Host Path Persistent Volumes:_ If using a `hostPath` persistent volume, then it must be available on all worker nodes in the cluster and have read/write/many permissions for all container/pods in the WebLogic Server deployment.  Be aware
   that many cloud provider's volume providers may not support volumes across availability zones.  You may want to use NFS or a clustered file system to work around this limitation.
