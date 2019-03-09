@@ -42,11 +42,12 @@ If you set the `domainHomeImageBuildPath` property to `./docker-images/OracleWeb
     respectively, as shown in the example.
 {{% notice note %}}
 When using this sample, the WebLogic Server credentials that you specify, in three separate places, must be consistent:
+
+- The secret that you create for the credentials.
+- The properties files in the sample project you choose to create the Docker image from.
+- The parameters you supply to the `create-domain.sh` script.
 {{% /notice %}}
 
-    - The secret that you create for the credentials.
-    - The properties files in the sample project you choose to create the Docker image from.
-    - The parameters you supply to the `create-domain.sh` script.
 
     If you specify the `-e` option, the script will generate the
     Kubernetes YAML files *and* apply them to your cluster.  If you omit the `-e` option, the
@@ -55,7 +56,7 @@ When using this sample, the WebLogic Server credentials that you specify, in thr
     If you run the sample from a machine that is remote to the Kubernetes cluster, and you need to push the new image to a registry that is local to the cluster, you need to do the following:
 
     * Set the `image` property in the inputs file to the target image name (including the registry hostname/port, and the tag if needed).
-    * If you want Kubernetes to pull the image from a private registry, create a Kubernetes secret to hold your credentials and set the `imagePullSecretName` property in the inputs file to the name of the secret. Note that the secret needs to be in the same namespace as where you want to run the domain.
+    * If you want Kubernetes to pull the image from a private registry, create a Kubernetes secret to hold your credentials and set the `imagePullSecretName` property in the inputs file to the name of the secret.
 {{% notice note %}}
 The Kubernetes secret must be in the same namespace where the domain will be running.
 For more information see the ***Security*** section about
