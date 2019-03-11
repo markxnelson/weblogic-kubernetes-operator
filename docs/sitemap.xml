@@ -313,8 +313,8 @@
   </url>
   
   <url>
-    <loc>/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/</loc>
-    <lastmod>2019-02-23T16:50:09-05:00</lastmod>
+    <loc>/weblogic-kubernetes-operator/userguide/managing-domains/configoverrides/</loc>
+    <lastmod>2019-02-23T16:45:16-05:00</lastmod>
   </url>
   
   <url>
@@ -330,11 +330,6 @@
   <url>
     <loc>/weblogic-kubernetes-operator/developerguide/</loc>
     <lastmod>2019-02-22T15:27:54-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/weblogic-kubernetes-operator/userguide/configoverrides/</loc>
-    <lastmod>2019-03-11T14:14:20-04:00</lastmod>
   </url>
   
   <url>
@@ -408,8 +403,8 @@
   </url>
   
   <url>
-    <loc>/weblogic-kubernetes-operator/userguide/managing-domains/integrations/</loc>
-    <lastmod>2019-02-23T16:46:23-05:00</lastmod>
+    <loc>/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/</loc>
+    <lastmod>2019-02-23T16:50:09-05:00</lastmod>
   </url>
   
   <url>
@@ -428,13 +423,13 @@
   </url>
   
   <url>
-    <loc>/weblogic-kubernetes-operator/developerguide/backwards-compatibility/</loc>
-    <lastmod>2019-02-23T17:26:09-05:00</lastmod>
+    <loc>/weblogic-kubernetes-operator/userguide/managing-domains/integrations/</loc>
+    <lastmod>2019-02-23T16:46:23-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/weblogic-kubernetes-operator/userguide/configoverrides/config-overrides/</loc>
-    <lastmod>2019-03-11T14:14:20-04:00</lastmod>
+    <loc>/weblogic-kubernetes-operator/developerguide/backwards-compatibility/</loc>
+    <lastmod>2019-02-23T17:26:09-05:00</lastmod>
   </url>
   
   <url>

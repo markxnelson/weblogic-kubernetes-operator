@@ -247,7 +247,7 @@ roleRef:
 
 ```
 
-### Using a Prometheus alert action to call the operator's REST scale API
+#### Using a Prometheus alert action to call the operator's REST scale API
 In addition to using the WebLogic Diagnostic Framework for automatic scaling of a dynamic cluster,
 you can use a third-party monitoring application like Prometheus.  Please read the following blog for
 details about [Using Prometheus to Automatically Scale WebLogic Clusters on Kubernetes](https://blogs.oracle.com/weblogicserver/using-prometheus-to-automatically-scale-weblogic-clusters-on-kubernetes-v5).
