@@ -266,7 +266,8 @@ You should clone this repository to your local machine so that you have access t
       <pubDate>Sat, 23 Feb 2019 17:36:29 -0500</pubDate>
       
       <guid>/weblogic-kubernetes-operator/security/encryption/</guid>
-      <description>TODO</description>
+      <description>Reference  Encryption of values for WebLogic configuration overrides  Encryption of Kubernetes Secrets To protect your Kubernetes secret with encryption, see the Kubernetes documenation about encryption at rest for secret data and using a KMS provider for data encryption.
+WebLogic Operator Introspector The credential for the WebLogic domain is kept in a kubernetes secret that follows the pattern &amp;lt;domainUID&amp;gt;-weblogic-credentials, where &amp;lt;domainUID&amp;gt; is the unique identifier of the domain, for example, domain1-weblogic-credentials.</description>
     </item>
     
     <item>
@@ -429,7 +430,8 @@ $ helm upgrade \ --reuse-values \ --set &amp;quot;kubernetes.namespaces={traefik
       <pubDate>Sat, 23 Feb 2019 17:36:33 -0500</pubDate>
       
       <guid>/weblogic-kubernetes-operator/security/secrets/</guid>
-      <description>TODO</description>
+      <description>Reference  WebLogic Domain Credentials Secret WebLogic Domain Image Pull Secret WebLogic Operator External REST Interface Secret WebLogic Operator Internal REST Interface Secret  WebLogic Domain Credentials Secret The credential for the WebLogic domain is kept in a kubernetes secret that follows the pattern &amp;lt;domainUID&amp;gt;-weblogic-credentials, where &amp;lt;domainUID&amp;gt; is the unique identifier of the domain, for example, mydomain-weblogic-credentials.
+If the WebLogic domain will be started in domain1-ns and the &amp;lt;domainUID&amp;gt; is domain1, an example of creating a kubernetes generic secret is as follows:</description>
     </item>
     
     <item>
@@ -491,6 +493,15 @@ After this, the operator starts watches for changes to Domain resources and any 
       
       <guid>/weblogic-kubernetes-operator/developerguide/backwards-compatibility/</guid>
       <description>Starting with the 2.0 release, future operator releases must be backward compatible with respect to the domain resource schema, operator Helm chart input values, configuration overrides template, Kubernetes resources created by the operator Helm chart, Kubernetes resources created by the operator, and the operator REST interface. We will maintain compatibility for three releases, except in the case of a clearly communicated deprecated feature, which will be maintained for one release after a replacement is available.</description>
+    </item>
+    
+    <item>
+      <title>Configuration Overrides</title>
+      <link>/weblogic-kubernetes-operator/userguide/configoverrides/config-overrides/</link>
+      <pubDate>Mon, 11 Mar 2019 14:14:20 -0400</pubDate>
+      
+      <guid>/weblogic-kubernetes-operator/userguide/configoverrides/config-overrides/</guid>
+      <description>Table of contents  Overview Prerequisites Typical overrides Unsupported overrides Override template names and syntax  Override template names Override template schemas Override template macros Override template syntax special requirements Override template samples  Step-by-step guide Debugging Internal design flow  Overview Use configuration overrides (also called situational configuration) to customize a WebLogic domain home configuration without modifying the domain&amp;rsquo;s actual config.xml or system resource files. For example, you may want to override a JDBC datasource XML module user name, password, and URL so that it references a local database.</description>
     </item>
     
     <item>

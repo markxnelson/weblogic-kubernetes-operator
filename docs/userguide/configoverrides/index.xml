@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Configuration on WebLogic Kubernetes Operator</title>
+    <link>/weblogic-kubernetes-operator/userguide/configoverrides/</link>
+    <description>Recent content in Configuration on WebLogic Kubernetes Operator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 11 Mar 2019 14:14:20 -0400</lastBuildDate>
+    
+	<atom:link href="/weblogic-kubernetes-operator/userguide/configoverrides/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Configuration Overrides</title>
+      <link>/weblogic-kubernetes-operator/userguide/configoverrides/config-overrides/</link>
+      <pubDate>Mon, 11 Mar 2019 14:14:20 -0400</pubDate>
+      
+      <guid>/weblogic-kubernetes-operator/userguide/configoverrides/config-overrides/</guid>
+      <description>Table of contents  Overview Prerequisites Typical overrides Unsupported overrides Override template names and syntax  Override template names Override template schemas Override template macros Override template syntax special requirements Override template samples  Step-by-step guide Debugging Internal design flow  Overview Use configuration overrides (also called situational configuration) to customize a WebLogic domain home configuration without modifying the domain&amp;rsquo;s actual config.xml or system resource files. For example, you may want to override a JDBC datasource XML module user name, password, and URL so that it references a local database.</description>
+    </item>
+    
+  </channel>
+</rss>
