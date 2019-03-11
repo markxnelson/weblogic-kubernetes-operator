@@ -6,7 +6,7 @@ description: "WebLogic Domain encryption and the WebLogic Operator"
 ---
 
 #### Reference
-* [Encryption of values for WebLogic configuration overrides]({{<relref "/userguide/configoverrides/config-overrides.md#override-template-macros">}})
+* [Encryption of values for WebLogic configuration overrides]({{<relref "/userguide/managing-domains/configoverrides/_index.md#override-template-macros">}})
 * [WebLogic Operator Introspector Encryption](#weblogic-operator-introspector-encryption")
 * [Encryption of Kubernetes Secrets](#encryption-of-kubernetes-secrets")
 
@@ -15,7 +15,7 @@ description: "WebLogic Domain encryption and the WebLogic Operator"
 The WebLogic Operator has an introspection job that handles the WebLogic Domain encryption.
 The intropsection also addresses use of kubernetes secrets for use with configuration overrides.
 For additional information on the configuration handling, see the
-[configuration overrides]({{<relref "/userguide/configoverrides/config-overrides.md">}})
+[configuration overrides]({{<relref "/userguide/managing-domains/configoverrides/_index.md">}})
 documenation.
 
 The intropection also creates a `boot.properties` file that is made available

@@ -266,7 +266,8 @@ You should clone this repository to your local machine so that you have access t
       <pubDate>Sat, 23 Feb 2019 17:36:29 -0500</pubDate>
       
       <guid>/weblogic-kubernetes-operator/security/encryption/</guid>
-      <description>TODO</description>
+      <description>Reference  Encryption of values for WebLogic configuration overrides  Encryption of Kubernetes Secrets To protect your Kubernetes secret with encryption, see the Kubernetes documenation about encryption at rest for secret data and using a KMS provider for data encryption.
+WebLogic Operator Introspector The credential for the WebLogic domain is kept in a kubernetes secret that follows the pattern &amp;lt;domainUID&amp;gt;-weblogic-credentials, where &amp;lt;domainUID&amp;gt; is the unique identifier of the domain, for example, domain1-weblogic-credentials.</description>
     </item>
     
     <item>
@@ -429,7 +430,8 @@ $ helm upgrade \ --reuse-values \ --set &amp;quot;kubernetes.namespaces={traefik
       <pubDate>Sat, 23 Feb 2019 17:36:33 -0500</pubDate>
       
       <guid>/weblogic-kubernetes-operator/security/secrets/</guid>
-      <description>TODO</description>
+      <description>Reference  WebLogic Domain Credentials Secret WebLogic Domain Image Pull Secret WebLogic Operator External REST Interface Secret WebLogic Operator Internal REST Interface Secret  WebLogic Domain Credentials Secret The credential for the WebLogic domain is kept in a kubernetes secret that follows the pattern &amp;lt;domainUID&amp;gt;-weblogic-credentials, where &amp;lt;domainUID&amp;gt; is the unique identifier of the domain, for example, mydomain-weblogic-credentials.
+If the WebLogic domain will be started in domain1-ns and the &amp;lt;domainUID&amp;gt; is domain1, an example of creating a kubernetes generic secret is as follows:</description>
     </item>
     
     <item>

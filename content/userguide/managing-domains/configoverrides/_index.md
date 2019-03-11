@@ -1,9 +1,11 @@
----
-title: "Configuration Overrides"
-date: 2019-03-11T14:14:20-04:00
----
++++
+title = "Configuration Overrides"
+date = 2019-02-23T16:45:16-05:00
+weight = 4
+pre = "<b> </b>"
++++
 
-## Table of contents
+#### Table of contents
 
 * [Overview](#overview)
 * [Prerequisites](#prerequisites)
@@ -20,13 +22,13 @@ date: 2019-03-11T14:14:20-04:00
 * [Internal design flow](#internal-design-flow)
 
 ---
-# Overview
+### Overview
 
 Use configuration overrides (also called _situational configuration_) to customize a WebLogic domain home configuration without modifying the domain's actual `config.xml` or system resource files. For example, you may want to override a JDBC datasource XML module user name, password, and URL so that it references a local database.
 
 You can use overrides to customize domains as they are moved from QA to production, are deployed to different sites, or are even deployed multiple times at the same site.
 
-## How do you specify overrides?
+#### How do you specify overrides?
 
 * Make sure your domain home meets the prerequisites. See [Prerequisites](#prerequisites).
 * Make sure your overrides are supported. See [Typical overrides](#typical-overrides) and [Unsupported overrides](#unsupported-overrides).
@@ -43,7 +45,7 @@ You can use overrides to customize domains as they are moved from QA to producti
 
 For a detailed walk-through of these steps, see the [Step-by-step guide](#step-by-step-guide).
 
-## How do overrides work during runtime?
+#### How do overrides work during runtime?
 
 * When a domain is first deployed, or is restarted after shutting down all the WebLogic Server pods, the operator will:
   * Resolve any macros in your override templates.
@@ -55,14 +57,14 @@ For a detailed walk-through of these steps, see the [Step-by-step guide](#step-b
 For a detailed walk-through of the runtime flow, see the [Internal design flow](#internal-design-flow).
 
 ---
-# Prerequisites
+### Prerequisites
 
 * A WebLogic domain home must not contain any situational configuration XML file in its `optconfig` directory that was not placed there by the operator. Any existing situational configuration XML files in this directory will be deleted and replaced by your operator override templates (if any).
 
 * If you want to override a JDBC, JMS, or WLDF (diagnostics) module, the original module must be located in your domain home `config/jdbc`, `config/jms`, and `config/diagnostics` directory, respectively. These are the default locations for these types of modules.
 
 ---
-# Typical overrides
+#### Typical overrides
 
 Typical attributes for overrides include:
 
@@ -76,7 +78,7 @@ Typical attributes for overrides include:
 * Tuning (`MaxMessageSize`, etc.)
 
 ---
-# Unsupported overrides
+#### Unsupported overrides
 
 **IMPORTANT: The operator does not support custom overrides in the following areas.**
 
@@ -105,11 +107,11 @@ Note that it's OK, even expected, to override Network Access Point `public` or `
 The behavior when using an unsupported override is undefined.
 
 ---
-# Override template names and syntax
+### Override template names and syntax
 
 Overrides leverage a built-in WebLogic feature called "Configuration Overriding" which is often informally called "Situational Configuration." Situational configuration consists of XML formatted files that closely resemble the structure of WebLogic `config.xml` and system resource module XML files. In addition, the attribute fields in these files can embed `add`, `replace`, and `delete` verbs to specify the desired override action for the field.
 
-## Override template names
+#### Override template names
 
 The operator requires a different file name format for override templates than WebLogic's built-in situational configuration feature.  It converts the names to the format required by situational configuration when it moves the templates to the domain home `optconfig` directory.  The following table describes the format:
 
@@ -122,7 +124,7 @@ The operator requires a different file name format for override templates than W
 
 A `MODULENAME` must correspond to the MBean name of a system resource defined in your original `config.xml` file.
 
-## Override template schemas
+#### Override template schemas
 
 An override template must define the exact schemas required by the situational configuration feature.  The schemas vary based on the file type you wish to override.
 
@@ -166,7 +168,7 @@ _`diagnostics-MODULENAME.xml`_
 </wldf:wldf-resource>
 ```
 
-## Override template macros
+#### Override template macros
 
 The operator supports embedding macros within override templates. This helps make your templates flexibly handle multiple use cases, such as specifying a different URL, user name, and password for a different deployment.
 
@@ -180,14 +182,14 @@ The secret macro `SECRETNAME` field must reference the name of a Kubernetes secr
 
 **SECURITY NOTE: Use the `:encrypt` suffix in a secret macro to encrypt its replacement value with the WebLogic WLST `encrypt` command (instead of leaving it at its plain text value).  This is useful for overriding MBean attributes that expect encrypted values, such as the `password-encrypted` field of a data source, and is also useful for ensuring that a custom override situational configuration file the operator places in the domain home does not expose passwords in plain-text.**
 
-## Override template syntax special requirements
+#### Override template syntax special requirements
 
 **Check each item below to ensure custom situational configuration takes effect:**
 
 * Reference the name of the current bean and each parent bean in any hierarchy you override.
   * See [Override template samples](#override-template-samples) for examples.
 * Use situational config `replace` and `add` verbs as follows:
-  * If you are adding a new bean that doesn't already exist in your original domain home `config.xml`, specify `add` on the MBean itself and on each attribute within the bean. 
+  * If you are adding a new bean that doesn't already exist in your original domain home `config.xml`, specify `add` on the MBean itself and on each attribute within the bean.
     * See the `server-debug` stanza in [Override template samples](#override-template-samples) below for an example.
   * If you are adding a new attribute to an existing bean in the domain home `config.xml`, the attribute needs an `add` verb.
     * See the `max-message-size` stanza in [Override template samples](#override-template-samples) below for an example.
@@ -200,11 +202,11 @@ The secret macro `SECRETNAME` field must reference the name of a Kubernetes secr
 * When overriding modules:
   * It is a best practice to use XML namespace abbreviations `jms:`, `jdbc:`, and `wldf:` respectively for JMS, JDBC, and WLDF (diagnostics) module override files.
 
-## Override template samples
+#### Override template samples
 
-Here are some sample template override files. 
+Here are some sample template override files.
 
-### Overriding `config.xml`
+#### Overriding `config.xml`
 
 The following `config.xml` override file demonstrates:
 
@@ -233,7 +235,7 @@ The following `config.xml` override file demonstrates:
 </d:domain>
 ```
 
-### Overriding a data source module
+#### Overriding a data source module
 
 The following `jdbc-testDS.xml` override template demonstrates setting the URL, user name, and password-encrypted fields of a JDBC module named `testDS` via `secret macros`.  The generated situational configuration that replaces the macros with secret values will be located in the `DOMAIN_HOME/optconfig/jdbc` directory.   The `password-encrypted` field will be populated with an encrypted value because it uses a secret macro with an `:encrypt` suffix.  The secret is named `dbsecret` and contains three keys: `url`, `username`, and `password`.
 
@@ -259,7 +261,7 @@ The following `jdbc-testDS.xml` override template demonstrates setting the URL, 
 ```
 
 ---
-# Step-by-step guide
+### Step-by-step guide
 
 * Make sure your domain home meets the prerequisites. See [Prerequisites](#prerequisites).
 * Make sure your overrides are supported. See [Typical overrides](#typical-overrides) and [Unsupported overrides](#unsupported-overrides).
@@ -318,7 +320,7 @@ spec:
 ```
 
 ---
-# Debugging
+### Debugging
 
 Incorrectly formatted override files may be accepted without warnings or errors, and will not prevent WebLogic pods from booting. So it is important to make sure that the template files are correct in a QA environment, otherwise your WebLogic Servers may start even though critically required overrides are failing to take effect.
 
@@ -339,11 +341,11 @@ Incorrectly formatted override files may be accepted without warnings or errors,
     * If the search yields Warning or Error lines, then the format of the custom situational configuration template is incorrect, and the Warning or Error text should describe the problem.
     * Note: The following exception may show up in your server logs when overriding JDBC modules. It is not expected to affect runtime behavior, and can be ignored (a fix is pending for them):
          ```
-         java.lang.NullPointerException 
-           at weblogic.management.provider.internal.situationalconfig.SituationalConfigManagerImpl.registerListener(SituationalConfigManagerImpl.java:227) 
-           at weblogic.management.provider.internal.situationalconfig.SituationalConfigManagerImpl.start(SituationalConfigManagerImpl.java:319) 
+         java.lang.NullPointerException
+           at weblogic.management.provider.internal.situationalconfig.SituationalConfigManagerImpl.registerListener(SituationalConfigManagerImpl.java:227)
+           at weblogic.management.provider.internal.situationalconfig.SituationalConfigManagerImpl.start(SituationalConfigManagerImpl.java:319)
            ...
-           at weblogic.management.configuration.DomainMBeanImpl.setJDBCSystemResources(DomainMBeanImpl.java:11444) 
+           at weblogic.management.configuration.DomainMBeanImpl.setJDBCSystemResources(DomainMBeanImpl.java:11444)
            ...
          ```
   * Look in your `DOMAIN_HOME/optconfig` directory.
@@ -375,7 +377,7 @@ Incorrectly formatted override files may be accepted without warnings or errors,
 
 
 ---
-# Internal design flow
+### Internal design flow
 
 * When a domain is first deployed, or is restarted, the operator runtime creates an introspector Kubernetes job named `DOMAIN_UID-introspect-domain-job`.
 * The introspector job's pod:

@@ -4,25 +4,25 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.54.0" />
-    <meta name="description" content="WebLogic Domain security and the WebLogic Operator">
+    <meta name="description" content="WebLogic Domain Configuration Overrides Information">
 
 
     <link rel="icon" href="/weblogic-kubernetes-operator/images/favicon.png" type="image/png">
 
-    <title>Domain Security :: WebLogic Kubernetes Operator</title>
+    <title>Configuration :: WebLogic Kubernetes Operator</title>
 
     
-    <link href="/weblogic-kubernetes-operator/css/nucleus.css?1552344588" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/fontawesome-all.min.css?1552344588" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/hybrid.css?1552344588" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/featherlight.min.css?1552344588" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/perfect-scrollbar.min.css?1552344588" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/auto-complete.css?1552344588" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/theme.css?1552344588" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/hugo-theme.css?1552344588" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/nucleus.css?1552342233" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/fontawesome-all.min.css?1552342233" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/hybrid.css?1552342233" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/featherlight.min.css?1552342233" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/perfect-scrollbar.min.css?1552342233" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/auto-complete.css?1552342233" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/theme.css?1552342233" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/hugo-theme.css?1552342233" rel="stylesheet">
     
 
-    <script src="/weblogic-kubernetes-operator/js/jquery-2.x.min.js?1552344588"></script>
+    <script src="/weblogic-kubernetes-operator/js/jquery-2.x.min.js?1552342233"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -32,7 +32,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/weblogic-kubernetes-operator/security/domain-security/">
+  <body class="" data-url="/weblogic-kubernetes-operator/userguide/configoverrides/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/lunr.min.js?1552344588"></script>
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/auto-complete.js?1552344588"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/lunr.min.js?1552342233"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/auto-complete.js?1552342233"></script>
 <script type="text/javascript">
     
         var baseurl = "\/weblogic-kubernetes-operator\/";
     
 </script>
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/search.js?1552344588"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/search.js?1552342233"></script>
 
     
   </div>
@@ -241,7 +241,7 @@
   
     
     <li data-nav-id="/weblogic-kubernetes-operator/userguide/" title="User Guide" class="dd-item 
-        
+        parent
         
         
         ">
@@ -821,16 +821,83 @@
  
   
     
-    <li data-nav-id="/weblogic-kubernetes-operator/userguide/managing-domains/configoverrides/" title="Configuration Overrides" class="dd-item 
+    <li data-nav-id="/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/" title="Domain Life Cycle" class="dd-item 
         
         
         
         ">
-      <a href="/weblogic-kubernetes-operator/userguide/managing-domains/configoverrides/">
-          <b> </b>Configuration Overrides
+      <a href="/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/">
+          <b> </b>Domain Life Cycle
           
       </a>
       
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/startup/" title="Startup and shutdown" class="dd-item ">
+        <a href="/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/startup/">
+        Startup and shutdown
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/restarting/" title="Restarting" class="dd-item ">
+        <a href="/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/restarting/">
+        Restarting
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/scaling/" title="Scaling" class="dd-item ">
+        <a href="/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/scaling/">
+        Scaling
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
               
     </li>
   
@@ -1027,97 +1094,6 @@
  
   
     
-    <li data-nav-id="/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/" title="Domain Life Cycle" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/">
-          <b> </b>Domain Life Cycle
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-          
-          
-        
-          
-            
-            
-
-
- 
-  
-    
-      <li data-nav-id="/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/startup/" title="Startup and shutdown" class="dd-item ">
-        <a href="/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/startup/">
-        Startup and shutdown
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
- 
-  
-    
-      <li data-nav-id="/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/restarting/" title="Restarting" class="dd-item ">
-        <a href="/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/restarting/">
-        Restarting
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
- 
-  
-    
-      <li data-nav-id="/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/scaling/" title="Scaling" class="dd-item ">
-        <a href="/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/scaling/">
-        Scaling
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
- 
-  
-    
     <li data-nav-id="/weblogic-kubernetes-operator/userguide/managing-domains/integrations/" title="Integrations" class="dd-item 
         
         
@@ -1286,6 +1262,59 @@
         </ul>
               
     </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/weblogic-kubernetes-operator/userguide/configoverrides/" title="Configuration" class="dd-item 
+        parent
+        active
+        
+        ">
+      <a href="/weblogic-kubernetes-operator/userguide/configoverrides/">
+          Configuration
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/weblogic-kubernetes-operator/userguide/configoverrides/config-overrides/" title="Configuration Overrides" class="dd-item ">
+        <a href="/weblogic-kubernetes-operator/userguide/configoverrides/config-overrides/">
+        Configuration Overrides
+        
+        </a>
+    </li>
+     
   
  
 
@@ -1910,7 +1939,7 @@
   
     
     <li data-nav-id="/weblogic-kubernetes-operator/security/" title="Security" class="dd-item 
-        parent
+        
         
         
         ">
@@ -1956,8 +1985,8 @@
   
     
     <li data-nav-id="/weblogic-kubernetes-operator/security/domain-security/" title="Domain Security" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/weblogic-kubernetes-operator/security/domain-security/">
@@ -2208,7 +2237,7 @@
             
           
           
-            <a href='/weblogic-kubernetes-operator/'></a> > <a href='/weblogic-kubernetes-operator/security/'>Security</a> > Domain Security
+            <a href='/weblogic-kubernetes-operator/'></a> > <a href='/weblogic-kubernetes-operator/userguide/'>User Guide</a> > Configuration
           
          
           
@@ -2233,90 +2262,10 @@
         
         <div id="body-inner">
           
-            <h1>Domain Security</h1>
+            <h1>Configuration</h1>
           
 
         
-
-
-
-
-
-
-
-
-
-<ul class="children children-h4">
-	
-    
-    
-
-	
-		
-	
-		
-  
-
-
-	
-	
-
-<h4>
-<a href="/weblogic-kubernetes-operator/security/domain-security/image-protection/" >Docker Image Protection</a>
-</h4>
-
-
-
-
-
-
-
-			
-				
-<p>WebLogic Domain in Docker Image Protection</p>
-				
-			
-		
-
-		
-			
-
-		
-	
-		
-  
-
-
-	
-	
-
-<h4>
-<a href="/weblogic-kubernetes-operator/security/domain-security/weblogic-channels/" >Channels</a>
-</h4>
-
-
-
-
-
-
-
-			
-				
-<p>WebLogic Channels</p>
-				
-			
-		
-
-		
-			
-
-		
-	
-
-	
-</ul>
-
-
 
 
 
@@ -2487,6 +2436,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -2501,6 +2451,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2880,9 +2833,6 @@
                     
                     
 
-                    
-            
-        
                     
                         
             
@@ -2896,6 +2846,9 @@
                     
                     
 
+                    
+            
+        
                     
                         
             
@@ -2929,6 +2882,9 @@
             
         
                     
+            
+        
+                    
                         
             
             
@@ -2941,9 +2897,6 @@
                     
                     
 
-                    
-            
-        
                     
                         
             
@@ -2957,9 +2910,6 @@
                     
                     
 
-                    
-            
-        
                     
             
         
@@ -2976,6 +2926,9 @@
                     
                     
 
+                    
+            
+        
                     
                         
             
@@ -3011,19 +2964,6 @@
                     
             
         
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
                     
                         
             
@@ -3038,9 +2978,6 @@
                     
 
                     
-            
-        
-                    
                         
             
             
@@ -3180,6 +3117,9 @@
                     
                     
 
+                    
+            
+        
                     
             
         
@@ -3190,12 +3130,45 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
             
         
                     
             
         
                     
+            
+        
+                    
                         
             
             
@@ -3607,7 +3580,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -3622,9 +3594,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -3641,7 +3610,6 @@
             
             
                 
-                    
                     
                 
                 
@@ -3655,9 +3623,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -3797,10 +3762,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/weblogic-kubernetes-operator/security/certificates/" title="Certificates"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/weblogic-kubernetes-operator/userguide/managing-domains/integrations/exporting-logs/log-exporter/" title="Log Exporter"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/weblogic-kubernetes-operator/security/domain-security/image-protection/" title="Docker Image Protection" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/weblogic-kubernetes-operator/userguide/configoverrides/config-overrides/" title="Configuration Overrides" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -3810,20 +3775,20 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/weblogic-kubernetes-operator/js/clipboard.min.js?1552344588"></script>
-    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.min.js?1552344588"></script>
-    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.jquery.min.js?1552344588"></script>
-    <script src="/weblogic-kubernetes-operator/js/jquery.sticky.js?1552344588"></script>
-    <script src="/weblogic-kubernetes-operator/js/featherlight.min.js?1552344588"></script>
-    <script src="/weblogic-kubernetes-operator/js/html5shiv-printshiv.min.js?1552344588"></script>
-    <script src="/weblogic-kubernetes-operator/js/highlight.pack.js?1552344588"></script>
+    <script src="/weblogic-kubernetes-operator/js/clipboard.min.js?1552342234"></script>
+    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.min.js?1552342234"></script>
+    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.jquery.min.js?1552342234"></script>
+    <script src="/weblogic-kubernetes-operator/js/jquery.sticky.js?1552342234"></script>
+    <script src="/weblogic-kubernetes-operator/js/featherlight.min.js?1552342234"></script>
+    <script src="/weblogic-kubernetes-operator/js/html5shiv-printshiv.min.js?1552342234"></script>
+    <script src="/weblogic-kubernetes-operator/js/highlight.pack.js?1552342234"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/weblogic-kubernetes-operator/js/modernizr.custom.71422.js?1552344588"></script>
-    <script src="/weblogic-kubernetes-operator/js/learn.js?1552344588"></script>
-    <script src="/weblogic-kubernetes-operator/js/hugo-learn.js?1552344588"></script>
+    <script src="/weblogic-kubernetes-operator/js/modernizr.custom.71422.js?1552342234"></script>
+    <script src="/weblogic-kubernetes-operator/js/learn.js?1552342234"></script>
+    <script src="/weblogic-kubernetes-operator/js/hugo-learn.js?1552342234"></script>
 
-    <link href="/weblogic-kubernetes-operator/mermaid/mermaid.css?1552344588" type="text/css" rel="stylesheet" />
-    <script src="/weblogic-kubernetes-operator/mermaid/mermaid.js?1552344588"></script>
+    <link href="/weblogic-kubernetes-operator/mermaid/mermaid.css?1552342234" type="text/css" rel="stylesheet" />
+    <script src="/weblogic-kubernetes-operator/mermaid/mermaid.js?1552342234"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

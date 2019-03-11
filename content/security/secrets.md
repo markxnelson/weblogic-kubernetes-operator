@@ -18,7 +18,7 @@ follows the pattern `<domainUID>-weblogic-credentials`, where `<domainUID>` is
 the unique identifier of the domain, for example, `domain1-weblogic-credentials`.
 The `Secret` is created in the namespace where the `Domain` will be running.
 
-If the WebLogic domain will be started in `domain1-ns` and the `<domainUID>` is `domain1`,
+If the WebLogic Domain will be started in `domain1-ns` and the `<domainUID>` is `domain1`,
 an example of creating a kubernetes `generic secret` is as follows:
 
 ```bash
@@ -41,7 +41,7 @@ The WebLogic operator's introspector job will expect the secret key names to be:
 - `username`
 - `password`
 
-For example, here is what results when describing the kubernetes `secret`:
+For example, here is what results when describing the Kubernetes `Secret`:
 ```bash
 $ kubectl -n domain1-ns describe secret domain1-weblogic-credentials
 Name:         domain1-weblogic-credentials
