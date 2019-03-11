@@ -5,6 +5,13 @@ weight: 6
 description: "Kubernetes secrets for the WebLogic Operator"
 ---
 
+#### Reference
+* [WebLogic Domain Credentials Secret](#weblogic-domain-credentials-secret)
+* [WebLogic Domain Image Pull Secret](#weblogic-domain-image-pull-secret)
+* [WebLogic Operator External REST Interface Secret](#weblogic-operator-external-rest-interface-secret)
+* [WebLogic Operator Internal REST Interface Secret](#weblogic-operator-internal-rest-interface-secret)
+
+
 #### WebLogic Domain Credentials Secret
 
 The credential for the WebLogic domain is kept in a kubernetes `secret` that
@@ -29,7 +36,7 @@ tooling. For more information about creating Kubernetes secrets, see the Kuberne
 documentation.
 {{% /notice %}}
 
-The WebLogic operator's introspector job will expext the secret key names to be:
+The WebLogic operator's introspector job will expect the secret key names to be:
 
 - `username`
 - `password`
@@ -49,4 +56,40 @@ Data
 ====
 password:  8 bytes
 username:  8 bytes
+```
+
+#### WebLogic Domain Image Pull Secret
+
+The WebLogic Domain that the operator manages can have images that are protected
+in the registry. The `imagePullSecrets` setting can be used to specify the
+Kubernetes `Secret` that holds the registry credentials.
+
+{{% notice info %}}
+For more information, please see [Docker Image Protection]({{<relref "/security/domain-security/image-protection.md#weblogic-domain-in-docker-image-protection">}})
+under **Domain Security**.
+{{% /notice %}}
+
+#### WebLogic Operator External REST Interface Secret
+
+The operator can expose an external REST HTTPS interface which can be
+accessed from outside the Kubernetes cluster. A kubernetes `tls secret`
+is used to hold the certificates(s) and private key.
+
+{{% notice info %}}
+For more information, please see [Certificates]({{<relref "/security/certificates.md#reference">}})
+under **Securty**.
+{{% /notice %}}
+
+#### WebLogic Operator Internal REST Interface Secret
+
+The operator exposes an internal REST HTTPS interface with a self-signed certificate.
+The certificate is kept in a kubernetes `ConfigMap` with the name `weblogic-operator-cm ` using the key `internalOperatorCert`.
+The private key is kept in a kubernetes `Secret` with the name `weblogic-operator-secrets` using the key `internalOperatorKey`.
+These Kubernetes objects are managed by the operator's Helm chart and are part of the
+namespace where the WebLogic Operator is installed.
+
+For example, to see all the operator's config maps and secerts when installed into
+the kubernetes namespace `weblogic-operator`, use:
+```bash
+$ kubectl -n weblogic-operator get cm,secret
 ```
