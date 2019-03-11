@@ -6,7 +6,7 @@ description: "WebLogic Domain encryption and the WebLogic Operator"
 ---
 
 #### Reference
-* [Encryption of values for WebLogic configuration overrides]({{<relref "/userguide/configoverrides/config-overrides.md#override-template-macros">}})
+* [Encryption of values for WebLogic configuration overrides]({{<relref "/userguide/managing-domains/configoverrides/_index.md#override-template-macros">}})
 
 #### Encryption of Kubernetes Secrets
 
