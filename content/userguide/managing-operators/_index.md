@@ -1,14 +1,14 @@
-+++
-title = "Manage Operators"
-date = 2019-02-23T16:43:38-05:00
-weight = 3
-pre = "<b> </b>"
-+++
+---
+title: "Manage Operators"
+date: 2019-02-23T16:43:38-05:00
+weight: 3
+description: "Helm is used to create and deploy necessary operator resources and to run the operator in a Kubernetes cluster."
+---
 
 
 ### Overview
 
-Helm is used to create and deploy necessary operator resources and to run the operator in a Kubernetes cluster. Helm is a framework that helps you manage Kubernetes applications, and Helm charts help you define and install Helm applications into a Kubernetes cluster. The operator's Helm chart is located in the `kubernetes/charts/weblogic-operator` directory.
+Helm is a framework that helps you manage Kubernetes applications, and Helm charts help you define and install Helm applications into a Kubernetes cluster. The operator's Helm chart is located in the `kubernetes/charts/weblogic-operator` directory.
 
 {{% notice warning %}}
 If you have an older version of the operator installed on your cluster, then you must remove it before installing this version. This includes the 2.0-rc1 version; it must be completely removed. You should remove the deployment (for example, `kubectl delete deploy weblogic-operator -n your-namespace`) and the custom

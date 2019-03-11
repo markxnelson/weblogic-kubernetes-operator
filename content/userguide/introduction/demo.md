@@ -5,6 +5,6 @@ draft: false
 weight: 2
 ---
 
-This video provides a demonstration of the WebLogic Server Kubernetes Operator:
+This video provides a demonstration of the WebLogic Server Kubernetes Operator.
 
 {{< youtube yVdr4GmpxqY >}}

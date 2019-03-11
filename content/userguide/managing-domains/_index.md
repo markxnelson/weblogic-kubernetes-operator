@@ -1,13 +1,11 @@
-+++
-title = "Manage Domains"
-date = 2019-02-23T16:43:45-05:00
-weight = 4
-pre = "<b> </b>"
-+++
+---
+title: "Manage Domains"
+date: 2019-02-23T16:43:45-05:00
+weight: 4
+description: "Important considerations for WebLogic domains in Kubernetes"
+---
 
-#### Important considerations for WebLogic domains in Kubernetes
-
-Please be aware of the following important considerations for WebLogic domains running in Kubernetes.
+##### Please be aware of the following important considerations for WebLogic domains running in Kubernetes.
 
 * _Domain Home Location:_ The WebLogic domain home location is determined by the domain resource `domainHome` if set; otherwise, a default location is determined by the `domainHomeInImage` setting. If a domain resource `domainHome` field is not set
   and `domainHomeInImage` is `true` (the default), then the operator will

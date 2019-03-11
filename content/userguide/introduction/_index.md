@@ -1,19 +1,14 @@
-+++
-title = "Introduction"
-date = 2019-02-23T16:43:10-05:00
-weight = 2
-pre = "<b> </b>"
-+++
-
-
-
-
+---
+title: "Introduction"
+date: 2019-02-23T16:43:10-05:00
+weight: 2
+description: "Learn about the operator's design, architecture, terms, and prerequisites."
+---
+{{% children style="h4" description="true" %}}
 
 This guide provides detailed user information for the Oracle WebLogic
 Server Kubernetes Operator.  It provides instructions on how to install the operator in your
-Kubernetes cluster and how to use it to manage WebLogic domains.  
-
-If you are looking for information about how the operator is designed, implemented, built, and such, then
+Kubernetes cluster and how to use it to manage WebLogic domains.  If you are looking for information about how the operator is designed, implemented, built, and such, then
 you should refer to the [Developer guide](/developerguide).
 
 

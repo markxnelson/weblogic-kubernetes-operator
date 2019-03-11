@@ -46,22 +46,22 @@ additional pods become ready, or pods enter a non-ready state.
 
 #### Steps to set up an Ingress load balancer
 
-a. Install the Ingress controller.
+1. Install the Ingress controller.
 
-   After the Ingress controller is running, it monitors Ingress resources in a given namespace(s) and acts accordingly.
+    After the Ingress controller is running, it monitors Ingress resources in a given namespace(s) and acts accordingly.
 
-b. Create Ingress resource(s).
+1. Create Ingress resource(s).
 
-   Ingress resources contain routing rules to one or more backends. An Ingress controller is responsible to apply the rules to the underlying load balancer.
-   There are two approaches to create the Ingress resource:
+    Ingress resources contain routing rules to one or more backends. An Ingress controller is responsible to apply the rules to the underlying load balancer.
+    There are two approaches to create the Ingress resource:
 
-   * Use the Helm chart [ingress-per-domain](../kubernetes/samples/charts/ingress-per-domain).  
+      * Use the Helm chart [ingress-per-domain](../kubernetes/samples/charts/ingress-per-domain).  
 
-     Each Ingress provider supports a number of annotations in Ingress resources. This Helm chart allows you to define the routing rules without dealing with the detailed provider-specific annotations. Currently we support two Ingress providers: Traefik and Voyager.
+        Each Ingress provider supports a number of annotations in Ingress resources. This Helm chart allows you to define the routing rules without dealing with the detailed provider-specific annotations. Currently we support two Ingress providers: Traefik and Voyager.
 
-   * Create the Ingress resource manually from a YAML file.  
+     * Create the Ingress resource manually from a YAML file.  
 
-     Manually create an Ingress YAML file and then apply it to the Kubernetes cluster.
+        Manually create an Ingress YAML file and then apply it to the Kubernetes cluster.
 
 #### Guide and samples for Traefik and Voyager/HAProxy
 Traefik and Voyager/HAProxy are both popular Ingress controllers.

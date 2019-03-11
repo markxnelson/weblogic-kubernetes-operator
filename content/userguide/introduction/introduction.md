@@ -1,8 +1,8 @@
 ---
 title: "Get Started"
 date: 2019-02-23T16:40:54-05:00
-draft: false
 weight: 1
+
 ---
 
 An operator is an application-specific controller that extends Kubernetes to create, configure, and manage instances

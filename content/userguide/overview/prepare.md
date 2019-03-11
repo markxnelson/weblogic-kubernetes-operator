@@ -1,9 +1,9 @@
-+++
-title = "Prepare your environment"
-date = 2019-02-23T16:43:10-05:00
-weight = 1
-pre = "<b> </b>"
-+++
+---
+title: "Prepare your environment"
+date: 2019-02-23T16:43:10-05:00
+weight: 1
+description: "Prepare your environment, then install and use the operator to manage domains."
+---
 
 
 #### Set up your Kubernetes cluster
