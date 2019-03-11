@@ -11,12 +11,12 @@ description: "Kubernetes secrets for the WebLogic Operator"
 * [WebLogic Operator External REST Interface Secret](#weblogic-operator-external-rest-interface-secret)
 * [WebLogic Operator Internal REST Interface Secret](#weblogic-operator-internal-rest-interface-secret)
 
-
 #### WebLogic Domain Credentials Secret
 
-The credential for the WebLogic domain is kept in a kubernetes `secret` that
+The credential for the WebLogic Domain is kept in a Kubernetes `Secret` that
 follows the pattern `<domainUID>-weblogic-credentials`, where `<domainUID>` is
-the unique identifier of the domain, for example, `mydomain-weblogic-credentials`.
+the unique identifier of the domain, for example, `domain1-weblogic-credentials`.
+The `Secret` is created in the namespace where the `Domain` will be running.
 
 If the WebLogic domain will be started in `domain1-ns` and the `<domainUID>` is `domain1`,
 an example of creating a kubernetes `generic secret` is as follows:
@@ -89,7 +89,7 @@ These Kubernetes objects are managed by the operator's Helm chart and are part o
 namespace where the WebLogic Operator is installed.
 
 For example, to see all the operator's config maps and secerts when installed into
-the kubernetes namespace `weblogic-operator`, use:
+the kubernetes namespace `weblogic-operator-ns`, use:
 ```bash
-$ kubectl -n weblogic-operator get cm,secret
+$ kubectl -n weblogic-operator-ns get cm,secret
 ```
