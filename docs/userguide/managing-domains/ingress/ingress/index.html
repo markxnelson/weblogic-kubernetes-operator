@@ -12,17 +12,17 @@
     <title>Ingress :: WebLogic Kubernetes Operator</title>
 
     
-    <link href="/weblogic-kubernetes-operator/css/nucleus.css?1552081398" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/fontawesome-all.min.css?1552081398" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/hybrid.css?1552081398" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/featherlight.min.css?1552081398" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/perfect-scrollbar.min.css?1552081398" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/auto-complete.css?1552081398" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/theme.css?1552081398" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/hugo-theme.css?1552081398" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/nucleus.css?1552327800" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/fontawesome-all.min.css?1552327800" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/hybrid.css?1552327800" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/featherlight.min.css?1552327800" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/perfect-scrollbar.min.css?1552327800" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/auto-complete.css?1552327800" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/theme.css?1552327800" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/hugo-theme.css?1552327800" rel="stylesheet">
     
 
-    <script src="/weblogic-kubernetes-operator/js/jquery-2.x.min.js?1552081398"></script>
+    <script src="/weblogic-kubernetes-operator/js/jquery-2.x.min.js?1552327800"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/lunr.min.js?1552081398"></script>
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/auto-complete.js?1552081398"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/lunr.min.js?1552327800"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/auto-complete.js?1552327800"></script>
 <script type="text/javascript">
     
         var baseurl = "\/weblogic-kubernetes-operator\/";
     
 </script>
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/search.js?1552081398"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/search.js?1552327800"></script>
 
     
   </div>
@@ -273,7 +273,7 @@
         
         ">
       <a href="/weblogic-kubernetes-operator/userguide/introduction/">
-          <b> </b>Introduction
+          Introduction
           
       </a>
       
@@ -383,7 +383,7 @@
         
         ">
       <a href="/weblogic-kubernetes-operator/userguide/overview/">
-          <b> </b>Overview
+          Overview
           
       </a>
       
@@ -404,7 +404,7 @@
     
       <li data-nav-id="/weblogic-kubernetes-operator/userguide/overview/prepare/" title="Prepare your environment" class="dd-item ">
         <a href="/weblogic-kubernetes-operator/userguide/overview/prepare/">
-        <b> </b>Prepare your environment
+        Prepare your environment
         
         </a>
     </li>
@@ -436,7 +436,7 @@
         
         ">
       <a href="/weblogic-kubernetes-operator/userguide/managing-operators/">
-          <b> </b>Manage Operators
+          Manage Operators
           
       </a>
       
@@ -463,7 +463,7 @@
         
         ">
       <a href="/weblogic-kubernetes-operator/userguide/managing-operators/installation/">
-          <b> </b>Install the operator
+          Install the operator
           
       </a>
       
@@ -625,7 +625,7 @@
         
         ">
       <a href="/weblogic-kubernetes-operator/userguide/managing-domains/">
-          <b> </b>Manage Domains
+          Manage Domains
           
       </a>
       
@@ -1899,6 +1899,8 @@
         <ul>
           
           
+            
+          
           
           
         
@@ -1929,13 +1931,66 @@
  
   
     
-      <li data-nav-id="/weblogic-kubernetes-operator/security/domain-security/" title="Domain Security" class="dd-item ">
-        <a href="/weblogic-kubernetes-operator/security/domain-security/">
-        Domain Security
+    <li data-nav-id="/weblogic-kubernetes-operator/security/domain-security/" title="Domain Security" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/weblogic-kubernetes-operator/security/domain-security/">
+          Domain Security
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/weblogic-kubernetes-operator/security/domain-security/image-protection/" title="Docker Image Protection" class="dd-item ">
+        <a href="/weblogic-kubernetes-operator/security/domain-security/image-protection/">
+        Docker Image Protection
         
         </a>
     </li>
      
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/weblogic-kubernetes-operator/security/domain-security/weblogic-channels/" title="Channels" class="dd-item ">
+        <a href="/weblogic-kubernetes-operator/security/domain-security/weblogic-channels/">
+        Channels
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
   
  
 
@@ -2230,14 +2285,15 @@ additional pods become ready, or pods enter a non-ready state.</p>
 
 <h4 id="steps-to-set-up-an-ingress-load-balancer">Steps to set up an Ingress load balancer</h4>
 
-<p>a. Install the Ingress controller.</p>
+<ol>
+<li><p>Install the Ingress controller.</p>
 
-<p>After the Ingress controller is running, it monitors Ingress resources in a given namespace(s) and acts accordingly.</p>
+<p>After the Ingress controller is running, it monitors Ingress resources in a given namespace(s) and acts accordingly.</p></li>
 
-<p>b. Create Ingress resource(s).</p>
+<li><p>Create Ingress resource(s).</p>
 
 <p>Ingress resources contain routing rules to one or more backends. An Ingress controller is responsible to apply the rules to the underlying load balancer.
-   There are two approaches to create the Ingress resource:</p>
+There are two approaches to create the Ingress resource:</p>
 
 <ul>
 <li><p>Use the Helm chart <a href="../kubernetes/samples/charts/ingress-per-domain">ingress-per-domain</a>.</p>
@@ -2247,7 +2303,8 @@ additional pods become ready, or pods enter a non-ready state.</p>
 <li><p>Create the Ingress resource manually from a YAML file.</p>
 
 <p>Manually create an Ingress YAML file and then apply it to the Kubernetes cluster.</p></li>
-</ul>
+</ul></li>
+</ol>
 
 <h4 id="guide-and-samples-for-traefik-and-voyager-haproxy">Guide and samples for Traefik and Voyager/HAProxy</h4>
 
@@ -3559,6 +3616,8 @@ Information about how to install and configure these to load balance WebLogic cl
 
                     
                     
+                        
+                    
                     
 
                     
@@ -3590,6 +3649,38 @@ Information about how to install and configure these to load balance WebLogic cl
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
             
         
@@ -3715,20 +3806,20 @@ Information about how to install and configure these to load balance WebLogic cl
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/weblogic-kubernetes-operator/js/clipboard.min.js?1552081398"></script>
-    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.min.js?1552081398"></script>
-    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.jquery.min.js?1552081398"></script>
-    <script src="/weblogic-kubernetes-operator/js/jquery.sticky.js?1552081398"></script>
-    <script src="/weblogic-kubernetes-operator/js/featherlight.min.js?1552081398"></script>
-    <script src="/weblogic-kubernetes-operator/js/html5shiv-printshiv.min.js?1552081398"></script>
-    <script src="/weblogic-kubernetes-operator/js/highlight.pack.js?1552081398"></script>
+    <script src="/weblogic-kubernetes-operator/js/clipboard.min.js?1552327800"></script>
+    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.min.js?1552327800"></script>
+    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.jquery.min.js?1552327800"></script>
+    <script src="/weblogic-kubernetes-operator/js/jquery.sticky.js?1552327800"></script>
+    <script src="/weblogic-kubernetes-operator/js/featherlight.min.js?1552327800"></script>
+    <script src="/weblogic-kubernetes-operator/js/html5shiv-printshiv.min.js?1552327800"></script>
+    <script src="/weblogic-kubernetes-operator/js/highlight.pack.js?1552327800"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/weblogic-kubernetes-operator/js/modernizr.custom.71422.js?1552081398"></script>
-    <script src="/weblogic-kubernetes-operator/js/learn.js?1552081398"></script>
-    <script src="/weblogic-kubernetes-operator/js/hugo-learn.js?1552081398"></script>
+    <script src="/weblogic-kubernetes-operator/js/modernizr.custom.71422.js?1552327800"></script>
+    <script src="/weblogic-kubernetes-operator/js/learn.js?1552327800"></script>
+    <script src="/weblogic-kubernetes-operator/js/hugo-learn.js?1552327800"></script>
 
-    <link href="/weblogic-kubernetes-operator/mermaid/mermaid.css?1552081398" type="text/css" rel="stylesheet" />
-    <script src="/weblogic-kubernetes-operator/mermaid/mermaid.js?1552081398"></script>
+    <link href="/weblogic-kubernetes-operator/mermaid/mermaid.css?1552327800" type="text/css" rel="stylesheet" />
+    <script src="/weblogic-kubernetes-operator/mermaid/mermaid.js?1552327800"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

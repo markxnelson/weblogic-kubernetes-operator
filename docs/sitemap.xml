@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/weblogic-kubernetes-operator/security/domain-security/image-protection/</loc>
+    <lastmod>2019-03-08T19:00:49-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/weblogic-kubernetes-operator/security/certificates/</loc>
     <lastmod>2019-03-06T21:14:18-05:00</lastmod>
   </url>
@@ -104,7 +109,12 @@
   
   <url>
     <loc>/weblogic-kubernetes-operator/security/domain-security/</loc>
-    <lastmod>2019-02-27T11:26:21-05:00</lastmod>
+    <lastmod>2019-03-08T19:17:42-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/weblogic-kubernetes-operator/security/domain-security/weblogic-channels/</loc>
+    <lastmod>2019-03-08T19:07:36-05:00</lastmod>
   </url>
   
   <url>
@@ -429,7 +439,7 @@
   
   <url>
     <loc>/weblogic-kubernetes-operator/</loc>
-    <lastmod>2019-03-06T21:14:18-05:00</lastmod>
+    <lastmod>2019-03-08T19:00:49-05:00</lastmod>
   </url>
   
   <url>

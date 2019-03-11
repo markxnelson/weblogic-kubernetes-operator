@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.54.0" />
-    <meta name="description" content="Important considerations for WebLogic domains in Kubernetes">
+    <meta name="description" content="WebLogic Domain in Docker Image Protection">
 
 
     <link rel="icon" href="/weblogic-kubernetes-operator/images/favicon.png" type="image/png">
 
-    <title>Manage Domains :: WebLogic Kubernetes Operator</title>
+    <title>Docker Image Protection :: WebLogic Kubernetes Operator</title>
 
     
     <link href="/weblogic-kubernetes-operator/css/nucleus.css?1552327800" rel="stylesheet">
@@ -32,7 +32,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/weblogic-kubernetes-operator/userguide/managing-domains/">
+  <body class="" data-url="/weblogic-kubernetes-operator/security/domain-security/image-protection/">
     <nav id="sidebar" class="">
 
 
@@ -241,7 +241,7 @@
   
     
     <li data-nav-id="/weblogic-kubernetes-operator/userguide/" title="User Guide" class="dd-item 
-        parent
+        
         
         
         ">
@@ -620,8 +620,8 @@
   
     
     <li data-nav-id="/weblogic-kubernetes-operator/userguide/managing-domains/" title="Manage Domains" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/weblogic-kubernetes-operator/userguide/managing-domains/">
@@ -1886,7 +1886,7 @@
   
     
     <li data-nav-id="/weblogic-kubernetes-operator/security/" title="Security" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1932,7 +1932,7 @@
   
     
     <li data-nav-id="/weblogic-kubernetes-operator/security/domain-security/" title="Domain Security" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1956,7 +1956,7 @@
  
   
     
-      <li data-nav-id="/weblogic-kubernetes-operator/security/domain-security/image-protection/" title="Docker Image Protection" class="dd-item ">
+      <li data-nav-id="/weblogic-kubernetes-operator/security/domain-security/image-protection/" title="Docker Image Protection" class="dd-item active">
         <a href="/weblogic-kubernetes-operator/security/domain-security/image-protection/">
         Docker Image Protection
         
@@ -2184,7 +2184,13 @@
             
           
           
-            <a href='/weblogic-kubernetes-operator/'></a> > <a href='/weblogic-kubernetes-operator/userguide/'>User Guide</a> > Manage Domains
+            
+            
+          
+          
+            <a href='/weblogic-kubernetes-operator/'></a> > <a href='/weblogic-kubernetes-operator/security/'>Security</a> > <a href='/weblogic-kubernetes-operator/security/domain-security/'>Domain Security</a> > Docker Image Protection
+          
+         
           
          
           
@@ -2205,16 +2211,12 @@
 <ul>
 <li>
 <ul>
-<li>
+<li><a href="#weblogic-domain-in-docker-image-protection">WebLogic Domain in Docker Image Protection</a>
 <ul>
-<li><a href="#please-be-aware-of-the-following-important-considerations-for-weblogic-domains-running-in-kubernetes">Please be aware of the following important considerations for WebLogic domains running in Kubernetes.</a></li>
+<li><a href="#a-use-imagepullsecrets-with-the-domain-resource">A) Use <code>imagePullSecrets</code> with the <code>Domain</code> Resource</a></li>
+<li><a href="#b-setup-the-kubernetes-serviceaccount-with-imagepullsecrets">B) Setup the Kubernetes <code>ServiceAccount</code> with <code>imagePullSecrets</code></a></li>
 </ul></li>
 </ul></li>
-<li><a href="#creating-and-managing-weblogic-domains">Creating and managing WebLogic domains</a></li>
-<li><a href="#modifying-domain-configurations">Modifying domain configurations</a></li>
-<li><a href="#about-the-domain-resource">About the domain resource</a></li>
-<li><a href="#managing-life-cycle-operations">Managing life cycle operations</a></li>
-<li><a href="#scaling-clusters">Scaling clusters</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -2230,7 +2232,7 @@
         
         <div id="body-inner">
           
-            <h1>Manage Domains</h1>
+            <h1>Docker Image Protection</h1>
           
 
         
@@ -2238,115 +2240,92 @@
 
 
 
-<h5 id="please-be-aware-of-the-following-important-considerations-for-weblogic-domains-running-in-kubernetes">Please be aware of the following important considerations for WebLogic domains running in Kubernetes.</h5>
+<h4 id="weblogic-domain-in-docker-image-protection">WebLogic Domain in Docker Image Protection</h4>
 
-<ul>
-<li><p><em>Domain Home Location:</em> The WebLogic domain home location is determined by the domain resource <code>domainHome</code> if set; otherwise, a default location is determined by the <code>domainHomeInImage</code> setting. If a domain resource <code>domainHome</code> field is not set
-and <code>domainHomeInImage</code> is <code>true</code> (the default), then the operator will
-assume that the domain home is a directory under <code>/u01/oracle/user_projects/domains/</code> and report an error if no domain is found
-or more than one domain is found.  If a domain resource <code>domainHome</code> field is not set and <code>domainHomeInImage</code> is <code>false</code>, then the operator will
-assume that the domain home is <code>/shared/domains/DOMAIN_UID</code>.
-<div class="notices warning" ><p>Oracle strongly recommends storing an image containing a WebLogic Domain Home
-  as private in the registry (e.g. Oracle Cloud Infrastructure Registry, Docker Hub, etc.).
-  A Docker image that contains a WebLogic Domain has sensitive information including
-  keys and credentials that are used access external resources (e.g. datasource password).
-  For more information about
-  <a href="/weblogic-kubernetes-operator/security/domain-security/image-protection/#weblogic-domain-in-docker-image-protection">domain home in image protection</a>
-  see the <strong><em>Security</em></strong> section.</p>
+<div class="notices warning" ><p>Oracle strongly recommends storing the Docker images that contain a
+WebLogic Domain Home as private in the Docker registry.
+In addition to any local registry, public Docker registries include
+<a href="https://hub.docker.com/">Docker Hub</a> and the
+<a href="https://cloud.oracle.com/containers/registry">Oracle Cloud Infrastructure Registry</a> (OCIR).</p>
 </div>
-</p></li>
 
-<li><p><em>Log File Locations:</em> The operator can automatically override WebLogic domain and server log locations using situational
-configuration overrides.  This occurs if the domain resource <code>logHomeEnabled</code> field is explicitly set to <code>true</code>, or if <code>logHomeEnabled</code> isn&rsquo;t set
-and <code>domainHomeInImage</code> is explicitly set to <code>false</code>.   When overriding, the log location will be the location specified by the <code>logHome</code> setting.</p></li>
 
-<li><p><em>Listen Address Overrides:</em>  The operator will automatically override all WebLogic domain default,
-SSL, admin, or custom channel listen addresses (using situational configuration overrides).  These will become <code>domainUID</code> followed by a
-hyphen and then the server name, all lower case, and underscores converted to hyphens.  For example, if <code>domainUID=domain1</code> and
-the WebLogic server name is <code>Admin_Server</code>, then its listen address becomes <code>domain1-admin-server</code>.</p></li>
+<p>The WebLogic Domain home that is part of a Docker based image contains sensitive
+information about the domain including keys and credentials that are used to
+access external resources (e.g. datasource password). In addition, the Docker image
+may be used to create a running server that further exposes the WebLogic Domain
+outside of the Kubernetes cluster.</p>
 
-<li><p><em>Domain, Cluster, Server, and Network-Access-Point Names:</em> WebLogic domain, cluster, server, and network-access-point (channel)
-names must contain only the characters <code>A-Z</code>, <code>a-z</code>, <code>0-9</code>, <code>-</code>, or <code>_</code>.  This ensures that they can be converted to
-meet Kubernetes resource and DNS1123 naming requirements.  (When generating pod and service names, the operator will convert
-configured names to lower case and substitute a hyphen (<code>-</code>) for each underscore (<code>_</code>).)</p></li>
+<p>There are two main options to pull images from a private registry:</p>
 
-<li><p><em>Node Ports:</em> If you choose to expose any WebLogic channels outside the Kubernetes cluster via a <code>NodePort</code>, for example, the
-administration port or a T3 channel to allow WLST access, you need to ensure that you allocate each channel a
-unique port number across the entire Kubernetes cluster.  If you expose the administration port in each WebLogic domain in
-the Kubernetes cluster, then each one must have a different port.  This is required because <code>NodePorts</code> are used to
-expose channels outside the Kubernetes cluster.<br />
-<div class="notices warning" ><p>Exposing admin, RMI, or T3 capable channels via a Kubernetes <code>NodePort</code>
-  can create an insecure configuration. In general, only HTTP protocols should be made available externally and this exposure
-  is usually accomplished by setting up an external load balancer that can access internal (non-NodePort) services.
-  For more information about <a href="/weblogic-kubernetes-operator/security/domain-security/weblogic-channels/#weblogic-t3-channels">T3 channels</a>
-  see the <strong><em>Security</em></strong> section.</p>
-</div>
-</p></li>
+<ol>
+<li>Specify the image pull secret on the WebLogic <code>Domain</code> resource</li>
+<li>Setup the <code>ServiceAccount</code> in the domain namespace with an image pull secret</li>
+</ol>
 
-<li><p><em>Host Path Persistent Volumes:</em> If using a <code>hostPath</code> persistent volume, then it must be available on all worker nodes in the cluster and have read/write/many permissions for all container/pods in the WebLogic Server deployment.  Be aware
-that many cloud provider&rsquo;s volume providers may not support volumes across availability zones.  You may want to use NFS or a clustered file system to work around this limitation.</p></li>
+<h5 id="a-use-imagepullsecrets-with-the-domain-resource">A) Use <code>imagePullSecrets</code> with the <code>Domain</code> Resource</h5>
 
-<li><p><em>Security Note:</em> The <code>USER_MEM_ARGS</code> environment variable defaults to <code>-Djava.security.egd=file:/dev/./urandom</code> in all WebLogic Server pods and the WebLogic introspection job. It can be explicitly set to another value in your domain resource YAML file using the <code>env</code> attribute under the <code>serverPod</code> configuration.</p></li>
-</ul>
+<p>In order to access Docker image that is protected by a private registry the
+<code>imagePullSecrets</code> should be specificed on Kubernetes <code>Domain</code> resource defintion:</p>
 
-<p>The following features are not certified or supported in this release:</p>
+<pre><code class="language-yaml">apiVersion: &quot;weblogic.oracle/v2&quot;
+kind: Domain
+metadata:
+  name: domain1
+  namespace: domain1-ns
+  labels:
+    weblogic.resourceVersion: domain-v2
+    weblogic.domainUID: domain1
+spec:
+  domainHomeInImage: true
+  image: &quot;my-domain-home-in-image&quot;
+  imagePullPolicy: &quot;IfNotPresent&quot;
+  imagePullSecrets:
+  - name: &quot;my-registry-pull-secret&quot;
+  webLogicCredentialsSecret: 
+    name: &quot;domain1-weblogic-credentials&quot;
+</code></pre>
 
-<ul>
-<li>Whole Server Migration</li>
-<li>Consensus Leasing</li>
-<li>Node Manager (although it is used internally for the liveness probe and to start WebLogic Server instances)</li>
-<li>Multicast</li>
-<li>Multitenancy</li>
-<li>Production redeployment</li>
-</ul>
+<p>To create the Kubernetes secret called <code>my-registry-pull-secret</code> in
+the namespace where the domain will be running, <code>domain1-ns</code>, the following
+command can be used:</p>
 
-<p>Please consult My Oracle Support Doc ID 2349228.1 for up-to-date information about the features of WebLogic Server that are supported in Kubernetes environments.</p>
+<pre><code class="language-bash">$ kubectl create secret docker-registry my-registry-pull-secret \
+  -n domain1-ns \
+  --docker-server=&lt;registry-server&gt; \
+  --docker-username=&lt;name&gt; \
+  --docker-password=&lt;password&gt; \
+  --docker-email=&lt;email&gt;
+</code></pre>
 
-<h3 id="creating-and-managing-weblogic-domains">Creating and managing WebLogic domains</h3>
+<p>For more information about creating Kubernetes secrets for accessing
+the registry, see the Kubernetes documentation about
+<a href="https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/">pulling an image from a private registry</a>.</p>
 
-<p>You can locate a WebLogic domain either in a persistent volume (PV) or in a Docker image.
-For examples of each, see the <a href="../kubernetes/samples/README.md">WebLogic operator samples</a>.</p>
+<h5 id="b-setup-the-kubernetes-serviceaccount-with-imagepullsecrets">B) Setup the Kubernetes <code>ServiceAccount</code> with <code>imagePullSecrets</code></h5>
 
-<p>If you want to create your own Docker images, for example, to choose a specific set of patches or to create a domain
-with a specific configuration and/or applications deployed, then you can create the domain custom resource
-manually to deploy your domain.  This process is documented in <a href="../kubernetes/samples/scripts/create-weblogic-domain/manually-create-domain/README.md">this
-sample</a>.</p>
+<p>An additional option for accessing a Docker image protected by a private registry
+is to setup the Kubernetes <code>ServiceAccount</code> in the namespace running the
+WebLogic Domain with a set of image pull secrets thus avoiding the need to
+set <code>imagePullSecrets</code> for each <code>Domain</code> resource being created (as each resource
+instance represents a WebLogic Domain that the operator is managing).</p>
 
-<h3 id="modifying-domain-configurations">Modifying domain configurations</h3>
+<p>The Kubernestes secret would be created in the same manner as shown above and then the
+<code>ServiceAccount</code> would be updated to include this image pull secret:</p>
 
-<p>You can modify the WebLogic domain configuration for both the &ldquo;domain in persistent volume&rdquo; and the &ldquo;domain in image&rdquo; options before deploying a domain resource:</p>
+<pre><code class="language-bash">$ kubectl patch serviceaccount default -n domain1-ns \
+  -p '{&quot;imagePullSecrets&quot;: [{&quot;name&quot;: &quot;my-registry-pull-secret&quot;}]}'
+</code></pre>
 
-<ul>
-<li>When the domain is in a persistent volume, you can use WLST or WDT to change the configuration.</li>
-<li>For either case, you can use <a href="config-overrides.md">configuration overrides</a>.<br /></li>
-</ul>
-
-<p>Configuration overrides allow changing a configuration without modifying its original <code>config.xml</code> or system resource XML files, and also support parameterizing overrides so that you can inject values into them from Kubernetes secrets.   For example, you can inject database user names, passwords, and URLs that are stored in a secret.</p>
-
-<h3 id="about-the-domain-resource">About the domain resource</h3>
-
-<p>For information about the domain resource, see <a href="domain-resource.md">Domain resource</a>.</p>
-
-<h3 id="managing-life-cycle-operations">Managing life cycle operations</h3>
-
-<p>You can perform life cycle operations on WebLogic servers, clusters, or domains.
-See <a href="server-lifecycle.md">Starting, stopping, and restarting servers</a> and <a href="restart.md">Restarting WebLogic servers</a>.</p>
-
-<h3 id="scaling-clusters">Scaling clusters</h3>
-
-<p>The operator let&rsquo;s you initiate scaling of clusters in various ways:</p>
-
-<ul>
-<li><a href="scaling.md#on-demand-updating-the-domain-resource-directly">Using kubectl to edit the domain resource</a></li>
-<li><a href="scaling.md#calling-the-operators-rest-scale-api">Using the operator&rsquo;s REST APIs</a></li>
-<li><a href="scaling.md#using-a-wldf-policy-rule-and-script-action-to-call-the-operators-rest-scale-api">Using WLDF policies</a></li>
-<li><a href="scaling.md#using-a-prometheus-alert-action-to-call-the-operators-rest-scale-api">Using a Prometheus action</a></li>
-</ul>
+<p>For more information about updating a Kubernetes <code>ServiceAccount</code>
+for accessing the registry, see the Kubernetes documentation about
+<a href="https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/#add-imagepullsecrets-to-a-service-account">configuring service accounts</a>.</p>
 
 
 <footer class=" footline" >
 	
 </footer>
+
 
         
         </div> 
@@ -2510,7 +2489,6 @@ See <a href="server-lifecycle.md">Starting, stopping, and restarting servers</a>
             
                 
                     
-                    
                 
                 
 
@@ -2525,9 +2503,6 @@ See <a href="server-lifecycle.md">Starting, stopping, and restarting servers</a>
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -2771,7 +2746,6 @@ See <a href="server-lifecycle.md">Starting, stopping, and restarting servers</a>
             
                 
                     
-                    
                 
                 
 
@@ -2786,9 +2760,6 @@ See <a href="server-lifecycle.md">Starting, stopping, and restarting servers</a>
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -3622,6 +3593,7 @@ See <a href="server-lifecycle.md">Starting, stopping, and restarting servers</a>
             
                 
                     
+                    
                 
                 
 
@@ -3636,6 +3608,9 @@ See <a href="server-lifecycle.md">Starting, stopping, and restarting servers</a>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -3653,6 +3628,7 @@ See <a href="server-lifecycle.md">Starting, stopping, and restarting servers</a>
             
                 
                     
+                    
                 
                 
 
@@ -3665,6 +3641,7 @@ See <a href="server-lifecycle.md">Starting, stopping, and restarting servers</a>
             
             
                 
+                    
                     
                 
                 
@@ -3681,6 +3658,9 @@ See <a href="server-lifecycle.md">Starting, stopping, and restarting servers</a>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -3804,10 +3784,10 @@ See <a href="server-lifecycle.md">Starting, stopping, and restarting servers</a>
 	 
 	 
 		
-			<a class="nav nav-prev" href="/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/logs/" title="Logs"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/weblogic-kubernetes-operator/security/domain-security/" title="Domain Security"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/weblogic-kubernetes-operator/userguide/managing-domains/choosing-a-model/" title="Choose a Model" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/weblogic-kubernetes-operator/security/domain-security/weblogic-channels/" title="Channels" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -3838,3 +3818,4 @@ See <a href="server-lifecycle.md">Starting, stopping, and restarting servers</a>
 
   </body>
 </html>
+
