@@ -12,17 +12,17 @@
     <title>Use Helm :: WebLogic Kubernetes Operator</title>
 
     
-    <link href="/weblogic-kubernetes-operator/css/nucleus.css?1552391061" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/fontawesome-all.min.css?1552391061" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/hybrid.css?1552391061" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/featherlight.min.css?1552391061" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/perfect-scrollbar.min.css?1552391061" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/auto-complete.css?1552391061" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/theme.css?1552391061" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/hugo-theme.css?1552391061" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/nucleus.css?1552396115" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/fontawesome-all.min.css?1552396115" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/hybrid.css?1552396115" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/featherlight.min.css?1552396115" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/perfect-scrollbar.min.css?1552396115" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/auto-complete.css?1552396115" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/theme.css?1552396115" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/hugo-theme.css?1552396115" rel="stylesheet">
     
 
-    <script src="/weblogic-kubernetes-operator/js/jquery-2.x.min.js?1552391061"></script>
+    <script src="/weblogic-kubernetes-operator/js/jquery-2.x.min.js?1552396115"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/lunr.min.js?1552391061"></script>
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/auto-complete.js?1552391061"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/lunr.min.js?1552396115"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/auto-complete.js?1552396115"></script>
 <script type="text/javascript">
     
         var baseurl = "\/weblogic-kubernetes-operator\/";
     
 </script>
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/search.js?1552391061"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/search.js?1552396115"></script>
 
     
   </div>
@@ -2241,6 +2241,7 @@
 <ul>
 <li>
 <ul>
+<li><a href="#table-of-contents">Table of contents</a></li>
 <li><a href="#useful-helm-operations">Useful Helm operations</a></li>
 </ul></li>
 <li><a href="#operator-helm-configuration-values">Operator Helm configuration values</a>
@@ -2316,6 +2317,23 @@
 
 
 
+
+<h4 id="table-of-contents">Table of contents</h4>
+
+<ul>
+<li><a href="#useful-helm-operations">Useful Helm operations</a></li>
+<li><a href="#operator-helm-configuration-values">Operator Helm configuration values</a>
+
+<ul>
+<li><a href="#overall-operator-information">Overall operator information</a></li>
+<li><a href="#creating-the-operator-pod">Creating the operator pod</a></li>
+<li><a href="#weblogic-domain-management">WebLogic domain management</a></li>
+<li><a href="#elastic-stack-integration">Elastic Stack integration</a></li>
+<li><a href="#rest-interface-configuration">REST interface configuration</a></li>
+<li><a href="#debugging-options">Debugging options</a></li>
+</ul></li>
+<li><a href="#common-mistakes-and-solutions">Common mistakes and solutions</a></li>
+</ul>
 
 <h4 id="useful-helm-operations">Useful Helm operations</h4>
 
@@ -4294,20 +4312,20 @@ Error: UPGRADE FAILED: failed to create resource: namespaces &quot;myuser-d2-ns&
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/weblogic-kubernetes-operator/js/clipboard.min.js?1552391061"></script>
-    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.min.js?1552391061"></script>
-    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.jquery.min.js?1552391061"></script>
-    <script src="/weblogic-kubernetes-operator/js/jquery.sticky.js?1552391061"></script>
-    <script src="/weblogic-kubernetes-operator/js/featherlight.min.js?1552391061"></script>
-    <script src="/weblogic-kubernetes-operator/js/html5shiv-printshiv.min.js?1552391061"></script>
-    <script src="/weblogic-kubernetes-operator/js/highlight.pack.js?1552391061"></script>
+    <script src="/weblogic-kubernetes-operator/js/clipboard.min.js?1552396115"></script>
+    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.min.js?1552396115"></script>
+    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.jquery.min.js?1552396115"></script>
+    <script src="/weblogic-kubernetes-operator/js/jquery.sticky.js?1552396115"></script>
+    <script src="/weblogic-kubernetes-operator/js/featherlight.min.js?1552396115"></script>
+    <script src="/weblogic-kubernetes-operator/js/html5shiv-printshiv.min.js?1552396115"></script>
+    <script src="/weblogic-kubernetes-operator/js/highlight.pack.js?1552396115"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/weblogic-kubernetes-operator/js/modernizr.custom.71422.js?1552391061"></script>
-    <script src="/weblogic-kubernetes-operator/js/learn.js?1552391061"></script>
-    <script src="/weblogic-kubernetes-operator/js/hugo-learn.js?1552391061"></script>
+    <script src="/weblogic-kubernetes-operator/js/modernizr.custom.71422.js?1552396115"></script>
+    <script src="/weblogic-kubernetes-operator/js/learn.js?1552396115"></script>
+    <script src="/weblogic-kubernetes-operator/js/hugo-learn.js?1552396115"></script>
 
-    <link href="/weblogic-kubernetes-operator/mermaid/mermaid.css?1552391061" type="text/css" rel="stylesheet" />
-    <script src="/weblogic-kubernetes-operator/mermaid/mermaid.js?1552391061"></script>
+    <link href="/weblogic-kubernetes-operator/mermaid/mermaid.css?1552396115" type="text/css" rel="stylesheet" />
+    <script src="/weblogic-kubernetes-operator/mermaid/mermaid.js?1552396115"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -12,17 +12,17 @@
     <title>Scaling :: WebLogic Kubernetes Operator</title>
 
     
-    <link href="/weblogic-kubernetes-operator/css/nucleus.css?1552391062" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/fontawesome-all.min.css?1552391062" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/hybrid.css?1552391062" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/featherlight.min.css?1552391062" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/perfect-scrollbar.min.css?1552391062" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/auto-complete.css?1552391062" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/theme.css?1552391062" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/hugo-theme.css?1552391062" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/nucleus.css?1552396116" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/fontawesome-all.min.css?1552396116" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/hybrid.css?1552396116" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/featherlight.min.css?1552396116" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/perfect-scrollbar.min.css?1552396116" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/auto-complete.css?1552396116" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/theme.css?1552396116" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/hugo-theme.css?1552396116" rel="stylesheet">
     
 
-    <script src="/weblogic-kubernetes-operator/js/jquery-2.x.min.js?1552391062"></script>
+    <script src="/weblogic-kubernetes-operator/js/jquery-2.x.min.js?1552396116"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/lunr.min.js?1552391062"></script>
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/auto-complete.js?1552391062"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/lunr.min.js?1552396116"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/auto-complete.js?1552396116"></script>
 <script type="text/javascript">
     
         var baseurl = "\/weblogic-kubernetes-operator\/";
     
 </script>
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/search.js?1552391062"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/search.js?1552396116"></script>
 
     
   </div>
@@ -2243,14 +2243,14 @@
 <li><a href="#calling-the-operator-s-rest-scale-api">Calling the operator&rsquo;s REST scale API</a>
 <ul>
 <li><a href="#operator-rest-endpoints">Operator REST endpoints</a></li>
-</ul></li>
 <li><a href="#what-does-the-operator-do-in-response-to-a-scaling-request">What does the operator do in response to a scaling request?</a></li>
+</ul></li>
 <li><a href="#using-a-wldf-policy-rule-and-script-action-to-call-the-operator-s-rest-scale-api">Using a WLDF policy rule and script action to call the operator&rsquo;s REST scale API</a>
 <ul>
 <li><a href="#configure-automatic-scaling-of-weblogic-clusters-in-kubernetes-with-wldf">Configure automatic scaling of WebLogic clusters in Kubernetes with WLDF</a></li>
 <li><a href="#create-cluster-role-bindings-to-allow-a-namespace-user-to-query-wls-kubernetes-cluster-information">Create cluster role bindings to allow a namespace user to query WLS Kubernetes cluster information</a></li>
-<li><a href="#using-a-prometheus-alert-action-to-call-the-operator-s-rest-scale-api">Using a Prometheus alert action to call the operator&rsquo;s REST scale API</a></li>
 </ul></li>
+<li><a href="#using-a-prometheus-alert-action-to-call-the-operator-s-rest-scale-api">Using a Prometheus alert action to call the operator&rsquo;s REST scale API</a></li>
 <li><a href="#helpful-tips">Helpful Tips</a>
 <ul>
 <li><a href="#debugging-scalingaction-sh">Debugging scalingAction.sh</a></li>
@@ -2291,10 +2291,10 @@
 <p>The operator provides several ways to initiate scaling of WebLogic clusters, including:</p>
 
 <ul>
-<li>On-demand, updating the domain resource directly (using <code>kubectl</code>).</li>
-<li>Calling the operator&rsquo;s REST scale API, for example, from <code>curl</code>.</li>
-<li>Using a WLDF policy rule and script action to call the operator&rsquo;s REST scale API.</li>
-<li>Using a Prometheus alert action to call the operator&rsquo;s REST scale API.</li>
+<li><a href="#on-demand-updating-the-domain-resource-directly">On-demand, updating the domain resource directly (using <code>kubectl</code>)</a>.</li>
+<li><a href="#calling-the-operator-s-rest-scale-api">Calling the operator&rsquo;s REST scale API, for example, from <code>curl</code></a>.</li>
+<li><a href="#using-a-wldf-policy-rule-and-script-action-to-call-the-operator-s-rest-scale-api">Using a WLDF policy rule and script action to call the operator&rsquo;s REST scale API</a>.</li>
+<li><a href="#using-a-prometheus-alert-action-to-call-the-operator-s-rest-scale-api">Using a Prometheus alert action to call the operator&rsquo;s REST scale API</a>.</li>
 </ul>
 
 <h3 id="on-demand-updating-the-domain-resource-directly">On-demand, updating the domain resource directly</h3>
@@ -2381,7 +2381,7 @@ Detailed instructions for configuring the external REST endpoint are available <
 </div>
 
 
-<h3 id="what-does-the-operator-do-in-response-to-a-scaling-request">What does the operator do in response to a scaling request?</h3>
+<h4 id="what-does-the-operator-do-in-response-to-a-scaling-request">What does the operator do in response to a scaling request?</h4>
 
 <p>When the operator receives a scaling request, it will:</p>
 
@@ -2542,7 +2542,7 @@ roleRef:
 
 </code></pre>
 
-<h4 id="using-a-prometheus-alert-action-to-call-the-operator-s-rest-scale-api">Using a Prometheus alert action to call the operator&rsquo;s REST scale API</h4>
+<h3 id="using-a-prometheus-alert-action-to-call-the-operator-s-rest-scale-api">Using a Prometheus alert action to call the operator&rsquo;s REST scale API</h3>
 
 <p>In addition to using the WebLogic Diagnostic Framework for automatic scaling of a dynamic cluster,
 you can use a third-party monitoring application like Prometheus.  Please read the following blog for
@@ -4145,20 +4145,20 @@ curl --noproxy '*' -v --cacert operator.cert.pem \
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/weblogic-kubernetes-operator/js/clipboard.min.js?1552391062"></script>
-    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.min.js?1552391062"></script>
-    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.jquery.min.js?1552391062"></script>
-    <script src="/weblogic-kubernetes-operator/js/jquery.sticky.js?1552391062"></script>
-    <script src="/weblogic-kubernetes-operator/js/featherlight.min.js?1552391062"></script>
-    <script src="/weblogic-kubernetes-operator/js/html5shiv-printshiv.min.js?1552391062"></script>
-    <script src="/weblogic-kubernetes-operator/js/highlight.pack.js?1552391062"></script>
+    <script src="/weblogic-kubernetes-operator/js/clipboard.min.js?1552396116"></script>
+    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.min.js?1552396116"></script>
+    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.jquery.min.js?1552396116"></script>
+    <script src="/weblogic-kubernetes-operator/js/jquery.sticky.js?1552396116"></script>
+    <script src="/weblogic-kubernetes-operator/js/featherlight.min.js?1552396116"></script>
+    <script src="/weblogic-kubernetes-operator/js/html5shiv-printshiv.min.js?1552396116"></script>
+    <script src="/weblogic-kubernetes-operator/js/highlight.pack.js?1552396116"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/weblogic-kubernetes-operator/js/modernizr.custom.71422.js?1552391062"></script>
-    <script src="/weblogic-kubernetes-operator/js/learn.js?1552391062"></script>
-    <script src="/weblogic-kubernetes-operator/js/hugo-learn.js?1552391062"></script>
+    <script src="/weblogic-kubernetes-operator/js/modernizr.custom.71422.js?1552396116"></script>
+    <script src="/weblogic-kubernetes-operator/js/learn.js?1552396116"></script>
+    <script src="/weblogic-kubernetes-operator/js/hugo-learn.js?1552396116"></script>
 
-    <link href="/weblogic-kubernetes-operator/mermaid/mermaid.css?1552391062" type="text/css" rel="stylesheet" />
-    <script src="/weblogic-kubernetes-operator/mermaid/mermaid.js?1552391062"></script>
+    <link href="/weblogic-kubernetes-operator/mermaid/mermaid.css?1552396116" type="text/css" rel="stylesheet" />
+    <script src="/weblogic-kubernetes-operator/mermaid/mermaid.js?1552396116"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
