@@ -1,11 +1,9 @@
-+++
-title = "Elastic Stack"
-date = 2019-02-23T17:32:56-05:00
-weight = 6
-pre = "<b> </b>"
-+++
-
-### Sample to deploy Elasticsearch and Kibana
+---
+title: "Elastic Stack"
+date: 2019-02-23T17:32:31-05:00
+weight: 6
+description: "Sample for configuring the Elasticsearch and Kibana deployments and services for the operator's logs."
+---
 
 
 When you install the WebLogic operator Helm chart, you can set

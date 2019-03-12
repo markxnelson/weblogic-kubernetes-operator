@@ -15,7 +15,7 @@ The following prerequisites must be fulfilled before proceeding with the creatio
 * Make sure that all the servers in the WebLogic domain are able to reach the storage location.
 * Make sure that the host directory that will be used, already exists and has the appropriate file permissions set.
 
-#### Storage locations
+### Storage locations
 Persistent volumes can point to different storage locations, for example NFS servers or a local directory path. The list of available options is listed in the [Kubernetes documentation](https://kubernetes.io/docs/concepts/storage/persistent-volumes/).
 
 **Note regarding HostPath**: In a single-node Kubernetes cluster, such as may be used for testing or proof of concept activities, `HOST_PATH` provides the simplest configuration.  In a multinode Kubernetes cluster, a `HOST_PATH` that is located on shared storage mounted by all nodes in the Kubernetes cluster is the simplest configuration.  If nodes do not have shared storage, then NFS is probably the most widely available option.  There are other options listed in the referenced table.
@@ -30,13 +30,13 @@ $ mkdir -m 777 -p /path/to/domain1PersistentVolume
 
 Currently, we recommend that you use NFS version 3.0 for running WebLogic Server on OCI Container Engine for Kubernetes. During certification, we found that when using NFS 4.0, the servers in the WebLogic domain went into a failed state intermittently. Because multiple threads use NFS (default store, diagnostics store, Node Manager, logging, and `domain_home`), there are issues when accessing the file store. These issues are removed by changing the NFS to version 3.0.
 
-#### YAML files
+### YAML files
 
 Persistent volumes and claims are described in YAML files. For each persistent volume, you should create one persistent volume YAML file and one persistent volume claim YAML file. In the example below, you will find two YAML templates, one for the volume and one for the claim. As stated above, they either can be dedicated to a specific domain, or shared across multiple domains. For the use cases where a volume will be dedicated to a particular domain, it is a best practice to label it with `weblogic.domainUID=[domain name]`. This makes it easy to search for, and clean up resources associated with that particular domain.
 
 For sample YAML templates, refer to the [Persistent volumes example](../kubernetes/samples/scripts/create-weblogic-domain-pv-pvc/README.md).
 
-#### Kubernetes resources
+### Kubernetes resources
 
 After you have written your YAML files, you use them to create the persistent volume by creating Kubernetes resources using the `kubectl create -f` command.
 

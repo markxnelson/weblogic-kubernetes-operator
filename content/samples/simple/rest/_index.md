@@ -1,9 +1,9 @@
-+++
-title = "REST APIs"
-date = 2019-02-23T17:33:42-05:00
-weight = 4
-pre = "<b> </b>"
-+++
+---
+title: "REST APIs"
+date: 2019-02-23T17:32:31-05:00
+weight: 4
+description: "Sample for generating a self-signed certificate and private key that can be used for the operator's external REST API."
+---
 
 ### Sample to create certificate and key
 

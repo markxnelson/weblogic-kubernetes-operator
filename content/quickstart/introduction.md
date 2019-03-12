@@ -7,7 +7,7 @@ weight: 1
 
 Use this Quick Start guide to create a WebLogic deployment in a Kubernetes cluster with the Oracle WebLogic Kubernetes Operator. Please note that this walk-through is for demonstration purposes only, not for use in production.
 These instructions assume that you are already familiar with Kubernetes.  If you need more detailed instructions, please
-refer to the [User guide](/userguide).
+refer to the [User guide]({{< relref "/userguide/_index.md" >}}).
 
 {{% notice warning %}}
 If you have an older version of the operator installed on your cluster, you must remove

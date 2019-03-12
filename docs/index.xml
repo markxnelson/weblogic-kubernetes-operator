@@ -226,7 +226,7 @@ WebLogic clusters as backends of an Ingress In an Ingress object, a list of back
       <pubDate>Sat, 23 Feb 2019 16:43:45 -0500</pubDate>
       
       <guid>/weblogic-kubernetes-operator/userguide/managing-domains/domain-resource/</guid>
-      <description>In this guide, we outline how to set up and configure your own domain resource which can be used to configure your WLS domain. Then, you can use the domain resource to start the Kubernetes artifacts of the corresponding domain.
+      <description>Use this document to set up and configure your own domain resource which can be used to configure your WLS domain. Then, you can use the domain resource to start the Kubernetes artifacts of the corresponding domain.
 Swagger documentation is available here.
 Prerequisites The following prerequisites must be fulfilled before proceeding with the creation of the resource. * Make sure the WebLogic operator is running. * Create a Kubernetes namespace for the domain resource unless the intention is to use the default namespace.</description>
     </item>
@@ -337,7 +337,7 @@ You can access most of the REST services using GET, for example:
       <pubDate>Sat, 23 Feb 2019 16:43:10 -0500</pubDate>
       
       <guid>/weblogic-kubernetes-operator/userguide/overview/database/</guid>
-      <description>Run the Oracle Database in Kubernetes If you wish to run the Oracle Database inside your Kubernetes cluster, in order to place your state store, leasing tables, and such, in that database, then you can use this sample to install the database.
+      <description>Run the Oracle database in Kubernetes If you wish to run the Oracle database inside your Kubernetes cluster, in order to place your state store, leasing tables, and such, in that database, then you can use this sample to install the database.
 You must configure your database to store its DB files on persistent storage. Refer to your cloud vendor&amp;rsquo;s documentation for details of available storage providers and how to create a persistent volume and attach it to a pod.</description>
     </item>
     

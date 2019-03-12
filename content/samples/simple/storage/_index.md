@@ -1,9 +1,11 @@
-+++
-title = "Storage"
-date = 2019-02-23T17:33:26-05:00
-weight = 2
-pre = "<b> </b>"
-+++
+---
+title: "Storage"
+date: 2019-02-23T17:32:31-05:00
+weight: 1
+description: "Sample for creating a PV or PVC that can be used by a domain resource as the persistent storage for the WebLogic domain home or log files."
+---
+
+
 ### Sample persistent volume and persistent volume claim
 
 The sample scripts demonstrate the creation of a Kubernetes persistent volume (PV) and persistent volume claim (PVC), which can then be used in a domain resource as a persistent storage for the WebLogic domain home or log files.

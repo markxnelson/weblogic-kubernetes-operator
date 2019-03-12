@@ -1,9 +1,10 @@
-+++
-title = "Credentials"
-date = 2019-02-23T17:32:31-05:00
-weight = 1
-pre = "<b> </b>"
-+++
+---
+title: "Credentials"
+date: 2019-02-23T17:32:31-05:00
+weight: 1
+description: "Sample for creating a Kubernetes secret that contains the Administration Server credentials. This secret can be used in creating a WebLogic domain resource."
+---
+
 
 ### Creating credentials for a WebLogic domain
 

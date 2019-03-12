@@ -39,6 +39,34 @@ If `weblogic-operator-namespace` exists, then it will be used.  If it does not e
 
 You can verify the operator installation by examining the output from the `helm install` command.
 
+#### Alternatively, install the operator Helm chart from GitHub chart repository
+
+Add this repository to the Helm installation:
+
+```
+$ helm repo add weblogic-operator https://oracle.github.io/weblogic-kubernetes-operator/charts
+```
+
+Verify that the repository was added correctly:
+
+```
+$ helm repo list
+NAME           URL
+weblogic-operator    https://oracle.github.io/weblogic-kubernetes-operator/charts
+```
+
+Update with the latest information about charts from the chart repositories:
+
+```
+$ helm repo update
+```
+
+Install the operator from the repository:
+
+```
+$ helm install weblogic-operator/weblogic-operator --name weblogic-operator
+```
+
 #### Removing the operator
 
 The `helm delete` command is used to remove an operator release and its associated resources from the Kubernetes cluster.  The release name used with the `helm delete` command is the same release name used with the `helm install` command (see [Install the Helm chart](#install-the-helm-chart)).  For example:

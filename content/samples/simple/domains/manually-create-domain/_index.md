@@ -1,11 +1,10 @@
-+++
-title = "Manually"
-date = 2019-02-23T17:32:37-05:00
-weight = 1
-pre = "<b> </b>"
-+++
+---
+title: "Manually"
+date: 2019-02-23T17:32:31-05:00
+weight: 1
+description: "Sample for creating the domain custom resource manually."
+---
 
-### Creating the domain custom resource manually
 
 In some circumstances you may wish to manually create your domain custom resource.  If you have created your own
 Docker image containing your domain and the specific patches that you require, then this approach will probably
