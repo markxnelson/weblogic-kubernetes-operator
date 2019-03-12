@@ -1,11 +1,11 @@
 ---
-title: "Database"
+title: "Run a database"
 date: 2019-02-23T16:43:10-05:00
 weight: 3
 
 ---
 
-### Run the Oracle Database in Kubernetes
+#### Run the Oracle Database in Kubernetes
 
 If you wish to run the Oracle Database inside your Kubernetes cluster, in order to place
 your state store, leasing tables, and such, in that database, then you can use this

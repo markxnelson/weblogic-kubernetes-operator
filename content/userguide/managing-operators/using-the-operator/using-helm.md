@@ -5,7 +5,7 @@ weight: 1
 description: "Useful Helm operations"
 ---
 
-#### Table of contents
+#### Contents
 
 * [Useful Helm operations](#useful-helm-operations)
 * [Operator Helm configuration values](#operator-helm-configuration-values)

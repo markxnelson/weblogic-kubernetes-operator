@@ -5,7 +5,7 @@ weight = 5
 pre = "<b> </b>"
 +++
 
-#### Table of contents
+#### Contents
 
 * [Overview](#overview)
 * [Prerequisites](#prerequisites)

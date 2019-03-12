@@ -5,6 +5,15 @@ weight: 4
 description: "Important considerations for WebLogic domains in Kubernetes"
 ---
 
+#### Contents
+
+* [Important considerations for WebLogic domains in Kubernetes](#important-considerations-for-weblogic-domains-in-kubernetes)
+* [Creating and managing WebLogic domains](#creating-and-managing-weblogic-domains)
+* [Modifying domain configurations](#modifying-domain-configurations)
+* [About the domain resource](#about-the-domain-resource)
+* [Managing life cycle operations](#managing-life-cycle-operations)
+* [Scaling clusters](#scaling-clusters)
+
 #### Important considerations for WebLogic domains in Kubernetes
 
 Please be aware of the following important considerations for WebLogic domains running in Kubernetes:

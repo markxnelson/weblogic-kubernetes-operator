@@ -4,7 +4,7 @@ date: 2019-02-23T16:43:10-05:00
 weight: 2
 
 ---
-### Cheat sheet for setting up Kubernetes
+#### Cheat sheet for setting up Kubernetes
 
 If you need some help setting up a Kubernetes environment to experiment with the operator, please read on!  The supported environments are either an on-premises installation of Kubernetes, for example, on bare metal, or on a cloud provider like Oracle Cloud, Google, or Amazon.  Cloud providers allow you to provision a managed Kubernetes environment from their management consoles.  You could also set up Kubernetes manually using compute resources on a cloud.  There are also a number of ways to run a Kubernetes single-node cluster that are suitable for development or testing purposes.  Your options look like this:
 
@@ -21,11 +21,11 @@ If you need some help setting up a Kubernetes environment to experiment with the
 
 We have provided our hints and tips for several of these options in the sections below.
 
-### Set up Kubernetes on bare compute resources in a cloud
+#### Set up Kubernetes on bare compute resources in a cloud
 
 Follow the basic steps from the  [Terraform Kubernetes installer for Oracle Cloud Infrastructure](https://github.com/oracle/terraform-kubernetes-installer).
 
-### Prerequisites
+#### Prerequisites
 
 1. Download and install [Terraform][Terraform] (v0.10.3 or later).
 2. Download and install the [OCI Terraform Provider][OCI provider] (v2.0.0 or later).
@@ -37,7 +37,7 @@ Follow the basic steps from the  [Terraform Kubernetes installer for Oracle Clou
    ```
 4.  Ensure that you have [kubectl][Kubectl] installed if you plan to interact with the cluster locally.
 
-### Quick Start
+#### Quick Start
 
 1. Do a `git clone` of the Terraform Kubernetes installer project:
 
@@ -149,7 +149,7 @@ $
 ```
 
 
-### Install Kubernetes on your own compute resources (for example, Oracle Linux servers outside a cloud)
+#### Install Kubernetes on your own compute resources (for example, Oracle Linux servers outside a cloud)
 
 These instructions are for Oracle Linux 7u2+.  If you are using a different flavor of Linux, you will need to adjust them accordingly.
 
@@ -368,7 +368,7 @@ These instructions are for Oracle Linux 7u2+.  If you are using a different flav
     Congratulations!  Docker and Kubernetes are installed and configured!
 
 
-### Install Docker for Mac with Kubernetes
+#### Install Docker for Mac with Kubernetes
 
 Docker for Mac 18+ provides an [embedded Kubernetes environment](https://docs.docker.com/docker-for-mac/#kubernetes) that is a quick and easy way to get a simple test environment set up on your Mac.  To set it up, follow these instructions:
 
@@ -438,6 +438,6 @@ Docker for Mac 18+ provides an [embedded Kubernetes environment](https://docs.do
     To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
     ```
 
-### Important note about persistent volumes
+#### Important note about persistent volumes
 
 Docker for Mac has some restrictions on where you can place a directory that can be used as a `HostPath` for a persistent volume.  To keep it simple, place your directory somewhere under `/Users`.
