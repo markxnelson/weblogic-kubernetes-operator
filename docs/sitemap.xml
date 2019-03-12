@@ -108,6 +108,11 @@
   </url>
   
   <url>
+    <loc>/weblogic-kubernetes-operator/recent-changes/</loc>
+    <lastmod>2019-02-22T15:27:38-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/weblogic-kubernetes-operator/security/domain-security/</loc>
     <lastmod>2019-03-08T19:17:42-05:00</lastmod>
   </url>
@@ -178,8 +183,8 @@
   </url>
   
   <url>
-    <loc>/weblogic-kubernetes-operator/userguide/managing-domains/persistent-storage/</loc>
-    <lastmod>2019-02-23T16:45:09-05:00</lastmod>
+    <loc>/weblogic-kubernetes-operator/userguide/managing-domains/domain-resource/</loc>
+    <lastmod>2019-02-23T16:43:45-05:00</lastmod>
   </url>
   
   <url>
@@ -189,6 +194,11 @@
   
   <url>
     <loc>/weblogic-kubernetes-operator/userguide/overview/</loc>
+    <lastmod>2019-02-23T16:43:10-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/weblogic-kubernetes-operator/userguide/overview/k8s-setup/</loc>
     <lastmod>2019-02-23T16:43:10-05:00</lastmod>
   </url>
   
@@ -258,13 +268,18 @@
   </url>
   
   <url>
-    <loc>/weblogic-kubernetes-operator/userguide/managing-domains/domain-in-image/</loc>
-    <lastmod>2019-02-23T16:45:16-05:00</lastmod>
+    <loc>/weblogic-kubernetes-operator/userguide/managing-domains/persistent-storage/</loc>
+    <lastmod>2019-02-23T16:45:09-05:00</lastmod>
   </url>
   
   <url>
     <loc>/weblogic-kubernetes-operator/userguide/managing-operators/</loc>
     <lastmod>2019-02-23T16:43:38-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/weblogic-kubernetes-operator/userguide/overview/database/</loc>
+    <lastmod>2019-02-23T16:43:10-05:00</lastmod>
   </url>
   
   <url>
@@ -313,7 +328,7 @@
   </url>
   
   <url>
-    <loc>/weblogic-kubernetes-operator/userguide/managing-domains/configoverrides/</loc>
+    <loc>/weblogic-kubernetes-operator/userguide/managing-domains/domain-in-image/</loc>
     <lastmod>2019-02-23T16:45:16-05:00</lastmod>
   </url>
   
@@ -330,11 +345,6 @@
   <url>
     <loc>/weblogic-kubernetes-operator/developerguide/</loc>
     <lastmod>2019-02-22T15:27:54-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/weblogic-kubernetes-operator/userguide/managing-domains/accessing-the-domain/</loc>
-    <lastmod>2019-02-23T17:39:00-05:00</lastmod>
   </url>
   
   <url>
@@ -358,6 +368,11 @@
   </url>
   
   <url>
+    <loc>/weblogic-kubernetes-operator/userguide/managing-domains/configoverrides/</loc>
+    <lastmod>2019-02-23T16:45:16-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/weblogic-kubernetes-operator/reference/</loc>
     <lastmod>2019-02-22T16:16:39-05:00</lastmod>
   </url>
@@ -368,8 +383,8 @@
   </url>
   
   <url>
-    <loc>/weblogic-kubernetes-operator/userguide/managing-domains/ingress/</loc>
-    <lastmod>2019-02-23T20:46:32-05:00</lastmod>
+    <loc>/weblogic-kubernetes-operator/userguide/managing-domains/accessing-the-domain/</loc>
+    <lastmod>2019-02-23T17:39:00-05:00</lastmod>
   </url>
   
   <url>
@@ -398,13 +413,13 @@
   </url>
   
   <url>
-    <loc>/weblogic-kubernetes-operator/developerguide/asynchronous-call-model/</loc>
-    <lastmod>2019-02-23T17:20:00-05:00</lastmod>
+    <loc>/weblogic-kubernetes-operator/userguide/managing-domains/ingress/</loc>
+    <lastmod>2019-02-23T20:46:32-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/</loc>
-    <lastmod>2019-02-23T16:50:09-05:00</lastmod>
+    <loc>/weblogic-kubernetes-operator/developerguide/asynchronous-call-model/</loc>
+    <lastmod>2019-02-23T17:20:00-05:00</lastmod>
   </url>
   
   <url>
@@ -423,13 +438,18 @@
   </url>
   
   <url>
-    <loc>/weblogic-kubernetes-operator/userguide/managing-domains/integrations/</loc>
-    <lastmod>2019-02-23T16:46:23-05:00</lastmod>
+    <loc>/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/</loc>
+    <lastmod>2019-02-23T16:50:09-05:00</lastmod>
   </url>
   
   <url>
     <loc>/weblogic-kubernetes-operator/developerguide/backwards-compatibility/</loc>
     <lastmod>2019-02-23T17:26:09-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/weblogic-kubernetes-operator/userguide/managing-domains/integrations/</loc>
+    <lastmod>2019-02-23T16:46:23-05:00</lastmod>
   </url>
   
   <url>

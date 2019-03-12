@@ -143,6 +143,16 @@ If you have an older version of the operator installed on your cluster, you must
     </item>
     
     <item>
+      <title>Recent changes</title>
+      <link>/weblogic-kubernetes-operator/recent-changes/</link>
+      <pubDate>Fri, 22 Feb 2019 15:27:38 -0500</pubDate>
+      
+      <guid>/weblogic-kubernetes-operator/recent-changes/</guid>
+      <description>This document tracks recent changes to the operator, especially ones that introduce backward incompatibilities.
+   Date Version Introduces backward incompatibilities Change     March 4, 2019 v2.0.1 no OpenShift support is now certified. Many bug fixes, including fixes for configuration overrides, cluster services, and domain status processing.   January 24, 2019 v2.0 yes; not compatible with 1.x releases, but is compatible with 2.0-rc2. Final version numbers and documentation updates.</description>
+    </item>
+    
+    <item>
       <title>Channels</title>
       <link>/weblogic-kubernetes-operator/security/domain-security/weblogic-channels/</link>
       <pubDate>Fri, 08 Mar 2019 19:07:36 -0500</pubDate>
@@ -211,6 +221,26 @@ WebLogic clusters as backends of an Ingress In an Ingress object, a list of back
     </item>
     
     <item>
+      <title>Domain resource</title>
+      <link>/weblogic-kubernetes-operator/userguide/managing-domains/domain-resource/</link>
+      <pubDate>Sat, 23 Feb 2019 16:43:45 -0500</pubDate>
+      
+      <guid>/weblogic-kubernetes-operator/userguide/managing-domains/domain-resource/</guid>
+      <description>In this guide, we outline how to set up and configure your own domain resource which can be used to configure your WLS domain. Then, you can use the domain resource to start the Kubernetes artifacts of the corresponding domain.
+Swagger documentation is available here.
+Prerequisites The following prerequisites must be fulfilled before proceeding with the creation of the resource. * Make sure the WebLogic operator is running. * Create a Kubernetes namespace for the domain resource unless the intention is to use the default namespace.</description>
+    </item>
+    
+    <item>
+      <title>Set up Kubernetes</title>
+      <link>/weblogic-kubernetes-operator/userguide/overview/k8s-setup/</link>
+      <pubDate>Sat, 23 Feb 2019 16:43:10 -0500</pubDate>
+      
+      <guid>/weblogic-kubernetes-operator/userguide/overview/k8s-setup/</guid>
+      <description>Cheat sheet for setting up Kubernetes If you need some help setting up a Kubernetes environment to experiment with the operator, please read on! The supported environments are either an on-premises installation of Kubernetes, for example, on bare metal, or on a cloud provider like Oracle Cloud, Google, or Amazon. Cloud providers allow you to provision a managed Kubernetes environment from their management consoles. You could also set up Kubernetes manually using compute resources on a cloud.</description>
+    </item>
+    
+    <item>
       <title>Swagger</title>
       <link>/weblogic-kubernetes-operator/reference/swagger/</link>
       <pubDate>Fri, 22 Feb 2019 16:17:07 -0500</pubDate>
@@ -255,7 +285,8 @@ You should clone this repository to your local machine so that you have access t
       <pubDate>Sat, 23 Feb 2019 17:39:19 -0500</pubDate>
       
       <guid>/weblogic-kubernetes-operator/userguide/managing-domains/accessing-the-domain/wlst/</guid>
-      <description></description>
+      <description>You can use the WebLogic Scripting Tool (WLST) to manage a domain running in Kubernetes. If the Administration Server was configured to expose a T3 channel using the exposeAdminT3Channel setting when creating the domain, then the matching T3 service can be used to connect. For example, if the domainUID is domain1, and the Administration Server name is admin-server, then the service would be called:
+domain1-admin-server-external  This service will be in the same namespace as the domain.</description>
     </item>
     
     <item>
@@ -264,7 +295,7 @@ You should clone this repository to your local machine so that you have access t
       <pubDate>Sat, 23 Feb 2019 17:36:29 -0500</pubDate>
       
       <guid>/weblogic-kubernetes-operator/security/encryption/</guid>
-      <description>Reference  Encryption of values for WebLogic configuration overrides WebLogic Operator Introspector Encryption Encryption of Kubernetes Secrets  WebLogic Operator Introspector Encryption The WebLogic Operator has an introspection job that handles the WebLogic Domain encryption. The intropsection also addresses use of kubernetes secrets for use with configuration overrides. For additional information on the configuration handling, see the configuration overrides documenation.
+      <description>Reference  Encryption of values for WebLogic configuration overrides WebLogic Operator Introspector Encryption Encryption of Kubernetes Secrets  WebLogic Operator Introspector Encryption The WebLogic Operator has an introspection job that handles the WebLogic Domain encryption. The intropsection also addresses use of Kubernetes secrets for use with configuration overrides. For additional information on the configuration handling, see the configuration overrides documenation.
 The intropection also creates a boot.properties file that is made available to the pods in the WebLogic Domain.</description>
     </item>
     
@@ -298,6 +329,16 @@ You can access most of the REST services using GET, for example:
       
       <guid>/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/scaling/</guid>
       <description>WebLogic Server supports two types of clustering configurations, configured and dynamic. Configured clusters are created by manually configuring each individual Managed Server instance. In dynamic clusters, the Managed Server configurations are generated from a single, shared template. With dynamic clusters, when additional server capacity is needed, new server instances can be added to the cluster without having to manually configure them individually. Also, unlike configured clusters, scaling up of dynamic clusters is not restricted to the set of servers defined in the cluster but can be increased based on runtime demands.</description>
+    </item>
+    
+    <item>
+      <title>Database</title>
+      <link>/weblogic-kubernetes-operator/userguide/overview/database/</link>
+      <pubDate>Sat, 23 Feb 2019 16:43:10 -0500</pubDate>
+      
+      <guid>/weblogic-kubernetes-operator/userguide/overview/database/</guid>
+      <description>Run the Oracle Database in Kubernetes If you wish to run the Oracle Database inside your Kubernetes cluster, in order to place your state store, leasing tables, and such, in that database, then you can use this sample to install the database.
+You must configure your database to store its DB files on persistent storage. Refer to your cloud vendor&amp;rsquo;s documentation for details of available storage providers and how to create a persistent volume and attach it to a pod.</description>
     </item>
     
     <item>

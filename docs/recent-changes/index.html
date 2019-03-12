@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/weblogic-kubernetes-operator/images/favicon.png" type="image/png">
 
-    <title>Production Samples :: WebLogic Kubernetes Operator</title>
+    <title>Recent changes :: WebLogic Kubernetes Operator</title>
 
     
     <link href="/weblogic-kubernetes-operator/css/nucleus.css?1552402434" rel="stylesheet">
@@ -32,7 +32,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/weblogic-kubernetes-operator/samples/production/">
+  <body class="" data-url="/weblogic-kubernetes-operator/recent-changes/">
     <nav id="sidebar" class="">
 
 
@@ -1372,7 +1372,7 @@
   
     
     <li data-nav-id="/weblogic-kubernetes-operator/samples/" title="Samples" class="dd-item 
-        parent
+        
         
         
         ">
@@ -1663,8 +1663,8 @@
   
     
     <li data-nav-id="/weblogic-kubernetes-operator/samples/production/" title="Production Samples" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/weblogic-kubernetes-operator/samples/production/">
@@ -2261,13 +2261,7 @@
             
           
           
-            
-            
-          
-          
-            <a href='/weblogic-kubernetes-operator/'></a> > <a href='/weblogic-kubernetes-operator/samples/'>Samples</a> > Production Samples
-          
-         
+            <a href='/weblogic-kubernetes-operator/'></a> > Recent changes
           
          
           
@@ -2290,18 +2284,81 @@
         
         <div id="body-inner">
           
-            <h1>Production Samples</h1>
+            <h1>Recent changes</h1>
           
 
         
 
 
-<p>The samples in this section are intended to help you create a production deployment of WebLogic on Kubernetes.</p>
+<p>This document tracks recent changes to the operator, especially ones that introduce backward incompatibilities.</p>
+
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Version</th>
+<th>Introduces backward incompatibilities</th>
+<th>Change</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>March 4, 2019</td>
+<td>v2.0.1</td>
+<td>no</td>
+<td>OpenShift support is now certified.  Many bug fixes, including fixes for configuration overrides, cluster services, and domain status processing.</td>
+</tr>
+
+<tr>
+<td>January 24, 2019</td>
+<td>v2.0</td>
+<td>yes; not compatible with 1.x releases, but is compatible with 2.0-rc2.</td>
+<td>Final version numbers and documentation updates.</td>
+</tr>
+
+<tr>
+<td>January 16, 2019</td>
+<td>v2.0-rc2</td>
+<td>yes</td>
+<td>Schema updates are completed, and various bugs fixed.</td>
+</tr>
+
+<tr>
+<td>December 20, 2018</td>
+<td>v2.0-rc1</td>
+<td>yes</td>
+<td>Operator is now installed via Helm charts, replacing the earlier scripts.  The operator now supports the domain home on persistent volume or in Docker image use cases, which required a redesign of the domain schema.  You can override the domain configuration using configuration override templates.  Now load balancers and Ingresses can be independently configured.  You can direct WebLogic logs to a persistent volume or to the pod&rsquo;s log.  Added lifecycle support for servers and significantly enhanced configurability for generated pods.  The final v2.0 release will be the initial release where the operator team intends to provide backward compatibility as part of future releases.</td>
+</tr>
+
+<tr>
+<td>March 20, 2018</td>
+<td>v1.1</td>
+<td>yes</td>
+<td>Several files and input parameters have been renamed.  This affects how operators and domains are created.  It also changes generated Kubernetes artifacts, therefore customers must recreate their operators and domains.</td>
+</tr>
+
+<tr>
+<td>April 4, 2018</td>
+<td>v1.0</td>
+<td>yes</td>
+<td>Many Kubernetes artifact names and labels have changed. Also, the names of generated YAML files for creating a domain&rsquo;s PV and PVC have changed.  Because of these changes, customers must recreate their operators and domains.</td>
+</tr>
+
+<tr>
+<td>May 7, 2018</td>
+<td></td>
+<td>no</td>
+<td>Added support for dynamic clusters, the Apache HTTP Server, the Voyager Ingress Controller, and for PV in NFS storage for multi-node environments.</td>
+</tr>
+</tbody>
+</table>
 
 
 <footer class=" footline" >
 	
 </footer>
+
 
         
         </div> 
@@ -3227,7 +3284,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -3242,9 +3298,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -3410,7 +3463,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -3429,9 +3481,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -3823,10 +3872,8 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/weblogic-kubernetes-operator/samples/simple/elastic-stack/" title="Elastic Stack"> <i class="fa fa-chevron-left"></i></a>
 		
-		
-			<a class="nav nav-next" href="/weblogic-kubernetes-operator/developerguide/" title="Developer Guide" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/weblogic-kubernetes-operator/quickstart/" title="Quick Start" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -3857,3 +3904,4 @@
 
   </body>
 </html>
+

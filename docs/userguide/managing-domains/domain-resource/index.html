@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/weblogic-kubernetes-operator/images/favicon.png" type="image/png">
 
-    <title>Production Samples :: WebLogic Kubernetes Operator</title>
+    <title>Domain resource :: WebLogic Kubernetes Operator</title>
 
     
     <link href="/weblogic-kubernetes-operator/css/nucleus.css?1552402434" rel="stylesheet">
@@ -32,7 +32,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/weblogic-kubernetes-operator/samples/production/">
+  <body class="" data-url="/weblogic-kubernetes-operator/userguide/managing-domains/domain-resource/">
     <nav id="sidebar" class="">
 
 
@@ -241,7 +241,7 @@
   
     
     <li data-nav-id="/weblogic-kubernetes-operator/userguide/" title="User Guide" class="dd-item 
-        
+        parent
         
         
         ">
@@ -658,7 +658,7 @@
   
     
     <li data-nav-id="/weblogic-kubernetes-operator/userguide/managing-domains/" title="Manage Domains" class="dd-item 
-        
+        parent
         
         
         ">
@@ -727,7 +727,7 @@
  
   
     
-      <li data-nav-id="/weblogic-kubernetes-operator/userguide/managing-domains/domain-resource/" title="Domain resource" class="dd-item ">
+      <li data-nav-id="/weblogic-kubernetes-operator/userguide/managing-domains/domain-resource/" title="Domain resource" class="dd-item active">
         <a href="/weblogic-kubernetes-operator/userguide/managing-domains/domain-resource/">
         <b> </b>Domain resource
         
@@ -1372,7 +1372,7 @@
   
     
     <li data-nav-id="/weblogic-kubernetes-operator/samples/" title="Samples" class="dd-item 
-        parent
+        
         
         
         ">
@@ -1663,8 +1663,8 @@
   
     
     <li data-nav-id="/weblogic-kubernetes-operator/samples/production/" title="Production Samples" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/weblogic-kubernetes-operator/samples/production/">
@@ -2265,7 +2265,13 @@
             
           
           
-            <a href='/weblogic-kubernetes-operator/'></a> > <a href='/weblogic-kubernetes-operator/samples/'>Samples</a> > Production Samples
+            
+            
+          
+          
+            <a href='/weblogic-kubernetes-operator/'></a> > <a href='/weblogic-kubernetes-operator/userguide/'>User Guide</a> > <a href='/weblogic-kubernetes-operator/userguide/managing-domains/'>Manage Domains</a> > Domain resource
+          
+         
           
          
           
@@ -2278,7 +2284,25 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#prerequisites">Prerequisites</a></li>
+</ul></li>
+<li><a href="#yaml-files">YAML files</a></li>
+<li><a href="#kubernetes-resources">Kubernetes resources</a>
+<ul>
+<li><a href="#verify-the-results">Verify the results</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -2290,18 +2314,50 @@
         
         <div id="body-inner">
           
-            <h1>Production Samples</h1>
+            <h1>Domain resource</h1>
           
 
         
 
 
-<p>The samples in this section are intended to help you create a production deployment of WebLogic on Kubernetes.</p>
+
+
+<p>In this guide, we outline how to set up and configure your own <a href="../docs/domains/Domain.md">domain resource</a> which can be used to configure your WLS domain. Then, you can use the domain resource to start the Kubernetes artifacts of the corresponding domain.</p>
+
+<p>Swagger documentation is available <a href="https://oracle.github.io/weblogic-kubernetes-operator/domains/index.html">here</a>.</p>
+
+<h4 id="prerequisites">Prerequisites</h4>
+
+<p>The following prerequisites must be fulfilled before proceeding with the creation of the resource.
+* Make sure the WebLogic operator is running.
+* Create a Kubernetes namespace for the domain resource unless the intention is to use the default namespace.
+* Create the Kubernetes secrets <code>username</code> and <code>password</code> of the admin account in the same Kubernetes namespace as the domain resource.</p>
+
+<h3 id="yaml-files">YAML files</h3>
+
+<p>Domain resources are defined using the domain resource YAML files. For each WLS domain you want to create and configure, you should create one domain resource YAML file and apply it. In the example referenced below, the sample script, <code>create-domain.sh</code>, generates a domain resource YAML file that you can use as a basis. Copy the file and override the default settings so that it matches all the WLS domain parameters that define your WLS domain.</p>
+
+<p>See the <a href="../kubernetes/samples/scripts/create-weblogic-domain/domain-home-on-pv/README.md">WebLogic sample domain home on a persistent volume README</a>.</p>
+
+<h3 id="kubernetes-resources">Kubernetes resources</h3>
+
+<p>After you have written your YAML files, you use them to create your WLS domain artifacts using the <code>kubectl apply -f</code> command.</p>
+
+<pre><code>$ kubectl apply -f domain-resource.yaml
+</code></pre>
+
+<h4 id="verify-the-results">Verify the results</h4>
+
+<p>To confirm that the domain resource was created, use this command:</p>
+
+<pre><code>$ kubectl describe domain [domain name] -n [namespace]
+</code></pre>
 
 
 <footer class=" footline" >
 	
 </footer>
+
 
         
         </div> 
@@ -2465,6 +2521,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -2480,85 +2537,8 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -2599,409 +2579,6 @@
                     
             
         
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
                     
                         
             
@@ -3130,6 +2707,497 @@
                     
 
                     
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
                         
             
             
@@ -3227,7 +3295,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -3242,9 +3309,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -3410,7 +3474,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -3429,9 +3492,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -3823,10 +3883,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/weblogic-kubernetes-operator/samples/simple/elastic-stack/" title="Elastic Stack"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/weblogic-kubernetes-operator/userguide/managing-domains/prepare/" title="Prepare to run a domain"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/weblogic-kubernetes-operator/developerguide/" title="Developer Guide" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/weblogic-kubernetes-operator/userguide/managing-domains/persistent-storage/" title="Persistent Storage" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -3857,3 +3917,4 @@
 
   </body>
 </html>
+

@@ -26,7 +26,7 @@
       <pubDate>Sat, 23 Feb 2019 17:36:29 -0500</pubDate>
       
       <guid>/weblogic-kubernetes-operator/security/encryption/</guid>
-      <description>Reference  Encryption of values for WebLogic configuration overrides WebLogic Operator Introspector Encryption Encryption of Kubernetes Secrets  WebLogic Operator Introspector Encryption The WebLogic Operator has an introspection job that handles the WebLogic Domain encryption. The intropsection also addresses use of kubernetes secrets for use with configuration overrides. For additional information on the configuration handling, see the configuration overrides documenation.
+      <description>Reference  Encryption of values for WebLogic configuration overrides WebLogic Operator Introspector Encryption Encryption of Kubernetes Secrets  WebLogic Operator Introspector Encryption The WebLogic Operator has an introspection job that handles the WebLogic Domain encryption. The intropsection also addresses use of Kubernetes secrets for use with configuration overrides. For additional information on the configuration handling, see the configuration overrides documenation.
 The intropection also creates a boot.properties file that is made available to the pods in the WebLogic Domain.</description>
     </item>
     
