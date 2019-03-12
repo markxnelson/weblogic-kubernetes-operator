@@ -32,7 +32,7 @@ After creating Kubernetes clusters, you can optionally:
     </item>
     
     <item>
-      <title>Database</title>
+      <title>Run a database</title>
       <link>/weblogic-kubernetes-operator/userguide/overview/database/</link>
       <pubDate>Sat, 23 Feb 2019 16:43:10 -0500</pubDate>
       

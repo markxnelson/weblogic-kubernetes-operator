@@ -64,7 +64,7 @@
   
   <url>
     <loc>/weblogic-kubernetes-operator/userguide/managing-domains/domain-in-image/base-images/</loc>
-    <lastmod>2019-02-23T16:45:38-05:00</lastmod>
+    <lastmod>2019-02-23T16:45:55-05:00</lastmod>
   </url>
   
   <url>
@@ -383,8 +383,8 @@
   </url>
   
   <url>
-    <loc>/weblogic-kubernetes-operator/userguide/managing-domains/accessing-the-domain/</loc>
-    <lastmod>2019-02-23T17:39:00-05:00</lastmod>
+    <loc>/weblogic-kubernetes-operator/userguide/managing-domains/ingress/</loc>
+    <lastmod>2019-02-23T20:46:32-05:00</lastmod>
   </url>
   
   <url>
@@ -413,8 +413,8 @@
   </url>
   
   <url>
-    <loc>/weblogic-kubernetes-operator/userguide/managing-domains/ingress/</loc>
-    <lastmod>2019-02-23T20:46:32-05:00</lastmod>
+    <loc>/weblogic-kubernetes-operator/userguide/managing-domains/accessing-the-domain/</loc>
+    <lastmod>2019-02-23T17:39:00-05:00</lastmod>
   </url>
   
   <url>
