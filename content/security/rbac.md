@@ -5,9 +5,41 @@ weight: 5
 description: "Role based authorization for the WebLogic Operator"
 ---
 
-The operator assumes that certain roles and role bindings are created on the Kubernetes cluster.  The operator installation scripts create these, and the operator verifies that they are correct when the cluster starts up.  This document lists the [RBAC](https://kubernetes.io/docs/admin/authorization/rbac/) definitions that are created.
+The operator assumes that certain Kubernetes roles are created in the
+Kubernetes cluster.  The operator Helm chart creates the required cluster roles,
+cluster role bindings, roles and role bindings for the `ServiceAccount` that
+is used by the operator. The operator will also attempt to verify that
+the RBAC settings are correct when the Operator starts running.
 
-The general design goal is to provide the operator with the minimum amount of permissions that it requires, and to favor built-in roles over custom roles, where it make sense to do so.
+{{% notice info %}}
+For more information about Kubernetes roles, please see the Kubernetes
+[RBAC](https://kubernetes.io/docs/admin/authorization/rbac/) documentation.
+{{% /notice %}}
+
+In order to display the Kubernetes roles and related bindings used by
+the WebLogic Operator where the operator was installed using the
+Helm release name `weblogic-operator`, look for:
+
+- `Role`
+- `RoleBinding`
+- `ClusterRole`
+- `ClusterRoleBinding`
+
+when using the Helm command:
+```bash
+$ helm status weblogic-operator
+```
+
+{{% notice info %}}
+For more information about the Kubernetes `ServiceAccount` used by the operator, please see
+[Service Accounts]({{<relref "/security/service-accounts.md#weblogic-operator-service-account">}})
+under **Security**.
+{{% /notice %}}
+
+
+The general design goal is to provide the operator with the minimum amount of
+permissions that the operator requires and to favor built-in roles over custom roles
+where it make sense to use the Kubernetes built-in roles.
 
 #### Kubernetes role definitions
 
