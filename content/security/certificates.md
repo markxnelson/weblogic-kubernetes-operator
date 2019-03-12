@@ -29,9 +29,9 @@ certificate(s) and key:
 ```bash
 $ kubectl create secret tls weblogic-operator-cert -n weblogic-operator-ns \
   --cert=<path-to-certificate> --key=<path-to-private-key>
-#
+
 $ helm get values weblogic-operator
-#
+
 $ helm upgrade --wait --recreate-pods --reuse-values \
   --set externalRestEnabled=true \
   --set externalRestIdentitySecret=weblogic-operator-cert \

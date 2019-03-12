@@ -24,6 +24,7 @@ an example of creating a kubernetes `generic secret` is as follows:
 ```bash
 $ kubectl -n domain1-ns create secret generic domain1-weblogic-credentials \
   --from-file=username --from-file=password
+
 $ kubectl -n domain1-ns label secret domain1-weblogic-credentials \
   weblogic.domainUID=domain1 weblogic.domainName=domain1
 ```

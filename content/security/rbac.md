@@ -5,6 +5,16 @@ weight: 5
 description: "Role based authorization for the WebLogic Operator"
 ---
 
+#### Reference
+* [Overview](#overview)
+* [Operator RBAC Definitions](#operator-rbac-definitions)
+  - [Role and Role Binding Naming Convention](#kubernetes-role-and-role-binding-naming-convention)
+  - [Cluster Role and Cluster Role Binding Naming Convention](#kubernetes-cluster-role-and-cluster-role-binding-naming-convention)
+* [Role Bindings](#role-bindings)
+* [Cluster Role Bindings](#cluster-role-bindings)
+
+#### Overview
+
 The operator assumes that certain Kubernetes roles are created in the
 Kubernetes cluster.  The operator Helm chart creates the required cluster roles,
 cluster role bindings, roles and role bindings for the `ServiceAccount` that
@@ -12,50 +22,127 @@ is used by the operator. The operator will also attempt to verify that
 the RBAC settings are correct when the Operator starts running.
 
 {{% notice info %}}
-For more information about Kubernetes roles, please see the Kubernetes
-[RBAC](https://kubernetes.io/docs/admin/authorization/rbac/) documentation.
+For more information about the Kubernetes `ServiceAccount` used by the operator, please see
+[Service Accounts]({{<relref "/security/service-accounts.md#weblogic-operator-service-account">}})
+under **Security**.
 {{% /notice %}}
 
-In order to display the Kubernetes roles and related bindings used by
+The general design goal is to provide the operator with the minimum amount of
+permissions that the operator requires and to favor built-in roles over custom roles
+where it make sense to use the Kubernetes built-in roles.
+
+{{% notice info %}}
+For more information about Kubernetes roles, please see the
+[Kubernetes RBAC](https://kubernetes.io/docs/reference/access-authn-authz/rbac/) documentation.
+{{% /notice %}}
+
+#### Operator RBAC Definitions
+
+To display the Kubernetes roles and related bindings used by
 the WebLogic Operator where the operator was installed using the
-Helm release name `weblogic-operator`, look for:
+Helm release name `weblogic-operator`, look for the Kubernetes objects:
 
 - `Role`
 - `RoleBinding`
 - `ClusterRole`
 - `ClusterRoleBinding`
 
-when using the Helm command:
+when using the Helm `status` command:
+
 ```bash
 $ helm status weblogic-operator
 ```
 
-{{% notice info %}}
-For more information about the Kubernetes `ServiceAccount` used by the operator, please see
-[Service Accounts]({{<relref "/security/service-accounts.md#weblogic-operator-service-account">}})
-under **Security**.
-{{% /notice %}}
+Assuming the operator was installed into the namespace `weblogic-operator-ns`
+with a target namespaces of `domain1-ns`, the following
+commands can be used to display a _subset_ of the Kubernetes roles and
+related role bindings:
 
+```bash
+$ kubectl describe clusterrole \
+  weblogic-operator-ns-weblogic-operator-clusterrole-general
 
-The general design goal is to provide the operator with the minimum amount of
-permissions that the operator requires and to favor built-in roles over custom roles
-where it make sense to use the Kubernetes built-in roles.
+$ kubectl describe clusterrolebinding \
+  weblogic-operator-ns-weblogic-operator-clusterrolebinding-general
 
-#### Kubernetes role definitions
+$ kubectl -n weblogic-operator-ns \
+  describe role weblogic-operator-role
 
-| Cluster role | Resources | Verbs | Notes |
+$ kubectl -n domain1-ns \
+  describe rolebinding weblogic-operator-rolebinding-namespace \
+```
+
+##### Kubernetes Role and Role Binding Naming Convention
+
+The following naming pattern is used for the `Role` and `RoleBinding` objects:
+
+- weblogic-operator-`<type>`-`<optional-role-name>`
+
+*Using:*
+
+1. `<type>` as the kind of Kubernetes object:
+  * _role_
+  * _rolebinding_
+2. `<optional-role-name>` as an optional name given to the role or role binding
+  * For example: `namespace`
+
+A complete name for an operator created Kubernetes `RoleBinding` would be:
+
+> `weblogic-operator-rolebinding-namespace`
+
+##### Kubernetes Cluster Role and Cluster Role Binding Naming Convention
+
+The following naming pattern is used for the `ClusterRole` and `ClusterRoleBinding` objects:
+
+- `<operator-ns>`-weblogic-operator-`<type>`-`<role-name>`
+
+*Using:*
+
+1. `<operator-ns>` as the namespace the operator is installed
+  * For example: `weblogic-operator-ns`
+2. `<type>` as the kind of Kubernetes object:
+  * _clusterrole_
+  * _clusterrolebinding_
+3. `<role-name>` as the name given to the role or role binding
+  * For example: `general`
+
+A complete name for an operator created Kubernetes `ClusterRoleBinding` would be:
+
+> `weblogic-operator-ns-weblogic-operator-clusterrolebinding-general`
+
+#### Role Bindings
+
+Assuming that the WebLogic Operator was installed into the Kubernetes namespace `weblogic-operator-ns`,
+and a target namespace for the operator is `domain1-ns`, the following `RoleBinding` entries are mapped
+to a `Role` or `ClusterRole` granting permission to the operator.
+
+| Role Binding | Mapped to Role | Resource Access | Notes |
 | --- | --- | --- | --- |
-| `NAMESPACE-weblogic-operator-clusterrole-general` |	namespaces, persistentvolumes	| get, list, watch | 1 |
-| |	customresourcedefinitions in API group apiextensions.k8s.io	| get, list, watch, create, update, patch, delete, deletecollection	| |
-| |	domains in API group weblogic.oracle	| get, list, watch, update, patch	| |
-| |	Ingresses in API group extensions	| get, list, watch, create, update, patch, delete, deletecollection	| |
-| `NAMESPACE-weblogic-operator-clusterrole-nonresource`	| nonResourceURLs: ["/version/*"]	| get |	1 |
-|`NAMESPACE-weblogic-operator-clusterrole-namespace`	| secrets, persistentvolumeclaims	| get, list, watch	| 2 |
-| |	services, pods, networkpolicies	| get, list, watch, create, update, patch, delete, deletecollection | |
-| `NAMESPACE-weblogic-operator-clusterrolebinding-discovery`	| system:discovery in API group rbac.authorization.k8s.io | |		1 |
-| `NAMESPACE-weblogic-operator-clusterrolebinding-auth-delegator`	| system:auth-delegator in API group rbac.authorization.k8s.io	| |	1 |
+| `weblogic-operator-rolebinding` | `weblogic-operator-role` | **Edit**: secrets, configmaps, events | The role binding is created in the namespace `weblogic-operator-ns` [^1] |
+| `weblogic-operator-rolebinding-namespace` | Operator Cluster Role `namespace` | **Read**: secrets, pod/log, storageclasses | The role binding is created in the namespace `domain1-ns` [^2] |
+| | | **Edit**: configmaps, events, pods, podtemplates, services, persistentvolumeclaims, newtworkpolicies, podsecuritypolicies, podpresets, jobs.batch, cronjobs.batch | |
+| | | **Create**: pods/exec | |
 
-**Notes**:
+#### Cluster Role Bindings
 
-1. This cluster role is assigned to the operator’s service account in the operator’s namespace.  The uppercase text `NAMESPACE` in the cluster role name is replaced with the operator’s namespace.
-2. This cluster role is assigned to the operator’s service account in each of the “target namespaces”; that is, each namespace that the operator is configured to manage.
+Assuming that the WebLogic Operator was installed into the Kubernetes namespace `weblogic-operator-ns`,
+the following `ClusterRoleBinding` entries are mapped to a `ClusterRole` granting permission to the operator.
+
+**Note**: The Operator names in table below represent the `<role-name>` from [cluster names](#kubernetes-cluster-role-and-cluster-role-binding-naming-convention) section.
+
+| Cluster Role Binding | Mapped to Cluster Role | Resource Access | Notes |
+| --- | --- | --- | --- |
+| Operator `general` | Operator `general` | **Read**: namespaces | [^1] |
+| | | **Edit**: customresourcedefinitions, ingresses, persistentvolumes | |
+| | | **Update**: domains (weblogic.oracle), domains/status | |
+| | | **Create**: tokenreviews, subjectaccessreviews, localsubjectaccessreviews, selfsubjectaccessreviews, selfsubjectrulesreviews | |
+| Operator `nonresource` | Operator `nonresource` | **Get**: /version/* | [^1] |
+| Operator `discovery` | Kubernetes `system:discovery` | **See**: [Kubernetes Discovery Roles](https://kubernetes.io/docs/reference/access-authn-authz/rbac/#discovery-roles) | [^1] |
+| Operator `auth-delegator` | Kubernetes `system:auth-delegator` | **See**: [Kubernetes Component Roles](https://kubernetes.io/docs/reference/access-authn-authz/rbac/#other-component-roles) | [^1] |
+
+
+[^1]: The binding is assigned to the operator `ServiceAccount`.
+[^2]: The binding is assigned to the operator `ServiceAccount`
+      in each namespace listed with the `domainNamespaces` setting.
+      The `domainNamespaces` setting contains the list of namespaces
+      that the operator is configured to manage.
