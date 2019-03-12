@@ -5,9 +5,9 @@ weight: 3
 
 ---
 
-#### Run the Oracle Database in Kubernetes
+#### Run the Oracle database in Kubernetes
 
-If you wish to run the Oracle Database inside your Kubernetes cluster, in order to place
+If you wish to run the Oracle database inside your Kubernetes cluster, in order to place
 your state store, leasing tables, and such, in that database, then you can use this
 sample to install the database.
 

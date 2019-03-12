@@ -1,12 +1,10 @@
-+++
-title = "Domain Home on a PV"
-date = 2019-02-23T17:32:37-05:00
-weight = 2
-pre = "<b> </b>"
-+++
+---
+title: "Domain home on a PV"
+date: 2019-02-23T17:32:31-05:00
+weight: 2
+description: "Sample for creating a WebLogic domain home inside a Docker image, and the domain resource YAML file for deploying the generated WebLogic domain."
+---
 
-
-### WebLogic sample domain home on a persistent volume
 
 The sample scripts demonstrate the creation of a WebLogic domain home on an existing Kubernetes persistent volume (PV) and persistent volume claim (PVC). The scripts also generate the domain YAML file, which can then be used to start the Kubernetes artifacts of the corresponding domain. Optionally, the scripts start up the domain, and WebLogic Server pods and services.
 

@@ -14,15 +14,12 @@ Oracle is finding ways for organizations using WebLogic Server to run important 
 * Scale WebLogic domains by starting and stopping Managed Servers on demand, or by integrating with a REST API to initiate scaling based on WLDF, Prometheus, Grafana, or other rules.
 * Publish operator and WebLogic Server logs into Elasticsearch and interact with them in Kibana.
 
-The fastest way to experience the operator is to follow the [Quick Start guide](site/quickstart.md), or you can peruse our [documentation](site), read our [blogs](https://blogs.oracle.com/fusionmiddlewaresupport/updated-weblogic-kubernetes-support-with-operator-20-v2), or try out the [samples](kubernetes/samples/README.md).
+The fastest way to experience the operator is to follow the [Quick Start guide]({{< relref "/quickstart/_index.md" >}}), or you can peruse our [documentation]({{< relref "/userguide/_index.md" >}}), read our [blogs](https://blogs.oracle.com/weblogicserver/updated-weblogic-kubernetes-support-with-operator-20), or try out the [samples]({{< relref "/samples/_index.md" >}}).
 
-```diff
-+ The current release of the operator is 2.0-rc2, a release candidate for our 2.0 release.
-+ This release candidate was published on Jan. 16, 2019.
-+ We expect to publish the final 2.0 release later in January, 2019.
-+ We expect that there will be some minor changes to documentation and samples in the final 2.0 release.
-+ However, this release candidate is suitable for testing and early adopters.
-```
+***
+The [current release of the operator](https://github.com/oracle/weblogic-kubernetes-operator/releases) is 2.0.1.
+This release was published on March 4, 2019.
+***
 
 #### Known issues
 
@@ -49,19 +46,19 @@ maintained for one release after a replacement is available.
 This documentation includes sections targeted to different audiences.  To help you find what you are looking for more easily,
 please consult this table of contents:
 
-* The [Quick Start guide](/quickstart) explains how to quickly get the operator running, using the defaults, nothing special.
-* The [User guide](/userguide) contains detailed usage information, including how to install and configure the operator,
+* The [Quick Start guide]({{< relref "/quickstart/_index.md" >}}) explains how to quickly get the operator running, using the defaults, nothing special.
+* The [User guide]({{< relref "/userguide/_index.md" >}}) contains detailed usage information, including how to install and configure the operator,
   and how to use it to create and manage WebLogic domains.  
-* The [Samples](/samples) provide detailed example code and instructions that show you how to perform
+* The [Samples]({{< relref "/samples/_index.md" >}}) provide detailed example code and instructions that show you how to perform
   various tasks related to the operator.
-* The [Developer guide](/developerguide) provides details for people who want to understand how the operator is built, tested, and so on. Those who wish to contribute to the operator code will find useful information here.  This section also includes
+* The [Developer guide]({{< relref "/developerguide/_index.md" >}}) provides details for people who want to understand how the operator is built, tested, and so on. Those who wish to contribute to the operator code will find useful information here.  This section also includes
   API documentation (Javadoc) and Swagger/OpenAPI documentation for the REST APIs.
 * The [Contributing](#contributing-to-the-operator) section provides information about contribution requirements.
 
 
 ### User guide
 
-The [User guide](/userguide) provides detailed information about all aspects of using the operator including:
+The [User guide]({{< relref "/userguide/_index.md" >}}) provides detailed information about all aspects of using the operator including:
 
 * Installing and configuring the operator.
 * Using the operator to create and manage WebLogic domains.
@@ -75,7 +72,7 @@ The [User guide](/userguide) provides detailed information about all aspects of 
 
 ### Samples
 
-Please refer to our [samples](/samples) for information about the available sample code.
+Please refer to our [samples]({{< relref "/samples/_index.md" >}}) for information about the available sample code.
 
 ### Need more help? Have a suggestion? Come and say, "Hello!"
 
@@ -90,7 +87,7 @@ See [Recent changes](site/recent-changes.md) for changes to the operator, includ
 
 ### Developer guide
 
-Developers interested in this project are encouraged to read the [Developer guide](/developerguide) to learn how to build the project, run tests, and so on.  The Developer guide also provides details about the structure of the code, coding standards, and the Asynchronous Call facility used in the code to manage calls to the Kubernetes API.
+Developers interested in this project are encouraged to read the [Developer guide]({{< relref "/developerguide/_index.md" >}}) to learn how to build the project, run tests, and so on.  The Developer guide also provides details about the structure of the code, coding standards, and the Asynchronous Call facility used in the code to manage calls to the Kubernetes API.
 
 Please take a look at our [wish list](https://github.com/oracle/weblogic-kubernetes-operator/wiki/Wish-list) to get an idea of the kind of features we would like to add to the operator.  Maybe you will see something to which you would like to contribute!
 
@@ -142,7 +139,7 @@ Only pull requests from committers that can be verified as having signed the OCA
 
 Please be aware that pull requests that seek to introduce a new dependency will be subject to additional review.  In general, contributors should avoid dependencies with incompatible licenses, and should try to use recent versions of dependencies.  Standard security vulnerability checklists will be consulted before accepting a new dependency.  Dependencies on closed-source code, including WebLogic Server, will most likely be rejected.
 
-### Use Helm Chart from Github chart repository
+### Use Helm Chart from GitHub chart repository
 
 Add this repo to Helm installation:
 
