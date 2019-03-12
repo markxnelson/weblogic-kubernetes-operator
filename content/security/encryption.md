@@ -13,7 +13,7 @@ description: "WebLogic Domain encryption and the WebLogic Operator"
 #### WebLogic Operator Introspector Encryption
 
 The WebLogic Operator has an introspection job that handles the WebLogic Domain encryption.
-The intropsection also addresses use of kubernetes secrets for use with configuration overrides.
+The intropsection also addresses use of Kubernetes secrets for use with configuration overrides.
 For additional information on the configuration handling, see the
 [configuration overrides]({{<relref "/userguide/managing-domains/configoverrides/_index.md">}})
 documenation.
@@ -35,5 +35,5 @@ under **Securty**.
 To better protect your credentials and private keys, the Kubernetes cluster should be setup with encryption.
 Please see the Kubernetes documenation about
 [encryption at rest for secret data](https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/)
-and [using a KMS provider for data encryption](https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/).
+and [using a KMS provider for data encryption](https://kubernetes.io/docs/tasks/administer-cluster/kms-provider/).
 {{% /notice %}}

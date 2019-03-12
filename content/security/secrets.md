@@ -72,7 +72,7 @@ under **Domain Security**.
 #### WebLogic Operator External REST Interface Secret
 
 The operator can expose an external REST HTTPS interface which can be
-accessed from outside the Kubernetes cluster. A kubernetes `tls secret`
+accessed from outside the Kubernetes cluster. A Kubernetes `tls secret`
 is used to hold the certificates(s) and private key.
 
 {{% notice info %}}
