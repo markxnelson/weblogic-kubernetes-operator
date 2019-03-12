@@ -5,7 +5,7 @@ weight = 1
 pre = "<b> </b>"
 +++
 
-#### Manually creating the domain custom resource
+### Creating the domain custom resource manually
 
 In some circumstances you may wish to manually create your domain custom resource.  If you have created your own
 Docker image containing your domain and the specific patches that you require, then this approach will probably

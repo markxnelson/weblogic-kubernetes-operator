@@ -5,7 +5,7 @@ weight = 4
 pre = "<b> </b>"
 +++
 
-#### Sample to create certificate and key
+### Sample to create certificate and key
 
 When a user enables the operator's external REST API (by setting
 `externalRestEnabled` to `true` when installing or upgrading the operator Helm chart), the user also needs

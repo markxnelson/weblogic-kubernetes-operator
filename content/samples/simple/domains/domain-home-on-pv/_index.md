@@ -6,7 +6,7 @@ pre = "<b> </b>"
 +++
 
 
-#### WebLogic sample domain home on a persistent volume
+### WebLogic sample domain home on a persistent volume
 
 The sample scripts demonstrate the creation of a WebLogic domain home on an existing Kubernetes persistent volume (PV) and persistent volume claim (PVC). The scripts also generate the domain YAML file, which can then be used to start the Kubernetes artifacts of the corresponding domain. Optionally, the scripts start up the domain, and WebLogic Server pods and services.
 
@@ -393,7 +393,7 @@ Sometimes in production, but most likely in testing environments, you might want
 $ kubectl create -f delete-domain-job.yaml
 
 ```
-#### Troubleshooting
+### Troubleshooting
 
 * Message: `status on iteration 20 of 20
 pod domain1-create-weblogic-sample-domain-job-4qwt2 status is Pending

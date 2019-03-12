@@ -64,7 +64,7 @@ For a detailed walk-through of the runtime flow, see the [Internal design flow](
 * If you want to override a JDBC, JMS, or WLDF (diagnostics) module, the original module must be located in your domain home `config/jdbc`, `config/jms`, and `config/diagnostics` directory, respectively. These are the default locations for these types of modules.
 
 ---
-#### Typical overrides
+### Typical overrides
 
 Typical attributes for overrides include:
 
@@ -78,7 +78,7 @@ Typical attributes for overrides include:
 * Tuning (`MaxMessageSize`, etc.)
 
 ---
-#### Unsupported overrides
+### Unsupported overrides
 
 **IMPORTANT: The operator does not support custom overrides in the following areas.**
 

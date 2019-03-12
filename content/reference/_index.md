@@ -10,4 +10,4 @@ pre = "<b>5. </b>"
 
 # Reference
 
-This section contains links to reference documentation.
+For reference, see the following API documentation.

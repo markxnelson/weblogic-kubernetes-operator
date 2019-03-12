@@ -7,4 +7,4 @@ pre = "<b> </b>"
 
 
 
-This section describes how you can start, stop, restart, and scale the domain's servers.
+Learn how you can start, stop, restart, and scale the domain's servers.

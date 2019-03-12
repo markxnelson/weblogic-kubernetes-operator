@@ -14,10 +14,10 @@ The following blogs provide more in-depth information on support for scaling Web
 
 The operator provides several ways to initiate scaling of WebLogic clusters, including:
 
-* On-demand, updating the domain resource directly (using `kubectl`).
-* Calling the operator's REST scale API, for example, from `curl`.
-* Using a WLDF policy rule and script action to call the operator's REST scale API.
-* Using a Prometheus alert action to call the operator's REST scale API.
+* [On-demand, updating the domain resource directly (using `kubectl`)](#on-demand-updating-the-domain-resource-directly).
+* [Calling the operator's REST scale API, for example, from `curl`](#calling-the-operator-s-rest-scale-api).
+* [Using a WLDF policy rule and script action to call the operator's REST scale API](#using-a-wldf-policy-rule-and-script-action-to-call-the-operator-s-rest-scale-api).
+* [Using a Prometheus alert action to call the operator's REST scale API](#using-a-prometheus-alert-action-to-call-the-operator-s-rest-scale-api).
 
 ### On-demand, updating the domain resource directly
 The easiest way to scale a WebLogic cluster in Kubernetes is to simply edit the `replicas` property within a domain resource.  This can be done by using the `kubectl` command-line interface for running commands against Kubernetes clusters.  More specifically, you can modify the domain resource directly by using the `kubectl edit` command.  For example:
@@ -101,7 +101,7 @@ Detailed instructions for configuring the external REST endpoint are available [
 Regardless of which endpoint is being invoked, the URL format for scaling is the same.
 {{% /notice %}}
 
-### What does the operator do in response to a scaling request?
+#### What does the operator do in response to a scaling request?
 
 When the operator receives a scaling request, it will:
 
@@ -247,7 +247,7 @@ roleRef:
 
 ```
 
-#### Using a Prometheus alert action to call the operator's REST scale API
+### Using a Prometheus alert action to call the operator's REST scale API
 In addition to using the WebLogic Diagnostic Framework for automatic scaling of a dynamic cluster,
 you can use a third-party monitoring application like Prometheus.  Please read the following blog for
 details about [Using Prometheus to Automatically Scale WebLogic Clusters on Kubernetes](https://blogs.oracle.com/weblogicserver/using-prometheus-to-automatically-scale-weblogic-clusters-on-kubernetes-v5).

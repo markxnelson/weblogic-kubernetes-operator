@@ -4,7 +4,7 @@ date = 2019-02-23T17:33:26-05:00
 weight = 2
 pre = "<b> </b>"
 +++
-#### Sample persistent volume and persistent volume claim
+### Sample persistent volume and persistent volume claim
 
 The sample scripts demonstrate the creation of a Kubernetes persistent volume (PV) and persistent volume claim (PVC), which can then be used in a domain resource as a persistent storage for the WebLogic domain home or log files.
 

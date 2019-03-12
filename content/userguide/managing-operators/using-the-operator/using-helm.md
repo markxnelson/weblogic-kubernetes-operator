@@ -5,6 +5,17 @@ weight: 1
 description: "Useful Helm operations"
 ---
 
+#### Table of contents
+
+* [Useful Helm operations](#useful-helm-operations)
+* [Operator Helm configuration values](#operator-helm-configuration-values)
+  * [Overall operator information](#overall-operator-information)
+  * [Creating the operator pod](#creating-the-operator-pod)
+  * [WebLogic domain management](#weblogic-domain-management)
+  * [Elastic Stack integration](#elastic-stack-integration)
+  * [REST interface configuration](#rest-interface-configuration)
+  * [Debugging options](#debugging-options)
+* [Common mistakes and solutions](#common-mistakes-and-solutions)
 
 #### Useful Helm operations
 
