@@ -17,8 +17,7 @@
       <pubDate>Sat, 23 Feb 2019 17:04:41 -0500</pubDate>
       
       <guid>/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/startup/</guid>
-      <description>There are properties on the domain resource that specify which servers should be running and which servers should be restarted. To start, stop, or restart servers, modify these properties on the domain resource (for example, by using kubectl or the Kubernetes REST API). The operator will notice the changes and apply them.
-Starting and stopping servers The serverStartPolicy property on the domain resource controls which servers should be running. The operator runtime monitors this property and creates or deletes the corresponding server pods.</description>
+      <description>Contents  Starting and stopping servers  Common starting and stopping scenarios  Restarting servers  Rolling restarts Common restarting scenarios   There are properties on the domain resource that specify which servers should be running and which servers should be restarted. To start, stop, or restart servers, modify these properties on the domain resource (for example, by using kubectl or the Kubernetes REST API). The operator will notice the changes and apply them.</description>
     </item>
     
     <item>

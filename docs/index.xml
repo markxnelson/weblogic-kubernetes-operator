@@ -66,8 +66,7 @@ $ helm get values weblogic-operator  Show all of the values your operator Helm r
       <pubDate>Sat, 23 Feb 2019 17:04:41 -0500</pubDate>
       
       <guid>/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/startup/</guid>
-      <description>There are properties on the domain resource that specify which servers should be running and which servers should be restarted. To start, stop, or restart servers, modify these properties on the domain resource (for example, by using kubectl or the Kubernetes REST API). The operator will notice the changes and apply them.
-Starting and stopping servers The serverStartPolicy property on the domain resource controls which servers should be running. The operator runtime monitors this property and creates or deletes the corresponding server pods.</description>
+      <description>Contents  Starting and stopping servers  Common starting and stopping scenarios  Restarting servers  Rolling restarts Common restarting scenarios   There are properties on the domain resource that specify which servers should be running and which servers should be restarted. To start, stop, or restart servers, modify these properties on the domain resource (for example, by using kubectl or the Kubernetes REST API). The operator will notice the changes and apply them.</description>
     </item>
     
     <item>
@@ -180,7 +179,7 @@ One of the operator&amp;rsquo;s most important jobs is to start and stop WebLogi
       
       <guid>/weblogic-kubernetes-operator/userguide/introduction/demo/</guid>
       <description>This video provides a demonstration of the WebLogic Server Kubernetes Operator.
-  </description>
+   This video provides a demonstration of the WebLogic Server Kubernetes Operator.</description>
     </item>
     
     <item>
@@ -360,8 +359,7 @@ $ docker pull traefik:1.</description>
       <pubDate>Sat, 23 Feb 2019 20:51:51 -0500</pubDate>
       
       <guid>/weblogic-kubernetes-operator/userguide/introduction/design/</guid>
-      <description>The Oracle WebLogic Server Kubernetes Operator (the “operator”) is designed to fulfill a similar role to that which a human operator would fill in a traditional data center deployment. It contains a set of useful built-in knowledge about how to perform various life cycle operations on a domain correctly.
-Human operators are normally responsible for starting and stopping environments, initiating backups, performing scaling operations, performing manual tasks associated with disaster recovery and high availability needs and coordinating actions with other operators in other data centers.</description>
+      <description>The Oracle WebLogic Server Kubernetes Operator (the “operator”) is designed to fulfill a similar role to that which a human operator would fill in The Oracle WebLogic Server Kubernetes Operator (the “operator”) is designed to fulfill a similar role to that which a human operator would fill in a traditional data center deployment. It contains a set of useful built-in knowledge about how to perform various life cycle operations on a domain correctly.</description>
     </item>
     
     <item>

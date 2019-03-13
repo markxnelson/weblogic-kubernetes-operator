@@ -12,17 +12,17 @@
     <title>Startup and shutdown :: WebLogic Kubernetes Operator</title>
 
     
-    <link href="/weblogic-kubernetes-operator/css/nucleus.css?1552478043" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/fontawesome-all.min.css?1552478043" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/hybrid.css?1552478043" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/featherlight.min.css?1552478043" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/perfect-scrollbar.min.css?1552478043" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/auto-complete.css?1552478043" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/theme.css?1552478043" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/hugo-theme.css?1552478043" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/nucleus.css?1552490622" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/fontawesome-all.min.css?1552490622" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/hybrid.css?1552490622" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/featherlight.min.css?1552490622" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/perfect-scrollbar.min.css?1552490622" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/auto-complete.css?1552490622" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/theme.css?1552490622" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/hugo-theme.css?1552490622" rel="stylesheet">
     
 
-    <script src="/weblogic-kubernetes-operator/js/jquery-2.x.min.js?1552478043"></script>
+    <script src="/weblogic-kubernetes-operator/js/jquery-2.x.min.js?1552490622"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/lunr.min.js?1552478043"></script>
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/auto-complete.js?1552478043"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/lunr.min.js?1552490622"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/auto-complete.js?1552490622"></script>
 <script type="text/javascript">
     
         var baseurl = "\/weblogic-kubernetes-operator\/";
     
 </script>
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/search.js?1552478043"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/search.js?1552490622"></script>
 
     
   </div>
@@ -2296,6 +2296,10 @@
 <ul>
 <li>
 <ul>
+<li>
+<ul>
+<li><a href="#contents">Contents</a></li>
+</ul></li>
 <li><a href="#starting-and-stopping-servers">Starting and stopping servers</a>
 <ul>
 <li><a href="#serverstartpolicy-rules"><code>serverStartPolicy</code> rules</a></li>
@@ -2304,7 +2308,7 @@
 <li><a href="#standalone-managed-server-start-and-stop-rules">Standalone Managed Server start and stop rules</a></li>
 <li><a href="#clustered-managed-server-start-and-stop-rules">Clustered Managed Server start and stop rules</a></li>
 </ul></li>
-<li><a href="#common-scenarios">Common scenarios</a>
+<li><a href="#common-starting-and-stopping-scenarios">Common starting and stopping scenarios</a>
 <ul>
 <li><a href="#normal-running-state">Normal running state</a></li>
 <li><a href="#shut-down-all-the-servers">Shut down all the servers</a></li>
@@ -2321,7 +2325,7 @@
 <ul>
 <li><a href="#using-restartversion-to-force-the-operator-to-restart-servers">Using <code>restartVersion</code> to force the operator to restart servers</a></li>
 </ul></li>
-<li><a href="#common-scenarios-1">Common scenarios</a>
+<li><a href="#common-restarting-scenarios">Common restarting scenarios</a>
 <ul>
 <li><a href="#restart-all-the-servers-in-the-domain">Restart all the servers in the domain</a></li>
 <li><a href="#restart-all-the-servers-in-the-cluster">Restart all the servers in the cluster</a></li>
@@ -2351,6 +2355,22 @@
 
 
 
+
+<h4 id="contents">Contents</h4>
+
+<ul>
+<li><a href="#starting-and-stopping-servers">Starting and stopping servers</a>
+
+<ul>
+<li><a href="#common-starting-and-stopping-scenarios">Common starting and stopping scenarios</a></li>
+</ul></li>
+<li><a href="#restarting-servers">Restarting servers</a>
+
+<ul>
+<li><a href="#rolling-restarts">Rolling restarts</a></li>
+<li><a href="#common-restarting-scenarios">Common restarting scenarios</a></li>
+</ul></li>
+</ul>
 
 <p>There are properties on the domain resource that specify which servers should be running
 and which servers should be restarted. To start, stop, or restart servers, modify these properties on the domain resource
@@ -2519,7 +2539,7 @@ The operator runtime monitors this property and creates or deletes the correspon
 </div>
 
 
-<h3 id="common-scenarios">Common scenarios</h3>
+<h3 id="common-starting-and-stopping-scenarios">Common starting and stopping scenarios</h3>
 
 <h4 id="normal-running-state">Normal running state</h4>
 
@@ -2666,7 +2686,7 @@ If the value is different, then the server pod is old and needs to be restarted.
 </div>
 
 
-<h3 id="common-scenarios-1">Common scenarios</h3>
+<h3 id="common-restarting-scenarios">Common restarting scenarios</h3>
 
 <h4 id="restart-all-the-servers-in-the-domain">Restart all the servers in the domain</h4>
 
@@ -4290,20 +4310,20 @@ have to specify the <code>serverStartPolicy</code> as the default value is <code
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/weblogic-kubernetes-operator/js/clipboard.min.js?1552478043"></script>
-    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.min.js?1552478043"></script>
-    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.jquery.min.js?1552478043"></script>
-    <script src="/weblogic-kubernetes-operator/js/jquery.sticky.js?1552478043"></script>
-    <script src="/weblogic-kubernetes-operator/js/featherlight.min.js?1552478043"></script>
-    <script src="/weblogic-kubernetes-operator/js/html5shiv-printshiv.min.js?1552478043"></script>
-    <script src="/weblogic-kubernetes-operator/js/highlight.pack.js?1552478043"></script>
+    <script src="/weblogic-kubernetes-operator/js/clipboard.min.js?1552490623"></script>
+    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.min.js?1552490623"></script>
+    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.jquery.min.js?1552490623"></script>
+    <script src="/weblogic-kubernetes-operator/js/jquery.sticky.js?1552490623"></script>
+    <script src="/weblogic-kubernetes-operator/js/featherlight.min.js?1552490623"></script>
+    <script src="/weblogic-kubernetes-operator/js/html5shiv-printshiv.min.js?1552490623"></script>
+    <script src="/weblogic-kubernetes-operator/js/highlight.pack.js?1552490623"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/weblogic-kubernetes-operator/js/modernizr.custom.71422.js?1552478043"></script>
-    <script src="/weblogic-kubernetes-operator/js/learn.js?1552478043"></script>
-    <script src="/weblogic-kubernetes-operator/js/hugo-learn.js?1552478043"></script>
+    <script src="/weblogic-kubernetes-operator/js/modernizr.custom.71422.js?1552490623"></script>
+    <script src="/weblogic-kubernetes-operator/js/learn.js?1552490623"></script>
+    <script src="/weblogic-kubernetes-operator/js/hugo-learn.js?1552490623"></script>
 
-    <link href="/weblogic-kubernetes-operator/mermaid/mermaid.css?1552478043" type="text/css" rel="stylesheet" />
-    <script src="/weblogic-kubernetes-operator/mermaid/mermaid.js?1552478043"></script>
+    <link href="/weblogic-kubernetes-operator/mermaid/mermaid.css?1552490623" type="text/css" rel="stylesheet" />
+    <script src="/weblogic-kubernetes-operator/mermaid/mermaid.js?1552490623"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -12,17 +12,17 @@
     <title>Introduction :: WebLogic Kubernetes Operator</title>
 
     
-    <link href="/weblogic-kubernetes-operator/css/nucleus.css?1552478043" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/fontawesome-all.min.css?1552478043" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/hybrid.css?1552478043" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/featherlight.min.css?1552478043" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/perfect-scrollbar.min.css?1552478043" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/auto-complete.css?1552478043" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/theme.css?1552478043" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/hugo-theme.css?1552478043" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/nucleus.css?1552490623" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/fontawesome-all.min.css?1552490623" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/hybrid.css?1552490623" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/featherlight.min.css?1552490623" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/perfect-scrollbar.min.css?1552490623" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/auto-complete.css?1552490623" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/theme.css?1552490623" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/hugo-theme.css?1552490623" rel="stylesheet">
     
 
-    <script src="/weblogic-kubernetes-operator/js/jquery-2.x.min.js?1552478043"></script>
+    <script src="/weblogic-kubernetes-operator/js/jquery-2.x.min.js?1552490623"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/lunr.min.js?1552478043"></script>
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/auto-complete.js?1552478043"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/lunr.min.js?1552490623"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/auto-complete.js?1552490623"></script>
 <script type="text/javascript">
     
         var baseurl = "\/weblogic-kubernetes-operator\/";
     
 </script>
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/search.js?1552478043"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/search.js?1552490623"></script>
 
     
   </div>
@@ -2330,8 +2330,7 @@
 
 			
 				
-<p>An operator is an application-specific controller that extends Kubernetes to create, configure, and manage instances of complex applications. The Oracle WebLogic Server Kubernetes Operator follows the standard Kubernetes operator pattern, and simplifies the management and operation of WebLogic domains and deployments.
-You can have one or more operators in your Kubernetes cluster that manage one or more WebLogic domains each. We provide a Helm chart to manage the installation and configuration of the operator.</p>
+<p>An operator is an application-specific controller that extends Kubernetes to create, configure, and manage instances of complex applications. The Oracle WebLogic Server Kubernetes Operator follows the standard Kubernetes operator pattern, and simplifies the management and operation of WebLogic domains and deployments.</p>
 				
 			
 		
@@ -2360,8 +2359,7 @@ You can have one or more operators in your Kubernetes cluster that manage one or
 
 			
 				
-<p>This video provides a demonstration of the WebLogic Server Kubernetes Operator.
-  </p>
+<p>This video provides a demonstration of the WebLogic Server Kubernetes Operator.</p>
 				
 			
 		
@@ -2390,8 +2388,7 @@ You can have one or more operators in your Kubernetes cluster that manage one or
 
 			
 				
-<p>The operator consists of the following parts:
- The operator runtime, a process that runs in a Docker container deployed into a Kubernetes pod and which performs the actual management tasks. The model for a Kubernetes custom resource definition (CRD) that when installed in a Kubernetes cluster allows the Kubernetes API server to manage instances of this new type representing the operational details and status of WebLogic domains. A Helm chart for installing the operator runtime and related resources.</p>
+<p>The operator consists of several parts: the operator runtime, the model for a Kubernetes custom resource definition (CRD), a Helm chart for installing the operator, a variety of sample shell scripts for preparing or packaging WebLogic domains for running in Kubernetes, and sample Helm charts or shell scripts for conditionally exposing WebLogic endpoints outside the Kubernetes cluster.</p>
 				
 			
 		
@@ -2420,8 +2417,7 @@ You can have one or more operators in your Kubernetes cluster that manage one or
 
 			
 				
-<p>The Oracle WebLogic Server Kubernetes Operator (the “operator”) is designed to fulfill a similar role to that which a human operator would fill in a traditional data center deployment. It contains a set of useful built-in knowledge about how to perform various life cycle operations on a domain correctly.
-Human operators are normally responsible for starting and stopping environments, initiating backups, performing scaling operations, performing manual tasks associated with disaster recovery and high availability needs and coordinating actions with other operators in other data centers.</p>
+<p>The Oracle WebLogic Server Kubernetes Operator (the “operator”) is designed to fulfill a similar role to that which a human operator would fill in a traditional data center deployment.  It contains a set of useful built-in knowledge about how to perform various life cycle operations on a domain correctly.</p>
 				
 			
 		
@@ -4042,20 +4038,20 @@ you should refer to the <a href="/developerguide">Developer guide</a>.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/weblogic-kubernetes-operator/js/clipboard.min.js?1552478043"></script>
-    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.min.js?1552478043"></script>
-    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.jquery.min.js?1552478043"></script>
-    <script src="/weblogic-kubernetes-operator/js/jquery.sticky.js?1552478043"></script>
-    <script src="/weblogic-kubernetes-operator/js/featherlight.min.js?1552478043"></script>
-    <script src="/weblogic-kubernetes-operator/js/html5shiv-printshiv.min.js?1552478043"></script>
-    <script src="/weblogic-kubernetes-operator/js/highlight.pack.js?1552478043"></script>
+    <script src="/weblogic-kubernetes-operator/js/clipboard.min.js?1552490623"></script>
+    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.min.js?1552490623"></script>
+    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.jquery.min.js?1552490623"></script>
+    <script src="/weblogic-kubernetes-operator/js/jquery.sticky.js?1552490623"></script>
+    <script src="/weblogic-kubernetes-operator/js/featherlight.min.js?1552490623"></script>
+    <script src="/weblogic-kubernetes-operator/js/html5shiv-printshiv.min.js?1552490623"></script>
+    <script src="/weblogic-kubernetes-operator/js/highlight.pack.js?1552490623"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/weblogic-kubernetes-operator/js/modernizr.custom.71422.js?1552478043"></script>
-    <script src="/weblogic-kubernetes-operator/js/learn.js?1552478043"></script>
-    <script src="/weblogic-kubernetes-operator/js/hugo-learn.js?1552478043"></script>
+    <script src="/weblogic-kubernetes-operator/js/modernizr.custom.71422.js?1552490623"></script>
+    <script src="/weblogic-kubernetes-operator/js/learn.js?1552490623"></script>
+    <script src="/weblogic-kubernetes-operator/js/hugo-learn.js?1552490623"></script>
 
-    <link href="/weblogic-kubernetes-operator/mermaid/mermaid.css?1552478043" type="text/css" rel="stylesheet" />
-    <script src="/weblogic-kubernetes-operator/mermaid/mermaid.js?1552478043"></script>
+    <link href="/weblogic-kubernetes-operator/mermaid/mermaid.css?1552490623" type="text/css" rel="stylesheet" />
+    <script src="/weblogic-kubernetes-operator/mermaid/mermaid.js?1552490623"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
