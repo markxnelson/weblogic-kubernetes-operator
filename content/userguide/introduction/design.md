@@ -3,9 +3,10 @@ title: "Design philosophy"
 date: 2019-02-23T20:51:51-05:00
 draft: false
 weight: 4
+description: "The Oracle WebLogic Server Kubernetes Operator (the “operator”) is designed to fulfill a similar role to that which a human operator would fill in a traditional data center deployment.  It contains a set of useful built-in knowledge about how to perform various life cycle operations on a domain correctly."
 ---
 
-The Oracle WebLogic Server Kubernetes Operator (the “operator”) is designed to fulfill a similar role to that which a human operator would fill in a traditional data center deployment.  It contains a set of useful built-in knowledge about how to perform various life cycle operations on a domain correctly.
+The Oracle WebLogic Server Kubernetes Operator (the “operator”) is designed to fulfill a similar role to that which a human operator would fill in The Oracle WebLogic Server Kubernetes Operator (the “operator”) is designed to fulfill a similar role to that which a human operator would fill in a traditional data center deployment.  It contains a set of useful built-in knowledge about how to perform various life cycle operations on a domain correctly.a traditional data center deployment.  It contains a set of useful built-in knowledge about how to perform various life cycle operations on a domain correctly.
 
 Human operators are normally responsible for starting and stopping environments, initiating backups, performing scaling operations, performing manual tasks associated with disaster recovery and high availability needs and coordinating actions with other operators in other data centers.  It is envisaged that the operator will have similar responsibilities in a Kubernetes environment.
 

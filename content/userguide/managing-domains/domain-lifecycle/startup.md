@@ -4,7 +4,13 @@ date: 2019-02-23T17:04:41-05:00
 draft: false
 weight: 1
 ---
+#### Contents
 
+* [Starting and stopping servers](#starting-and-stopping-servers)
+    * [Common starting and stopping scenarios](#common-starting-and-stopping-scenarios)
+* [Restarting servers](#restarting-servers)
+    * [Rolling restarts](#rolling-restarts)
+    * [Common restarting scenarios](#common-restarting-scenarios)
 
 There are properties on the domain resource that specify which servers should be running
 and which servers should be restarted. To start, stop, or restart servers, modify these properties on the domain resource
@@ -57,7 +63,7 @@ Servers configured as `ALWAYS` count toward the cluster's `replicas` count.
 If more servers are configured as `ALWAYS` than the cluster's `replicas` count, they will all be started and the `replicas` count will be ignored.
 {{% /notice %}}
 
-### Common scenarios
+### Common starting and stopping scenarios
 
 #### Normal running state
 Normally, the Administration Server, all of the standalone Managed Servers, and enough Managed Servers in each cluster to satisfy its `replicas` count, should be started.
@@ -195,7 +201,7 @@ The `restartVersion` property can be specified at the domain, cluster, and serve
 The servers will also be restarted if `restartVersion` is removed from the domain resource (for example, if you had previously specified a value to cause a restart, then you remove that value after the previous restart has completed).
 {{% /notice %}}
 
-### Common scenarios
+### Common restarting scenarios
 
 #### Restart all the servers in the domain
 

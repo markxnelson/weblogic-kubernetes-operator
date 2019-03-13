@@ -6,7 +6,7 @@ weight: 2
 ---
 
 
-This document describes when to restart servers in the Oracle WebLogic Server in Kubernetes environment.
+This document describes _when_ to restart servers in the Oracle WebLogic Server in Kubernetes environment.
 
 #### Overview
 

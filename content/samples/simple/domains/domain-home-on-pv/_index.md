@@ -2,7 +2,7 @@
 title: "Domain home on a PV"
 date: 2019-02-23T17:32:31-05:00
 weight: 2
-description: "Sample for creating a WebLogic domain home inside a Docker image, and the domain resource YAML file for deploying the generated WebLogic domain."
+description: "Sample for creating a WebLogic domain home on an existing PV or PVC, and the domain resource YAML file for deploying the generated WebLogic domain."
 ---
 
 

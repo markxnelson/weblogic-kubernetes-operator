@@ -2,7 +2,7 @@
 title: "Domain home in image"
 date: 2019-02-23T17:32:31-05:00
 weight: 3
-description: "Sample for creating the domain home in a Docker image."
+description: "Sample for creating a WebLogic domain home inside a Docker image, and the domain resource YAML file for deploying the generated WebLogic domain."
 ---
 
 The sample scripts demonstrate the creation of a WebLogic domain home in a Docker image using one of the domain home in image samples in the [WebLogic Server Domain Docker image samples GitHub project](https://github.com/oracle/docker-images/tree/master/OracleWebLogic/samples). The sample scripts have an option of putting the WebLogic domain log, server logs, server output files, and the Node Manager logs on an existing Kubernetes persistent volume (PV) and persistent volume claim (PVC). The scripts also generate the domain YAML file, which can then be used by the scripts or used manually to start the Kubernetes artifacts of the corresponding domain, including the WebLogic Server pods and services.

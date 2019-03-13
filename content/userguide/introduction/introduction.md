@@ -2,7 +2,9 @@
 title: "Get Started"
 date: 2019-02-23T16:40:54-05:00
 weight: 1
-
+description: "An operator is an application-specific controller that extends Kubernetes to create, configure, and manage instances
+of complex applications. The Oracle WebLogic Server Kubernetes Operator follows the standard Kubernetes operator pattern, and
+simplifies the management and operation of WebLogic domains and deployments."
 ---
 
 An operator is an application-specific controller that extends Kubernetes to create, configure, and manage instances

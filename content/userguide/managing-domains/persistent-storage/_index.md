@@ -67,4 +67,4 @@ The simplest case is where the `HOST_PATH` provider is used. This can be either 
 
 #### Further reading
 
-* See the blog, "[How to run WebLogic clusters on the Oracle Cloud Infrastructure Container Engine for Kubernetes](https://blogs.oracle.com/weblogicserver/how-to-run-weblogic-clusters-on-the-oracle-cloud-infrastructure-container-engine-for-kubernetes)."
+* See the blog, [How to run WebLogic clusters on the Oracle Cloud Infrastructure Container Engine for Kubernetes](https://blogs.oracle.com/weblogicserver/how-to-run-weblogic-clusters-on-the-oracle-cloud-infrastructure-container-engine-for-kubernetes).

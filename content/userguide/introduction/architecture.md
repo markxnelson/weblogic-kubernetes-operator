@@ -3,6 +3,7 @@ title: "Architecture"
 date: 2019-02-23T20:51:45-05:00
 draft: false
 weight: 3
+description: "The operator consists of several parts: the operator runtime, the model for a Kubernetes custom resource definition (CRD), a Helm chart for installing the operator, a variety of sample shell scripts for preparing or packaging WebLogic domains for running in Kubernetes, and sample Helm charts or shell scripts for conditionally exposing WebLogic endpoints outside the Kubernetes cluster."
 ---
 
 The operator consists of the following parts:
