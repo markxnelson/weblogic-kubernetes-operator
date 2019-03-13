@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.54.0" />
-    <meta name="description" content="WebLogic Domain encryption and the WebLogic Operator">
+    <meta name="description" content="WebLogic domain encryption and the WebLogic operator">
 
 
     <link rel="icon" href="/weblogic-kubernetes-operator/images/favicon.png" type="image/png">
@@ -12,17 +12,17 @@
     <title>Encryption :: WebLogic Kubernetes Operator</title>
 
     
-    <link href="/weblogic-kubernetes-operator/css/nucleus.css?1552490623" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/fontawesome-all.min.css?1552490623" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/hybrid.css?1552490623" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/featherlight.min.css?1552490623" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/perfect-scrollbar.min.css?1552490623" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/auto-complete.css?1552490623" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/theme.css?1552490623" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/hugo-theme.css?1552490623" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/nucleus.css?1552496762" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/fontawesome-all.min.css?1552496762" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/hybrid.css?1552496762" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/featherlight.min.css?1552496762" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/perfect-scrollbar.min.css?1552496762" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/auto-complete.css?1552496762" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/theme.css?1552496762" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/hugo-theme.css?1552496762" rel="stylesheet">
     
 
-    <script src="/weblogic-kubernetes-operator/js/jquery-2.x.min.js?1552490623"></script>
+    <script src="/weblogic-kubernetes-operator/js/jquery-2.x.min.js?1552496762"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/lunr.min.js?1552490623"></script>
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/auto-complete.js?1552490623"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/lunr.min.js?1552496762"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/auto-complete.js?1552496762"></script>
 <script type="text/javascript">
     
         var baseurl = "\/weblogic-kubernetes-operator\/";
     
 </script>
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/search.js?1552490623"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/search.js?1552496762"></script>
 
     
   </div>
@@ -2012,13 +2012,13 @@
  
   
     
-    <li data-nav-id="/weblogic-kubernetes-operator/security/domain-security/" title="Domain Security" class="dd-item 
+    <li data-nav-id="/weblogic-kubernetes-operator/security/domain-security/" title="Domain security" class="dd-item 
         
         
         
         ">
       <a href="/weblogic-kubernetes-operator/security/domain-security/">
-          Domain Security
+          Domain security
           
       </a>
       
@@ -2037,9 +2037,9 @@
  
   
     
-      <li data-nav-id="/weblogic-kubernetes-operator/security/domain-security/image-protection/" title="Docker Image Protection" class="dd-item ">
+      <li data-nav-id="/weblogic-kubernetes-operator/security/domain-security/image-protection/" title="Docker image protection" class="dd-item ">
         <a href="/weblogic-kubernetes-operator/security/domain-security/image-protection/">
-        Docker Image Protection
+        Docker image protection
         
         </a>
     </li>
@@ -2103,9 +2103,9 @@
  
   
     
-      <li data-nav-id="/weblogic-kubernetes-operator/security/service-accounts/" title="Service Accounts" class="dd-item ">
+      <li data-nav-id="/weblogic-kubernetes-operator/security/service-accounts/" title="Service accounts" class="dd-item ">
         <a href="/weblogic-kubernetes-operator/security/service-accounts/">
-        Service Accounts
+        Service accounts
         
         </a>
     </li>
@@ -2286,9 +2286,10 @@
 <ul>
 <li>
 <ul>
+<li><a href="#contents">Contents</a></li>
+<li><a href="#weblogic-operator-introspector-encryption">WebLogic operator introspector encryption</a></li>
+<li><a href="#encryption-of-kubernetes-secrets">Encryption of Kubernetes secrets</a></li>
 <li><a href="#reference">Reference</a></li>
-<li><a href="#weblogic-operator-introspector-encryption">WebLogic Operator Introspector Encryption</a></li>
-<li><a href="#encryption-of-kubernetes-secrets">Encryption of Kubernetes Secrets</a></li>
 </ul></li>
 </ul></li>
 </ul></li>
@@ -2313,41 +2314,47 @@
 
 
 
-<h4 id="reference">Reference</h4>
+<h4 id="contents">Contents</h4>
 
 <ul>
-<li><a href="/weblogic-kubernetes-operator/userguide/managing-domains/configoverrides/#override-template-macros">Encryption of values for WebLogic configuration overrides</a></li>
-<li><a href="#weblogic-operator-introspector-encryption">WebLogic Operator Introspector Encryption</a></li>
-<li><a href="#encryption-of-kubernetes-secrets">Encryption of Kubernetes Secrets</a></li>
+<li><a href="#weblogic-operator-introspector-encryption">WebLogic operator introspector encryption</a></li>
+<li><a href="#encryption-of-kubernetes-secrets">Encryption of Kubernetes secrets</a></li>
+<li><a href="#reference">Reference</a></li>
 </ul>
 
-<h4 id="weblogic-operator-introspector-encryption">WebLogic Operator Introspector Encryption</h4>
+<h4 id="weblogic-operator-introspector-encryption">WebLogic operator introspector encryption</h4>
 
-<p>The WebLogic Operator has an introspection job that handles the WebLogic Domain encryption.
-The intropsection also addresses use of Kubernetes secrets for use with configuration overrides.
+<p>The WebLogic operator has an introspection job that handles WebLogic domain encryption.
+The introspection also addresses use of Kubernetes secrets for use with configuration overrides.
 For additional information on the configuration handling, see the
 <a href="/weblogic-kubernetes-operator/userguide/managing-domains/configoverrides/">configuration overrides</a>
-documenation.</p>
+documentation.</p>
 
-<p>The intropection also creates a <code>boot.properties</code> file that is made available
-to the pods in the WebLogic Domain. The credential used for the
-WebLogic Domain is kept in a Kubernetes <code>Secret</code> which follows the naming pattern
+<p>The introspection also creates a <code>boot.properties</code> file that is made available
+to the pods in the WebLogic domain. The credential used for the
+WebLogic domain is kept in a Kubernetes <code>Secret</code> which follows the naming pattern
 <code>&lt;domainUID&gt;-weblogic-credentials</code>, where <code>&lt;domainUID&gt;</code> is
 the unique identifier of the domain, for example, <code>mydomain-weblogic-credentials</code>.</p>
 
 <div class="notices info" ><p>For more information about the WebLogic credentials secret, please see <a href="/weblogic-kubernetes-operator/security/secrets/#reference">Secrets</a>
-under <strong>Securty</strong>.</p>
+under <strong>Security</strong>.</p>
 </div>
 
 
-<h4 id="encryption-of-kubernetes-secrets">Encryption of Kubernetes Secrets</h4>
+<h4 id="encryption-of-kubernetes-secrets">Encryption of Kubernetes secrets</h4>
 
-<div class="notices tip" ><p>To better protect your credentials and private keys, the Kubernetes cluster should be setup with encryption.
-Please see the Kubernetes documenation about
+<div class="notices tip" ><p>To better protect your credentials and private keys, the Kubernetes cluster should be set up with encryption.
+Please see the Kubernetes documentation about
 <a href="https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/">encryption at rest for secret data</a>
 and <a href="https://kubernetes.io/docs/tasks/administer-cluster/kms-provider/">using a KMS provider for data encryption</a>.</p>
 </div>
 
+
+<h4 id="reference">Reference</h4>
+
+<ul>
+<li><a href="/weblogic-kubernetes-operator/userguide/managing-domains/configoverrides/#override-template-macros">Encryption of values for WebLogic configuration overrides</a></li>
+</ul>
 
 
 <footer class=" footline" >
@@ -3878,7 +3885,7 @@ and <a href="https://kubernetes.io/docs/tasks/administer-cluster/kms-provider/">
 			<a class="nav nav-prev" href="/weblogic-kubernetes-operator/security/domain-security/weblogic-channels/" title="Channels"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/weblogic-kubernetes-operator/security/service-accounts/" title="Service Accounts" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/weblogic-kubernetes-operator/security/service-accounts/" title="Service accounts" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -3888,20 +3895,20 @@ and <a href="https://kubernetes.io/docs/tasks/administer-cluster/kms-provider/">
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/weblogic-kubernetes-operator/js/clipboard.min.js?1552490623"></script>
-    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.min.js?1552490623"></script>
-    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.jquery.min.js?1552490623"></script>
-    <script src="/weblogic-kubernetes-operator/js/jquery.sticky.js?1552490623"></script>
-    <script src="/weblogic-kubernetes-operator/js/featherlight.min.js?1552490623"></script>
-    <script src="/weblogic-kubernetes-operator/js/html5shiv-printshiv.min.js?1552490623"></script>
-    <script src="/weblogic-kubernetes-operator/js/highlight.pack.js?1552490623"></script>
+    <script src="/weblogic-kubernetes-operator/js/clipboard.min.js?1552496762"></script>
+    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.min.js?1552496762"></script>
+    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.jquery.min.js?1552496762"></script>
+    <script src="/weblogic-kubernetes-operator/js/jquery.sticky.js?1552496762"></script>
+    <script src="/weblogic-kubernetes-operator/js/featherlight.min.js?1552496762"></script>
+    <script src="/weblogic-kubernetes-operator/js/html5shiv-printshiv.min.js?1552496762"></script>
+    <script src="/weblogic-kubernetes-operator/js/highlight.pack.js?1552496762"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/weblogic-kubernetes-operator/js/modernizr.custom.71422.js?1552490623"></script>
-    <script src="/weblogic-kubernetes-operator/js/learn.js?1552490623"></script>
-    <script src="/weblogic-kubernetes-operator/js/hugo-learn.js?1552490623"></script>
+    <script src="/weblogic-kubernetes-operator/js/modernizr.custom.71422.js?1552496762"></script>
+    <script src="/weblogic-kubernetes-operator/js/learn.js?1552496762"></script>
+    <script src="/weblogic-kubernetes-operator/js/hugo-learn.js?1552496762"></script>
 
-    <link href="/weblogic-kubernetes-operator/mermaid/mermaid.css?1552490623" type="text/css" rel="stylesheet" />
-    <script src="/weblogic-kubernetes-operator/mermaid/mermaid.js?1552490623"></script>
+    <link href="/weblogic-kubernetes-operator/mermaid/mermaid.css?1552496762" type="text/css" rel="stylesheet" />
+    <script src="/weblogic-kubernetes-operator/mermaid/mermaid.js?1552496762"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

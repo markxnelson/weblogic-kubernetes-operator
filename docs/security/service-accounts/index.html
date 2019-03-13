@@ -4,25 +4,25 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.54.0" />
-    <meta name="description" content="Kubernetes service accounts for the WebLogic Operator">
+    <meta name="description" content="Kubernetes service accounts for the WebLogic operator">
 
 
     <link rel="icon" href="/weblogic-kubernetes-operator/images/favicon.png" type="image/png">
 
-    <title>Service Accounts :: WebLogic Kubernetes Operator</title>
+    <title>Service accounts :: WebLogic Kubernetes Operator</title>
 
     
-    <link href="/weblogic-kubernetes-operator/css/nucleus.css?1552490623" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/fontawesome-all.min.css?1552490623" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/hybrid.css?1552490623" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/featherlight.min.css?1552490623" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/perfect-scrollbar.min.css?1552490623" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/auto-complete.css?1552490623" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/theme.css?1552490623" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/hugo-theme.css?1552490623" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/nucleus.css?1552496762" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/fontawesome-all.min.css?1552496762" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/hybrid.css?1552496762" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/featherlight.min.css?1552496762" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/perfect-scrollbar.min.css?1552496762" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/auto-complete.css?1552496762" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/theme.css?1552496762" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/hugo-theme.css?1552496762" rel="stylesheet">
     
 
-    <script src="/weblogic-kubernetes-operator/js/jquery-2.x.min.js?1552490623"></script>
+    <script src="/weblogic-kubernetes-operator/js/jquery-2.x.min.js?1552496762"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/lunr.min.js?1552490623"></script>
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/auto-complete.js?1552490623"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/lunr.min.js?1552496762"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/auto-complete.js?1552496762"></script>
 <script type="text/javascript">
     
         var baseurl = "\/weblogic-kubernetes-operator\/";
     
 </script>
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/search.js?1552490623"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/search.js?1552496762"></script>
 
     
   </div>
@@ -2012,13 +2012,13 @@
  
   
     
-    <li data-nav-id="/weblogic-kubernetes-operator/security/domain-security/" title="Domain Security" class="dd-item 
+    <li data-nav-id="/weblogic-kubernetes-operator/security/domain-security/" title="Domain security" class="dd-item 
         
         
         
         ">
       <a href="/weblogic-kubernetes-operator/security/domain-security/">
-          Domain Security
+          Domain security
           
       </a>
       
@@ -2037,9 +2037,9 @@
  
   
     
-      <li data-nav-id="/weblogic-kubernetes-operator/security/domain-security/image-protection/" title="Docker Image Protection" class="dd-item ">
+      <li data-nav-id="/weblogic-kubernetes-operator/security/domain-security/image-protection/" title="Docker image protection" class="dd-item ">
         <a href="/weblogic-kubernetes-operator/security/domain-security/image-protection/">
-        Docker Image Protection
+        Docker image protection
         
         </a>
     </li>
@@ -2103,9 +2103,9 @@
  
   
     
-      <li data-nav-id="/weblogic-kubernetes-operator/security/service-accounts/" title="Service Accounts" class="dd-item active">
+      <li data-nav-id="/weblogic-kubernetes-operator/security/service-accounts/" title="Service accounts" class="dd-item active">
         <a href="/weblogic-kubernetes-operator/security/service-accounts/">
-        Service Accounts
+        Service accounts
         
         </a>
     </li>
@@ -2265,7 +2265,7 @@
             
           
           
-            <a href='/weblogic-kubernetes-operator/'></a> > <a href='/weblogic-kubernetes-operator/security/'>Security</a> > Service Accounts
+            <a href='/weblogic-kubernetes-operator/'></a> > <a href='/weblogic-kubernetes-operator/security/'>Security</a> > Service accounts
           
          
           
@@ -2286,8 +2286,8 @@
 <ul>
 <li>
 <ul>
+<li><a href="#weblogic-operator-service-account">WebLogic operator service account</a></li>
 <li><a href="#reference">Reference</a></li>
-<li><a href="#weblogic-operator-service-account">WebLogic Operator Service Account</a></li>
 </ul></li>
 </ul></li>
 </ul></li>
@@ -2304,7 +2304,7 @@
         
         <div id="body-inner">
           
-            <h1>Service Accounts</h1>
+            <h1>Service accounts</h1>
           
 
         
@@ -2312,35 +2312,35 @@
 
 
 
-<h4 id="reference">Reference</h4>
+<h4 id="weblogic-operator-service-account">WebLogic operator service account</h4>
 
-<ul>
-<li><a href="/weblogic-kubernetes-operator/userguide/managing-operators/#install-helm-and-tiller">Helm Service Account</a></li>
-<li><a href="/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/using-helm/#serviceaccount">Operator Helm Chart Service Account Configuration</a></li>
-</ul>
-
-<h4 id="weblogic-operator-service-account">WebLogic Operator Service Account</h4>
-
-<p>When the WebLogic Operator is installed, the Helm chart property of <code>serviceAccount</code> can
+<p>When the WebLogic operator is installed, the Helm chart property, <code>serviceAccount</code>, can
 be specified where the value contains the name of the Kubernetes <code>ServiceAccount</code>
-in the namespace that the WebLogic Operator will be installed.
-For more information about the Helm chart see the
+in the namespace in which the WebLogic operator will be installed.
+For more information about the Helm chart, see the
 <a href="/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/using-helm/#operator-helm-configuration-values">operator Helm configuration values</a>.</p>
 
-<p>The WebLogic Operator will use this <code>ServiceAccount</code> when calling the Kubernetes API server
+<p>The WebLogic operator will use this <code>ServiceAccount</code> when calling the Kubernetes API server
 and the appropriate access controls will be created for this <code>ServiceAccount</code> by
-the operator&rsquo;s Helm Chart.</p>
+the operator&rsquo;s Helm chart.</p>
 
-<div class="notices info" ><p>For more information about access controls see <a href="/weblogic-kubernetes-operator/security/rbac/">RBAC</a> under <strong>Security</strong>.</p>
+<div class="notices info" ><p>For more information about access controls, see <a href="/weblogic-kubernetes-operator/security/rbac/">RBAC</a> under <strong>Security</strong>.</p>
 </div>
 
 
-<p>In order to display the <code>ServiceAccount</code> used by the WebLogic Operator
+<p>In order to display the <code>ServiceAccount</code> used by the WebLogic operator,
 where the operator was installed using the Helm release name <code>weblogic-operator</code>,
 look for the <code>serviceAccount</code> value using the Helm command:</p>
 
 <pre><code class="language-bash">$ helm get values --all weblogic-operator
 </code></pre>
+
+<h4 id="reference">Reference</h4>
+
+<ul>
+<li><a href="/weblogic-kubernetes-operator/userguide/managing-operators/#install-helm-and-tiller">Helm service account</a></li>
+<li><a href="/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/using-helm/#serviceaccount">Operator Helm chart service account configuration</a></li>
+</ul>
 
 
 <footer class=" footline" >
@@ -3881,20 +3881,20 @@ look for the <code>serviceAccount</code> value using the Helm command:</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/weblogic-kubernetes-operator/js/clipboard.min.js?1552490623"></script>
-    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.min.js?1552490623"></script>
-    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.jquery.min.js?1552490623"></script>
-    <script src="/weblogic-kubernetes-operator/js/jquery.sticky.js?1552490623"></script>
-    <script src="/weblogic-kubernetes-operator/js/featherlight.min.js?1552490623"></script>
-    <script src="/weblogic-kubernetes-operator/js/html5shiv-printshiv.min.js?1552490623"></script>
-    <script src="/weblogic-kubernetes-operator/js/highlight.pack.js?1552490623"></script>
+    <script src="/weblogic-kubernetes-operator/js/clipboard.min.js?1552496762"></script>
+    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.min.js?1552496762"></script>
+    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.jquery.min.js?1552496762"></script>
+    <script src="/weblogic-kubernetes-operator/js/jquery.sticky.js?1552496762"></script>
+    <script src="/weblogic-kubernetes-operator/js/featherlight.min.js?1552496762"></script>
+    <script src="/weblogic-kubernetes-operator/js/html5shiv-printshiv.min.js?1552496762"></script>
+    <script src="/weblogic-kubernetes-operator/js/highlight.pack.js?1552496762"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/weblogic-kubernetes-operator/js/modernizr.custom.71422.js?1552490623"></script>
-    <script src="/weblogic-kubernetes-operator/js/learn.js?1552490623"></script>
-    <script src="/weblogic-kubernetes-operator/js/hugo-learn.js?1552490623"></script>
+    <script src="/weblogic-kubernetes-operator/js/modernizr.custom.71422.js?1552496762"></script>
+    <script src="/weblogic-kubernetes-operator/js/learn.js?1552496762"></script>
+    <script src="/weblogic-kubernetes-operator/js/hugo-learn.js?1552496762"></script>
 
-    <link href="/weblogic-kubernetes-operator/mermaid/mermaid.css?1552490623" type="text/css" rel="stylesheet" />
-    <script src="/weblogic-kubernetes-operator/mermaid/mermaid.js?1552490623"></script>
+    <link href="/weblogic-kubernetes-operator/mermaid/mermaid.css?1552496762" type="text/css" rel="stylesheet" />
+    <script src="/weblogic-kubernetes-operator/mermaid/mermaid.js?1552496762"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
