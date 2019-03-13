@@ -103,7 +103,7 @@ After creating Kubernetes clusters, you can optionally:
     </item>
     
     <item>
-      <title>Get Started</title>
+      <title>Get started</title>
       <link>/weblogic-kubernetes-operator/userguide/introduction/introduction/</link>
       <pubDate>Sat, 23 Feb 2019 16:40:54 -0500</pubDate>
       
@@ -383,7 +383,7 @@ The WebLogic operator will use this ServiceAccount when calling the Kubernetes A
     </item>
     
     <item>
-      <title>Integration Tests</title>
+      <title>Integration tests</title>
       <link>/weblogic-kubernetes-operator/developerguide/integration-tests/</link>
       <pubDate>Sat, 23 Feb 2019 17:23:22 -0500</pubDate>
       
@@ -404,7 +404,7 @@ Because we want to balance separating destabilizing work into feature branches a
     </item>
     
     <item>
-      <title>Life Cycle</title>
+      <title>Life cycle</title>
       <link>/weblogic-kubernetes-operator/userguide/managing-operators/using-the-operator/lifecycle/</link>
       <pubDate>Sat, 23 Feb 2019 17:08:54 -0500</pubDate>
       
@@ -423,7 +423,7 @@ $ helm install stable/traefik \ --name traefik-operator \ --namespace traefik \ 
     </item>
     
     <item>
-      <title>Coding Standards</title>
+      <title>Coding standards</title>
       <link>/weblogic-kubernetes-operator/developerguide/coding-standards/</link>
       <pubDate>Sat, 23 Feb 2019 17:24:10 -0500</pubDate>
       
@@ -472,7 +472,7 @@ $ helm upgrade \ --reuse-values \ --set &amp;quot;kubernetes.namespaces={traefik
     </item>
     
     <item>
-      <title>Code Structure</title>
+      <title>Code structure</title>
       <link>/weblogic-kubernetes-operator/developerguide/code-structure/</link>
       <pubDate>Sat, 23 Feb 2019 17:25:04 -0500</pubDate>
       
@@ -493,7 +493,7 @@ $ kubernetes/samples/scripts/create-weblogic-domain-credentials/create-weblogic-
     </item>
     
     <item>
-      <title>Asynchronous Call Model</title>
+      <title>Asynchronous call model</title>
       <link>/weblogic-kubernetes-operator/developerguide/asynchronous-call-model/</link>
       <pubDate>Sat, 23 Feb 2019 17:20:00 -0500</pubDate>
       
@@ -514,7 +514,7 @@ $ kubectl get pods -n sample-domain1-ns $ kubectl get domains -n sample-domain1-
     </item>
     
     <item>
-      <title>Domain Processing</title>
+      <title>Domain processing</title>
       <link>/weblogic-kubernetes-operator/developerguide/domain-processing/</link>
       <pubDate>Sat, 23 Feb 2019 17:20:20 -0500</pubDate>
       
@@ -524,7 +524,7 @@ After this, the operator starts watches for changes to Domain resources and any 
     </item>
     
     <item>
-      <title>Backward Compatibility</title>
+      <title>Backward compatibility</title>
       <link>/weblogic-kubernetes-operator/developerguide/backwards-compatibility/</link>
       <pubDate>Sat, 23 Feb 2019 17:26:09 -0500</pubDate>
       

@@ -34,7 +34,7 @@ Contributions must conform to coding and formatting standards.</description>
     </item>
     
     <item>
-      <title>Integration Tests</title>
+      <title>Integration tests</title>
       <link>/weblogic-kubernetes-operator/developerguide/integration-tests/</link>
       <pubDate>Sat, 23 Feb 2019 17:23:22 -0500</pubDate>
       
@@ -55,7 +55,7 @@ Because we want to balance separating destabilizing work into feature branches a
     </item>
     
     <item>
-      <title>Coding Standards</title>
+      <title>Coding standards</title>
       <link>/weblogic-kubernetes-operator/developerguide/coding-standards/</link>
       <pubDate>Sat, 23 Feb 2019 17:24:10 -0500</pubDate>
       
@@ -65,7 +65,7 @@ Because we want to balance separating destabilizing work into feature branches a
     </item>
     
     <item>
-      <title>Code Structure</title>
+      <title>Code structure</title>
       <link>/weblogic-kubernetes-operator/developerguide/code-structure/</link>
       <pubDate>Sat, 23 Feb 2019 17:25:04 -0500</pubDate>
       
@@ -75,7 +75,7 @@ Because we want to balance separating destabilizing work into feature branches a
     </item>
     
     <item>
-      <title>Asynchronous Call Model</title>
+      <title>Asynchronous call model</title>
       <link>/weblogic-kubernetes-operator/developerguide/asynchronous-call-model/</link>
       <pubDate>Sat, 23 Feb 2019 17:20:00 -0500</pubDate>
       
@@ -84,7 +84,7 @@ Because we want to balance separating destabilizing work into feature branches a
     </item>
     
     <item>
-      <title>Domain Processing</title>
+      <title>Domain processing</title>
       <link>/weblogic-kubernetes-operator/developerguide/domain-processing/</link>
       <pubDate>Sat, 23 Feb 2019 17:20:20 -0500</pubDate>
       
@@ -94,7 +94,7 @@ After this, the operator starts watches for changes to Domain resources and any 
     </item>
     
     <item>
-      <title>Backward Compatibility</title>
+      <title>Backward compatibility</title>
       <link>/weblogic-kubernetes-operator/developerguide/backwards-compatibility/</link>
       <pubDate>Sat, 23 Feb 2019 17:26:09 -0500</pubDate>
       
