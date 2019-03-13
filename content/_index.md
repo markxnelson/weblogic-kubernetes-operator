@@ -95,7 +95,7 @@ Please take a look at our [wish list](https://github.com/oracle/weblogic-kuberne
 
 Documentation for APIs:
 
-* The operator provides a REST API that you can use to obtain configuration information and to initiate scaling actions. For details about how to use the REST APIs, see [Using the operator's REST services](site/rest.md).
+* The operator provides a REST API that you can use to obtain configuration information and to initiate scaling actions. For details about how to use the REST APIs, see [Use the operator's REST services]({{< relref "/userguide/managing-operators/using-the-operator/the-rest-api.md#use-the-operator-s-rest-services" >}}).
 
 * See the [Swagger](/swagger/index.html) documentation for the operator's REST interface.
 

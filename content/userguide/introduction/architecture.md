@@ -21,7 +21,7 @@ $ docker login
 $ docker pull oracle/weblogic-kubernetes-operator:2.0-rc2
 ```
 
-For more details on acquiring the operator image and prerequisites for installing the operator, consult the [Quick Start guide](quickstart.md).
+For more details on acquiring the operator image and prerequisites for installing the operator, consult the [Quick Start guide]({{< relref "/quickstart/_index.md" >}}).
 
 The operator registers a Kubernetes custom resource definition called `domain.weblogic.oracle` (shortname `domain`, plural `domains`).  More details about the domain resource type defined by this CRD, including its schema, are available [here](domain-resource.md).
 
