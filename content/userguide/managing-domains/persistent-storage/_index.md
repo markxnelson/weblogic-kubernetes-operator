@@ -1,5 +1,5 @@
 +++
-title = "Persistent Storage"
+title = "Persistent storage"
 date = 2019-02-23T16:45:09-05:00
 weight = 3
 pre = "<b> </b>"

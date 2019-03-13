@@ -1,5 +1,5 @@
 +++
-title = "Choose a Model"
+title = "Choose a model"
 date = 2019-02-23T16:44:54-05:00
 weight = 1
 pre = "<b> </b>"

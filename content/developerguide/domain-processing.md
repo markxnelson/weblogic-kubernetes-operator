@@ -1,5 +1,5 @@
 ---
-title: "Domain Processing"
+title: "Domain processing"
 date: 2019-02-23T17:20:20-05:00
 draft: false
 weight: 8

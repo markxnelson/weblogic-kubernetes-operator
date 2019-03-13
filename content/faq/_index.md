@@ -1,5 +1,5 @@
 +++
-title = "Frequently Asked Questions"
+title = "Frequently asked questions"
 date = 2019-02-23T08:14:59-05:00
 weight = 7
 chapter = true

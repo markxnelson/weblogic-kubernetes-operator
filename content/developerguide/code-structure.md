@@ -1,5 +1,5 @@
 ---
-title: "Code Structure"
+title: "Code structure"
 date: 2019-02-23T17:25:04-05:00
 draft: false
 weight: 6

@@ -139,15 +139,15 @@ Only pull requests from committers that can be verified as having signed the OCA
 
 Please be aware that pull requests that seek to introduce a new dependency will be subject to additional review.  In general, contributors should avoid dependencies with incompatible licenses, and should try to use recent versions of dependencies.  Standard security vulnerability checklists will be consulted before accepting a new dependency.  Dependencies on closed-source code, including WebLogic Server, will most likely be rejected.
 
-### Use Helm Chart from GitHub chart repository
+### Use Helm chart from GitHub chart repository
 
-Add this repo to Helm installation:
+Add this repository to the Helm installation:
 
 ```
 $ helm repo add weblogic-operator https://oracle.github.io/weblogic-kubernetes-operator/charts
 ```
 
-Verify repository was added correctly:
+Verify that the repository was added correctly:
 
 ```
 $ helm repo list
@@ -155,13 +155,13 @@ NAME           URL
 weblogic-operator    https://oracle.github.io/weblogic-kubernetes-operator/charts
 ```
 
-Update with latest information about charts from chart repositories:
+Update with the latest information about charts from the chart repositories:
 
 ```
 $ helm repo update
 ```
 
-Install Operator from the repo:
+Install the operator from the repository:
 
 ```
 $ helm install weblogic-operator/weblogic-operator --name weblogic-operator

@@ -1,5 +1,5 @@
 ---
-title: "Manage Domains"
+title: "Manage domains"
 date: 2019-02-23T16:43:45-05:00
 weight: 4
 description: "Important considerations for WebLogic domains in Kubernetes"

@@ -1,5 +1,5 @@
 ---
-title: "Asynchronous Call Model"
+title: "Asynchronous call model"
 date: 2019-02-23T17:20:00-05:00
 draft: false
 weight: 7
@@ -8,7 +8,7 @@ weight: 7
 
 Our expectation is that customers will task the operator with managing hundreds of WebLogic domains across dozens of Kubernetes namespaces.  Therefore, we have designed the operator with an efficient user-level threads pattern.  We've used that pattern to implement an asynchronous call model for Kubernetes API requests.  This call model has built-in support for timeouts, retries with exponential back-off, and lists that exceed the requested maximum size using the continuance functionality.
 
-#### User-Level Thread Pattern
+#### User-level thread pattern
 
 The user-level thread pattern is implemented by the classes in the `oracle.kubernetes.operator.work` package.
 
@@ -97,7 +97,7 @@ In this sample, the step uses asynchronous file IO and the suspend/resume `Fiber
     }
 ```
 
-#### Call Builder Pattern
+#### Call builder pattern
 
 The asynchronous call model is implemented by classes in the `oracle.kubernetes.operator.helpers` package, including `CallBuilder` and `ResponseStep`.  The model is based on the `Fiber` suspend/resume pattern described above.  `CallBuilder` provides many methods having names ending with "Async", such as `listPodAsync()` or `deleteServiceAsync()`.  These methods return a `Step` that can be returned as part of a `NextAction`.  When creating these `Steps`, the developer must provide a `ResponseStep`.  Only `ResponseStep.onSuccess()` must be implemented; however, it is often useful to override `onFailure()` as Kubernetes treats `404 (Not Found)` as a failure.
 
