@@ -12,17 +12,17 @@
     <title>Manage domains :: WebLogic Kubernetes Operator</title>
 
     
-    <link href="/weblogic-kubernetes-operator/css/nucleus.css?1552509608" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/fontawesome-all.min.css?1552509608" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/hybrid.css?1552509608" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/featherlight.min.css?1552509608" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/perfect-scrollbar.min.css?1552509608" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/auto-complete.css?1552509608" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/theme.css?1552509608" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/hugo-theme.css?1552509608" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/nucleus.css?1552582639" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/fontawesome-all.min.css?1552582639" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/hybrid.css?1552582639" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/featherlight.min.css?1552582639" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/perfect-scrollbar.min.css?1552582639" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/auto-complete.css?1552582639" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/theme.css?1552582639" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/hugo-theme.css?1552582639" rel="stylesheet">
     
 
-    <script src="/weblogic-kubernetes-operator/js/jquery-2.x.min.js?1552509608"></script>
+    <script src="/weblogic-kubernetes-operator/js/jquery-2.x.min.js?1552582639"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/lunr.min.js?1552509608"></script>
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/auto-complete.js?1552509608"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/lunr.min.js?1552582639"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/auto-complete.js?1552582639"></script>
 <script type="text/javascript">
     
         var baseurl = "\/weblogic-kubernetes-operator\/";
     
 </script>
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/search.js?1552509608"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/search.js?1552582639"></script>
 
     
   </div>
@@ -2338,13 +2338,13 @@ and <code>domainHomeInImage</code> is <code>true</code> (the default), then the 
 assume that the domain home is a directory under <code>/u01/oracle/user_projects/domains/</code> and report an error if no domain is found
 or more than one domain is found.  If a domain resource <code>domainHome</code> field is not set and <code>domainHomeInImage</code> is <code>false</code>, then the operator will
 assume that the domain home is <code>/shared/domains/DOMAIN_UID</code>.
-<div class="notices warning" ><p>Oracle strongly recommends storing an image containing a WebLogic Domain Home
+<div class="notices warning" ><p>Oracle strongly recommends storing an image containing a WebLogic domain home
   as private in the registry (e.g. Oracle Cloud Infrastructure Registry, Docker Hub, etc.).
   A Docker image that contains a WebLogic Domain has sensitive information including
   keys and credentials that are used access external resources (e.g. datasource password).
-  For more information about
+  For more information, see
   <a href="/weblogic-kubernetes-operator/security/domain-security/image-protection/#weblogic-domain-in-docker-image-protection">domain home in image protection</a>
-  see the <strong><em>Security</em></strong> section.</p>
+  in the <strong><em>Security</em></strong> section.</p>
 </div>
 </p></li>
 
@@ -2370,8 +2370,8 @@ expose channels outside the Kubernetes cluster.<br />
 <div class="notices warning" ><p>Exposing admin, RMI, or T3 capable channels via a Kubernetes <code>NodePort</code>
   can create an insecure configuration. In general, only HTTP protocols should be made available externally and this exposure
   is usually accomplished by setting up an external load balancer that can access internal (non-NodePort) services.
-  For more information about <a href="/weblogic-kubernetes-operator/security/domain-security/weblogic-channels/#weblogic-t3-channels">T3 channels</a>
-  see the <strong><em>Security</em></strong> section.</p>
+  For more information, see <a href="/weblogic-kubernetes-operator/security/domain-security/weblogic-channels/#weblogic-t3-channels">T3 channels</a>
+  in the <strong><em>Security</em></strong> section.</p>
 </div>
 </p></li>
 
@@ -2397,11 +2397,11 @@ that many cloud provider&rsquo;s volume providers may not support volumes across
 <h3 id="creating-and-managing-weblogic-domains">Creating and managing WebLogic domains</h3>
 
 <p>You can locate a WebLogic domain either in a persistent volume (PV) or in a Docker image.
-For examples of each, see the <a href="../kubernetes/samples/README.md">WebLogic operator samples</a>.</p>
+For examples of each, see the <a href="/weblogic-kubernetes-operator/samples/simple/domains/">WebLogic operator samples</a>.</p>
 
 <p>If you want to create your own Docker images, for example, to choose a specific set of patches or to create a domain
 with a specific configuration and/or applications deployed, then you can create the domain custom resource
-manually to deploy your domain.  This process is documented in <a href="../kubernetes/samples/scripts/create-weblogic-domain/manually-create-domain/README.md">this
+manually to deploy your domain.  This process is documented in <a href="/weblogic-kubernetes-operator/samples/simple/domains/manually-create-domain/">this
 sample</a>.</p>
 
 <h3 id="modifying-domain-configurations">Modifying domain configurations</h3>
@@ -2410,14 +2410,14 @@ sample</a>.</p>
 
 <ul>
 <li>When the domain is in a persistent volume, you can use WLST or WDT to change the configuration.</li>
-<li>For either case, you can use <a href="config-overrides.md">configuration overrides</a>.<br /></li>
+<li>For either case, you can use <a href="/weblogic-kubernetes-operator/userguide/managing-domains/configoverrides/">configuration overrides</a>.<br /></li>
 </ul>
 
 <p>Configuration overrides allow changing a configuration without modifying its original <code>config.xml</code> or system resource XML files, and also support parameterizing overrides so that you can inject values into them from Kubernetes secrets.   For example, you can inject database user names, passwords, and URLs that are stored in a secret.</p>
 
 <h3 id="about-the-domain-resource">About the domain resource</h3>
 
-<p>For information about the domain resource, see <a href="domain-resource.md">Domain resource</a>.</p>
+<p>For information about the domain resource, see <a href="/weblogic-kubernetes-operator/userguide/managing-domains/domain-resource/">Domain resource</a>.</p>
 
 <h3 id="managing-life-cycle-operations">Managing life cycle operations</h3>
 
@@ -2429,10 +2429,10 @@ See <a href="server-lifecycle.md">Starting, stopping, and restarting servers</a>
 <p>The operator let&rsquo;s you initiate scaling of clusters in various ways:</p>
 
 <ul>
-<li><a href="scaling.md#on-demand-updating-the-domain-resource-directly">Using kubectl to edit the domain resource</a></li>
-<li><a href="scaling.md#calling-the-operators-rest-scale-api">Using the operator&rsquo;s REST APIs</a></li>
-<li><a href="scaling.md#using-a-wldf-policy-rule-and-script-action-to-call-the-operators-rest-scale-api">Using WLDF policies</a></li>
-<li><a href="scaling.md#using-a-prometheus-alert-action-to-call-the-operators-rest-scale-api">Using a Prometheus action</a></li>
+<li><a href="/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/scaling/#on-demand-updating-the-domain-resource-directly">Using kubectl to edit the domain resource</a></li>
+<li><a href="/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/scaling/#calling-the-operator-s-rest-scale-api">Using the operator&rsquo;s REST APIs</a></li>
+<li><a href="/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/scaling/#using-a-wldf-policy-rule-and-script-action-to-call-the-operator-s-rest-scale-api">Using WLDF policies</a></li>
+<li><a href="/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/scaling/#using-a-prometheus-alert-action-to-call-the-operator-s-rest-scale-api">Using a Prometheus action</a></li>
 </ul>
 
 
@@ -3973,20 +3973,20 @@ See <a href="server-lifecycle.md">Starting, stopping, and restarting servers</a>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/weblogic-kubernetes-operator/js/clipboard.min.js?1552509608"></script>
-    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.min.js?1552509608"></script>
-    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.jquery.min.js?1552509608"></script>
-    <script src="/weblogic-kubernetes-operator/js/jquery.sticky.js?1552509608"></script>
-    <script src="/weblogic-kubernetes-operator/js/featherlight.min.js?1552509608"></script>
-    <script src="/weblogic-kubernetes-operator/js/html5shiv-printshiv.min.js?1552509608"></script>
-    <script src="/weblogic-kubernetes-operator/js/highlight.pack.js?1552509608"></script>
+    <script src="/weblogic-kubernetes-operator/js/clipboard.min.js?1552582639"></script>
+    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.min.js?1552582639"></script>
+    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.jquery.min.js?1552582639"></script>
+    <script src="/weblogic-kubernetes-operator/js/jquery.sticky.js?1552582639"></script>
+    <script src="/weblogic-kubernetes-operator/js/featherlight.min.js?1552582639"></script>
+    <script src="/weblogic-kubernetes-operator/js/html5shiv-printshiv.min.js?1552582639"></script>
+    <script src="/weblogic-kubernetes-operator/js/highlight.pack.js?1552582639"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/weblogic-kubernetes-operator/js/modernizr.custom.71422.js?1552509608"></script>
-    <script src="/weblogic-kubernetes-operator/js/learn.js?1552509608"></script>
-    <script src="/weblogic-kubernetes-operator/js/hugo-learn.js?1552509608"></script>
+    <script src="/weblogic-kubernetes-operator/js/modernizr.custom.71422.js?1552582639"></script>
+    <script src="/weblogic-kubernetes-operator/js/learn.js?1552582639"></script>
+    <script src="/weblogic-kubernetes-operator/js/hugo-learn.js?1552582639"></script>
 
-    <link href="/weblogic-kubernetes-operator/mermaid/mermaid.css?1552509608" type="text/css" rel="stylesheet" />
-    <script src="/weblogic-kubernetes-operator/mermaid/mermaid.js?1552509608"></script>
+    <link href="/weblogic-kubernetes-operator/mermaid/mermaid.css?1552582639" type="text/css" rel="stylesheet" />
+    <script src="/weblogic-kubernetes-operator/mermaid/mermaid.js?1552582639"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -12,17 +12,17 @@
     <title>Configuration overrides :: WebLogic Kubernetes Operator</title>
 
     
-    <link href="/weblogic-kubernetes-operator/css/nucleus.css?1552509608" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/fontawesome-all.min.css?1552509608" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/hybrid.css?1552509608" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/featherlight.min.css?1552509608" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/perfect-scrollbar.min.css?1552509608" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/auto-complete.css?1552509608" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/theme.css?1552509608" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/hugo-theme.css?1552509608" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/nucleus.css?1552582639" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/fontawesome-all.min.css?1552582639" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/hybrid.css?1552582639" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/featherlight.min.css?1552582639" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/perfect-scrollbar.min.css?1552582639" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/auto-complete.css?1552582639" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/theme.css?1552582639" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/hugo-theme.css?1552582639" rel="stylesheet">
     
 
-    <script src="/weblogic-kubernetes-operator/js/jquery-2.x.min.js?1552509608"></script>
+    <script src="/weblogic-kubernetes-operator/js/jquery-2.x.min.js?1552582639"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/lunr.min.js?1552509608"></script>
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/auto-complete.js?1552509608"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/lunr.min.js?1552582639"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/auto-complete.js?1552582639"></script>
 <script type="text/javascript">
     
         var baseurl = "\/weblogic-kubernetes-operator\/";
     
 </script>
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/search.js?1552509608"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/search.js?1552582639"></script>
 
     
   </div>
@@ -2363,7 +2363,7 @@
 
 <h3 id="overview">Overview</h3>
 
-<p>Use configuration overrides (also called <em>situational configuration</em>) to customize a WebLogic domain home configuration without modifying the domain&rsquo;s actual <code>config.xml</code> or system resource files. For example, you may want to override a JDBC datasource XML module user name, password, and URL so that it references a local database.</p>
+<p>Use configuration overrides (also called <em>situational configuration</em>) to customize a WebLogic domain home configuration without modifying the domain&rsquo;s actual <code>config.xml</code> or system resource files. For example, you may want to override a JDBC data source XML module user name, password, and URL so that it references a local database.</p>
 
 <p>You can use overrides to customize domains as they are moved from QA to production, are deployed to different sites, or are even deployed multiple times at the same site.</p>
 
@@ -2385,8 +2385,8 @@
 <li>Create Kubernetes secrets that contain template macro values.</li>
 <li>Set your domain <code>configOverrideSecrets</code> to reference the aforementioned secrets.</li>
 </ul></li>
-<li>Stop all running WebLogic Server pods in your domain. (See <a href="server-lifecycle.md">Server Lifecycle</a> and <a href="restart.md">Restarting WebLogic servers</a>.)</li>
-<li>Start or restart your domain. (See <a href="server-lifecycle.md">Server Lifecycle</a> and <a href="restart.md">Restarting WebLogic servers</a>.)</li>
+<li>Stop all running WebLogic Server pods in your domain. (See <a href="/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/startup/#starting-and-stopping-servers">Starting and stopping servers</a>.)</li>
+<li>Start or restart your domain. (See <a href="/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/startup/#starting-and-stopping-servers">Starting and stopping servers</a> and <a href="/weblogic-kubernetes-operator/userguide/managing-domains/domain-lifecycle/startup/#restarting-servers">Restarting servers</a>.)</li>
 <li>Verify your overrides are taking effect.  (See <a href="#debugging">Debugging</a>).</li>
 </ul>
 
@@ -4410,20 +4410,20 @@ spec:
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/weblogic-kubernetes-operator/js/clipboard.min.js?1552509608"></script>
-    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.min.js?1552509608"></script>
-    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.jquery.min.js?1552509608"></script>
-    <script src="/weblogic-kubernetes-operator/js/jquery.sticky.js?1552509608"></script>
-    <script src="/weblogic-kubernetes-operator/js/featherlight.min.js?1552509608"></script>
-    <script src="/weblogic-kubernetes-operator/js/html5shiv-printshiv.min.js?1552509608"></script>
-    <script src="/weblogic-kubernetes-operator/js/highlight.pack.js?1552509608"></script>
+    <script src="/weblogic-kubernetes-operator/js/clipboard.min.js?1552582640"></script>
+    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.min.js?1552582640"></script>
+    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.jquery.min.js?1552582640"></script>
+    <script src="/weblogic-kubernetes-operator/js/jquery.sticky.js?1552582640"></script>
+    <script src="/weblogic-kubernetes-operator/js/featherlight.min.js?1552582640"></script>
+    <script src="/weblogic-kubernetes-operator/js/html5shiv-printshiv.min.js?1552582640"></script>
+    <script src="/weblogic-kubernetes-operator/js/highlight.pack.js?1552582640"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/weblogic-kubernetes-operator/js/modernizr.custom.71422.js?1552509608"></script>
-    <script src="/weblogic-kubernetes-operator/js/learn.js?1552509608"></script>
-    <script src="/weblogic-kubernetes-operator/js/hugo-learn.js?1552509608"></script>
+    <script src="/weblogic-kubernetes-operator/js/modernizr.custom.71422.js?1552582640"></script>
+    <script src="/weblogic-kubernetes-operator/js/learn.js?1552582640"></script>
+    <script src="/weblogic-kubernetes-operator/js/hugo-learn.js?1552582640"></script>
 
-    <link href="/weblogic-kubernetes-operator/mermaid/mermaid.css?1552509608" type="text/css" rel="stylesheet" />
-    <script src="/weblogic-kubernetes-operator/mermaid/mermaid.js?1552509608"></script>
+    <link href="/weblogic-kubernetes-operator/mermaid/mermaid.css?1552582640" type="text/css" rel="stylesheet" />
+    <script src="/weblogic-kubernetes-operator/mermaid/mermaid.js?1552582640"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

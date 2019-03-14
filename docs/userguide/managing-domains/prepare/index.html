@@ -12,17 +12,17 @@
     <title>Prepare to run a domain :: WebLogic Kubernetes Operator</title>
 
     
-    <link href="/weblogic-kubernetes-operator/css/nucleus.css?1552509607" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/fontawesome-all.min.css?1552509607" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/hybrid.css?1552509607" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/featherlight.min.css?1552509607" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/perfect-scrollbar.min.css?1552509607" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/auto-complete.css?1552509607" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/theme.css?1552509607" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/hugo-theme.css?1552509608" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/nucleus.css?1552582639" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/fontawesome-all.min.css?1552582639" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/hybrid.css?1552582639" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/featherlight.min.css?1552582639" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/perfect-scrollbar.min.css?1552582639" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/auto-complete.css?1552582639" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/theme.css?1552582639" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/hugo-theme.css?1552582639" rel="stylesheet">
     
 
-    <script src="/weblogic-kubernetes-operator/js/jquery-2.x.min.js?1552509608"></script>
+    <script src="/weblogic-kubernetes-operator/js/jquery-2.x.min.js?1552582639"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/lunr.min.js?1552509608"></script>
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/auto-complete.js?1552509608"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/lunr.min.js?1552582639"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/auto-complete.js?1552582639"></script>
 <script type="text/javascript">
     
         var baseurl = "\/weblogic-kubernetes-operator\/";
     
 </script>
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/search.js?1552509608"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/search.js?1552582639"></script>
 
     
   </div>
@@ -2314,7 +2314,7 @@
 numbers, and hyphens.</p></li>
 
 <li><p>Create a Kubernetes secret containing the Administration Server boot credentials.  You can do this manually or by using
-<a href="/kubernetes/samples/scripts/create-weblogic-domain-credentials/README.md">the provided sample</a>.  To create
+<a href="/weblogic-kubernetes-operator/samples/simple/credentials/">the provided sample</a>.  To create
 the secret manually, use this command:</p>
 
 <pre><code>$ kubectl -n domain-namespace-1 \
@@ -2331,7 +2331,7 @@ the <code>domainUID</code> followed by the literal string <code>-weblogic-creden
 <li>Replace the string <code>welcome1</code> in the fourth line with the password.</li>
 </ul></li>
 
-<li><p>Optionally, <a href="/kubernetes/samples/scripts/create-weblogic-domain-pv-pvc/README.md">create a PV &amp; persistent volume claim (PVC)</a> which can hold the domain home, logs, and application binaries.
+<li><p>Optionally, <a href="/weblogic-kubernetes-operator/samples/simple/storage/">create a PV &amp; persistent volume claim (PVC)</a> which can hold the domain home, logs, and application binaries.
 Even if you put your domain in a Docker image, you may want to put the logs on a persistent volume so that they are available after the pods terminate.
 This may be instead of, or as well as, other approaches like streaming logs into Elasticsearch.</p></li>
 
@@ -3881,20 +3881,20 @@ This may be instead of, or as well as, other approaches like streaming logs into
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/weblogic-kubernetes-operator/js/clipboard.min.js?1552509608"></script>
-    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.min.js?1552509608"></script>
-    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.jquery.min.js?1552509608"></script>
-    <script src="/weblogic-kubernetes-operator/js/jquery.sticky.js?1552509608"></script>
-    <script src="/weblogic-kubernetes-operator/js/featherlight.min.js?1552509608"></script>
-    <script src="/weblogic-kubernetes-operator/js/html5shiv-printshiv.min.js?1552509608"></script>
-    <script src="/weblogic-kubernetes-operator/js/highlight.pack.js?1552509608"></script>
+    <script src="/weblogic-kubernetes-operator/js/clipboard.min.js?1552582639"></script>
+    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.min.js?1552582639"></script>
+    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.jquery.min.js?1552582639"></script>
+    <script src="/weblogic-kubernetes-operator/js/jquery.sticky.js?1552582639"></script>
+    <script src="/weblogic-kubernetes-operator/js/featherlight.min.js?1552582639"></script>
+    <script src="/weblogic-kubernetes-operator/js/html5shiv-printshiv.min.js?1552582639"></script>
+    <script src="/weblogic-kubernetes-operator/js/highlight.pack.js?1552582639"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/weblogic-kubernetes-operator/js/modernizr.custom.71422.js?1552509608"></script>
-    <script src="/weblogic-kubernetes-operator/js/learn.js?1552509608"></script>
-    <script src="/weblogic-kubernetes-operator/js/hugo-learn.js?1552509608"></script>
+    <script src="/weblogic-kubernetes-operator/js/modernizr.custom.71422.js?1552582639"></script>
+    <script src="/weblogic-kubernetes-operator/js/learn.js?1552582639"></script>
+    <script src="/weblogic-kubernetes-operator/js/hugo-learn.js?1552582639"></script>
 
-    <link href="/weblogic-kubernetes-operator/mermaid/mermaid.css?1552509608" type="text/css" rel="stylesheet" />
-    <script src="/weblogic-kubernetes-operator/mermaid/mermaid.js?1552509608"></script>
+    <link href="/weblogic-kubernetes-operator/mermaid/mermaid.css?1552582639" type="text/css" rel="stylesheet" />
+    <script src="/weblogic-kubernetes-operator/mermaid/mermaid.js?1552582639"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
