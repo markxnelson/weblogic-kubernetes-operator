@@ -24,7 +24,7 @@ There are two main options available:
   and the domain directory.
 
 If you want to use the first option, you will need to obtain the standard
-WebLogic Server image from the Docker store, [see here](#obtaining-standard-images-from-the-docker-store),
+WebLogic Server image from the Docker store, [see here](#obtaining-standard-images-from-the-docker-store);
 this image already contains the mandatory patches applied as described in [this section](#creating-a-custom-image-with-patches-applied).
 If you want to use additional patches, you can customize that process to include additional patches.
 
@@ -122,7 +122,7 @@ run WebLogic 12.2.1.3 in Kubernetes using the operator.
 #### Creating a custom image with your domain inside the image
 
 You can also create a Docker image with the WebLogic domain inside the image.
-[Samples](/kubernetes/samples/scripts/create-weblogic-domain/domain-home-in-image/README.md)
+[Samples]({{< relref "/samples/simple/domains/domain-home-in-image/_index.md" >}})
 are provided that demonstrate how to create the image using:
 
 * WLST to define the domain, or

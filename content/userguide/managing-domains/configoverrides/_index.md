@@ -24,7 +24,7 @@ pre = "<b> </b>"
 ---
 ### Overview
 
-Use configuration overrides (also called _situational configuration_) to customize a WebLogic domain home configuration without modifying the domain's actual `config.xml` or system resource files. For example, you may want to override a JDBC datasource XML module user name, password, and URL so that it references a local database.
+Use configuration overrides (also called _situational configuration_) to customize a WebLogic domain home configuration without modifying the domain's actual `config.xml` or system resource files. For example, you may want to override a JDBC data source XML module user name, password, and URL so that it references a local database.
 
 You can use overrides to customize domains as they are moved from QA to production, are deployed to different sites, or are even deployed multiple times at the same site.
 
@@ -39,8 +39,8 @@ You can use overrides to customize domains as they are moved from QA to producti
 * If templates leverage `secret macros`:
   * Create Kubernetes secrets that contain template macro values.
   * Set your domain `configOverrideSecrets` to reference the aforementioned secrets.
-* Stop all running WebLogic Server pods in your domain. (See [Server Lifecycle](server-lifecycle.md) and [Restarting WebLogic servers](restart.md).)
-* Start or restart your domain. (See [Server Lifecycle](server-lifecycle.md) and [Restarting WebLogic servers](restart.md).)
+* Stop all running WebLogic Server pods in your domain. (See [Starting and stopping servers]({{< relref "/userguide/managing-domains/domain-lifecycle/startup/_index.md#starting-and-stopping-servers" >}}).)
+* Start or restart your domain. (See [Starting and stopping servers]({{< relref "/userguide/managing-domains/domain-lifecycle/startup/_index.md#starting-and-stopping-servers" >}}) and [Restarting servers]({{< relref "/userguide/managing-domains/domain-lifecycle/startup/_index.md#restarting-servers" >}}).)
 * Verify your overrides are taking effect.  (See [Debugging](#debugging)).
 
 For a detailed walk-through of these steps, see the [Step-by-step guide](#step-by-step-guide).

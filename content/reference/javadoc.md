@@ -5,4 +5,4 @@ draft: false
 weight: 1
 ---
 
-You can view the Java API documentation [here](/apidocs).
+You can view the Java API documentation [here](https://oracle.github.io/weblogic-kubernetes-operator/apidocs/index.html).

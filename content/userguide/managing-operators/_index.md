@@ -84,8 +84,7 @@ To enable the external REST interface, configure these values in a custom config
 * Set `externalRestIdentitySecret` to the name of the kubernetes `tls secret` that contains the certificate(s) and private key.
 * Optionally, set `externalRestHttpsPort` to the external port number for the operator REST interface (defaults to `31001`).
 
-More detailed information about REST interface configuration values can be found from the
-[operator Helm configuration values]({{<relref "/userguide/managing-operators/using-the-operator/using-helm.md#rest-interface-configuration">}}).
+For more detailed information, see the [REST interface configuration]({{<relref "/userguide/managing-operators/using-the-operator/using-helm.md#rest-interface-configuration">}}) values.
 
 ##### Sample SSL certificate and private key for the REST interface
 
@@ -101,8 +100,8 @@ A certficate signed by a commercial certificate authority is more widely accepte
 should contain valid host names, expiration dates and key constraints.
 {{% /notice %}}
 
-More detailed information about the sample script and how to run the script
-can be found in the ***Samples*** section under the [REST APIs]({{<relref "/samples/simple/rest/_index.md#sample-to-create-certificate-and-key">}}).
+For more detailed information about the sample script and how to run it, see
+the [REST APIs]({{<relref "/samples/simple/rest/_index.md#sample-to-create-certificate-and-key">}}) in the ***Samples*** section.
 
 #### Optional: Elastic Stack (Elasticsearch, Logstash, and Kibana) integration
 
@@ -118,4 +117,4 @@ As part of the Elastic Stack integration, Logstash configuration occurs for each
 * Set `logStashImage` to override the default version of Logstash to be used (`logstash:6.2`).
 * Set `elasticSearchHost` and `elasticSearchPort` to override the default location where Elasticsearch is running (`elasticsearch2.default.svc.cluster.local:9201`). This will configure Logstash to send the operator's log contents there.
 
-More detailed information about configuration values can be found in [Operator Helm configuration values]({{<relref "/userguide/managing-operators/using-the-operator/using-helm.md#operator-helm-configuration-values">}}).
+For more detailed information, see the [Operator Helm configuration values]({{<relref "/userguide/managing-operators/using-the-operator/using-helm.md#operator-helm-configuration-values">}}).

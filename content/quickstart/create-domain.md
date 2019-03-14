@@ -59,8 +59,8 @@ When using this sample, the WebLogic Server credentials that you specify, in thr
     * If you want Kubernetes to pull the image from a private registry, create a Kubernetes secret to hold your credentials and set the `imagePullSecretName` property in the inputs file to the name of the secret.
 {{% notice note %}}
 The Kubernetes secret must be in the same namespace where the domain will be running.
-For more information see the ***Security*** section about
-[domain home in image protection]({{<relref "/security/domain-security/image-protection.md#weblogic-domain-in-docker-image-protection">}}).
+For more information, see [domain home in image protection]({{<relref "/security/domain-security/image-protection.md#weblogic-domain-in-docker-image-protection">}})
+in the ***Security*** section.
 {{% /notice %}}
     * Run the `create-domain.sh` script without the `-e` option.
     * Push the `image` to the registry.

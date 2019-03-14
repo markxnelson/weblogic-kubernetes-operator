@@ -24,13 +24,13 @@ Please be aware of the following important considerations for WebLogic domains r
   or more than one domain is found.  If a domain resource `domainHome` field is not set and `domainHomeInImage` is `false`, then the operator will
   assume that the domain home is `/shared/domains/DOMAIN_UID`.
   {{% notice warning %}}
-  Oracle strongly recommends storing an image containing a WebLogic Domain Home
+  Oracle strongly recommends storing an image containing a WebLogic domain home
   as private in the registry (e.g. Oracle Cloud Infrastructure Registry, Docker Hub, etc.).
   A Docker image that contains a WebLogic Domain has sensitive information including
   keys and credentials that are used access external resources (e.g. datasource password).
-  For more information about
+  For more information, see
   [domain home in image protection]({{<relref "/security/domain-security/image-protection.md#weblogic-domain-in-docker-image-protection">}})
-  see the ***Security*** section.
+  in the ***Security*** section.
   {{% /notice %}}
 
 * _Log File Locations:_ The operator can automatically override WebLogic domain and server log locations using situational
@@ -56,8 +56,8 @@ Please be aware of the following important considerations for WebLogic domains r
   Exposing admin, RMI, or T3 capable channels via a Kubernetes `NodePort`
   can create an insecure configuration. In general, only HTTP protocols should be made available externally and this exposure
   is usually accomplished by setting up an external load balancer that can access internal (non-NodePort) services.
-  For more information about [T3 channels]({{<relref "/security/domain-security/weblogic-channels.md#weblogic-t3-channels">}})
-  see the ***Security*** section.
+  For more information, see [T3 channels]({{<relref "/security/domain-security/weblogic-channels.md#weblogic-t3-channels">}})
+  in the ***Security*** section.
   {{% /notice %}}
 
 * _Host Path Persistent Volumes:_ If using a `hostPath` persistent volume, then it must be available on all worker nodes in the cluster and have read/write/many permissions for all container/pods in the WebLogic Server deployment.  Be aware
@@ -80,25 +80,25 @@ Please consult My Oracle Support Doc ID 2349228.1 for up-to-date information abo
 ### Creating and managing WebLogic domains
 
 You can locate a WebLogic domain either in a persistent volume (PV) or in a Docker image.
-For examples of each, see the [WebLogic operator samples](../kubernetes/samples/README.md).
+For examples of each, see the [WebLogic operator samples]({{< relref "/samples/simple/domains/_index.md" >}}).
 
 If you want to create your own Docker images, for example, to choose a specific set of patches or to create a domain
 with a specific configuration and/or applications deployed, then you can create the domain custom resource
 manually to deploy your domain.  This process is documented in [this
-sample](../kubernetes/samples/scripts/create-weblogic-domain/manually-create-domain/README.md).
+sample]({{< relref "/samples/simple/domains/manually-create-domain/_index.md" >}}).
 
 ### Modifying domain configurations
 
 You can modify the WebLogic domain configuration for both the "domain in persistent volume" and the "domain in image" options before deploying a domain resource:
 
 * When the domain is in a persistent volume, you can use WLST or WDT to change the configuration.
-* For either case, you can use [configuration overrides](config-overrides.md).   
+* For either case, you can use [configuration overrides]({{< relref "/userguide/managing-domains/configoverrides/_index.md" >}}).   
 
 Configuration overrides allow changing a configuration without modifying its original `config.xml` or system resource XML files, and also support parameterizing overrides so that you can inject values into them from Kubernetes secrets.   For example, you can inject database user names, passwords, and URLs that are stored in a secret.
 
 ### About the domain resource
 
-For information about the domain resource, see [Domain resource](domain-resource.md).
+For information about the domain resource, see [Domain resource]({{< relref "/userguide/managing-domains/domain-resource/_index.md" >}}).
 
 ### Managing life cycle operations
 
@@ -109,7 +109,7 @@ See [Starting, stopping, and restarting servers](server-lifecycle.md) and [Resta
 
 The operator let's you initiate scaling of clusters in various ways:
 
-* [Using kubectl to edit the domain resource](scaling.md#on-demand-updating-the-domain-resource-directly)
-* [Using the operator's REST APIs](scaling.md#calling-the-operators-rest-scale-api)
-* [Using WLDF policies](scaling.md#using-a-wldf-policy-rule-and-script-action-to-call-the-operators-rest-scale-api)
-* [Using a Prometheus action](scaling.md#using-a-prometheus-alert-action-to-call-the-operators-rest-scale-api)
+* [Using kubectl to edit the domain resource]({{< relref "/userguide/managing-domains/domain-lifecycle/scaling.md#on-demand-updating-the-domain-resource-directly" >}})
+* [Using the operator's REST APIs]({{< relref "/userguide/managing-domains/domain-lifecycle/scaling.md#calling-the-operator-s-rest-scale-api" >}})
+* [Using WLDF policies]({{< relref "/userguide/managing-domains/domain-lifecycle/scaling.md#using-a-wldf-policy-rule-and-script-action-to-call-the-operator-s-rest-scale-api" >}})
+* [Using a Prometheus action]({{< relref "/userguide/managing-domains/domain-lifecycle/scaling.md#using-a-prometheus-alert-action-to-call-the-operator-s-rest-scale-api" >}})

@@ -27,8 +27,8 @@ Follow the basic steps from the  [Terraform Kubernetes installer for Oracle Clou
 
 #### Prerequisites
 
-1. Download and install [Terraform][Terraform] (v0.10.3 or later).
-2. Download and install the [OCI Terraform Provider][OCI provider] (v2.0.0 or later).
+1. Download and install [Terraform](https://www.terraform.io/) (v0.10.3 or later).
+2. Download and install the [OCI Terraform Provider](https://github.com/terraform-providers/terraform-provider-oci/releases) (v2.0.0 or later).
 3. Create an Terraform configuration file at  `~/.terraformrc` that specifies the path to the OCI provider:
    ```
    providers {

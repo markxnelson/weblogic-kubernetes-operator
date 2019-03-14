@@ -10,7 +10,7 @@ pre = "<b> </b>"
 
 Use this document to set up and configure your own [domain resource](../docs/domains/Domain.md) which can be used to configure your WLS domain. Then, you can use the domain resource to start the Kubernetes artifacts of the corresponding domain.
 
-Swagger documentation is available [here](https://oracle.github.io/weblogic-kubernetes-operator/domains/index.html).
+Swagger documentation is available [here](https://oracle.github.io/weblogic-kubernetes-operator/swagger/index.html).
 
 #### Prerequisites
 
@@ -23,7 +23,7 @@ The following prerequisites must be fulfilled before proceeding with the creatio
 
 Domain resources are defined using the domain resource YAML files. For each WLS domain you want to create and configure, you should create one domain resource YAML file and apply it. In the example referenced below, the sample script, `create-domain.sh`, generates a domain resource YAML file that you can use as a basis. Copy the file and override the default settings so that it matches all the WLS domain parameters that define your WLS domain.
 
-See the [WebLogic sample domain home on a persistent volume README](../kubernetes/samples/scripts/create-weblogic-domain/domain-home-on-pv/README.md).
+See the [WebLogic sample domain home on a persistent volume README]({{< relref "/samples/simple/domains/domain-home-on-pv/_index.md" >}}).
 
 #### Kubernetes resources
 

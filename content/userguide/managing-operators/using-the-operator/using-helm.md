@@ -143,12 +143,13 @@ Example 2: In the configuration below, the Helm installation will manage `namesp
 ```
 domainNamespaces: [ "namespace1", "namespace2" ]
 ```
-{{% notice note %}}
-You must include the `default` namespace in the list if you want the operator to monitor both the `default` namespace and some other namespaces.
-{{% /notice %}}
 
 {{% notice note %}}
 These examples show two valid YAML syntax options for arrays.
+{{% /notice %}}
+
+{{% notice note %}}
+You must include the `default` namespace in the list if you want the operator to monitor both the `default` namespace and some other namespaces.
 {{% /notice %}}
 
 #### Elastic Stack integration

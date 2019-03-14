@@ -18,7 +18,7 @@ Perform these steps to prepare your Kubernetes cluster to run a WebLogic domain:
     numbers, and hyphens.
 
 1. Create a Kubernetes secret containing the Administration Server boot credentials.  You can do this manually or by using
-   [the provided sample](/kubernetes/samples/scripts/create-weblogic-domain-credentials/README.md).  To create
+   [the provided sample]({{< relref "/samples/simple/credentials/_index.md" >}}).  To create
    the secret manually, use this command:
 
     ```
@@ -34,7 +34,7 @@ Perform these steps to prepare your Kubernetes cluster to run a WebLogic domain:
     * Replace the string `weblogic` in the third line with the user name for the administrative user.
     * Replace the string `welcome1` in the fourth line with the password.
 
-1. Optionally, [create a PV & persistent volume claim (PVC)](/kubernetes/samples/scripts/create-weblogic-domain-pv-pvc/README.md) which can hold the domain home, logs, and application binaries.
+1. Optionally, [create a PV & persistent volume claim (PVC)]({{< relref "/samples/simple/storage/_index.md" >}}) which can hold the domain home, logs, and application binaries.
    Even if you put your domain in a Docker image, you may want to put the logs on a persistent volume so that they are available after the pods terminate.
    This may be instead of, or as well as, other approaches like streaming logs into Elasticsearch.
 1. Optionally, [configure load balancer(s)](/kubernetes/samples/charts/README.md) to manage access to any WebLogic clusters.

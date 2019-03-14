@@ -23,11 +23,11 @@ $ docker pull oracle/weblogic-kubernetes-operator:2.0-rc2
 
 For more details on acquiring the operator image and prerequisites for installing the operator, consult the [Quick Start guide]({{< relref "/quickstart/_index.md" >}}).
 
-The operator registers a Kubernetes custom resource definition called `domain.weblogic.oracle` (shortname `domain`, plural `domains`).  More details about the domain resource type defined by this CRD, including its schema, are available [here](domain-resource.md).
+The operator registers a Kubernetes custom resource definition called `domain.weblogic.oracle` (shortname `domain`, plural `domains`).  More details about the domain resource type defined by this CRD, including its schema, are available [here]({{< relref "/userguide/managing-domains/domain-resource.md" >}}).
 
 The diagram below shows the general layout of high-level components, including optional components, in a Kubernetes cluster that is hosting WebLogic domains and the operator:
 
-![High level architecture](https://markxnelson.github.io/weblogic-kubernetes-operator/userguide/images/high-level-architecture.png)
+![High level architecture](/images/high-level-architecture.png)
 
 The Kubernetes cluster has several namespaces.  Components may be deployed into namespaces as follows:
 
@@ -40,7 +40,7 @@ The Kubernetes cluster has several namespaces.  Components may be deployed into 
 
 The diagram below shows how the various parts of a WebLogic domain are manifest in Kubernetes by the operator.
 
-![Domain architecture](https://markxnelson.github.io/weblogic-kubernetes-operator/userguide/images/domain-architecture2.png)
+![Domain architecture](/images/domain-architecture2.png)
 
 This diagram shows the following details:
 
@@ -54,11 +54,12 @@ This diagram shows the following details:
 
 The diagram below shows the components inside the containers running WebLogic Server instances:
 
-![Inside a container](https://markxnelson.github.io/weblogic-kubernetes-operator/userguide/images/inside-a-container.png)
+![Inside a container](/images/inside-a-container.png)
 
 The domain resource specifies a Docker image, defaulting to `store/oracle/weblogic:12.2.1.3`. All containers running WebLogic Server use this same Docker image. Depending on the use case, this image could contain the WebLogic Server product binaries or also include the domain directory.
-**Note**: During a rolling event caused by a change to the domain resource's `image` field, containers will be using a mix of the updated value of the `image` field and its previous value.
-
+{{% notice note %}}
+During a rolling event caused by a change to the domain resource's `image` field, containers will be using a mix of the updated value of the `image` field and its previous value.
+{{% /notice %}}
 Within the container, the following aspects are configured by the operator:
 
 *	The `ENTRYPOINT` is configured by a script that starts up a Node Manager process, and then uses WLST to request that Node Manager start the server.  Node Manager is used to start servers so that the socket connection to the server will be available to obtain server status even when the server is unresponsive.  This is used by the liveness probe.

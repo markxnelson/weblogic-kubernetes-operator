@@ -13,7 +13,7 @@ simplifies the management and operation of WebLogic domains and deployments.
 
 You can have one or more operators in your Kubernetes cluster that manage one or more WebLogic domains each.
 We provide a Helm chart to manage the installation and configuration of the operator.
-Detailed instructions are available [here](install.md).
+Detailed instructions are available [here]({{< relref "/userguide/managing-operators/installation/_index.md" >}}).
 
 
 ### Prerequisites

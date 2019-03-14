@@ -7,9 +7,9 @@ pre = "<b> </b>"
 
 {{% notice warning %}}
 Oracle strongly recommends storing a domain image as private in the registry.
-A Docker image that contains a WebLogic Domain Home has sensitive information
+A Docker image that contains a WebLogic domain home has sensitive information
 including keys and credentials that are used to access external resources
-(e.g. datasource password). For more information about
+(for example, data source password). For more information, see
 [domain home in image protection]({{<relref "/security/domain-security/image-protection.md#weblogic-domain-in-docker-image-protection">}})
-see the ***Security*** section.
+in the ***Security*** section.
 {{% /notice %}}

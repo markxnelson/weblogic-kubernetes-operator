@@ -9,7 +9,7 @@ description: "Learn about the operator's design, architecture, terms, and prereq
 This guide provides detailed user information for the Oracle WebLogic
 Server Kubernetes Operator.  It provides instructions on how to install the operator in your
 Kubernetes cluster and how to use it to manage WebLogic domains.  If you are looking for information about how the operator is designed, implemented, built, and such, then
-you should refer to the [Developer guide](/developerguide).
+you should refer to the [Developer guide]({{< relref "/developerguide/_index.md" >}}).
 
 
 ### Important terms
@@ -30,4 +30,4 @@ This documentation uses several important terms which are intended to have a spe
 
 
 ### Additional reading
-Before using the operator, you might want to read the [design philosophy](design.md) to develop an understanding of the operator's design, and the [architectural overview](architecture.md) to understand its architecture, including how WebLogic domains are deployed in Kubernetes using the operator. Also, worth reading are the details of the [Kubernetes RBAC definitions](rbac.md) required by the operator.
+Before using the operator, you might want to read the [design philosophy]({{< relref "/userguide/introduction/design.md" >}}) to develop an understanding of the operator's design, and the [architectural overview]({{< relref "/userguide/introduction/architecture.md" >}}) to understand its architecture, including how WebLogic domains are deployed in Kubernetes using the operator. Also, worth reading are the details of the [Kubernetes RBAC definitions]({{< relref "/security/rbac.md" >}}) required by the operator.

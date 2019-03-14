@@ -5,4 +5,4 @@ draft: false
 weight: 2
 ---
 
-You can view the Swagger REST API documentation [here](/swagger).
+You can view the Swagger REST API documentation [here](https://oracle.github.io/weblogic-kubernetes-operator/swagger/index.html).
