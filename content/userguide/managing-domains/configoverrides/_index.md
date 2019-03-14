@@ -190,11 +190,11 @@ The secret macro `SECRETNAME` field must reference the name of a Kubernetes secr
   * See [Override template samples](#override-template-samples) for examples.
 * Use situational config `replace` and `add` verbs as follows:
   * If you are adding a new bean that doesn't already exist in your original domain home `config.xml`, specify `add` on the MBean itself and on each attribute within the bean.
-    * See the `server-debug` stanza in [Override template samples](#override-template-samples) below for an example.
+    * See the `server-debug` stanza in [Override template samples](#override-template-samples) for an example.
   * If you are adding a new attribute to an existing bean in the domain home `config.xml`, the attribute needs an `add` verb.
-    * See the `max-message-size` stanza in [Override template samples](#override-template-samples) below for an example.
+    * See the `max-message-size` stanza in [Override template samples](#override-template-samples) for an example.
   * If you are changing the value of an existing attribute within a domain home `config.xml`, the attribute needs a `replace` verb.
-    * See the `public-address` stanza in  [Override template samples](#override-template-samples) below for an example.
+    * See the `public-address` stanza in  [Override template samples](#override-template-samples) for an example.
 * When overriding `config.xml`:
   * The XML namespace (`xmlns:` in the XML) must be exactly as specified in [Override template schemas](#override-template-schemas).
     * For example, use `d:` to reference `config.xml` beans and attributes, `f:` for `add` and `replace` `domain-fragment` verbs, and `s:` to reference the situational configuration schema.
@@ -292,15 +292,15 @@ The following `jdbc-testDS.xml` override template demonstrates setting the URL, 
 * Configure the name of the configuration map in the domain CR `configOverrides` field.
 * Configure the names of each secret in domain CR.
   * If the secret contains the WebLogic admin `username` and `password` keys, set the domain CR `webLogicCredentialsSecret` field.
-  * For all other secrets, add them to the domain CR `configOverrideSecrets` field. Note: This must be in an array format even if you only add one secret (see the sample domain resource yaml below).
+  * For all other secrets, add them to the domain CR `configOverrideSecrets` field. Note: This must be in an array format even if you only add one secret (see the sample domain resource YAML below).
 * Any override changes require stopping all WebLogic pods, applying your domain resource (if it changed), and restarting the WebLogic pods before they can take effect.
   * Custom override changes on an existing running domain, such as updating an override configuration map, a secret, or a domain resource, will not take effect until all running WebLogic Server pods in your domain are shutdown (so no servers are left running), and the domain is subsequently restarted with your new domain resource (if it changed), or with your existing domain resource (if you haven't changed it).
   * To stop all running WebLogic Server pods in your domain, apply a changed resource, and then start/restart the domain:
-    * Set your domain resource `serverStartPolicy` to `NEVER`, wait, and apply your latest domain resource with the `serverStartPolicy` restored back to `ALWAYS` or `IF_NEEDED` (see [Server Lifecycle](server-lifecycle.md) and [Restarting WebLogic servers](restart.md).)
+    * Set your domain resource `serverStartPolicy` to `NEVER`, wait, and apply your latest domain resource with the `serverStartPolicy` restored back to `ALWAYS` or `IF_NEEDED` (See [Starting and stopping servers]({{< relref "/userguide/managing-domains/domain-lifecycle/startup/_index.md#starting-and-stopping-servers" >}}).)
     * Or delete your domain resource, wait, and apply your (potentially changed) domain resource.
 * See [Debugging](#debugging) for ways to check if the situational configuration is taking effect or if there are errors.
 
-Example domain resource yaml:
+Example domain resource YAML:
 ```
 apiVersion: "weblogic.oracle/v2"
 kind: Domain

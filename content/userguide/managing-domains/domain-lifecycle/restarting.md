@@ -27,7 +27,7 @@ The following types of server restarts are supported in Oracle WebLogic Server i
 
 * Full domain restarts - the Administration Server and all the Managed Servers in a domain are shutdown, impacting service availability to the end user, and then restarted.  Unlike a rolling restart, the operator cannot detect and initiate a full domain restart; it must always be manually initiated.
 
-For detailed information on how to restart servers in a Oracle WebLogic Server in Kubernetes environment, see [Starting, stopping, and restarting servers](server-lifecycle.md).
+For detailed information on how to restart servers in a Oracle WebLogic Server in Kubernetes environment, see [Starting, stopping, and restarting servers]({{< relref "/userguide/managing-domains/domain-lifecycle/startup/_index.md" >}}).
 
 #### Common restart scenarios
 
@@ -48,8 +48,8 @@ Changes to the Oracle WebLogic Server configuration may require either a rolling
 
 * **Domain home in image:**
 For domain home in image, any changes (dynamic or non-dynamic) to the WebLogic configuration requires a full domain restart.  
-    * If you create a new image with a new name, then you must avoid a rolling restart, which can cause unexpected behavior for the running domain due to configuration inconsistencies as seen by the various servers, by following the steps in [Avoiding a rolling restart when changing image property on a domain resource](restart.md#avoiding-a-rolling-restart-when-changing-image-property-on-a-domain-resource).
-    * If you create a new image with the same name, then you must manually initiate a full domain restart. See [Full domain restarts](server-lifecycle.md#full-domain-restarts) in Starting, stopping, and restarting servers.
+    * If you create a new image with a new name, then you must avoid a rolling restart, which can cause unexpected behavior for the running domain due to configuration inconsistencies as seen by the various servers, by following the steps in [Avoiding a rolling restart when changing image property on a domain resource](#avoiding-a-rolling-restart-when-changing-image-property-on-a-domain-resource).
+    * If you create a new image with the same name, then you must manually initiate a full domain restart. See [Full domain restarts]({{< relref "/userguide/managing-domains/domain-lifecycle/startup/_index.md#full-domain-restarts" >}}) in Starting, stopping, and restarting servers.
 
 
 * **Domain home on PV:**
@@ -64,7 +64,7 @@ For domain home on PV, the type of restart needed to apply the changes, depends 
     * Other dynamic WebLogic configuration changes do not require a restart.  For example, a change to a server's connection timeout property
 is dynamic and does not require a restart.
     * Other non-dynamic WebLogic configuration changes require either a manually initiated rolling restart or a full domain restart, depending on the nature of the change.
-      For example, a rolling restart is applicable when changing a WebLogic Server's `stuck thread timer interval` property. See [Restart all the servers in the domain](server-lifecycle.md#restart-all-the-servers-in-the-domain) in Starting, stopping, and restarting servers.
+      For example, a rolling restart is applicable when changing a WebLogic Server's `stuck thread timer interval` property. See [Restart all the servers in the domain]({{< relref "/userguide/managing-domains/domain-lifecycle/startup/_index.md#restart-all-the-servers-in-the-domain" >}}) in Starting, stopping, and restarting servers.
 
 
 #### Changing the custom domain configuration overrides
@@ -85,7 +85,7 @@ property in the domain resource.
 #### Changing properties on the domain resource that affect server pods
 
 The operator will initiate a rolling restart of the domain when you modify any of the domain resource properties that affect the server pods configuration,
-such as `image`, `volumes`, and `env`.  For a complete list, see [Properties that cause servers to be restarted](server-lifecycle.md#properties-that-cause-servers-to-be-restarted) in Starting, stopping, and restarting servers.
+such as `image`, `volumes`, and `env`.  For a complete list, see [Properties that cause servers to be restarted]({{< relref "/userguide/managing-domains/domain-lifecycle/startup/_index.md#properties-that-cause-servers-to-be-restarted" >}}) in Starting, stopping, and restarting servers.
 
 You can modify these properties using the `kubectl` command-line tool's `edit` and `patch` commands or through the Kubernetes REST API.
 
@@ -111,12 +111,12 @@ WebLogic Server patches can be applied to either a domain home in image or a dom
 With rolling compatible patches:
 
 * If you update the `image` property with a new image name, then the operator will initiate a rolling restart.
-* If you keep the same image name, then you must manually initiate a rolling restart. See [Restart all the servers in the domain](server-lifecycle.md#restart-all-the-servers-in-the-domain) in Starting, stopping, and restarting servers.
+* If you keep the same image name, then you must manually initiate a rolling restart. See [Restart all the servers in the domain]({{< relref "/userguide/managing-domains/domain-lifecycle/startup/_index.md#restart-all-the-servers-in-the-domain" >}}) in Starting, stopping, and restarting servers.
 
 With patches that are not rolling compatible:
 
-* If you keep the same image name, then you must manually initiate a full domain restart. See [Full domain restarts](server-lifecycle.md#full-domain-restarts) in Starting, stopping, and restarting servers.
-* If you update the `image` property with a new image name, then you must avoid the rolling restart by following the steps in [Avoiding a rolling restart when changing image property on a domain resource](restart.md#Avoiding-a-rolling-restart-when-changing-image-property-on-a-domain-resource).
+* If you keep the same image name, then you must manually initiate a full domain restart. See [Full domain restarts]({{< relref "/userguide/managing-domains/domain-lifecycle/startup/_index.md#full-domain-restarts">}}) in Starting, stopping, and restarting servers.
+* If you update the `image` property with a new image name, then you must avoid the rolling restart by following the steps in [Avoiding a rolling restart when changing image property on a domain resource](#avoiding-a-rolling-restart-when-changing-image-property-on-a-domain-resource).
 
 #### Updating deployed applications for domain home in image
 
@@ -129,12 +129,12 @@ in the domain be shutdown and restarted.
 If the application update is rolling compatible:
 
 * If you update the `image` property with a new image name, then the operator will initiate a rolling restart.
-* If you keep the same image name, then you must manually initiate a rolling restart. See [Restart all the servers in the domain](server-lifecycle.md#restart-all-the-servers-in-the-domain) in Starting, stopping, and restarting servers.
+* If you keep the same image name, then you must manually initiate a rolling restart. See [Restart all the servers in the domain]({{< relref "/userguide/managing-domains/domain-lifecycle/startup/_index.md#restart-all-the-servers-in-the-domain">}}) in Starting, stopping, and restarting servers.
 
 If the application update is not rolling compatible:
 
-* If you keep the same image name, then you must manually initiate a full domain restart. See [Full domain restarts](server-lifecycle.md#full-domain-restarts) in Starting, stopping, and restarting servers.
-* If you update the `image` property with a new image name, then you must avoid the rolling restart by following the steps in [Avoiding a rolling restart when changing image property on a domain resource](restart.md#Avoiding-a-rolling-restart-when-changing-image-property-on-a-domain-resource).
+* If you keep the same image name, then you must manually initiate a full domain restart. See [Full domain restarts]({{< relref "/userguide/managing-domains/domain-lifecycle/startup/_index.md#full-domain-restarts">}}) in Starting, stopping, and restarting servers.
+* If you update the `image` property with a new image name, then you must avoid the rolling restart by following the steps in [Avoiding a rolling restart when changing image property on a domain resource](#avoiding-a-rolling-restart-when-changing-image-property-on-a-domain-resource).
 
 #### Rolling out an updated domain home in image
 
@@ -167,7 +167,7 @@ e. The operator will now initiate a rolling restart, which will apply the update
 #### Avoiding a rolling restart when changing `image` property on a domain resource
 If you've created a new image that is not rolling compatible, and you've changed the image name, then:
 
-1. Bring the domain down (stopping all the server pods) by setting the `serverStartPolicy` to `NEVER`. See [Shut down all the servers](server-lifecycle.md#shut-down-all-the-servers) in Starting, stopping, and restarting servers.
+1. Bring the domain down (stopping all the server pods) by setting the `serverStartPolicy` to `NEVER`. See [Shut down all the servers]({{< relref "/userguide/managing-domains/domain-lifecycle/startup/_index.md#shut-down-all-the-servers">}}) in Starting, stopping, and restarting servers.
 
 2. Update the `image` property with a new image name.
 
@@ -186,7 +186,7 @@ If you've created a new image that is not rolling compatible, and you've changed
 
     Alternatively, if you know that your set of changes are not rolling compatible, then you must avoiding a rolling restart by:
 
-     1. Bringing the domain down (stopping all the server pods) by setting the `serverStartPolicy` to `NEVER`. See [Shut down all the servers](server-lifecycle.md#shut-down-all-the-servers) in Starting, stopping, and restarting servers.
+     1. Bringing the domain down (stopping all the server pods) by setting the `serverStartPolicy` to `NEVER`. See [Shut down all the servers]({{< relref "/userguide/managing-domains/domain-lifecycle/startup/_index.md#shut-down-all-the-servers">}}) in Starting, stopping, and restarting servers.
 
      2. Make all your changes to the Oracle WebLogic Server in Kubernetes environment.
 

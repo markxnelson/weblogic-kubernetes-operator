@@ -95,7 +95,7 @@ The internal REST endpoint is only accessible from within the Kubernetes cluster
 is accessible from outside the Kubernetes cluster.
 The internal REST endpoint is enabled by default and thus always available, whereas the external REST endpoint
 is disabled by default and only exposed if explicitly configured.
-Detailed instructions for configuring the external REST endpoint are available [here](install.md).
+Detailed instructions for configuring the external REST endpoint are available [here]({{< relref "/userguide/managing-operators/_index.md#optional-configure-the-operator-s-external-rest-https-interface" >}}).
 
 {{% notice note %}}
 Regardless of which endpoint is being invoked, the URL format for scaling is the same.
@@ -167,15 +167,15 @@ Set this to https://kubernetes.default.svc when invoking `scalingAction.sh` from
 
 * `access_token` - Service Account Bearer token for authentication and authorization for access to REST Resources
 
-* `wls_domain_namespace` - Kubernetes namespace in which the WebLogic domain is defined, default=default
+* `wls_domain_namespace` - Kubernetes namespace in which the WebLogic domain is defined, default=`default`
 
-* `operator_service_name` - WebLogic Operator Service name of the REST endpoint, default=internal-weblogic-operator-service
+* `operator_service_name` - WebLogic Operator Service name of the REST endpoint, default=`internal-weblogic-operator-service`
 
-* `operator_service_account` - Kubernetes Service Account name for the WebLogic Operator, default=weblogic-operator
+* `operator_service_account` - Kubernetes Service Account name for the WebLogic Operator, default=`weblogic-operator`
 
-* `operator_namespace` – Namespace in which the WebLogic Operator is deployed, default=weblogic-operator
+* `operator_namespace` – Namespace in which the WebLogic Operator is deployed, default=`weblogic-operator`
 
-* `scaling_size` – Incremental number of WebLogic Server instances by which to scale up or down, default=1
+* `scaling_size` – Incremental number of WebLogic Server instances by which to scale up or down, default=`1`
 
 You can use any of the following tools to configure policies for diagnostic system modules:
 
