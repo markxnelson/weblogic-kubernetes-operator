@@ -4,25 +4,25 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.54.0" />
-    <meta name="description" content="">
+    <meta name="description" content="Delete the domain resources created while executing the samples.">
 
 
     <link rel="icon" href="/weblogic-kubernetes-operator/images/favicon.png" type="image/png">
 
-    <title>Prometheus :: WebLogic Kubernetes Operator</title>
+    <title>Delete domain resources :: WebLogic Kubernetes Operator</title>
 
     
-    <link href="/weblogic-kubernetes-operator/css/nucleus.css?1552593983" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/fontawesome-all.min.css?1552593983" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/hybrid.css?1552593983" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/featherlight.min.css?1552593983" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/perfect-scrollbar.min.css?1552593983" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/auto-complete.css?1552593983" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/theme.css?1552593983" rel="stylesheet">
-    <link href="/weblogic-kubernetes-operator/css/hugo-theme.css?1552593983" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/nucleus.css?1552593984" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/fontawesome-all.min.css?1552593984" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/hybrid.css?1552593984" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/featherlight.min.css?1552593984" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/perfect-scrollbar.min.css?1552593984" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/auto-complete.css?1552593984" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/theme.css?1552593984" rel="stylesheet">
+    <link href="/weblogic-kubernetes-operator/css/hugo-theme.css?1552593984" rel="stylesheet">
     
 
-    <script src="/weblogic-kubernetes-operator/js/jquery-2.x.min.js?1552593983"></script>
+    <script src="/weblogic-kubernetes-operator/js/jquery-2.x.min.js?1552593984"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -32,7 +32,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/weblogic-kubernetes-operator/userguide/managing-domains/integrations/exporting-metrics/prometheus/">
+  <body class="" data-url="/weblogic-kubernetes-operator/samples/simple/domains/delete-domain/">
     <nav id="sidebar" class="">
 
 
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/lunr.min.js?1552593983"></script>
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/auto-complete.js?1552593983"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/lunr.min.js?1552593984"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/auto-complete.js?1552593984"></script>
 <script type="text/javascript">
     
         var baseurl = "\/weblogic-kubernetes-operator\/";
     
 </script>
-<script type="text/javascript" src="/weblogic-kubernetes-operator/js/search.js?1552593983"></script>
+<script type="text/javascript" src="/weblogic-kubernetes-operator/js/search.js?1552593984"></script>
 
     
   </div>
@@ -241,7 +241,7 @@
   
     
     <li data-nav-id="/weblogic-kubernetes-operator/userguide/" title="User Guide" class="dd-item 
-        parent
+        
         
         
         ">
@@ -658,7 +658,7 @@
   
     
     <li data-nav-id="/weblogic-kubernetes-operator/userguide/managing-domains/" title="Manage domains" class="dd-item 
-        parent
+        
         
         
         ">
@@ -1176,7 +1176,7 @@
   
     
     <li data-nav-id="/weblogic-kubernetes-operator/userguide/managing-domains/integrations/" title="Integrations" class="dd-item 
-        parent
+        
         
         
         ">
@@ -1203,7 +1203,7 @@
   
     
     <li data-nav-id="/weblogic-kubernetes-operator/userguide/managing-domains/integrations/exporting-metrics/" title="Export metrics" class="dd-item 
-        parent
+        
         
         
         ">
@@ -1246,7 +1246,7 @@
  
   
     
-      <li data-nav-id="/weblogic-kubernetes-operator/userguide/managing-domains/integrations/exporting-metrics/prometheus/" title="Prometheus" class="dd-item active">
+      <li data-nav-id="/weblogic-kubernetes-operator/userguide/managing-domains/integrations/exporting-metrics/prometheus/" title="Prometheus" class="dd-item ">
         <a href="/weblogic-kubernetes-operator/userguide/managing-domains/integrations/exporting-metrics/prometheus/">
         Prometheus
         
@@ -1372,7 +1372,7 @@
   
     
     <li data-nav-id="/weblogic-kubernetes-operator/samples/" title="Samples" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1399,7 +1399,7 @@
   
     
     <li data-nav-id="/weblogic-kubernetes-operator/samples/simple/" title="Simple samples" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1474,7 +1474,7 @@
   
     
     <li data-nav-id="/weblogic-kubernetes-operator/samples/simple/domains/" title="Domains" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1573,8 +1573,8 @@
   
     
     <li data-nav-id="/weblogic-kubernetes-operator/samples/simple/domains/delete-domain/" title="Delete domain resources" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/weblogic-kubernetes-operator/samples/simple/domains/delete-domain/">
@@ -2297,13 +2297,7 @@
             
           
           
-            
-            
-          
-          
-            <a href='/weblogic-kubernetes-operator/'></a> > <a href='/weblogic-kubernetes-operator/userguide/'>User Guide</a> > <a href='/weblogic-kubernetes-operator/userguide/managing-domains/'>Manage domains</a> > <a href='/weblogic-kubernetes-operator/userguide/managing-domains/integrations/'>Integrations</a> > <a href='/weblogic-kubernetes-operator/userguide/managing-domains/integrations/exporting-metrics/'>Export metrics</a> > Prometheus
-          
-         
+            <a href='/weblogic-kubernetes-operator/'></a> > <a href='/weblogic-kubernetes-operator/samples/'>Samples</a> > <a href='/weblogic-kubernetes-operator/samples/simple/'>Simple samples</a> > <a href='/weblogic-kubernetes-operator/samples/simple/domains/'>Domains</a> > Delete domain resources
           
          
           
@@ -2320,7 +2314,20 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#using-the-script-to-delete-domain-resources">Using the script to delete domain resources</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -2332,7 +2339,7 @@
         
         <div id="body-inner">
           
-            <h1>Prometheus</h1>
+            <h1>Delete domain resources</h1>
           
 
         
@@ -2340,10 +2347,36 @@
 
 
 
+<p>After running the samples, you will need to release domain resources that
+can then be used for other purposes. The script in this sample demonstrates one approach to releasing
+domain resources.</p>
+
+<h4 id="using-the-script-to-delete-domain-resources">Using the script to delete domain resources</h4>
+
+<pre><code>$ ./delete-weblogic-domain-resources.sh \
+  -d  domain-uid[,domain-uid...] \
+  [-s max-seconds] \
+  [-t]
+</code></pre>
+
+<p>The required option <code>-d</code> takes <code>domain-uid</code> values (separated
+ by commas and no spaces) to identify the domain resources that should be deleted.</p>
+
+<p>To limit the amount of time spent on attempting to delete domain resources, use <code>-s</code>.
+The option must be followed by an integer that represents the total number of seconds
+that will be spent attempting to delete resources. The default number of seconds is 120.</p>
+
+<p>The optional option <code>-t</code> shows what the script will delete without executing the deletion.</p>
+
+<p>To see the help associated with the script:</p>
+
+<pre><code>$ ./delete-weblogic-domain-resources.sh -h
+</code></pre>
+
+
 <footer class=" footline" >
 	
 </footer>
-
 
         
         </div> 
@@ -2507,7 +2540,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -2522,9 +2554,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -2800,7 +2829,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -2815,9 +2843,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -3157,7 +3182,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -3173,7 +3197,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -3186,9 +3209,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -3205,7 +3225,6 @@
             
             
                 
-                    
                     
                 
                 
@@ -3225,9 +3244,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -3286,20 +3302,6 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -3315,6 +3317,76 @@
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -3353,21 +3425,6 @@
 
                     
                     
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
                     
 
                     
@@ -3379,37 +3436,6 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -3429,6 +3455,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -3890,10 +3919,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/weblogic-kubernetes-operator/userguide/managing-domains/integrations/exporting-metrics/metrics-exporter/" title="Monitoring Exporter"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/weblogic-kubernetes-operator/samples/simple/domains/domain-home-in-image/" title="Domain home in image"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/weblogic-kubernetes-operator/userguide/managing-domains/integrations/exporting-logs/" title="Export logs" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/weblogic-kubernetes-operator/samples/simple/rest/" title="REST APIs" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -3903,20 +3932,20 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/weblogic-kubernetes-operator/js/clipboard.min.js?1552593983"></script>
-    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.min.js?1552593983"></script>
-    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.jquery.min.js?1552593983"></script>
-    <script src="/weblogic-kubernetes-operator/js/jquery.sticky.js?1552593983"></script>
-    <script src="/weblogic-kubernetes-operator/js/featherlight.min.js?1552593983"></script>
-    <script src="/weblogic-kubernetes-operator/js/html5shiv-printshiv.min.js?1552593983"></script>
-    <script src="/weblogic-kubernetes-operator/js/highlight.pack.js?1552593983"></script>
+    <script src="/weblogic-kubernetes-operator/js/clipboard.min.js?1552593984"></script>
+    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.min.js?1552593984"></script>
+    <script src="/weblogic-kubernetes-operator/js/perfect-scrollbar.jquery.min.js?1552593984"></script>
+    <script src="/weblogic-kubernetes-operator/js/jquery.sticky.js?1552593984"></script>
+    <script src="/weblogic-kubernetes-operator/js/featherlight.min.js?1552593984"></script>
+    <script src="/weblogic-kubernetes-operator/js/html5shiv-printshiv.min.js?1552593984"></script>
+    <script src="/weblogic-kubernetes-operator/js/highlight.pack.js?1552593984"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/weblogic-kubernetes-operator/js/modernizr.custom.71422.js?1552593983"></script>
-    <script src="/weblogic-kubernetes-operator/js/learn.js?1552593983"></script>
-    <script src="/weblogic-kubernetes-operator/js/hugo-learn.js?1552593983"></script>
+    <script src="/weblogic-kubernetes-operator/js/modernizr.custom.71422.js?1552593984"></script>
+    <script src="/weblogic-kubernetes-operator/js/learn.js?1552593984"></script>
+    <script src="/weblogic-kubernetes-operator/js/hugo-learn.js?1552593984"></script>
 
-    <link href="/weblogic-kubernetes-operator/mermaid/mermaid.css?1552593983" type="text/css" rel="stylesheet" />
-    <script src="/weblogic-kubernetes-operator/mermaid/mermaid.js?1552593983"></script>
+    <link href="/weblogic-kubernetes-operator/mermaid/mermaid.css?1552593984" type="text/css" rel="stylesheet" />
+    <script src="/weblogic-kubernetes-operator/mermaid/mermaid.js?1552593984"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
@@ -3924,4 +3953,3 @@
 
   </body>
 </html>
-
