@@ -103,7 +103,7 @@ For information about the domain resource, see [Domain resource]({{< relref "/us
 ### Managing life cycle operations
 
 You can perform life cycle operations on WebLogic servers, clusters, or domains.
-See [Starting, stopping, and restarting servers](server-lifecycle.md) and [Restarting WebLogic servers](restart.md).
+See [Starting, stopping, and restarting servers]({{< relref "/userguide/managing-domains/domain-lifecycle/startup.md" >}}) and [Restarting WebLogic servers]({{< relref "/userguide/managing-domains/domain-lifecycle/restarting.md" >}}).
 
 ### Scaling clusters
 

@@ -11,24 +11,5 @@
 	<atom:link href="/weblogic-kubernetes-operator/userguide/managing-domains/ingress/index.xml" rel="self" type="application/rss+xml" />
     
     
-    <item>
-      <title>Nodeports</title>
-      <link>/weblogic-kubernetes-operator/userguide/managing-domains/ingress/nodeports/</link>
-      <pubDate>Sat, 23 Feb 2019 20:47:58 -0500</pubDate>
-      
-      <guid>/weblogic-kubernetes-operator/userguide/managing-domains/ingress/nodeports/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ingress</title>
-      <link>/weblogic-kubernetes-operator/userguide/managing-domains/ingress/ingress/</link>
-      <pubDate>Sat, 23 Feb 2019 20:47:13 -0500</pubDate>
-      
-      <guid>/weblogic-kubernetes-operator/userguide/managing-domains/ingress/ingress/</guid>
-      <description>Ingresses are one approach provided by Kubernetes to configure load balancers. Depending on the version of Kubernetes you are using, and your cloud provider, you may need to use Ingresses. Please refer to the Ingress documentation for more information about Ingresses.
-WebLogic clusters as backends of an Ingress In an Ingress object, a list of backends are provided for each target that will be load balanced. Each backend is typically a Kubernetes service, more specifically, a combination of a serviceName and a servicePort.</description>
-    </item>
-    
   </channel>
 </rss>

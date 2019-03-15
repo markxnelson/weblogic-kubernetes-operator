@@ -69,7 +69,7 @@ $ helm install weblogic-operator/weblogic-operator --name weblogic-operator
 
 #### Removing the operator
 
-The `helm delete` command is used to remove an operator release and its associated resources from the Kubernetes cluster.  The release name used with the `helm delete` command is the same release name used with the `helm install` command (see [Install the Helm chart](#install-the-helm-chart)).  For example:
+The `helm delete` command is used to remove an operator release and its associated resources from the Kubernetes cluster.  The release name used with the `helm delete` command is the same release name used with the `helm install` command (see [Install the Helm chart](#install-the-operator-helm-chart)).  For example:
 ```
 $ helm delete --purge weblogic-operator
 ```

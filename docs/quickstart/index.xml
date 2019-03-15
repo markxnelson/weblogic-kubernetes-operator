@@ -18,7 +18,7 @@
       
       <guid>/weblogic-kubernetes-operator/quickstart/introduction/</guid>
       <description>Use this Quick Start guide to create a WebLogic deployment in a Kubernetes cluster with the Oracle WebLogic Kubernetes Operator. Please note that this walk-through is for demonstration purposes only, not for use in production. These instructions assume that you are already familiar with Kubernetes. If you need more detailed instructions, please refer to the User guide.
-If you have an older version of the operator installed on your cluster, you must remove it before installing this version.</description>
+Important note for users of operator releases before 2.0   Click here to expand   If you have an older version of the operator installed on your cluster, i.</description>
     </item>
     
     <item>
@@ -41,7 +41,7 @@ You should clone this repository to your local machine so that you have access t
       <description>Get these images and put them into your local registry.  If you don&amp;rsquo;t already have one, obtain a Docker store account, log in to the Docker store and accept the license agreement for the WebLogic Server image.
  Log in to the Docker store from your Docker client:
 $ docker login  Pull the operator image:
-$ docker pull oracle/weblogic-kubernetes-operator:2.0-rc2  Pull the Traefik load balancer image:
+$ docker pull oracle/weblogic-kubernetes-operator:2.0.1  Pull the Traefik load balancer image:
 $ docker pull traefik:1.</description>
     </item>
     

@@ -5,6 +5,4 @@ weight = 7
 pre = "<b> </b>"
 +++
 
-
-
-Lorem Ipsum.
+{{% children style="h4" description="true" %}} 

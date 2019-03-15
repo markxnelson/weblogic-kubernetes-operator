@@ -12,24 +12,6 @@
     
     
     <item>
-      <title>Administration Console</title>
-      <link>/weblogic-kubernetes-operator/userguide/managing-domains/accessing-the-domain/admin-console/</link>
-      <pubDate>Sat, 23 Feb 2019 17:39:15 -0500</pubDate>
-      
-      <guid>/weblogic-kubernetes-operator/userguide/managing-domains/accessing-the-domain/admin-console/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>WebLogic REST APIs</title>
-      <link>/weblogic-kubernetes-operator/userguide/managing-domains/accessing-the-domain/rest/</link>
-      <pubDate>Sat, 23 Feb 2019 17:39:23 -0500</pubDate>
-      
-      <guid>/weblogic-kubernetes-operator/userguide/managing-domains/accessing-the-domain/rest/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Using WLST</title>
       <link>/weblogic-kubernetes-operator/userguide/managing-domains/accessing-the-domain/wlst/</link>
       <pubDate>Sat, 23 Feb 2019 17:39:19 -0500</pubDate>
@@ -37,15 +19,6 @@
       <guid>/weblogic-kubernetes-operator/userguide/managing-domains/accessing-the-domain/wlst/</guid>
       <description>You can use the WebLogic Scripting Tool (WLST) to manage a domain running in Kubernetes. If the Administration Server was configured to expose a T3 channel using the exposeAdminT3Channel setting when creating the domain, then the matching T3 service can be used to connect. For example, if the domainUID is domain1, and the Administration Server name is admin-server, then the service would be called:
 domain1-admin-server-external  This service will be in the same namespace as the domain.</description>
-    </item>
-    
-    <item>
-      <title>Applications</title>
-      <link>/weblogic-kubernetes-operator/userguide/managing-domains/accessing-the-domain/applications/</link>
-      <pubDate>Sat, 23 Feb 2019 17:39:41 -0500</pubDate>
-      
-      <guid>/weblogic-kubernetes-operator/userguide/managing-domains/accessing-the-domain/applications/</guid>
-      <description></description>
     </item>
     
   </channel>

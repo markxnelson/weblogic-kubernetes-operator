@@ -6,7 +6,7 @@ weight: 6
 ---
 
 
-1. Create a Kubernetes secret containing the `username` and `password` for the domain using the [`create-weblogic-credentials`](../kubernetes/samples/scripts/create-weblogic-domain-credentials/create-weblogic-credentials.sh) script:
+1. Create a Kubernetes secret containing the `username` and `password` for the domain using the [`create-weblogic-credentials`](http://github.com/oracle/weblogic-kubernetes-operator/blob/master/kubernetes/samples/scripts/create-weblogic-domain-credentials/create-weblogic-credentials.sh) script:
 
     ```bash
     $ kubernetes/samples/scripts/create-weblogic-domain-credentials/create-weblogic-credentials.sh \
@@ -17,8 +17,8 @@ weight: 6
     with the value you provided.  For example, the command above would create a secret named
     `sample-domain1-weblogic-credentials`.
 
-1.	Create a new image with a domain home by running the [`create-domain`](../kubernetes/samples/scripts/create-weblogic-domain/domain-home-in-image/create-domain.sh) script.
-Follow the directions in the [README](../kubernetes/samples/scripts/create-weblogic-domain/domain-home-in-image/README.md) file,
+1.	Create a new image with a domain home by running the [`create-domain`](http://github.com/oracle/weblogic-kubernetes-operator/blob/master/kubernetes/samples/scripts/create-weblogic-domain/domain-home-in-image/create-domain.sh) script.
+Follow the directions in the [README](http://github.com/oracle/weblogic-kubernetes-operator/blob/master/kubernetes/samples/scripts/create-weblogic-domain/domain-home-in-image/README.md) file,
 including:
 
     * Copying the sample `kubernetes/samples/scripts/create-weblogic-domain/domain-home-in-image/create-domain-inputs.yaml` file and updating your copy with the `domainUID` (`sample-domain1`),
@@ -90,7 +90,7 @@ in the ***Security*** section.
     $ kubectl get services -n sample-domain1-ns
     ```
 
-1.	Create an Ingress for the domain, in the domain namespace, by using the [sample](../kubernetes/samples/charts/ingress-per-domain/README.md) Helm chart:
+1.	Create an Ingress for the domain, in the domain namespace, by using the [sample](http://github.com/oracle/weblogic-kubernetes-operator/blob/master/kubernetes/samples/charts/ingress-per-domain/README.md) Helm chart:
 
     ```bash
     $ helm install kubernetes/samples/charts/ingress-per-domain \

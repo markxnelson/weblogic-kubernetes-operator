@@ -37,4 +37,4 @@ Perform these steps to prepare your Kubernetes cluster to run a WebLogic domain:
 1. Optionally, [create a PV & persistent volume claim (PVC)]({{< relref "/samples/simple/storage/_index.md" >}}) which can hold the domain home, logs, and application binaries.
    Even if you put your domain in a Docker image, you may want to put the logs on a persistent volume so that they are available after the pods terminate.
    This may be instead of, or as well as, other approaches like streaming logs into Elasticsearch.
-1. Optionally, [configure load balancer(s)](/kubernetes/samples/charts/README.md) to manage access to any WebLogic clusters.
+1. Optionally, [configure load balancer(s)](https://github.com/oracle/weblogic-kubernetes-operator/blob/master/kubernetes/samples/charts/README.md) to manage access to any WebLogic clusters.

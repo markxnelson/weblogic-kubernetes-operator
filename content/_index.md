@@ -25,7 +25,7 @@ This release was published on March 4, 2019.
 
 | Issue | Description |
 | --- | --- |
-|  |  |
+| None currently |  |
 
 #### Operator earlier versions
 
@@ -33,9 +33,7 @@ Documentation for prior releases of the operator is available [here](site/README
 
 #### Backward compatibility guidelines
 
-The 2.0 release introduces some breaking changes and does not maintain compatibility with previous releases.
-
-Starting with the 2.0 release, future operator releases are intended to be backward compatible with respect to the domain
+Starting from the 2.0 release, operator releases are backward compatible with respect to the domain
 resource schema, operator Helm chart input values, configuration overrides template, Kubernetes resources created
 by the operator Helm chart, Kubernetes resources created by the operator, and the operator REST interface. We intend to
 maintain compatibility for three releases, except in the case of a clearly communicated deprecated feature, which will be
@@ -83,7 +81,7 @@ details of how to access our Slack workspace.  After you are logged in, please c
 
 ### Recent changes
 
-See [Recent changes](site/recent-changes.md) for changes to the operator, including any backward incompatible changes.
+See [Recent changes]({{< relref "release-notes.md" >}})  for changes to the operator, including any backward incompatible changes.
 
 ### Developer guide
 

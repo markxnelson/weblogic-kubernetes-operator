@@ -9,8 +9,13 @@ Use this Quick Start guide to create a WebLogic deployment in a Kubernetes clust
 These instructions assume that you are already familiar with Kubernetes.  If you need more detailed instructions, please
 refer to the [User guide]({{< relref "/userguide/_index.md" >}}).
 
+**Important note for users of operator releases before 2.0**
+{{% expand "Click here to expand" %}}
+
+
 {{% notice warning %}}
-If you have an older version of the operator installed on your cluster, you must remove
+If you have an older version of the operator installed on your cluster, i.e. a 1.x version, or one of the 2.0 release 
+candidates, you must remove
 it before installing this version.  This includes the 2.0-rc1 version; it must be completely removed.
 You should remove the deployment (for example, `kubectl delete deploy weblogic-operator -n your-namespace`) and the custom
 resource definition (for example, `kubectl delete crd domain`).  If you do not remove
@@ -21,6 +26,4 @@ the API version in the data (weblogic.oracle/v2) does not match the expected API
 ```
 {{% /notice %}}
 
-{{% notice note %}}
-You should be able to upgrade from version 2.0-rc2 to 2.0 because there are no backward incompatible changes between these two releases.  
-{{% /notice %}}
+{{% /expand %}}
