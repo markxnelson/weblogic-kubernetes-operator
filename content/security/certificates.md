@@ -32,7 +32,7 @@ $ helm upgrade --wait --recreate-pods --reuse-values \
   --set externalRestIdentitySecret=weblogic-operator-cert \
   weblogic-operator kubernetes/charts/weblogic-operator
 ```
-#### Reference
+#### Additional reading
 * [Configure the external REST interface SSL/TLS identity]({{<relref "/userguide/managing-operators/_index.md#optional-configure-the-operator-s-external-rest-https-interface">}})
 * [REST interface configuration settings]({{<relref "/userguide/managing-operators/using-the-operator/using-helm/_index.md#rest-interface-configuration">}})
 * [Sample to create external certificate and key]({{<relref "/samples/simple/rest/_index.md#sample-to-create-certificate-and-key">}})

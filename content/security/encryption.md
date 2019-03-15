@@ -8,7 +8,7 @@ description: "WebLogic domain encryption and the WebLogic operator"
 
 * [WebLogic operator introspector encryption](#weblogic-operator-introspector-encryption")
 * [Encryption of Kubernetes secrets](#encryption-of-kubernetes-secrets")
-* [Reference](#reference)
+* [Additional reading](#additional-reading)
 
 #### WebLogic operator introspector encryption
 
@@ -25,7 +25,7 @@ WebLogic domain is kept in a Kubernetes `Secret` which follows the naming patter
 the unique identifier of the domain, for example, `mydomain-weblogic-credentials`.
 
 {{% notice info %}}
-For more information about the WebLogic credentials secret, please see [Secrets]({{<relref "/security/secrets.md#reference">}})
+For more information about the WebLogic credentials secret, see [Secrets]({{<relref "/security/secrets.md#reference">}})
 under **Security**.
 {{% /notice %}}
 
@@ -38,5 +38,5 @@ Please see the Kubernetes documentation about
 and [using a KMS provider for data encryption](https://kubernetes.io/docs/tasks/administer-cluster/kms-provider/).
 {{% /notice %}}
 
-#### Reference
+#### Additional reading
 * [Encryption of values for WebLogic configuration overrides]({{<relref "/userguide/managing-domains/configoverrides/_index.md#override-template-macros">}})

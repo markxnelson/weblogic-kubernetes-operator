@@ -22,7 +22,7 @@ is used by the operator. The operator will also attempt to verify that
 the RBAC settings are correct when the operator starts running.
 
 {{% notice info %}}
-For more information about the Kubernetes `ServiceAccount` used by the operator, please see
+For more information about the Kubernetes `ServiceAccount` used by the operator, see
 [Service Accounts]({{<relref "/security/service-accounts.md#weblogic-operator-service-account">}})
 under **Security**.
 {{% /notice %}}
@@ -32,7 +32,7 @@ permissions that the operator requires and to favor built-in roles over custom r
 where it make sense to use the Kubernetes built-in roles.
 
 {{% notice info %}}
-For more information about Kubernetes roles, please see the
+For more information about Kubernetes roles, see the
 [Kubernetes RBAC](https://kubernetes.io/docs/reference/access-authn-authz/rbac/) documentation.
 {{% /notice %}}
 

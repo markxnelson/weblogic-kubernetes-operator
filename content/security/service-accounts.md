@@ -28,6 +28,6 @@ look for the `serviceAccount` value using the Helm command:
 ```bash
 $ helm get values --all weblogic-operator
 ```
-#### Reference
+#### Additional reading
 * [Helm service account]({{<relref "userguide/managing-operators/_index.md#install-helm-and-tiller">}})
 * [Operator Helm chart service account configuration]({{<relref "/userguide/managing-operators/using-the-operator/using-helm/_index.md#serviceaccount">}})

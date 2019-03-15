@@ -66,7 +66,7 @@ in the registry. The `imagePullSecrets` setting can be used to specify the
 Kubernetes `Secret` that holds the registry credentials.
 
 {{% notice info %}}
-For more information, please see [Docker Image Protection]({{<relref "/security/domain-security/image-protection.md#weblogic-domain-in-docker-image-protection">}})
+For more information, see [Docker Image Protection]({{<relref "/security/domain-security/image-protection.md#weblogic-domain-in-docker-image-protection">}})
 under **Domain Security**.
 {{% /notice %}}
 
@@ -77,7 +77,7 @@ accessed from outside the Kubernetes cluster. A Kubernetes `tls secret`
 is used to hold the certificate(s) and private key.
 
 {{% notice info %}}
-For more information, please see [Certificates]({{<relref "/security/certificates.md#reference">}})
+For more information, see [Certificates]({{<relref "/security/certificates.md#reference">}})
 under **Securty**.
 {{% /notice %}}
 
