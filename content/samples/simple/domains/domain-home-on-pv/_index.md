@@ -419,7 +419,7 @@ The most common cause is a poor choice of value for `weblogicDomainStoragePath` 
 ```
 create-pv-pvc.sh
 ```
-   You should [delete the resources for your sample domain](../../delete-domain/README.md), correct the value in that file, and rerun the commands to create the PV/PVC and the credential before you attempt to rerun:
+   You should [delete the resources for your sample domain]({{< relref "/samples/simple/domains/delete-domain/_index.md" >}}), correct the value in that file, and rerun the commands to create the PV/PVC and the credential before you attempt to rerun:
 ```
 create-domain.sh
 ```

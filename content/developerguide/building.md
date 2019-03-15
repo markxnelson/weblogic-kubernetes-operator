@@ -16,7 +16,7 @@ $ mvn clean install
 
 This will compile the source files, build JAR files containing the compiled classes and libraries needed to run the operator, and will also execute all of the unit tests.
 
-Contributions must conform to [coding and formatting standards](#coding-standards).  To automatically update local code to conform to formatting standards, issue the following command:
+Contributions must conform to [coding and formatting standards]({{< relref "/developerguide/coding-standards.md" >}}).  To automatically update local code to conform to formatting standards, issue the following command:
 
 ```
 $ mvn fmt:format
@@ -69,6 +69,6 @@ $ scp operator.tar YOUR_USER@YOUR_SERVER:/some/path/operator.tar
 $ docker load < /some/path/operator.tar
 ```
 
-Use the Helm charts to [install the operator](install.md).
+Use the Helm charts to [install the operator]({{< relref "/userguide/managing-operators/installation/_index.md" >}}).
 
-If the operator's behavior or pod log is insufficient to diagnose and resolve failures, then you can connect a Java debugger to the operator using the [debugging options](install.md#debugging-options).
+If the operator's behavior or pod log is insufficient to diagnose and resolve failures, then you can connect a Java debugger to the operator using the [debugging options]({{< relref "/userguide/managing-operators/using-the-operator/using-helm/_index.md#debugging-options" >}}).

@@ -10,7 +10,7 @@ After running the samples, you will need to release domain resources that
 can then be used for other purposes. The script in this sample demonstrates one approach to releasing
 domain resources.
 
-#### Using the script to delete domain resources
+#### Use this script to delete domain resources
 
 ```
 $ ./delete-weblogic-domain-resources.sh \

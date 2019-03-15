@@ -38,8 +38,8 @@ by `DNS:` for a host name, or `IP:` for an address, as with this example:
 -a "DNS:myhost,DNS:localhost,IP:127.0.0.1"
 ```
 
-The external certificate and key can be changed after installation of the operator, for
-more information see [updating operator external certificate]({{<relref "/security/certificates.md#updating-operator-external-certificate">}})
+The external certificate and key can be changed after installation of the operator. For
+more information, see [updating operator external certificate]({{<relref "/security/certificates.md#updating-operator-external-certificate">}})
 in the ***Security*** section.
 
 The script as used below will create the `tls secret` named `weblogic-operator-identity` in the namespace `weblogic-operator-ns` using a self-signed
