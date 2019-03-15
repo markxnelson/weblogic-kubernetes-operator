@@ -27,7 +27,7 @@ The operator requires a re-start in order to begin using the new or udpated exte
       <pubDate>Sat, 23 Feb 2019 17:36:29 -0500</pubDate>
       
       <guid>/weblogic-kubernetes-operator/security/encryption/</guid>
-      <description>Contents  WebLogic operator introspector encryption Encryption of Kubernetes secrets Reference  WebLogic operator introspector encryption The WebLogic operator has an introspection job that handles WebLogic domain encryption. The introspection also addresses use of Kubernetes secrets for use with configuration overrides. For additional information on the configuration handling, see the configuration overrides documentation.
+      <description>Contents  WebLogic operator introspector encryption Encryption of Kubernetes secrets Additional reading  WebLogic operator introspector encryption The WebLogic operator has an introspection job that handles WebLogic domain encryption. The introspection also addresses use of Kubernetes secrets for use with configuration overrides. For additional information on the configuration handling, see the configuration overrides documentation.
 The introspection also creates a boot.properties file that is made available to the pods in the WebLogic domain.</description>
     </item>
     
