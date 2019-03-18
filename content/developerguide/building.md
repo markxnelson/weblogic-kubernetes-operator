@@ -22,7 +22,7 @@ Contributions must conform to [coding and formatting standards]({{< relref "/dev
 $ mvn fmt:format
 ```
 
-### Building Javadoc
+#### Building Javadoc
 
 To build the Javadoc for the operator, issue the following command:
 

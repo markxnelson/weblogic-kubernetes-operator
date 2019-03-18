@@ -15,6 +15,7 @@ Swagger documentation is available [here](/weblogic-kubernetes-operator/swagger/
 #### Prerequisites
 
 The following prerequisites must be fulfilled before proceeding with the creation of the resource.
+
 * Make sure the WebLogic operator is running.
 * Create a Kubernetes namespace for the domain resource unless the intention is to use the default namespace.
 * Create the Kubernetes secrets `username` and `password` of the administrative account in the same Kubernetes namespace as the domain resource.

@@ -7,6 +7,8 @@ description: "This document describes when to restart servers in the Oracle WebL
 ---
 
 
+This document describes _when_ to restart servers in the Oracle WebLogic Server in Kubernetes environment.
+
 #### Overview
 
 There are many situations where changes to the Oracle WebLogic Server in Kubernetes environment require that all the servers in

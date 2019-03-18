@@ -5,7 +5,7 @@ draft: false
 weight: 1
 ---
 
-In addition to the requirements listed in the [User Guide]({{< relref "/userguide/introduction/introduction.md#prerequisites" >}}), the following software is also required to obtain and build the operator:
+In addition to the requirements listed in the [User guide]({{< relref "/userguide/introduction/introduction.md#prerequisites" >}}), the following software is also required to obtain and build the operator:
 
 * Git (1.8 or later recommended)
 * Java Developer Kit (1.8u131 or later recommended; please use 1.8, tests will not work on 1.9 or later versions)

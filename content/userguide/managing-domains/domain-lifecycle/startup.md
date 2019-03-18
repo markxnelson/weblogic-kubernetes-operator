@@ -6,6 +6,7 @@ weight: 1
 description: "There are properties on the domain resource that specify which servers should be running
 and which servers should be restarted. To start, stop, or restart servers, modify these properties on the domain resource."
 ---
+
 #### Contents
 
 * [Starting and stopping servers](#starting-and-stopping-servers)
