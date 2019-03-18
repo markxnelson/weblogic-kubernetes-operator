@@ -221,7 +221,7 @@
 	"title": "User Guide",
 	"tags": [],
 	"description": "",
-	"content": " User Guide The User Guide provides detailed information about all aspects of using the operator.\n\rIntroduction\r\rLearn about the operator\u0026#39;s design, architecture, terms, and prerequisites.\n\rOverview\r\rThe information in the following sections is organized in the order that you would most likely need to use it. If you want to set up an operator and use it to create and manage WebLogic domains, you should follow the User Guide sections from top to bottom, and the necessary information will be presented in the correct order.\n\rManage operators\r\rHelm is used to create and deploy necessary operator resources and to run the operator in a Kubernetes cluster.\n\rManage domains\r\rImportant considerations for WebLogic domains in Kubernetes\n\r"
+	"content": "The User Guide provides detailed information about all aspects of using the operator.\n\rIntroduction\r\rLearn about the operator\u0026#39;s design, architecture, terms, and prerequisites.\n\rOverview\r\rThe information in the following sections is organized in the order that you would most likely need to use it. If you want to set up an operator and use it to create and manage WebLogic domains, you should follow the User Guide sections from top to bottom, and the necessary information will be presented in the correct order.\n\rManage operators\r\rHelm is used to create and deploy necessary operator resources and to run the operator in a Kubernetes cluster.\n\rManage domains\r\rImportant considerations for WebLogic domains in Kubernetes\n\r"
 },
 {
 	"uri": "/weblogic-kubernetes-operator/userguide/introduction/architecture/",
@@ -424,7 +424,7 @@
 	"title": "Reference",
 	"tags": [],
 	"description": "",
-	"content": " Chapter 5 Reference See the following reference documentation.\n\rJavadoc\r\rJava API documentation\n\rSwagger\r\rSwagger REST API documentation\n\rDomain resource\r\rUse this document to set up and configure your own domain resource\n\r"
+	"content": "See the following reference documentation.\n\rJavadoc\r\rJava API documentation\n\rSwagger\r\rSwagger REST API documentation\n\rDomain resource\r\rUse this document to set up and configure your own domain resource\n\r"
 },
 {
 	"uri": "/weblogic-kubernetes-operator/quickstart/prepare/",
