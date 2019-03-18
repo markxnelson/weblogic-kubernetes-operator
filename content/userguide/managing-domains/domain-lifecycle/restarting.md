@@ -3,10 +3,9 @@ title: "Restarting"
 date: 2019-02-23T20:58:51-05:00
 draft: false
 weight: 2
+description: "This document describes when to restart servers in the Oracle WebLogic Server in Kubernetes environment."
 ---
 
-
-This document describes _when_ to restart servers in the Oracle WebLogic Server in Kubernetes environment.
 
 #### Overview
 

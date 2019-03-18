@@ -3,6 +3,8 @@ title: "Startup and shutdown"
 date: 2019-02-23T17:04:41-05:00
 draft: false
 weight: 1
+description: "There are properties on the domain resource that specify which servers should be running
+and which servers should be restarted. To start, stop, or restart servers, modify these properties on the domain resource."
 ---
 #### Contents
 

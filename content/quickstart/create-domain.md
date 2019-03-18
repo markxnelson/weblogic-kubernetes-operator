@@ -131,4 +131,10 @@ Depending on where your Kubernetes cluster is running, you may need to open fire
 {{% /notice %}}
 
 
-1.	To access the WLS Administration Console, edit the `my-inputs.yaml` file (assuming that you named your copy `my-inputs.yaml`) to set `exposedAdminNodePort: true`. Open a browser to `http://your.server.com:30701`. As in the previous step, substitute the Node IP address of the worker node for `your.server.com`.
+1.	To access the WLS Administration Console:
+
+    a. Edit the `my-inputs.yaml` file (assuming that you named your copy `my-inputs.yaml`) to set `exposedAdminNodePort: true`.
+
+    b. Open a browser to `http://your.server.com:30701`.
+
+    c. As in step 5, substitute the Node IP address of the worker node for `your.server.com`.
